@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class MenuClicks : MonoBehaviour
 {
-    public void ExitClick(){
-        Debug.Log("Teste");
-        Application.Quit();
+    public void NewGameButtonClick(){
+        Debug.Log("New");
     }
+    public void OptionsButtonClick(){
+        Debug.Log("Options");
+    }
+    public void ExitButtonClick() {
+        Application.Quit();
+        Debug.Log("Exit");
+    }
+
 }
