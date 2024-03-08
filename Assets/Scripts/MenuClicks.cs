@@ -1,12 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Burst.Intrinsics;
-using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
-
 public class MenuClicks : MonoBehaviour
 {
     private bool SetAnimateOptions = false;
@@ -16,24 +8,29 @@ public class MenuClicks : MonoBehaviour
     private RectTransform MainMenuRect;
 
     [SerializeField] private Material Blur;
-    void Start(){
+    void Start()
+    {
         MainMenuRect = GetComponent<RectTransform>();
         Blur.SetFloat("_Size", 0f);
     }
 
-    public void NewGameButtonClick(){
+    public void NewGameButtonClick()
+    {
         Debug.Log("New");
     }
-    public void OptionsButtonClick(){
+    public void OptionsButtonClick()
+    {
         SetAnimateOptions = true;
     }
-    public void ExitButtonClick() {
+    public void ExitButtonClick() 
+    {
         Application.Quit();
         Debug.Log("Exit");
     }
 
     void Update(){
-        if (SetAnimateOptions) {
+        if (SetAnimateOptions) 
+        {
             initialPosition = MainMenuRect.anchoredPosition;
             newPosition = new Vector2(0, -700);
             float _speed = Time.deltaTime * 8;
