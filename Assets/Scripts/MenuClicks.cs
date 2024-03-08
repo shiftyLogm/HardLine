@@ -1,8 +1,13 @@
+using System;
+using System.Collections.Generic;
 using JetBrains.Annotations;
+using Microsoft.Unity.VisualStudio.Editor;
+using Unity.VisualScripting;
 using UnityEngine;
 public class MenuClicks : MonoBehaviour
 {
     private bool SetAnimateOptions = false;
+    private bool EscKeyAnimateOptions = false;
     public RectTransform MainMenuRect;
 
     [SerializeField] public Material Blur;
@@ -13,7 +18,7 @@ public class MenuClicks : MonoBehaviour
         MainMenuRect = GetComponent<RectTransform>();
         Blur.SetFloat("_Size", 0f);
         MainMenuRect.anchoredPosition = new Vector2(0, -330.6f);
-        OptionsMenu.anchoredPosition = new Vector2(0, 974);
+        OptionsMenu.anchoredPosition = new Vector2(0, 1054);
         ArrowTurnBack.transform.localScale = new Vector3(2, 1, 2);
     }
 
@@ -50,12 +55,17 @@ public class MenuClicks : MonoBehaviour
             FunctionsMenu.AnimateVectorLerp(OptionsMenu, new (0, 0), 8);
         }
 
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SetAnimateOptions = false;
+        }
+
         if (SetAnimateOptions == false)
         {
             float initialSize = Mathf.Lerp(Blur.GetFloat("_Size"), 0f, Time.deltaTime * 4);
             Blur.SetFloat("_Size", initialSize);
             FunctionsMenu.AnimateVectorLerp(MainMenuRect, new (0, -330.6f), 8);
-            FunctionsMenu.AnimateVectorLerp(OptionsMenu,new (0, 974), 8);
+            FunctionsMenu.AnimateVectorLerp(OptionsMenu,new (0, 1054), 8);
             ArrowTurnBack.transform.localScale = new Vector3(2, 1, 2);
         }
     }
