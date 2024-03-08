@@ -11,7 +11,7 @@ public class GlowEffect : MonoBehaviour
 
     private TextMeshProUGUI textComponent;
 
-    private void Start()
+    void Start()
     {
         textComponent = GetComponent<TextMeshProUGUI>();
     }
