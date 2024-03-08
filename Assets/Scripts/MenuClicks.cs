@@ -33,16 +33,17 @@ public class MenuClicks : MonoBehaviour
     }
 
     void Update(){
-
         if (SetAnimateOptions) {
-
             initialPosition = MainMenuRect.anchoredPosition;
             newPosition = new Vector2(0, -700);
             float _speed = Time.deltaTime * 8;
             MainMenuRect.anchoredPosition = Vector2.Lerp(initialPosition, newPosition, _speed);
 
-            float blursize_transiction = Mathf.Lerp(0f, 2f, Time.deltaTime);
-            Blur.SetFloat("_Size", blursize_transiction);
+            float initialSize = Blur.GetFloat("_Size");
+            float finalSize = 4f; 
+            int _speedSize = 4;
+            initialSize = Mathf.Lerp(initialSize, finalSize, Time.deltaTime * _speedSize);
+            Blur.SetFloat("_Size", initialSize);
         }
     }
 }
