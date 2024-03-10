@@ -1,13 +1,7 @@
-using System;
-using System.Collections.Generic;
-using JetBrains.Annotations;
-using Microsoft.Unity.VisualStudio.Editor;
-using Unity.VisualScripting;
 using UnityEngine;
 public class MenuClicks : MonoBehaviour
 {
     private bool SetAnimateOptions = false;
-    private bool EscKeyAnimateOptions = false;
     public RectTransform MainMenuRect;
 
     [SerializeField] public Material Blur;
@@ -66,7 +60,6 @@ public class MenuClicks : MonoBehaviour
             Blur.SetFloat("_Size", initialSize);
             FunctionsMenu.AnimateVectorLerp(MainMenuRect, new (0, -330.6f), 8);
             FunctionsMenu.AnimateVectorLerp(OptionsMenu,new (0, 1054), 8);
-            ArrowTurnBack.transform.localScale = new Vector3(2, 1, 2);
         }
     }
 }
