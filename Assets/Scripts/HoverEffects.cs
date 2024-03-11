@@ -18,7 +18,6 @@ public class GlowEffect : MonoBehaviour
 
     private void Update()
     {
-        // Verifica se o mouse está sobre o texto
         if (RectTransformUtility.RectangleContainsScreenPoint(textComponent.rectTransform, Input.mousePosition))
         {
             textComponent.fontSize = Mathf.Lerp(textComponent.fontSize, hoverFontSize, Time.deltaTime * transitionSpeed);

@@ -2,11 +2,14 @@ using UnityEngine;
 public class MenuClicks : MonoBehaviour
 {
     private bool SetAnimateOptions = false;
+    public static bool SetMenuOptions = false;
     public RectTransform MainMenuRect;
 
-    [SerializeField] public Material Blur;
-    [SerializeField] public RectTransform OptionsMenu;
-    [SerializeField] public GameObject ArrowTurnBack;
+    public Material Blur;
+    public RectTransform OptionsMenu;
+    public GameObject ArrowTurnBack;
+
+    MenuOptions menuOptions;
     void Start()
     {
         MainMenuRect = GetComponent<RectTransform>();
@@ -14,6 +17,7 @@ public class MenuClicks : MonoBehaviour
         MainMenuRect.anchoredPosition = new Vector2(0, -330.6f);
         OptionsMenu.anchoredPosition = new Vector2(0, 1054);
         ArrowTurnBack.transform.localScale = new Vector3(2, 1, 2);
+        menuOptions = GameObject.FindGameObjectWithTag("Menu").GetComponent<MenuOptions>();
     }
 
     public void NewGameButtonClick()
@@ -37,15 +41,14 @@ public class MenuClicks : MonoBehaviour
 
     void Update(){
         if (SetAnimateOptions) 
-        {
+        {   
+            SetMenuOptions = false;
             FunctionsMenu.AnimateVectorLerp(MainMenuRect, new (0f, -700f), 8);
-
             float initialSize = Blur.GetFloat("_Size");
             float finalSize = 4f; 
             int _speedSize = 4;
             initialSize = Mathf.Lerp(initialSize, finalSize, Time.deltaTime * _speedSize);
             Blur.SetFloat("_Size", initialSize);
-
             FunctionsMenu.AnimateVectorLerp(OptionsMenu, new (0, 0), 8);
         }
 
@@ -60,6 +63,7 @@ public class MenuClicks : MonoBehaviour
             Blur.SetFloat("_Size", initialSize);
             FunctionsMenu.AnimateVectorLerp(MainMenuRect, new (0, -330.6f), 8);
             FunctionsMenu.AnimateVectorLerp(OptionsMenu,new (0, 1054), 8);
+            SetMenuOptions = true;
         }
     }
 }
