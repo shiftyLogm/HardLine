@@ -17,7 +17,6 @@ public class MenuClicks : MonoBehaviour
         MainMenuRect.anchoredPosition = new Vector2(0, -330.6f);
         OptionsMenu.anchoredPosition = new Vector2(0, 1054);
         ArrowTurnBack.transform.localScale = new Vector3(2, 1, 2);
-        menuOptions = GameObject.FindGameObjectWithTag("Menu").GetComponent<MenuOptions>();
     }
 
     public void NewGameButtonClick()

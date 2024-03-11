@@ -1,3 +1,4 @@
+using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.PlayerLoop;

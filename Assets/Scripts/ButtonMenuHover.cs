@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class GlowEffect : MonoBehaviour
+public class ButtonMenuHover : MonoBehaviour
 {
     public float normalFontSize = 20f;
     public float hoverFontSize = 22f;

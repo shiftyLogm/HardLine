@@ -1667,9 +1667,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1874093598}
   - {fileID: 2007236581}
   - {fileID: 905914079}
+  - {fileID: 1874093598}
   m_Father: {fileID: 914672393}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1882,8 +1882,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 607013059}
-  - component: {fileID: 607013062}
   - component: {fileID: 607013061}
+  - component: {fileID: 607013062}
   - component: {fileID: 607013060}
   m_Layer: 5
   m_Name: Text (TMP)
@@ -2021,7 +2021,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   normalFontSize: 20
-  hoverFontSize: 25
+  hoverFontSize: 22
   transitionSpeed: 5
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
@@ -2320,8 +2320,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 797120277}
-  - component: {fileID: 797120280}
   - component: {fileID: 797120279}
+  - component: {fileID: 797120280}
   - component: {fileID: 797120278}
   m_Layer: 5
   m_Name: Text (TMP)
@@ -2461,7 +2461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   normalFontSize: 20
-  hoverFontSize: 25
+  hoverFontSize: 22
   transitionSpeed: 5
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
@@ -4150,8 +4150,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1357617071}
-  - component: {fileID: 1357617074}
   - component: {fileID: 1357617073}
+  - component: {fileID: 1357617074}
   - component: {fileID: 1357617072}
   m_Layer: 5
   m_Name: Text (TMP)
@@ -4291,7 +4291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   normalFontSize: 20
-  hoverFontSize: 25
+  hoverFontSize: 22
   transitionSpeed: 5
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
@@ -5418,7 +5418,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 607013059}
   m_Father: {fileID: 361355862}
