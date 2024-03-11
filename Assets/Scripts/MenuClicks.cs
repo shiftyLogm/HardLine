@@ -2,14 +2,13 @@ using UnityEngine;
 public class MenuClicks : MonoBehaviour
 {
     private bool SetAnimateOptions = false;
-    public static bool SetMenuOptions = false;
+    public static bool SetMenuOptions;
     public RectTransform MainMenuRect;
 
     public Material Blur;
     public RectTransform OptionsMenu;
     public GameObject ArrowTurnBack;
-
-    MenuOptions menuOptions;
+    public GameObject MenuOptions;
     void Start()
     {
         MainMenuRect = GetComponent<RectTransform>();
@@ -23,22 +22,17 @@ public class MenuClicks : MonoBehaviour
     {
         Debug.Log("New");
     }
-    public void OptionsButtonClick()
-    {
-        SetAnimateOptions = true;
-    }
+    public void OptionsButtonClick() => SetAnimateOptions = true;
     public void ExitButtonClick() 
     {
         Application.Quit();
         Debug.Log("Exit");
     }
 
-    public void ArrowButtonClick()
-    {
-        SetAnimateOptions = false;
-    }
+    private void ArrowButtonClick() => SetAnimateOptions = false;
 
-    void Update(){
+    void Update()
+    {
         if (SetAnimateOptions) 
         {   
             SetMenuOptions = false;
@@ -54,15 +48,15 @@ public class MenuClicks : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             SetAnimateOptions = false;
-        }
+        } 
 
         if (SetAnimateOptions == false)
         {
+            SetMenuOptions = true;
             float initialSize = Mathf.Lerp(Blur.GetFloat("_Size"), 0f, Time.deltaTime * 4);
             Blur.SetFloat("_Size", initialSize);
             FunctionsMenu.AnimateVectorLerp(MainMenuRect, new (0, -330.6f), 8);
             FunctionsMenu.AnimateVectorLerp(OptionsMenu,new (0, 1054), 8);
-            SetMenuOptions = true;
         }
     }
 }
