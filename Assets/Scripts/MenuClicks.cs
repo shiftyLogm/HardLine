@@ -29,7 +29,7 @@ public class MenuClicks : MonoBehaviour
         Debug.Log("Exit");
     }
 
-    private void ArrowButtonClick() => SetAnimateOptions = false;
+    public void ArrowButtonClick() => SetAnimateOptions = false;
 
     void Update()
     {
