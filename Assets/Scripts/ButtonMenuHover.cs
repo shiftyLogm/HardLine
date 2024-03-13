@@ -1,32 +1,44 @@
+using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class ButtonMenuHover : MonoBehaviour
+public class ButtonMenuHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public float normalFontSize = 20f;
-    public float hoverFontSize = 22f;
-    public float transitionSpeed = 5f;
-    public Color normalColor = Color.white;
-    public Color hoverColor = Color.yellow;
+    public float transitionSpeed;
+    public TextMeshProUGUI textComponent;
 
-    private TextMeshProUGUI textComponent;
+    public GameObject buttonComponent;
 
+    private Vector3 normalVector;
+    private Vector3 hoverVector;
+    private Vector3 TargetVector;
+    private Color TargetColor;
+
+    private Color normalColor = Color.white;
+    private Color hoverColor = Color.yellow;
     void Start()
     {
-        textComponent = GetComponent<TextMeshProUGUI>();
+        transitionSpeed = 5f * Time.deltaTime;
+        TargetColor = normalColor;
+        normalVector = buttonComponent.transform.localScale;
+        TargetVector = normalVector;
+        hoverVector = new Vector3(2.35f, 2.35f, 1.175f);
     }
 
-    private void Update()
+    void Update()
     {
-        if (RectTransformUtility.RectangleContainsScreenPoint(textComponent.rectTransform, Input.mousePosition))
-        {
-            textComponent.fontSize = Mathf.Lerp(textComponent.fontSize, hoverFontSize, Time.deltaTime * transitionSpeed);
-            textComponent.color = Color.Lerp(textComponent.color, hoverColor, Time.deltaTime * transitionSpeed);
-        }
-        else
-        {
-            textComponent.fontSize = Mathf.Lerp(textComponent.fontSize, normalFontSize, Time.deltaTime * transitionSpeed);
-            textComponent.color = Color.Lerp(textComponent.color, normalColor, Time.deltaTime * transitionSpeed);
-        }
+        textComponent.color = Color.Lerp(textComponent.color, TargetColor, transitionSpeed);
+        buttonComponent.transform.localScale = Vector3.Lerp(buttonComponent.transform.localScale, TargetVector, transitionSpeed);
+    }
+    public void OnPointerEnter(PointerEventData eventData) 
+    {
+        TargetColor = hoverColor;
+        TargetVector = hoverVector;
+    }
+    public void OnPointerExit(PointerEventData eventData) 
+    {
+        TargetColor = normalColor;
+        TargetVector = normalVector;
     }
 }
