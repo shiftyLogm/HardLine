@@ -1,10 +1,13 @@
 using NovaSamples.Effects;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 public class MenuClicks : MonoBehaviour
 {
-    private bool SetAnimateOptions = false;
+    private bool SetAnimateOptionsOpen = false;
+    private bool SetAnimateOptionsClose = false;
+    private bool SetBlurAnimation = false;
     public static bool SetMenuOptions;
     public RectTransform MainMenuRect;
 
@@ -15,73 +18,55 @@ public class MenuClicks : MonoBehaviour
     public GameObject UIBlur;
     private float speedColor;
     private Color initialColor;
-    private bool SetBlurAnimation;
-    
     void Start()
     {
         MainMenuRect = GetComponent<RectTransform>();
         MainMenuRect.anchoredPosition = new Vector2(0, -330.6f);
         OptionsMenu.anchoredPosition = new Vector2(0, 1054);
         ArrowTurnBack.transform.localScale = new Vector3(2, 1, 2);
-        speedColor = 10f;
-        initialColor = BonfireReal.color;
     }
 
     public void NewGameButtonClick()
     {
         Debug.Log("New");
     }
-    public void OptionsButtonClick() => SetAnimateOptions = true;
+    public void OptionsButtonClick()
+    {
+        LeanTween.alpha(BonfireReal.rectTransform, 0f, .5f).setEase(LeanTweenType.easeInOutQuad);
+        LeanTween.move(MainMenuRect, new (0f, -700f), .75f).setEase(LeanTweenType.easeInOutQuad);
+        LeanTween.move(OptionsMenu, new (0, 0), .75f).setEase(LeanTweenType.easeInOutQuad); 
+        LeanTween.value(gameObject, updateBlur, 0, 30f, .5f).setEase(LeanTweenType.easeInOutQuad);
+    }
     public void ExitButtonClick() 
     {
         Application.Quit();
         Debug.Log("Exit");
     }
 
-    public void ArrowButtonClick() => SetAnimateOptions = false;
+    public void ArrowButtonClick() 
+    {
+        LeanTween.move(MainMenuRect, new (0, -330.6f), .75f).setEase(LeanTweenType.easeInOutQuad);
+        LeanTween.move(OptionsMenu, new (0, 1054), .75f).setEase(LeanTweenType.easeInOutQuad);
+    }
 
     void updateBlur(float val)
     {
         BlurEffect.blurRadius = val;
     }
 
-    void updateBlurValue()
-    {
-        if (SetBlurAnimation)
-        {
-            LeanTween.value(gameObject, updateBlur, 0, 30f, 1f).setEase(LeanTweenType.easeSpring);
-        } 
-        else
-        {
-            LeanTween.value(gameObject, updateBlur, 0, 30f, 1f).setEase(LeanTweenType.easeSpring);
-        }
-    }
-
     void Update()
-    {
-        if (SetAnimateOptions) 
-        {   
-            SetMenuOptions = false;
-            BonfireReal.color = Color.Lerp(BonfireReal.color, new(0, 0, 0 ,0), speedColor * Time.deltaTime);
-            FunctionsMenu.AnimateVectorLerp(MainMenuRect, new (0f, -700f), 8);
-            FunctionsMenu.AnimateVectorLerp(OptionsMenu, new (0, 0), 8); 
-            updateBlurValue();
-        }   
-
-        Debug.Log(BlurEffect.blurRadius);
-
+    {  
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SetAnimateOptions = false;
+            SetAnimateOptionsClose = true;
         } 
 
-        if (SetAnimateOptions == false)
+        if (SetAnimateOptionsClose)
         {
-            SetBlurAnimation = false;
             SetMenuOptions = true;
-            BonfireReal.color = Color.Lerp(BonfireReal.color, initialColor, speedColor * Time.deltaTime);
             FunctionsMenu.AnimateVectorLerp(MainMenuRect, new (0, -330.6f), 8);
             FunctionsMenu.AnimateVectorLerp(OptionsMenu, new (0, 1054), 8);
+            SetAnimateOptionsClose = false;
         }
 
     }
