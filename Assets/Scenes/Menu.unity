@@ -829,7 +829,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InputTexture: {fileID: 0}
-  blurRadius: 29
   BlurMode: 1
   CropCamera: {fileID: 0}
   contrast: 0
@@ -1078,8 +1077,8 @@ MonoBehaviour:
       Direction: 0
     Image:
       Adjustment:
-        CenterUV: {x: 0.5250001, y: -0.75942296}
-        UVScale: {x: 3.0476184, y: 1.2581239}
+        CenterUV: {x: 0.525, y: -0.65925926}
+        UVScale: {x: 3.047619, y: 1.4492754}
         PixelsPerUnitMultiplier: 1
         scaleMode: 0
       Mode: 0
@@ -2112,15 +2111,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7599235840010813280, guid: 46640eb424e726547b5f2426e3180e95, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.1661836
+      value: 1.0123703
       objectReference: {fileID: 0}
     - target: {fileID: 7599235840010813280, guid: 46640eb424e726547b5f2426e3180e95, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.1661836
+      value: 1.0123703
       objectReference: {fileID: 0}
     - target: {fileID: 7599235840010813280, guid: 46640eb424e726547b5f2426e3180e95, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.1661836
+      value: 1.0123703
       objectReference: {fileID: 0}
     - target: {fileID: 7599235840010813280, guid: 46640eb424e726547b5f2426e3180e95, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2172,7 +2171,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7599235840010813282, guid: 46640eb424e726547b5f2426e3180e95, type: 3}
       propertyPath: layout.Size.Y.Raw
-      value: 937.55396
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 7599235840010813282, guid: 46640eb424e726547b5f2426e3180e95, type: 3}
       propertyPath: layout.Position.X.Raw

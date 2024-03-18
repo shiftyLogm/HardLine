@@ -63,7 +63,7 @@ namespace NovaSamples.Effects
 
         [Header("Blur Options")]
         [SerializeField, Min(0), Tooltip("Effectively the blur strength. Higher values means \"more blurred\".")]
-        private float blurRadius = 8;
+        public static float blurRadius;
         public float BlurRadius
         {
             get => blurRadius;
