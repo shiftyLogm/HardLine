@@ -1,13 +1,12 @@
 using NovaSamples.Effects;
-using Unity.Mathematics;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
+using UnityEngine.Rendering.PostProcessing;
 public class MenuClicks : MonoBehaviour
 {
-    private bool SetAnimateOptionsOpen = false;
-    private bool SetAnimateOptionsClose = false;
-    private bool SetBlurAnimation = false;
     public static bool SetMenuOptions;
     public RectTransform MainMenuRect;
 
@@ -16,8 +15,8 @@ public class MenuClicks : MonoBehaviour
     public GameObject MenuOptions;
     public Image BonfireReal;
     public GameObject UIBlur;
-    private float speedColor;
-    private Color initialColor;
+    public Camera MainCamera;
+
     void Start()
     {
         MainMenuRect = GetComponent<RectTransform>();
@@ -33,9 +32,10 @@ public class MenuClicks : MonoBehaviour
     public void OptionsButtonClick()
     {
         LeanTween.alpha(BonfireReal.rectTransform, 0f, .5f).setEase(LeanTweenType.easeInOutQuad);
-        LeanTween.move(MainMenuRect, new (0f, -700f), .75f).setEase(LeanTweenType.easeInOutQuad);
-        LeanTween.move(OptionsMenu, new (0, 0), .75f).setEase(LeanTweenType.easeInOutQuad); 
-        LeanTween.value(gameObject, updateBlur, 0, 30f, .5f).setEase(LeanTweenType.easeInOutQuad);
+        LeanTween.move(MainMenuRect, new (0f, -700f), .5f).setEase(LeanTweenType.easeInOutQuad);
+        LeanTween.move(OptionsMenu, new (0, 0), .5f).setEase(LeanTweenType.easeInOutQuad); 
+        LeanTween.value(gameObject, updateBlur, 0f, 30f, .5f).setEase(LeanTweenType.easeInOutQuad);
+        SetMenuOptions = false;
     }
     public void ExitButtonClick() 
     {
@@ -45,8 +45,12 @@ public class MenuClicks : MonoBehaviour
 
     public void ArrowButtonClick() 
     {
-        LeanTween.move(MainMenuRect, new (0, -330.6f), .75f).setEase(LeanTweenType.easeInOutQuad);
-        LeanTween.move(OptionsMenu, new (0, 1054), .75f).setEase(LeanTweenType.easeInOutQuad);
+        
+        LeanTween.alpha(BonfireReal.rectTransform, 1f, .5f).setEase(LeanTweenType.easeInOutQuad);
+        LeanTween.move(MainMenuRect, new (0, -330.6f), .5f).setEase(LeanTweenType.easeInOutQuad);
+        LeanTween.move(OptionsMenu, new (0, 1054), .5f).setEase(LeanTweenType.easeInOutQuad);
+        LeanTween.value(gameObject, updateBlur, 30f, 0f, .5f).setEase(LeanTweenType.easeInOutQuad);
+        SetMenuOptions = true;
     }
 
     void updateBlur(float val)
@@ -58,16 +62,7 @@ public class MenuClicks : MonoBehaviour
     {  
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SetAnimateOptionsClose = true;
+            ArrowButtonClick();
         } 
-
-        if (SetAnimateOptionsClose)
-        {
-            SetMenuOptions = true;
-            FunctionsMenu.AnimateVectorLerp(MainMenuRect, new (0, -330.6f), 8);
-            FunctionsMenu.AnimateVectorLerp(OptionsMenu, new (0, 1054), 8);
-            SetAnimateOptionsClose = false;
-        }
-
     }
 }
