@@ -2011,7 +2011,6 @@ MonoBehaviour:
   MenuOptions: {fileID: 0}
   BonfireReal: {fileID: 618589314}
   UIBlur: {fileID: 975666041}
-  MainCamera: {fileID: 0}
 --- !u!1 &383046026
 GameObject:
   m_ObjectHideFlags: 0
@@ -6185,6 +6184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1893458562}
   - component: {fileID: 1893458561}
+  - component: {fileID: 1893458563}
   m_Layer: 0
   m_Name: Global Volume
   m_TagString: Untagged
@@ -6224,6 +6224,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1893458563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893458560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d9e714dfc2eeee418da2f51c206e27d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumePostProcessing: {fileID: 1893458561}
 --- !u!1 &1916340502
 GameObject:
   m_ObjectHideFlags: 0
