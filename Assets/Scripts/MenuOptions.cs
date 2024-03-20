@@ -6,13 +6,7 @@ public class MenuOptions : MonoBehaviour
     public GameObject PageSounds;
     public GameObject PageControls;
 
-    void Start()
-    {  
-        PageGeneral.SetActive(true);
-        PageSounds.SetActive(false);
-        PageControls.SetActive(false);
-    }
-    
+    public void Start() => PageGeneralClick();    
     public void PageGeneralClick()
     {
         PageSounds.SetActive(false);
@@ -34,10 +28,8 @@ public class MenuOptions : MonoBehaviour
         PageControls.SetActive(true);
     }
 
-    void Update(){
-        if (MenuClicks.SetMenuOptions)
-        {
-            Start();
-        }
+    void Update()
+    {
+        if (MenuClicks.resetOptions) PageGeneralClick();
     }
 }

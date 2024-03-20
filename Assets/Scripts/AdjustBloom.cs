@@ -6,16 +6,11 @@ public class AdjustBloom : MonoBehaviour
 {
     [SerializeField] private Volume volumePostProcessing;
     private Bloom bloomValue;
+    public static float valueIntensity;
     void Start()
     {   
         volumePostProcessing.GetComponent<Volume>();
         volumePostProcessing.profile.TryGet(out bloomValue);
     }
- 
-    [ContextMenu("test")]
-
-    void Update()
-    {
-        bloomValue.intensity.value = 1; 
-    }
+    void Update() => bloomValue.intensity.value = valueIntensity;
 }

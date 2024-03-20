@@ -4,6 +4,8 @@ using UnityEngine.UI;
 public class MenuClicks : MonoBehaviour
 {
     public static bool SetMenuOptions;
+    
+    public static bool resetOptions = false;
     public RectTransform MainMenuRect;
 
     public RectTransform OptionsMenu;
@@ -47,16 +49,12 @@ public class MenuClicks : MonoBehaviour
         SetMenuOptions = true;
     }
 
-    void updateBlur(float val)
-    {
-        BlurEffect.blurRadius = val;
-    }
-
+    void updateBlur(float val) => BlurEffect.blurRadius = val;
     void Update()
     {  
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            ArrowButtonClick();
-        } 
+        AdjustBloom.valueIntensity = OptionsMenu.anchoredPosition.y <= 200 ? 0 : 1;
+        resetOptions = OptionsMenu.anchoredPosition.y > 1000 ? true : false;
+        
+        if (Input.GetKeyDown(KeyCode.Escape) && SetMenuOptions == false) ArrowButtonClick();
     }
 }
