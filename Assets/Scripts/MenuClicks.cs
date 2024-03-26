@@ -1,28 +1,40 @@
+using Nova;
 using NovaSamples.Effects;
 using UnityEngine;
 using UnityEngine.UI;
 public class MenuClicks : MonoBehaviour
 {
     public static bool SetMenuOptions;
-    
     public static bool resetOptions = false;
     public RectTransform MainMenuRect;
-
     public RectTransform OptionsMenu;
     public GameObject ArrowTurnBack;
     public GameObject MenuOptions;
     public Image BonfireReal;
+    public RectTransform bonfirePos;
+    public Image BonfireFalse;
     public GameObject UIBlur;
-
+    public RectTransform blockblur;
+    public RectTransform PanelNewGame;
     void Start()
     {
         MainMenuRect = GetComponent<RectTransform>();
+        BonfireFalse.transform.position = new Vector2(2891, -367.6f);
         MainMenuRect.anchoredPosition = new Vector2(0, -330.6f);
         OptionsMenu.anchoredPosition = new Vector2(0, 1054);
         ArrowTurnBack.transform.localScale = new Vector3(2, 1, 2);
+        PanelNewGame.anchoredPosition = new Vector2(-1957, -.46f);
+        bonfirePos.anchoredPosition = new Vector2(570, -367.7f);
+        blockblur.anchoredPosition = new Vector2(504, -356);
     }
+
     public void NewGameButtonClick()
     {
+        BonfireFalse.transform.position = new Vector2(2891, -1121);
+        LeanTween.move(MainMenuRect, new Vector2(1953, -330.6f), 1f).setEase(LeanTweenType.easeInOutCubic);
+        LeanTween.move(bonfirePos, new Vector2(2523, -367.7f), 1f).setEase(LeanTweenType.easeInOutCubic);
+        LeanTween.move(blockblur, new Vector2(2457, -356), 1f).setEase(LeanTweenType.easeInOutCubic);
+        LeanTween.move(PanelNewGame, new Vector2(-4, -.46f), 1f).setEase(LeanTweenType.easeInOutCubic);
         Debug.Log("New");
     }
 
@@ -34,6 +46,7 @@ public class MenuClicks : MonoBehaviour
         LeanTween.value(gameObject, updateBlur, 0f, 30f, .5f).setEase(LeanTweenType.easeInOutQuad);
         SetMenuOptions = false;
     }
+
     public void ExitButtonClick() 
     {
         Application.Quit();

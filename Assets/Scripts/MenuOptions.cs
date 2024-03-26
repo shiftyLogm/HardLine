@@ -6,7 +6,8 @@ public class MenuOptions : MonoBehaviour
     public GameObject PageSounds;
     public GameObject PageControls;
 
-    public void Start() => PageGeneralClick();    
+    public void Start() => PageGeneralClick();
+        
     public void PageGeneralClick()
     {
         PageSounds.SetActive(false);

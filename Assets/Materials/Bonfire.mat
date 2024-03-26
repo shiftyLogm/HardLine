@@ -73,7 +73,7 @@ Material:
     - _BlurAmount: 0
     - _EnableExternalAlpha: 0
     m_Colors:
-    - _Color: {r: 4, g: 1.5741967, b: 0, a: 1}
+    - _Color: {r: 2, g: 0.78709835, b: 0, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
