@@ -12,20 +12,22 @@ public class MenuClicks : MonoBehaviour
     public GameObject MenuOptions;
     public Image BonfireReal;
     public RectTransform bonfirePos;
-    public Image BonfireFalse;
-    public GameObject UIBlur;
-    public RectTransform blockblur;
+    public RectTransform BonfireFalse;
+    public GameObject blockblur_obj;
+    public RectTransform blockblur_rect;
     public RectTransform PanelNewGame;
+
     void Start()
     {
         MainMenuRect = GetComponent<RectTransform>();
-        BonfireFalse.transform.position = new Vector2(2891, -367.6f);
+        BonfireFalse.anchoredPosition = new Vector2(2891, -367.6f);
         MainMenuRect.anchoredPosition = new Vector2(0, -330.6f);
         OptionsMenu.anchoredPosition = new Vector2(0, 1054);
         ArrowTurnBack.transform.localScale = new Vector3(2, 1, 2);
         PanelNewGame.anchoredPosition = new Vector2(-1957, -.46f);
         bonfirePos.anchoredPosition = new Vector2(570, -367.7f);
-        blockblur.anchoredPosition = new Vector2(504, -356);
+        blockblur_rect.anchoredPosition = new Vector2(504, -356);
+        blockblur_obj.SetActive(false);
     }
 
     public void NewGameButtonClick()
@@ -33,7 +35,7 @@ public class MenuClicks : MonoBehaviour
         BonfireFalse.transform.position = new Vector2(2891, -1121);
         LeanTween.move(MainMenuRect, new Vector2(1953, -330.6f), 1f).setEase(LeanTweenType.easeInOutCubic);
         LeanTween.move(bonfirePos, new Vector2(2523, -367.7f), 1f).setEase(LeanTweenType.easeInOutCubic);
-        LeanTween.move(blockblur, new Vector2(2457, -356), 1f).setEase(LeanTweenType.easeInOutCubic);
+        LeanTween.move(blockblur_rect, new Vector2(2457, -356), 1f).setEase(LeanTweenType.easeInOutCubic);
         LeanTween.move(PanelNewGame, new Vector2(-4, -.46f), 1f).setEase(LeanTweenType.easeInOutCubic);
         Debug.Log("New");
     }
@@ -44,6 +46,8 @@ public class MenuClicks : MonoBehaviour
         LeanTween.move(MainMenuRect, new (0f, -700f), .5f).setEase(LeanTweenType.easeInOutQuad);
         LeanTween.move(OptionsMenu, new(0, 0), .5f).setEase(LeanTweenType.easeInOutQuad); 
         LeanTween.value(gameObject, updateBlur, 0f, 30f, .5f).setEase(LeanTweenType.easeInOutQuad);
+        Invoke("activateBlur", .25f);
+        blockblur_obj.SetActive(true);
         SetMenuOptions = false;
     }
 
@@ -53,12 +57,16 @@ public class MenuClicks : MonoBehaviour
         Debug.Log("Exit");
     }
 
+    public void desactivateBlur() => blockblur_obj.SetActive(false);
+    public void activateBlur() => blockblur_obj.SetActive(true);
+
     public void ArrowButtonClick() 
     {
         LeanTween.alpha(BonfireReal.rectTransform, 1f, .5f).setEase(LeanTweenType.easeInOutQuad);
         LeanTween.move(MainMenuRect, new (0, -330.6f), .5f).setEase(LeanTweenType.easeInOutQuad);
         LeanTween.move(OptionsMenu, new(0, 1054), .5f).setEase(LeanTweenType.easeInOutQuad);
         LeanTween.value(gameObject, updateBlur, 30f, 0f, .5f).setEase(LeanTweenType.easeInOutQuad);
+        Invoke("desactivateBlur", .25f);
         SetMenuOptions = true;
     }
 
