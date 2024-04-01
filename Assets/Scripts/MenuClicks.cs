@@ -16,6 +16,8 @@ public class MenuClicks : MonoBehaviour
     public GameObject blockblur_obj;
     public RectTransform blockblur_rect;
     public RectTransform PanelNewGame;
+    public RectTransform ArrowTurnBackNewGame;
+    public GameObject GrabHand;
 
     void Start()
     {
@@ -24,10 +26,11 @@ public class MenuClicks : MonoBehaviour
         MainMenuRect.anchoredPosition = new Vector2(0, -330.6f);
         OptionsMenu.anchoredPosition = new Vector2(0, 1054);
         ArrowTurnBack.transform.localScale = new Vector3(2, 1, 2);
-        PanelNewGame.anchoredPosition = new Vector2(-1957, -.46f);
+        PanelNewGame.anchoredPosition = new Vector2(-2005, -.46f);
         bonfirePos.anchoredPosition = new Vector2(570, -367.7f);
         blockblur_rect.anchoredPosition = new Vector2(504, -356);
         blockblur_obj.SetActive(false);
+        ArrowTurnBackNewGame.anchoredPosition = new Vector2(816, 639);
     }
 
     public void NewGameButtonClick()
@@ -37,7 +40,8 @@ public class MenuClicks : MonoBehaviour
         LeanTween.move(bonfirePos, new Vector2(2523, -367.7f), 1f).setEase(LeanTweenType.easeInOutCubic);
         LeanTween.move(blockblur_rect, new Vector2(2457, -356), 1f).setEase(LeanTweenType.easeInOutCubic);
         LeanTween.move(PanelNewGame, new Vector2(-4, -.46f), 1f).setEase(LeanTweenType.easeInOutCubic);
-        Debug.Log("New");
+        Invoke("downArrow", 1.2f);
+        Invoke("desactiveHand", .75f);
     }
 
     public void OptionsButtonClick()
@@ -57,9 +61,12 @@ public class MenuClicks : MonoBehaviour
         Debug.Log("Exit");
     }
 
-    public void desactivateBlur() => blockblur_obj.SetActive(false);
-    public void activateBlur() => blockblur_obj.SetActive(true);
+    void desactivateBlur() => blockblur_obj.SetActive(false);
+    void activateBlur() => blockblur_obj.SetActive(true); 
 
+    void downArrow() => LeanTween.move(ArrowTurnBackNewGame, new(816, 427), 0.5f).setEase(LeanTweenType.easeInOutQuad);
+    void desactiveHand() => GrabHand.SetActive(false);
+    
     public void ArrowButtonClick() 
     {
         LeanTween.alpha(BonfireReal.rectTransform, 1f, .5f).setEase(LeanTweenType.easeInOutQuad);
@@ -68,6 +75,15 @@ public class MenuClicks : MonoBehaviour
         LeanTween.value(gameObject, updateBlur, 30f, 0f, .5f).setEase(LeanTweenType.easeInOutQuad);
         Invoke("desactivateBlur", .25f);
         SetMenuOptions = true;
+    }
+
+    public void ArrowButtonClickNewGame()
+    {
+        BonfireFalse.anchoredPosition = new Vector2(2891, -367.6f);
+        LeanTween.move(MainMenuRect, new Vector2(0, -330.6f), 1f).setEase(LeanTweenType.easeInOutCubic);
+        LeanTween.move(bonfirePos, new Vector2(570, -367.7f), 1f).setEase(LeanTweenType.easeInOutCubic);
+        LeanTween.move(blockblur_rect, new Vector2(504, -356), 1f).setEase(LeanTweenType.easeInOutCubic);
+        LeanTween.move(PanelNewGame, new Vector2(-2005, -.46f), 1f).setEase(LeanTweenType.easeInOutCubic);
     }
 
     void updateBlur(float val) => BlurEffect.blurRadius = val;
