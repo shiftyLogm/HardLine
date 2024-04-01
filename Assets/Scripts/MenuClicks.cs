@@ -17,7 +17,6 @@ public class MenuClicks : MonoBehaviour
     public RectTransform blockblur_rect;
     public RectTransform PanelNewGame;
     public RectTransform ArrowTurnBackNewGame;
-    public GameObject GrabHand;
 
     void Start()
     {
@@ -30,7 +29,7 @@ public class MenuClicks : MonoBehaviour
         bonfirePos.anchoredPosition = new Vector2(570, -367.7f);
         blockblur_rect.anchoredPosition = new Vector2(504, -356);
         blockblur_obj.SetActive(false);
-        ArrowTurnBackNewGame.anchoredPosition = new Vector2(816, 639);
+        ArrowTurnBackNewGame.anchoredPosition = new Vector2(837, 639);
     }
 
     public void NewGameButtonClick()
@@ -40,8 +39,7 @@ public class MenuClicks : MonoBehaviour
         LeanTween.move(bonfirePos, new Vector2(2523, -367.7f), 1f).setEase(LeanTweenType.easeInOutCubic);
         LeanTween.move(blockblur_rect, new Vector2(2457, -356), 1f).setEase(LeanTweenType.easeInOutCubic);
         LeanTween.move(PanelNewGame, new Vector2(-4, -.46f), 1f).setEase(LeanTweenType.easeInOutCubic);
-        Invoke("downArrow", 1.2f);
-        Invoke("desactiveHand", .75f);
+        Invoke("downArrow", .75f);
     }
 
     public void OptionsButtonClick()
@@ -63,9 +61,8 @@ public class MenuClicks : MonoBehaviour
 
     void desactivateBlur() => blockblur_obj.SetActive(false);
     void activateBlur() => blockblur_obj.SetActive(true); 
-
-    void downArrow() => LeanTween.move(ArrowTurnBackNewGame, new(816, 427), 0.5f).setEase(LeanTweenType.easeInOutQuad);
-    void desactiveHand() => GrabHand.SetActive(false);
+    void downArrow() => LeanTween.move(ArrowTurnBackNewGame, new(837, 447), 0.5f).setEase(LeanTweenType.easeInOutQuad);
+    void upArrow() => ArrowTurnBackNewGame.anchoredPosition = new Vector2(837, 639);
     
     public void ArrowButtonClick() 
     {
@@ -84,6 +81,7 @@ public class MenuClicks : MonoBehaviour
         LeanTween.move(bonfirePos, new Vector2(570, -367.7f), 1f).setEase(LeanTweenType.easeInOutCubic);
         LeanTween.move(blockblur_rect, new Vector2(504, -356), 1f).setEase(LeanTweenType.easeInOutCubic);
         LeanTween.move(PanelNewGame, new Vector2(-2005, -.46f), 1f).setEase(LeanTweenType.easeInOutCubic);
+        Invoke("upArrow", 1);
     }
 
     void updateBlur(float val) => BlurEffect.blurRadius = val;
