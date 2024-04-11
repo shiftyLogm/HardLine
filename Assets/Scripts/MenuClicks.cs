@@ -17,8 +17,6 @@ public class MenuClicks : MonoBehaviour
     public GameObject blockblur_obj;
     public RectTransform blockblur_rect;
     public RectTransform PanelNewGame;
-    public RectTransform ArrowTurnBackNewGame;
-    public GameObject ArrowTurnBackNGObj;
 
     void Start()
     {
@@ -31,8 +29,6 @@ public class MenuClicks : MonoBehaviour
         bonfirePos.anchoredPosition = new Vector2(570, -367.7f);
         blockblur_rect.anchoredPosition = new Vector2(504, -356);
         blockblur_obj.SetActive(false);
-        ArrowTurnBackNewGame.anchoredPosition = new Vector2(687, 667);
-        ArrowTurnBackNewGame.rotation = Quaternion.Euler(182, 0, 156.74f);
     }
 
     public void NewGameButtonClick()
@@ -64,17 +60,7 @@ public class MenuClicks : MonoBehaviour
 
     void desactivateBlur() => blockblur_obj.SetActive(false);
     void activateBlur() => blockblur_obj.SetActive(true); 
-    void downArrow() 
-    {
-        LeanTween.move(ArrowTurnBackNewGame, new(829, 418), 0.5f).setEase(LeanTweenType.easeInOutQuad);
-        LeanTween.rotateZ(ArrowTurnBackNGObj, -40f, 1).setEase(LeanTweenType.easeInOutQuad);
-    } 
-    void upArrow() 
-    {
-         ArrowTurnBackNewGame.anchoredPosition = new Vector2(687, 667);
-         ArrowTurnBackNewGame.rotation = Quaternion.Euler(182, 0, 156.74f);
-    }
-    
+      
     public void ArrowButtonClick() 
     {
         LeanTween.alpha(BonfireReal.rectTransform, 1f, .5f).setEase(LeanTweenType.easeInOutQuad);
