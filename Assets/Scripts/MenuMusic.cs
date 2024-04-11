@@ -13,9 +13,4 @@ public class MenuMusic : MonoBehaviour
         musicMenu.playOnAwake = true;
         musicMenu.pitch = .85f;
     }
-
-    void Update()
-    {
-        
-    }
 }

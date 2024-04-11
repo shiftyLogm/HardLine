@@ -1,10 +1,9 @@
-using Nova;
 using NovaSamples.Effects;
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 public class MenuClicks : MonoBehaviour
 {
+    public static bool SetMenuNemGame;
     public static bool SetMenuOptions;
     public static bool resetOptions = false;
     public RectTransform MainMenuRect;
@@ -38,7 +37,7 @@ public class MenuClicks : MonoBehaviour
         LeanTween.move(bonfirePos, new Vector2(2523, -367.7f), 1f).setEase(LeanTweenType.easeInOutCubic);
         LeanTween.move(blockblur_rect, new Vector2(2457, -356), 1f).setEase(LeanTweenType.easeInOutCubic);
         LeanTween.move(PanelNewGame, new Vector2(-4, -.46f), 1f).setEase(LeanTweenType.easeInOutCubic);
-        Invoke("downArrow", .75f);
+        SetMenuNemGame = true;
     }
 
     public void OptionsButtonClick()
@@ -49,7 +48,7 @@ public class MenuClicks : MonoBehaviour
         LeanTween.value(gameObject, updateBlur, 0f, 30f, .5f).setEase(LeanTweenType.easeInOutQuad);
         Invoke("activateBlur", .25f);
         blockblur_obj.SetActive(true);
-        SetMenuOptions = false;
+        SetMenuOptions = true;
     }
 
     public void ExitButtonClick() 
@@ -68,7 +67,7 @@ public class MenuClicks : MonoBehaviour
         LeanTween.move(OptionsMenu, new(0, 1054), .5f).setEase(LeanTweenType.easeInOutQuad);
         LeanTween.value(gameObject, updateBlur, 30f, 0f, .5f).setEase(LeanTweenType.easeInOutQuad);
         Invoke("desactivateBlur", .25f);
-        SetMenuOptions = true;
+        SetMenuOptions = false;
     }
 
     public void ArrowButtonClickNewGame()
@@ -78,7 +77,7 @@ public class MenuClicks : MonoBehaviour
         LeanTween.move(bonfirePos, new Vector2(570, -367.7f), 1f).setEase(LeanTweenType.easeInOutCubic);
         LeanTween.move(blockblur_rect, new Vector2(504, -356), 1f).setEase(LeanTweenType.easeInOutCubic);
         LeanTween.move(PanelNewGame, new Vector2(-2005, -.46f), 1f).setEase(LeanTweenType.easeInOutCubic);
-        Invoke("upArrow", 1);
+        SetMenuNemGame = false;
     }
 
     void updateBlur(float val) => BlurEffect.blurRadius = val;
@@ -87,6 +86,10 @@ public class MenuClicks : MonoBehaviour
         AdjustBloom.valueIntensity = OptionsMenu.anchoredPosition.y <= 200 ? 0 : 1;
         resetOptions = OptionsMenu.anchoredPosition.y > 1000 ? true : false;
         
-        if (Input.GetKeyDown(KeyCode.Escape) && SetMenuOptions == false) ArrowButtonClick();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (SetMenuOptions) ArrowButtonClick();
+            if (SetMenuNemGame) ArrowButtonClickNewGame();
+        }
     }
 }

@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 
 public class TransformHover : MonoBehaviour , IPointerEnterHandler , IPointerExitHandler
 {
-    public GameObject targetObject;
+    private GameObject targetObject;
     private Vector3 scaleHover;
     private Vector3 initialScale;
     public Vector3 targetScale;
@@ -11,6 +11,7 @@ public class TransformHover : MonoBehaviour , IPointerEnterHandler , IPointerExi
 
     void Start() 
     {
+        targetObject = gameObject;
         initialScale = targetObject.transform.localScale;
         scaleHover = initialScale;
         _speed = 5f * Time.deltaTime;

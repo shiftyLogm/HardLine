@@ -60,7 +60,6 @@ public class StateMachine : MonoBehaviour
     private void Awake()
     {
         SetNextStateToMain();
-
     }
 
 
