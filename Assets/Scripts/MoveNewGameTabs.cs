@@ -40,6 +40,7 @@ public class MoveNewGameTabs : MonoBehaviour
     void Update()
     {
         Debug.Log(_setMoveNG);
+        Debug.Log(MenuClicks.SetMenuNemGame);
         TurnTabsListen();
     }
 }
