@@ -4,7 +4,7 @@ public abstract class State
 {
     protected float time { get; set; }
     protected float fixedTime { get; set; }
-    protected float latetime { get; set; }
+    protected float lateTime { get; set; }
 
     public StateMachine stateMachine;
 
@@ -25,7 +25,7 @@ public abstract class State
     }
     public virtual void OnLateUpdate()
     {
-        latetime += Time.deltaTime;
+        lateTime += Time.deltaTime;
     }
 
     public virtual void OnExit()

@@ -14,17 +14,21 @@ public class MeleeBaseState : State
 
     public override void OnEnter(StateMachine _stateMachine)
     {
+        base.OnEnter(_stateMachine);
+
         animator = GetComponent<Animator>();
     }
 
     public override void OnUpdate()
     {
+        base.OnUpdate();
+
         shouldCombo = true;
         Debug.Log("meleebasestate");
     }
 
     public override void OnExit()
     {
-        
+        base.OnExit();
     }
 }

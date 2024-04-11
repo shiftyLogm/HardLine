@@ -6,18 +6,18 @@ public class GroundEntryState : MeleeBaseState
 {
     public override void OnEnter(StateMachine _stateMachine)
     {
+        base.OnEnter(_stateMachine);
 
         //Attack
         attackIndex = 1;
         duration = 0.5f;
-        if(shouldCombo) Debug.Log("shouldcombo");
-        else Debug.Log("notshould");
         animator.SetTrigger("Attack" + attackIndex);
         Debug.Log($"Player attack {attackIndex} fired");
     }
 
     public override void OnUpdate()
     {
+        base.OnUpdate();
 
         if(fixedTime >= duration)
         {

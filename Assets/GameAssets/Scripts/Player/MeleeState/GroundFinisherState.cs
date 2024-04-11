@@ -6,6 +6,8 @@ public class GroundFinisherState : MeleeBaseState
 {
     public override void OnEnter(StateMachine _stateMachine)
     {
+        base.OnEnter(_stateMachine);
+
         //Attack
         attackIndex = 3;
         duration = 0.75f;
@@ -15,6 +17,8 @@ public class GroundFinisherState : MeleeBaseState
 
     public override void OnUpdate()
     {
+        base.OnUpdate();
+
         if(fixedTime >= duration)
         {
             stateMachine.SetNextStateToMain();
