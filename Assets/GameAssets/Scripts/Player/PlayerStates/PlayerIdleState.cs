@@ -4,21 +4,25 @@ using UnityEngine;
 
 public class PlayerIdleState : State
 {
+
     public override void Enter()
     {
-        string animationToPlay = transitions[direction];
-        animator.Play($"Idle{animationToPlay}");
+        if(direction != "")
+        {
+            string animationToPlay = transitions[direction];
+            animator.Play($"Idle{animationToPlay}");
+        }
     }
 
     public override void Do()
     {
-        string animationToPlay = transitions[direction];
-        animator.Play($"Idle{animationToPlay}");
-        
-        if(rb.velocity.x != 0 || rb.velocity.y != 0)
+        if(direction != "")
         {
-            isComplete = true;
+            string animationToPlay = transitions[direction];
+            animator.Play($"Idle{animationToPlay}");
         }
+
+        
     }
 
     public override void Exit()

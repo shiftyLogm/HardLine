@@ -7,19 +7,23 @@ public class PlayerRunState : State
     
     public override void Enter()
     {
-        string animationToPlay = transitions[direction];
-        animator.Play($"Walk{animationToPlay}");
+        if(direction != "")
+        {
+            string animationToPlay = transitions[direction];
+            animator.Play($"Walk{animationToPlay}");
+            
+        }
     }
 
     public override void Do()
     {
-        string animationToPlay = transitions[direction];
-        animator.Play($"Walk{animationToPlay}");
-        
-        if(rb.velocity == new Vector2(0,0))
+        if(direction != "")
         {
-            isComplete = true;
+            string animationToPlay = transitions[direction];
+            animator.Play($"Walk{animationToPlay}");
         }
+        
+        
     }
 
     public override void Exit()

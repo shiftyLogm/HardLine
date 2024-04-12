@@ -19,7 +19,7 @@ public abstract class State : MonoBehaviour
     // Blackboard variables
     protected Animator animator;
     protected Rigidbody2D rb;
-    protected string direction;
+    public string direction;
 
     public virtual void Enter() { }
     public virtual void Do() { }
@@ -30,11 +30,6 @@ public abstract class State : MonoBehaviour
     {
         animator = _animator;
         rb = _rb;
-    }
-
-    public void Direction(string _direction)
-    {
-        direction = _direction;
     }
 
     public void Initialize()
