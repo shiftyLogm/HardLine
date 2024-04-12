@@ -29,7 +29,6 @@ public class MoveNewGameTabs : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(_setMoveNG);
         if (Input.GetKeyDown(KeyCode.Escape)) 
         {
             if (_setMoveNG) turnTabs();

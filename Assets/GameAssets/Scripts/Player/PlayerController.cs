@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Linq;
+using System.Data;
 
 public class PlayerController : MonoBehaviour
 {
@@ -19,7 +22,6 @@ public class PlayerController : MonoBehaviour
     private PlayerControls playerControls;
     private Rigidbody2D rb;
     bool isAttacking = false;
-
     // Criando uma variavel para saber a direçao para onde o jogador quer ir
     Vector2 mov;
     Vector2 oldMov;
@@ -61,20 +63,26 @@ public class PlayerController : MonoBehaviour
         else mov = oldMov;
     }
 
+    private string findKey(Dictionary<string, bool> dict, bool value)
+    {
+        var idx = dict.FirstOrDefault(x => x.Value == value);
+        return idx.Key;
+    }
     void DirectionFacing()
     {
+        Dictionary<string, bool> dictActions = new()
+        {
+            {"up", rb.velocity.y > 0},
+            {"down", rb.velocity.y < 0},
+            {"right", rb.velocity.x > 0},
+            {"left", rb.velocity.x < 0},
+        };
 
-        // Verifica as velocidades no eixo y
-        if (rb.velocity.y > 0) state.direction = "up";
-        if (rb.velocity.y < 0) state.direction = "down";
-
-        // Verifica as velocidades no eixo x
-        if (rb.velocity.x > 0) state.direction = "rigth";
-        if (rb.velocity.x < 0) state.direction = "left";
-
+        var key = findKey(dictActions, true);
+        state.direction = key;
         idleState.direction = state.direction;
         attackState.direction = state.direction;
-    }
+    }   
 
     #region State
 
