@@ -16,31 +16,24 @@ public class MoveNewGameTabs : MonoBehaviour
         _speed = .75f;
     }
 
-    public void moveTabs() 
+    public void moveTabs()
     {
         LeanTween.move(_tabPosition, _finalPosition, _speed).setEase(LeanTweenType.easeInOutCubic);
         _setMoveNG = true;
         MenuClicks.SetMenuNemGame = false;
-    } 
+    }
     private void turnTabs() 
     {
         LeanTween.move(_tabPosition, _initialPosition, _speed).setEase(LeanTweenType.easeInOutCubic);
         _setMoveNG = false;
     }
-
-    private void TurnTabsListen()
+    void Update()
     {
+        Debug.Log(_setMoveNG);
         if (Input.GetKeyDown(KeyCode.Escape)) 
         {
             if (_setMoveNG) turnTabs();
             else MenuClicks.SetMenuNemGame = true;
         }
-    }
-
-    void Update()
-    {
-        Debug.Log(_setMoveNG);
-        Debug.Log(MenuClicks.SetMenuNemGame);
-        TurnTabsListen();
     }
 }

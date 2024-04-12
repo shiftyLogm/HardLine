@@ -74,7 +74,6 @@ public class PlayerController : MonoBehaviour
 
         idleState.direction = state.direction;
         attackState.direction = state.direction;
-
     }
 
     #region State
