@@ -1,68 +1,45 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class State
+public abstract class State : MonoBehaviour
 {
-    protected float time { get; set; }
-    protected float fixedTime { get; set; }
-    protected float lateTime { get; set; }
-
-    public StateMachine stateMachine;
-
-    public virtual void OnEnter(StateMachine _stateMachine)
+    public bool isComplete { get; protected set;}
+    protected float startTime;
+    public float time => Time.time - startTime;
+    
+    protected Dictionary<string, string> transitions = new Dictionary<string, string>
     {
-        stateMachine = _stateMachine;
+        {"up", "Up"},
+        {"down", "Down"},
+        {"left", "Left"},
+        {"rigth", "Rigth"}
+    };
+
+    // Blackboard variables
+    protected Animator animator;
+    protected Rigidbody2D rb;
+    protected string direction;
+
+    public virtual void Enter() { }
+    public virtual void Do() { }
+    public virtual void FixedDo() { }
+    public virtual void Exit() { }
+
+    public void Setup(Animator _animator, Rigidbody2D _rb) 
+    {
+        animator = _animator;
+        rb = _rb;
     }
 
-
-    public virtual void OnUpdate()
+    public void Direction(string _direction)
     {
-        time += Time.deltaTime;
+        direction = _direction;
     }
 
-    public virtual void OnFixedUpdate()
+    public void Initialize()
     {
-        fixedTime += Time.deltaTime;
+        isComplete = false;
+        startTime = Time.time;
     }
-    public virtual void OnLateUpdate()
-    {
-        lateTime += Time.deltaTime;
-    }
-
-    public virtual void OnExit()
-    {
-
-    }
-
-    #region Passthrough Methods
-
-    /// <summary>
-    /// Removes a gameobject, component, or asset.
-    /// </summary>
-    /// <param name="obj">The type of Component to retrieve.</param>
-    protected static void Destroy(UnityEngine.Object obj)
-    {
-        UnityEngine.Object.Destroy(obj);
-    }
-
-    /// <summary>
-    /// Returns the component of type T if the game object has one attached, null if it doesn't.
-    /// </summary>
-    /// <typeparam name="T"></typeparam>
-    /// <returns></returns>
-    protected T GetComponent<T>() where T : Component { return stateMachine.GetComponent<T>(); }
-
-    /// <summary>
-    /// Returns the component of Type <paramref name="type"/> if the game object has one attached, null if it doesn't.
-    /// </summary>
-    /// <param name="type">The type of Component to retrieve.</param>
-    /// <returns></returns>
-    protected Component GetComponent(System.Type type) { return stateMachine.GetComponent(type); }
-
-    /// <summary>
-    /// Returns the component with name <paramref name="type"/> if the game object has one attached, null if it doesn't.
-    /// </summary>
-    /// <param name="type">The type of Component to retrieve.</param>
-    /// <returns></returns>
-    protected Component GetComponent(string type) { return stateMachine.GetComponent(type); }
-    #endregion
 }
