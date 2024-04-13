@@ -11,12 +11,12 @@ public class ButtonMenuHover : MonoBehaviour, IPointerEnterHandler, IPointerExit
     public GameObject buttonComponent;
 
     private Vector3 normalVector;
-    private Vector3 hoverVector;
-    private Vector3 TargetVector;
-    private Color TargetColor;
+    public Vector3 hoverVector;
+    public Vector3 TargetVector;
+    public Color TargetColor;
 
     private Color normalColor = Color.white;
-    private Color hoverColor = Color.yellow;
+    public Color hoverColor = Color.yellow;
     void Start()
     {
         transitionSpeed = 5f * Time.deltaTime;

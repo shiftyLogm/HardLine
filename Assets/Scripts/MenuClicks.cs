@@ -1,6 +1,7 @@
 using NovaSamples.Effects;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 public class MenuClicks : MonoBehaviour
 {
     public static bool SetMenuNemGame;
@@ -17,6 +18,11 @@ public class MenuClicks : MonoBehaviour
     public RectTransform blockblur_rect;
     public RectTransform PanelNewGame;
     public RectTransform PanelMainMenu;
+    private Vector3 InitialVectorButtonMenu;
+    private Vector3 TargetVectorButtonMenu;
+    private GameObject[] buttonsMenu;
+    public List<Button> buttonComponents = new List<Button>();
+    public List<ButtonMenuHover> eventsHover = new List<ButtonMenuHover>();
 
     void Start()
     {
@@ -28,8 +34,36 @@ public class MenuClicks : MonoBehaviour
         PanelNewGame.anchoredPosition = new Vector2(-1920, -.46f);
         bonfirePos.anchoredPosition = new Vector2(570, -367.7f);
         blockblur_rect.anchoredPosition = new Vector2(504, -356);
-        blockblur_obj.SetActive(false);
         PanelMainMenu.anchoredPosition = new Vector2(0, 0);
+        blockblur_obj.SetActive(false);
+        buttonsMenu = GameObject.FindGameObjectsWithTag("ButtonMenu");
+        InitialVectorButtonMenu = buttonsMenu[0].transform.localScale;
+        TargetVectorButtonMenu = buttonsMenu[0].GetComponent<ButtonMenuHover>().hoverVector;
+    }
+
+    private void DisableAndEnableOnClick(List<Button> list, bool value)
+    {
+        foreach(var button in list) button.interactable = value;
+    }
+
+    private void DisableHoverButton(List<ButtonMenuHover> list, Color color, Vector3 vector)
+    {
+        foreach(var idx in list)
+        {
+            var a = idx.GetComponent<ButtonMenuHover>();
+            a.hoverColor = color;
+            a.hoverVector = vector;
+        }
+    }
+
+    private void turnButtonsNormal()
+    {
+        foreach (var button in buttonsMenu)
+        {
+            var hoverComp = button.GetComponent<ButtonMenuHover>();
+            hoverComp.hoverColor = Color.yellow;
+            hoverComp.hoverVector = TargetVectorButtonMenu;
+        }
     }
 
     public void NewGameButtonClick()
@@ -39,6 +73,8 @@ public class MenuClicks : MonoBehaviour
         LeanTween.move(PanelNewGame, new Vector2(-4, -.46f), 1f).setEase(LeanTweenType.easeInOutCubic);
         LeanTween.move(PanelMainMenu, new Vector2(1920, 0), 1f).setEase(LeanTweenType.easeInOutCubic);
         SetMenuNemGame = true;
+        DisableAndEnableOnClick(buttonComponents, false);
+        DisableHoverButton(eventsHover, Color.white, InitialVectorButtonMenu);
     }
 
     public void OptionsButtonClick()
@@ -50,6 +86,8 @@ public class MenuClicks : MonoBehaviour
         Invoke("activateBlur", .25f);
         blockblur_obj.SetActive(true);
         SetMenuOptions = true;
+        DisableAndEnableOnClick(buttonComponents, false);
+        DisableHoverButton(eventsHover, Color.white, InitialVectorButtonMenu);
     }
 
     public void ExitButtonClick() 
@@ -69,6 +107,8 @@ public class MenuClicks : MonoBehaviour
         LeanTween.value(gameObject, updateBlur, 30f, 0f, .5f).setEase(LeanTweenType.easeInOutQuad);
         Invoke("desactivateBlur", .25f);
         SetMenuOptions = false;
+        DisableAndEnableOnClick(buttonComponents, true);
+        turnButtonsNormal();
     }
 
     public void ArrowButtonClickNewGame()
@@ -78,6 +118,8 @@ public class MenuClicks : MonoBehaviour
         LeanTween.move(blockblur_rect, new Vector2(504, -356), 1f).setEase(LeanTweenType.easeInOutCubic);
         LeanTween.move(PanelNewGame, new Vector2(-1920, -.46f), 1f).setEase(LeanTweenType.easeInOutCubic);
         SetMenuNemGame = false;
+        DisableAndEnableOnClick(buttonComponents, true);
+        turnButtonsNormal();
     }
 
     void updateBlur(float val) => BlurEffect.blurRadius = val;
