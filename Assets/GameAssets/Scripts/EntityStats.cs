@@ -5,8 +5,11 @@ using UnityEngine;
 public class EntityStats : MonoBehaviour
 {
     public int maxHp;
-    int hp;
+    float hp;
     public float moveSpeed;
+    public float attackRange;
+    public float attackDamage;
+    public float dashForce;
     
 
     // Start is called before the first frame update
@@ -19,5 +22,20 @@ public class EntityStats : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void TakeDamage(float _damage)
+    {
+        hp -= _damage;
+
+        if(hp <= 0)
+        {
+            Death();
+        }
+    }
+
+    void Death()
+    {
+        Destroy(this.gameObject);
     }
 }

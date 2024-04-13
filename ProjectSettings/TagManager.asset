@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Menu
   - PlayerSprite
+  - PlayerAttackPoints
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - UiBlur
   - OptionsMenu
   - arrow
-  - 
+  - Enemies
   - 
   - 
   - 
