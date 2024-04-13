@@ -486,7 +486,7 @@ GameObject:
   - component: {fileID: 86936135}
   m_Layer: 5
   m_Name: NG2
-  m_TagString: Untagged
+  m_TagString: TabNG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -560,6 +560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae60a0a1de33474b9855781d307f625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scaleHover: {x: 0, y: 0, z: 0}
   targetScale: {x: 1.07, y: 1.07, z: 1.07}
 --- !u!114 &86936135
 MonoBehaviour:
@@ -1896,7 +1897,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae60a0a1de33474b9855781d307f625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScale: {x: 2.54, y: 1.27, z: 2.54}
+  scaleHover: {x: 0, y: 0, z: 0}
+  targetScale: {x: 2.388, y: 1.194, z: 2.388}
 --- !u!1 &206293328
 GameObject:
   m_ObjectHideFlags: 0
@@ -2076,7 +2078,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae60a0a1de33474b9855781d307f625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScale: {x: 0.95, y: 0.95, z: 0.95}
+  scaleHover: {x: 0, y: 0, z: 0}
+  targetScale: {x: 0.948, y: 0.948, z: 0.948}
 --- !u!114 &265287060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2121,7 +2124,7 @@ GameObject:
   - component: {fileID: 302930782}
   m_Layer: 5
   m_Name: NG3
-  m_TagString: Untagged
+  m_TagString: TabNG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2195,6 +2198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae60a0a1de33474b9855781d307f625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scaleHover: {x: 0, y: 0, z: 0}
   targetScale: {x: 1.07, y: 1.07, z: 1.07}
 --- !u!114 &302930782
 MonoBehaviour:
@@ -2474,6 +2478,12 @@ MonoBehaviour:
   blockblur_rect: {fileID: 153423514}
   PanelNewGame: {fileID: 131123770}
   PanelMainMenu: {fileID: 914672393}
+  buttonComponents:
+  - {fileID: 2007236582}
+  - {fileID: 905914080}
+  eventsHover:
+  - {fileID: 2007236585}
+  - {fileID: 905914083}
 --- !u!1 &383046026
 GameObject:
   m_ObjectHideFlags: 0
@@ -4073,7 +4083,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae60a0a1de33474b9855781d307f625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScale: {x: 1.04, y: 1.04, z: 1.04}
+  scaleHover: {x: 0, y: 0, z: 0}
+  targetScale: {x: 1.056, y: 1.056, z: 1.056}
 --- !u!114 &897854358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4191,7 +4202,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae60a0a1de33474b9855781d307f625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScale: {x: 0.95, y: 0.95, z: 0.95}
+  scaleHover: {x: 0, y: 0, z: 0}
+  targetScale: {x: 0.948, y: 0.948, z: 0.948}
 --- !u!1 &905623895
 GameObject:
   m_ObjectHideFlags: 0
@@ -4207,7 +4219,7 @@ GameObject:
   - component: {fileID: 905623900}
   m_Layer: 5
   m_Name: NG1
-  m_TagString: Untagged
+  m_TagString: TabNG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4219,16 +4231,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 905623895}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.000597994, w: 0.9999998}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1053038395}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.069}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.000061035156}
+  m_AnchoredPosition: {x: 0, y: -0.000076293945}
   m_SizeDelta: {x: 1638.49, y: 216}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &905623897
@@ -4281,6 +4293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae60a0a1de33474b9855781d307f625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scaleHover: {x: 0, y: 0, z: 0}
   targetScale: {x: 1.07, y: 1.07, z: 1.07}
 --- !u!114 &905623900
 MonoBehaviour:
@@ -4326,7 +4339,7 @@ GameObject:
   - component: {fileID: 905914080}
   m_Layer: 5
   m_Name: OptionsButton
-  m_TagString: Untagged
+  m_TagString: ButtonMenu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4460,6 +4473,10 @@ MonoBehaviour:
   transitionSpeed: 2
   textComponent: {fileID: 1357617072}
   buttonComponent: {fileID: 905914078}
+  hoverVector: {x: 0, y: 0, z: 0}
+  TargetVector: {x: 0, y: 0, z: 0}
+  TargetColor: {r: 0, g: 0, b: 0, a: 0}
+  hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!1 &914672392
 GameObject:
   m_ObjectHideFlags: 0
@@ -6711,7 +6728,7 @@ GameObject:
   - component: {fileID: 1874093599}
   m_Layer: 5
   m_Name: ExitGameButton
-  m_TagString: Untagged
+  m_TagString: ButtonMenu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6845,6 +6862,10 @@ MonoBehaviour:
   transitionSpeed: 2
   textComponent: {fileID: 607013060}
   buttonComponent: {fileID: 1874093597}
+  hoverVector: {x: 0, y: 0, z: 0}
+  TargetVector: {x: 0, y: 0, z: 0}
+  TargetColor: {r: 0, g: 0, b: 0, a: 0}
+  hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!1 &1893458560
 GameObject:
   m_ObjectHideFlags: 0
@@ -7152,7 +7173,7 @@ GameObject:
   - component: {fileID: 2007236582}
   m_Layer: 5
   m_Name: NewGameButton
-  m_TagString: Untagged
+  m_TagString: ButtonMenu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7286,6 +7307,10 @@ MonoBehaviour:
   transitionSpeed: 2
   textComponent: {fileID: 797120278}
   buttonComponent: {fileID: 2007236580}
+  hoverVector: {x: 0, y: 0, z: 0}
+  TargetVector: {x: 0, y: 0, z: 0}
+  TargetColor: {r: 0, g: 0, b: 0, a: 0}
+  hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!1 &2032687269
 GameObject:
   m_ObjectHideFlags: 0
@@ -7538,7 +7563,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae60a0a1de33474b9855781d307f625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScale: {x: 1.884, y: 0.936, z: 1.884}
+  scaleHover: {x: 0, y: 0, z: 0}
+  targetScale: {x: 1.884, y: 0.942, z: 1.884}
 --- !u!114 &2064230625
 MonoBehaviour:
   m_ObjectHideFlags: 0
