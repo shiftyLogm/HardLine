@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
         else mov = oldMov;
     }
 
-    private string findKey(Dictionary<string, bool> dict, bool value)
+    private static string findKey(Dictionary<string, bool> dict, bool value)
     {
         var idx = dict.FirstOrDefault(x => x.Value == value);
         return idx.Key;
@@ -140,6 +140,11 @@ public class PlayerController : MonoBehaviour
             Debug.Log("atacou");
             isAttacking = true;
         }
+    }
+
+    internal static void findKey(Dictionary<Action, bool> dictArrowOptions)
+    {
+        throw new NotImplementedException();
     }
 
     #endregion;

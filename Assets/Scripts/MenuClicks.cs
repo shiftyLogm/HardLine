@@ -16,6 +16,7 @@ public class MenuClicks : MonoBehaviour
     public GameObject blockblur_obj;
     public RectTransform blockblur_rect;
     public RectTransform PanelNewGame;
+    public RectTransform PanelMainMenu;
 
     void Start()
     {
@@ -24,19 +25,19 @@ public class MenuClicks : MonoBehaviour
         MainMenuRect.anchoredPosition = new Vector2(0, -330.6f);
         OptionsMenu.anchoredPosition = new Vector2(0, 1054);
         ArrowTurnBack.transform.localScale = new Vector3(2, 1, 2);
-        PanelNewGame.anchoredPosition = new Vector2(-2005, -.46f);
+        PanelNewGame.anchoredPosition = new Vector2(-1920, -.46f);
         bonfirePos.anchoredPosition = new Vector2(570, -367.7f);
         blockblur_rect.anchoredPosition = new Vector2(504, -356);
         blockblur_obj.SetActive(false);
+        PanelMainMenu.anchoredPosition = new Vector2(0, 0);
     }
 
     public void NewGameButtonClick()
     {
         BonfireFalse.transform.position = new Vector2(2891, -1121);
-        LeanTween.move(MainMenuRect, new Vector2(1953, -330.6f), 1f).setEase(LeanTweenType.easeInOutCubic);
-        LeanTween.move(bonfirePos, new Vector2(2523, -367.7f), 1f).setEase(LeanTweenType.easeInOutCubic);
         LeanTween.move(blockblur_rect, new Vector2(2457, -356), 1f).setEase(LeanTweenType.easeInOutCubic);
         LeanTween.move(PanelNewGame, new Vector2(-4, -.46f), 1f).setEase(LeanTweenType.easeInOutCubic);
+        LeanTween.move(PanelMainMenu, new Vector2(1920, 0), 1f).setEase(LeanTweenType.easeInOutCubic);
         SetMenuNemGame = true;
     }
 
@@ -73,10 +74,9 @@ public class MenuClicks : MonoBehaviour
     public void ArrowButtonClickNewGame()
     {
         BonfireFalse.anchoredPosition = new Vector2(2891, -367.6f);
-        LeanTween.move(MainMenuRect, new Vector2(0, -330.6f), 1f).setEase(LeanTweenType.easeInOutCubic);
-        LeanTween.move(bonfirePos, new Vector2(570, -367.7f), 1f).setEase(LeanTweenType.easeInOutCubic);
+        LeanTween.move(PanelMainMenu, new Vector2(0, 0), 1f).setEase(LeanTweenType.easeInOutCubic);
         LeanTween.move(blockblur_rect, new Vector2(504, -356), 1f).setEase(LeanTweenType.easeInOutCubic);
-        LeanTween.move(PanelNewGame, new Vector2(-2005, -.46f), 1f).setEase(LeanTweenType.easeInOutCubic);
+        LeanTween.move(PanelNewGame, new Vector2(-1920, -.46f), 1f).setEase(LeanTweenType.easeInOutCubic);
         SetMenuNemGame = false;
     }
 
@@ -92,4 +92,4 @@ public class MenuClicks : MonoBehaviour
             if (SetMenuNemGame) ArrowButtonClickNewGame();
         }
     }
-}
+};
