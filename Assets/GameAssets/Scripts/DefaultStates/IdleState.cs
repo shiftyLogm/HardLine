@@ -2,16 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerRunState : State
+public class IdleState : State
 {
-    
+
     public override void Enter()
     {
         if(direction != "")
         {
             string animationToPlay = directions[direction];
-            animator.Play($"Walk{animationToPlay}");
-            
+            animator.Play($"Idle{animationToPlay}");
         }
     }
 
@@ -20,9 +19,9 @@ public class PlayerRunState : State
         if(direction != "")
         {
             string animationToPlay = directions[direction];
-            animator.Play($"Walk{animationToPlay}");
+            animator.Play($"Idle{animationToPlay}");
         }
-        
+  
     }
 
     public override void Exit()
