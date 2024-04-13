@@ -1671,6 +1671,7 @@ MonoBehaviour:
   idleState: {fileID: 1882727164}
   attackState: {fileID: 862162002}
   dashState: {fileID: 195438074}
+  animator: {fileID: 0}
 --- !u!114 &1885418273
 MonoBehaviour:
   m_ObjectHideFlags: 0
