@@ -6,13 +6,17 @@ public class PlayerAttackState : State
 {
     public override void Enter()
     {
-        string animationToPlay = transitions[direction];
+        rb.velocity = new Vector2(0,0);
+
+        string animationToPlay = directions[direction];
         animator.Play($"Attack{animationToPlay}");
     }
 
     public override void Do()
     {
-        string animationToPlay = transitions[direction];
+        rb.velocity = new Vector2(0,0);
+
+        string animationToPlay = directions[direction];
         animator.Play($"Attack{animationToPlay}");
         if(animator.GetCurrentAnimatorStateInfo(0).IsName($"Attack{animationToPlay}") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1) isComplete = true;
     }

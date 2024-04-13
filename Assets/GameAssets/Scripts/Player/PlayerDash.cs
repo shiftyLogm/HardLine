@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Callbacks;
 using UnityEngine;
 
-public class Helper
+public class PlayerDash : PlayerController
 {
-    string direction;
+    
 }

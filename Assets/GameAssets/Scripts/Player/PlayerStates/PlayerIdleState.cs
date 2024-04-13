@@ -9,7 +9,7 @@ public class PlayerIdleState : State
     {
         if(direction != "")
         {
-            string animationToPlay = transitions[direction];
+            string animationToPlay = directions[direction];
             animator.Play($"Idle{animationToPlay}");
         }
     }
@@ -18,11 +18,10 @@ public class PlayerIdleState : State
     {
         if(direction != "")
         {
-            string animationToPlay = transitions[direction];
+            string animationToPlay = directions[direction];
             animator.Play($"Idle{animationToPlay}");
         }
-
-        
+  
     }
 
     public override void Exit()
