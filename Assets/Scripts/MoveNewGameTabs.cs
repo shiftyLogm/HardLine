@@ -16,6 +16,7 @@ public class MoveNewGameTabs : MonoBehaviour
     public static bool _setMoveNG;
     public List<EventTrigger> eventsTrigger = new List<EventTrigger>();
     public List<TransformHover> eventsHover = new List<TransformHover>();
+
     void Start()
     {
         _tabPosition = GetComponent<RectTransform>();
@@ -27,6 +28,7 @@ public class MoveNewGameTabs : MonoBehaviour
         initialScaleTab = tabNG[0].transform.localScale;
         TargetScaleTab = tabNG[0].GetComponent<TransformHover>().targetScale;
     }
+    
     private void setListEventTrigger(List<EventTrigger> events, bool value)
     {
         foreach(var idx in events) idx.enabled = value;

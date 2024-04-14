@@ -38,7 +38,7 @@ public class MenuClicks : MonoBehaviour
         blockblur_obj.SetActive(false);
         buttonsMenu = GameObject.FindGameObjectsWithTag("ButtonMenu");
         InitialVectorButtonMenu = buttonsMenu[0].transform.localScale;
-        TargetVectorButtonMenu = buttonsMenu[0].GetComponent<ButtonMenuHover>().hoverVector;
+        TargetVectorButtonMenu = new Vector3(2.35f, 2.35f, 1.175f);
     }
 
     private void DisableAndEnableOnClick(List<Button> list, bool value)
