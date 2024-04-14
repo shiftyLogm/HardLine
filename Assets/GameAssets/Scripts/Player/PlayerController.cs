@@ -10,8 +10,8 @@ using System.Data;
 public class PlayerController : MonoBehaviour
 {
     // States
-    public PlayerRunState runState;
-    public PlayerIdleState idleState;
+    public RunState runState;
+    public IdleState idleState;
     public PlayerAttackState attackState;
     public PlayerDashState dashState;
 
@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
 
 
     // Variaveis
-    public Animator animator;
+    private Animator animator;
     private PlayerControls playerControls;
     private Rigidbody2D rb;
     private EntityStats entityStats;
@@ -166,7 +166,6 @@ public class PlayerController : MonoBehaviour
     {
         // Colocando o valor Vector2 a variavel de direçao criada
         mov = context.ReadValue<Vector2>();
-
     }
 
     public void OnAttack(InputAction.CallbackContext context)

@@ -7,6 +7,7 @@ TagManager:
   - Menu
   - PlayerSprite
   - PlayerAttackPoints
+  - Obstaculo
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - OptionsMenu
   - arrow
   - Enemies
-  - 
+  - Player
   - 
   - 
   - 
