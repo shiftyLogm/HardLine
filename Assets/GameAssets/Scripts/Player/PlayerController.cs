@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     bool isAttacking = false;
     bool isDashing = false;
     bool isTrueOrFalseAction = false;
+    bool canChangeDirection;
 
     // Criando uma variavel para saber a direçao para onde o jogador quer ir
     Vector2 mov;
@@ -66,7 +67,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // Seleciona a animaçao da direçao correspondente com a velocidade
-        if (rb.velocity != new Vector2(0, 0)) DirectionFacing();
+        if (rb.velocity != new Vector2(0, 0) && canChangeDirection) DirectionFacing();
 
 
         SelectState();
@@ -165,7 +166,16 @@ public class PlayerController : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         // Colocando o valor Vector2 a variavel de direçao criada
-        mov = context.ReadValue<Vector2>();
+        if(context.performed || context.started) 
+        {
+            mov = context.ReadValue<Vector2>();
+            canChangeDirection = true;
+        }
+        else if (context.canceled)
+        {
+            mov = new Vector2(0,0);
+            canChangeDirection = false;  
+        } 
     }
 
     public void OnAttack(InputAction.CallbackContext context)
