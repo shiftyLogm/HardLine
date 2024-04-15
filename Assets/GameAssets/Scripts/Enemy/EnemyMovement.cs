@@ -1,10 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using JetBrains.Annotations;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.AI;
-using UnityEngine.UI;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -15,10 +9,11 @@ public class EnemyMovement : MonoBehaviour
     public float raioVisao;
     public LayerMask layerMask;
     Transform target;
+    public Transform player;
 
-    NavMeshAgent agent;
+    //NavMeshAgent agent;
 
-    static float agentDrift = 0.0001f; // minimal
+    //static float agentDrift = 0.0001f; // minimal
     
 
     // Start is called before the first frame update
@@ -26,10 +21,10 @@ public class EnemyMovement : MonoBehaviour
     {
         entityStats = GetComponent<EntityStats>();
         rb = GetComponent<Rigidbody2D>();
-        agent = GetComponent<NavMeshAgent>();
+        //agent = GetComponent<NavMeshAgent>();
 
-        agent.updateRotation = false;
-        agent.updateUpAxis = false;
+        //agent.updateRotation = false;
+        //agent.updateUpAxis = false;
 
         target = null;
     }
@@ -42,12 +37,13 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        agent.isStopped = true;
+
     }
 
     void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, raioVisao);
+        Gizmos.DrawRay(transform.position, player.position - transform.position);
     }
 
     void FindPlayer()
@@ -66,7 +62,6 @@ public class EnemyMovement : MonoBehaviour
                 if(hit.transform.CompareTag("Player")) 
                 {
                     target = collider.transform;
-                    agent.SetDestination(target.position);
                     return;
                 }
             }
@@ -78,25 +73,26 @@ public class EnemyMovement : MonoBehaviour
     { 
         FindPlayer();
 
-        if(agent.hasPath) 
+        if(target != null) 
         {
-            Vector2 direction = agent.destination - transform.position; // Direçao que o objeto tem que ir
+            Vector2 direction = target.position - transform.position; // Direçao que o objeto tem que ir
             direction = direction.normalized; // Normalizando essa direçao
-            Debug.Log(direction);
-            rb.velocity = direction * entityStats.moveSpeed * Time.fixedDeltaTime; 
+            rb.velocity = direction * entityStats.moveSpeed * Time.fixedDeltaTime;
+            return;
         }
+        rb.velocity = new Vector2(0,0);
     }
 
 
     // Funçao apenas para resolver um erro do NavMeshAgent
-    void SetDestination(GameObject target)
+    /*void SetDestination(GameObject target)
     {   
 		if(Mathf.Abs(transform.position.x - target.transform.position.x) < agentDrift)
         {
             var driftPos = target.transform.position + new Vector3(agentDrift, 0f, 0f);
             agent.SetDestination(driftPos);
         }
-    }
+    }*/
 
     
 }
