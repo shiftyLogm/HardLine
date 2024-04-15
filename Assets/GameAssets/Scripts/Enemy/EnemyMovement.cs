@@ -1,19 +1,22 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyMovement : MonoBehaviour
 {
     private EntityStats entityStats;
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
 
     // Campo de visao variaveis
     public float raioVisao;
     public LayerMask layerMask;
+
     Transform target;
-    public Transform player;
+    Transform player;
 
-    //NavMeshAgent agent;
+    NavMeshAgent agent;
 
-    //static float agentDrift = 0.0001f; // minimal
+    // Aumento altura da linha ray
+    public float aumentoLinhaRay;
     
 
     // Start is called before the first frame update
@@ -21,12 +24,16 @@ public class EnemyMovement : MonoBehaviour
     {
         entityStats = GetComponent<EntityStats>();
         rb = GetComponent<Rigidbody2D>();
-        //agent = GetComponent<NavMeshAgent>();
+        agent = GetComponent<NavMeshAgent>();
 
-        //agent.updateRotation = false;
-        //agent.updateUpAxis = false;
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
+        agent.speed = 0;
 
         target = null;
+        
+        
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     // Update is called once per frame
@@ -37,18 +44,19 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-
+        
     }
 
     void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, raioVisao);
-        Gizmos.DrawRay(transform.position, player.position - transform.position);
+        //if(player != null) Gizmos.DrawRay(transform.position, new Vector2(player.transform.position.x, player.transform.position.y + aumentoLinhaRay) - new Vector2(transform.position.x, transform.position.y));
     }
 
     void FindPlayer()
     {
         Collider2D collider = Physics2D.OverlapCircle(transform.position, raioVisao, layerMask);
+
         if(collider != null) 
         {
             Vector2 pos = transform.position; // Posiçao do objeto
@@ -62,6 +70,7 @@ public class EnemyMovement : MonoBehaviour
                 if(hit.transform.CompareTag("Player")) 
                 {
                     target = collider.transform;
+                    agent.SetDestination(new Vector3(target.position.x, target.position.y + aumentoLinhaRay, 0f)); // Esse novo vector fara com que a linha do SetDestination va para o centro do target
                     return;
                 }
             }
@@ -73,26 +82,13 @@ public class EnemyMovement : MonoBehaviour
     { 
         FindPlayer();
 
-        if(target != null) 
+        if(agent.hasPath) 
         {
-            Vector2 direction = target.position - transform.position; // Direçao que o objeto tem que ir
+            Vector2 direction = agent.destination - transform.position; // Direçao que o objeto tem que ir
             direction = direction.normalized; // Normalizando essa direçao
             rb.velocity = direction * entityStats.moveSpeed * Time.fixedDeltaTime;
             return;
         }
         rb.velocity = new Vector2(0,0);
-    }
-
-
-    // Funçao apenas para resolver um erro do NavMeshAgent
-    /*void SetDestination(GameObject target)
-    {   
-		if(Mathf.Abs(transform.position.x - target.transform.position.x) < agentDrift)
-        {
-            var driftPos = target.transform.position + new Vector3(agentDrift, 0f, 0f);
-            agent.SetDestination(driftPos);
-        }
-    }*/
-
-    
+    }    
 }

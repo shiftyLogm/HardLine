@@ -23,10 +23,10 @@ public class PlayerController : MonoBehaviour
     private PlayerControls playerControls;
     private Rigidbody2D rb;
     private EntityStats entityStats;
-    bool isAttacking = false;
-    bool isDashing = false;
-    bool isTrueOrFalseAction = false;
-    bool canChangeDirection;
+    private bool isAttacking = false;
+    private bool isDashing = false;
+    private bool isTrueOrFalseAction = false;
+    private bool canChangeDirection;
 
     // Criando uma variavel para saber a direçao para onde o jogador quer ir
     Vector2 mov;
@@ -78,12 +78,7 @@ public class PlayerController : MonoBehaviour
 
     #region Direction
 
-    private string FindKey(Dictionary<string, bool> dict, bool value)
-    {
-        var idx = dict.FirstOrDefault(x => x.Value == value);
-        return idx.Key;
-    }
-    void DirectionFacing()
+    private void DirectionFacing()
     {
         Dictionary<string, bool> dictActions = new()
         {
@@ -93,7 +88,7 @@ public class PlayerController : MonoBehaviour
             {"left", rb.velocity.x < 0},
         };
 
-        var key = FindKey(dictActions, true);
+        var key = Helper.FindKey(dictActions, true);
         state.direction = key;
         idleState.direction = state.direction;
         attackState.direction = state.direction;
@@ -103,13 +98,7 @@ public class PlayerController : MonoBehaviour
 
     #region State
 
-    private State FindKeyState(Dictionary<State, bool> dict, bool value)
-    {
-        var idx = dict.FirstOrDefault(x => x.Value == value);
-        return idx.Key;
-    }
-
-    void SelectState()
+    private void SelectState()
     {
         State oldState = state;
         
@@ -123,10 +112,10 @@ public class PlayerController : MonoBehaviour
         // isTrueOrFalseActions
         if(isTrueOrFalseAction)
         {
-            state = FindKeyState(dict, true);
+            state = Helper.FindKeyState(dict, true);
             if(state == null) state = oldState;
 
-            if(state == idleState) isTrueOrFalseAction = false;
+            if(state == idleState) isTrueOrFalseAction = false; // Linha apenas necessaria por falta de pensar mais para criar outra logica
         }
 
         // Movimento
@@ -135,11 +124,10 @@ public class PlayerController : MonoBehaviour
             if (rb.velocity.x == 0 && rb.velocity.y == 0)
             {
                 state = idleState;
+                return;
             }
-            else
-            {
-                state = runState;
-            }
+
+            state = runState;
         }
 
         // Caso o oldState seja diferente state atual troca de estado
