@@ -176,6 +176,8 @@ public class PlayerController : MonoBehaviour
             mov = new Vector2(0,0);
             canChangeDirection = false;  
         } 
+
+        
     }
 
     public void OnAttack(InputAction.CallbackContext context)

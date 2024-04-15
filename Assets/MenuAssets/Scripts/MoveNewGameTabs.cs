@@ -3,15 +3,21 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using System;
+using TMPro;
+using UnityEditor;
+using UnityEngine.UIElements;
 
 public class MoveNewGameTabs : MonoBehaviour
 {
     private RectTransform _tabPosition;
+    private float _speed;
+    public RectTransform NameSaveInput;
     private Vector3 _initialPosition;
     private Vector3 _finalPosition;
-    private float _speed;
-    private Vector3 initialScaleTab; 
-    private Vector3 TargetScaleTab;
+    private Vector3 _initialScaleTab; 
+    private Vector3 _TargetScaleTab;
+    private Vector3 _targetNewSaveInputPos;
+    private Vector3 _initialNewSaveInputPos;
     private GameObject[] tabNG;
     public static bool _setMoveNG;
     public List<EventTrigger> eventsTrigger = new List<EventTrigger>();
@@ -22,11 +28,14 @@ public class MoveNewGameTabs : MonoBehaviour
         _tabPosition = GetComponent<RectTransform>();
         _initialPosition = _tabPosition.anchoredPosition;
         _finalPosition = new Vector3(-1837, 234);
+        _initialNewSaveInputPos = new Vector3(0, -678);
+        _targetNewSaveInputPos = new Vector3(0, -283);
+        NameSaveInput.anchoredPosition = _initialNewSaveInputPos; 
         _speed = .75f;
         setListEventTrigger(eventsTrigger, true);
         tabNG = GameObject.FindGameObjectsWithTag("TabNG");
-        initialScaleTab = tabNG[0].transform.localScale;
-        TargetScaleTab = tabNG[0].GetComponent<TransformHover>().targetScale;
+        _initialScaleTab = tabNG[0].transform.localScale;
+        _TargetScaleTab = tabNG[0].GetComponent<TransformHover>().targetScale;
     }
     
     private void setListEventTrigger(List<EventTrigger> events, bool value)
@@ -46,18 +55,20 @@ public class MoveNewGameTabs : MonoBehaviour
     public void moveTabs()
     {
         LeanTween.move(_tabPosition, _finalPosition, _speed).setEase(LeanTweenType.easeInOutCubic);
+        LeanTween.move(NameSaveInput, _targetNewSaveInputPos, 1).setEase(LeanTweenType.easeInOutCubic);
         _setMoveNG = true;
         MenuClicks.SetMenuNemGame = false;
         setListEventTrigger(eventsTrigger, false);
-        setListEventHover(eventsHover, initialScaleTab);
+        setListEventHover(eventsHover, _initialScaleTab);
     }
     public void turnTabs() 
     {
         LeanTween.move(_tabPosition, _initialPosition, _speed).setEase(LeanTweenType.easeInOutCubic);
+        LeanTween.move(NameSaveInput, _initialNewSaveInputPos, .5f).setEase(LeanTweenType.easeInOutCubic);
         _setMoveNG = false;
         MenuClicks.SetMenuNemGame = true;
         setListEventTrigger(eventsTrigger, true);
-        foreach(var Tab in tabNG) Tab.GetComponent<TransformHover>().targetScale = TargetScaleTab; 
+        foreach(var Tab in tabNG) Tab.GetComponent<TransformHover>().targetScale = _TargetScaleTab; 
     }   
     void Update()
     {
