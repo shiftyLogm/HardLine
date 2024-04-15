@@ -30,6 +30,8 @@ public class EnemyMovement : MonoBehaviour
 
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+
+        target = null;
     }
 
     // Update is called once per frame
@@ -50,7 +52,6 @@ public class EnemyMovement : MonoBehaviour
 
     void FindPlayer()
     {
-        Vector2 oldTargetPos;
         Collider2D collider = Physics2D.OverlapCircle(transform.position, raioVisao, layerMask);
         if(collider != null) 
         {
@@ -64,14 +65,12 @@ public class EnemyMovement : MonoBehaviour
             {    
                 if(hit.transform.CompareTag("Player")) 
                 {
-                    oldTargetPos = target.position;
                     target = collider.transform;
-                    agent.SetDestination(oldTargetPos);
+                    agent.SetDestination(target.position);
                     return;
                 }
             }
         }
-        
         target = null;
     }
 
