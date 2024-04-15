@@ -22,6 +22,7 @@ public class MoveNewGameTabs : MonoBehaviour
     public static bool _setMoveNG;
     public List<EventTrigger> eventsTrigger = new List<EventTrigger>();
     public List<TransformHover> eventsHover = new List<TransformHover>();
+    private NameSave objNameSave;
 
     void Start()
     {
@@ -36,6 +37,7 @@ public class MoveNewGameTabs : MonoBehaviour
         tabNG = GameObject.FindGameObjectsWithTag("TabNG");
         _initialScaleTab = tabNG[0].transform.localScale;
         _TargetScaleTab = tabNG[0].GetComponent<TransformHover>().targetScale;
+        objNameSave = GameObject.FindObjectOfType<NameSave>();
     }
     
     private void setListEventTrigger(List<EventTrigger> events, bool value)
@@ -60,6 +62,7 @@ public class MoveNewGameTabs : MonoBehaviour
         MenuClicks.SetMenuNemGame = false;
         setListEventTrigger(eventsTrigger, false);
         setListEventHover(eventsHover, _initialScaleTab);
+        objNameSave.setFocusInputField();
     }
     public void turnTabs() 
     {

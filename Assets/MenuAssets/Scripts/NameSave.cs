@@ -7,21 +7,25 @@ using UnityEngine.UI;
 public class NameSave : MonoBehaviour
 {
     public TMP_InputField saveName;
+    public TextMeshProUGUI Normaltext;
+    public TextMeshProUGUI Placeholder;
+    private string Placeholdertext;
 
     void Start()
     {
         saveName = GetComponent<TMP_InputField>();
+        Placeholdertext = Placeholder.text;
     }
 
-    void setFocusInputField() 
+    public void setFocusInputField() 
     {
         saveName.Select();
         saveName.ActivateInputField();
+        Placeholder.text = ""; 
     }
 
-    void Update()
+    public void deselectInputField()
     {
-        if (MoveNewGameTabs._setMoveNG) Invoke("setFocusInputField", 1.1f);
+        if (Normaltext.text.Length <= 1) Placeholder.text = Placeholdertext;
     }
-    
 }
