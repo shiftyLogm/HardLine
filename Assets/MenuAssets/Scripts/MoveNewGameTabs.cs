@@ -6,11 +6,13 @@ using System;
 using TMPro;
 using UnityEditor;
 using UnityEngine.UIElements;
+using UnityEditor.Rendering;
 
 public class MoveNewGameTabs : MonoBehaviour
 {
     private RectTransform _tabPosition;
-    private float _speed;
+    private float _speedExit;
+    private float _speedEnter;
     public RectTransform NameSaveInput;
     private Vector3 _initialPosition;
     private Vector3 _finalPosition;
@@ -23,6 +25,7 @@ public class MoveNewGameTabs : MonoBehaviour
     public List<EventTrigger> eventsTrigger = new List<EventTrigger>();
     public List<TransformHover> eventsHover = new List<TransformHover>();
     private NameSave objNameSave;
+    private HoverTabsClassNG objClassNG;
 
     void Start()
     {
@@ -30,14 +33,16 @@ public class MoveNewGameTabs : MonoBehaviour
         _initialPosition = _tabPosition.anchoredPosition;
         _finalPosition = new Vector3(-1837, 234);
         _initialNewSaveInputPos = new Vector3(0, -678);
-        _targetNewSaveInputPos = new Vector3(0, -283);
+        _targetNewSaveInputPos = new Vector3(0, -342);
         NameSaveInput.anchoredPosition = _initialNewSaveInputPos; 
-        _speed = .75f;
+        _speedEnter = .65f;
+        _speedExit = .9f;
         setListEventTrigger(eventsTrigger, true);
         tabNG = GameObject.FindGameObjectsWithTag("TabNG");
         _initialScaleTab = tabNG[0].transform.localScale;
         _TargetScaleTab = tabNG[0].GetComponent<TransformHover>().targetScale;
-        objNameSave = GameObject.FindObjectOfType<NameSave>();
+        objNameSave = FindObjectOfType<NameSave>();
+        objClassNG = FindObjectOfType<HoverTabsClassNG>();
     }
     
     private void setListEventTrigger(List<EventTrigger> events, bool value)
@@ -56,22 +61,24 @@ public class MoveNewGameTabs : MonoBehaviour
     }
     public void moveTabs()
     {
-        LeanTween.move(_tabPosition, _finalPosition, _speed).setEase(LeanTweenType.easeInOutCubic);
+        LeanTween.move(_tabPosition, _finalPosition, _speedEnter).setEase(LeanTweenType.easeInOutCubic);
         LeanTween.move(NameSaveInput, _targetNewSaveInputPos, 1).setEase(LeanTweenType.easeInOutCubic);
         _setMoveNG = true;
         MenuClicks.SetMenuNemGame = false;
         setListEventTrigger(eventsTrigger, false);
         setListEventHover(eventsHover, _initialScaleTab);
         objNameSave.setFocusInputField();
+        objClassNG.classAnimation(-100, objClassNG.flexSpeedEnter);
     }
     public void turnTabs() 
     {
-        LeanTween.move(_tabPosition, _initialPosition, _speed).setEase(LeanTweenType.easeInOutCubic);
+        LeanTween.move(_tabPosition, _initialPosition, _speedExit).setEase(LeanTweenType.easeInOutCubic);
         LeanTween.move(NameSaveInput, _initialNewSaveInputPos, .5f).setEase(LeanTweenType.easeInOutCubic);
         _setMoveNG = false;
         MenuClicks.SetMenuNemGame = true;
         setListEventTrigger(eventsTrigger, true);
-        foreach(var Tab in tabNG) Tab.GetComponent<TransformHover>().targetScale = _TargetScaleTab; 
+        foreach(var Tab in tabNG) Tab.GetComponent<TransformHover>().targetScale = _TargetScaleTab;
+        objClassNG.classAnimation(620, objClassNG.flexSpeedExit);
     }   
     void Update()
     {

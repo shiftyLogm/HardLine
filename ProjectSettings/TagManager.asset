@@ -8,6 +8,9 @@ TagManager:
   - PlayerSprite
   - PlayerAttackPoints
   - Obstaculo
+  - TabNG
+  - ButtonMenu
+  - Classes
   layers:
   - Default
   - TransparentFX
