@@ -85,7 +85,9 @@ public class EnemyMovement : MonoBehaviour
         if(agent.hasPath) 
         {
             Vector2 direction = agent.destination - transform.position; // Direçao que o objeto tem que ir
-            Debug.Log(agent.destination);
+            Debug.Log("agente destination" + agent.destination);
+            Debug.Log("pos" + transform.position);
+            Debug.Log("direction" + direction);
             direction = direction.normalized; // Normalizando essa direçao
             rb.velocity = direction * entityStats.moveSpeed * Time.fixedDeltaTime;
             return;
