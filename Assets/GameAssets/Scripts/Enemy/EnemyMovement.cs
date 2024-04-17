@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Threading.Tasks;
+using TreeEditor;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -54,6 +56,7 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         FindPlayer();  
+        // Debug.Log(agent.remainingDistance);
     }
 
     void OnDrawGizmos()
@@ -62,7 +65,7 @@ public class EnemyMovement : MonoBehaviour
         //if(player != null) Gizmos.DrawRay(transform.position, new Vector2(player.transform.position.x, player.transform.position.y + aumentoLinhaRay) - new Vector2(transform.position.x, transform.position.y));
     }
 
-  void FindPlayer()
+    async void FindPlayer()
     {
         Collider2D collider = Physics2D.OverlapCircle(transform.position, raioVisao, layerMask);
 
@@ -80,11 +83,14 @@ public class EnemyMovement : MonoBehaviour
                 {
                     target = collider.transform;
                     agent.SetDestination(new Vector2(target.position.x, target.position.y + aumentoLinhaRay)); // Esse novo vector fara com que a linha do SetDestination va para o centro do target
-                    patrol = false;
+                    patrol = false; 
                     return;
                 }
             }
         }
+        
+        if (agent.remainingDistance < 0.1f) transform.position = agent.destination;
+
         target = null; 
     }
 
