@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -17,6 +18,12 @@ public class EnemyMovement : MonoBehaviour
 
     // Aumento altura da linha ray
     public float aumentoLinhaRay;
+
+    // Lugar que o inimigo vai voltar quando nao encontrar player
+    GameObject[] enemySpawns;
+    private int indexEnemySpawns = 0;
+    private bool patrol = true;
+    private bool coroutineRunning = false;
     
 
     // Start is called before the first frame update
@@ -28,12 +35,13 @@ public class EnemyMovement : MonoBehaviour
 
         agent.updateRotation = false;
         agent.updateUpAxis = false;
-        agent.speed = 0;
 
         target = null;
         
-        
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        // EnemySpawns
+        enemySpawns = GameObject.FindGameObjectsWithTag("EnemySpawns");
     }
 
     // Update is called once per frame
@@ -44,7 +52,9 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        
+        FindPlayer();  
+
+         // Setando o Z para 0
     }
 
     void OnDrawGizmos()
@@ -53,7 +63,7 @@ public class EnemyMovement : MonoBehaviour
         //if(player != null) Gizmos.DrawRay(transform.position, new Vector2(player.transform.position.x, player.transform.position.y + aumentoLinhaRay) - new Vector2(transform.position.x, transform.position.y));
     }
 
-    void FindPlayer()
+  void FindPlayer()
     {
         Collider2D collider = Physics2D.OverlapCircle(transform.position, raioVisao, layerMask);
 
@@ -70,28 +80,60 @@ public class EnemyMovement : MonoBehaviour
                 if(hit.transform.CompareTag("Player")) 
                 {
                     target = collider.transform;
-                    agent.SetDestination(new Vector3(target.position.x, target.position.y + aumentoLinhaRay, 0f)); // Esse novo vector fara com que a linha do SetDestination va para o centro do target
+                    agent.SetDestination(new Vector2(target.position.x, target.position.y + aumentoLinhaRay)); // Esse novo vector fara com que a linha do SetDestination va para o centro do target
+                    patrol = false;
                     return;
                 }
             }
         }
-        target = null;
+        target = null; 
+    }
+
+    IEnumerator PatrolFunc()
+    {
+        if(coroutineRunning) yield break;
+        coroutineRunning = true;
+        patrol = true;
+
+        Debug.Log("Dentro da rotina");
+        while(patrol)
+        {
+            
+            Debug.Log("indo ate spawn");
+            agent.SetDestination(new Vector2(enemySpawns[indexEnemySpawns].transform.position.x, enemySpawns[indexEnemySpawns].transform.position.y));
+            
+            // Rotina ira parar ate que ele chegue ao spawn
+            yield return new WaitUntil(() => new Vector2(transform.position.x, transform.position.y) == new Vector2(enemySpawns[indexEnemySpawns].transform.position.x, enemySpawns[indexEnemySpawns].transform.position.y));
+            
+            // Aumentando index do spawn
+            indexEnemySpawns++;
+            if(indexEnemySpawns >= enemySpawns.Length) indexEnemySpawns = 0;
+            
+            // Dando um tempo ate ele ir para o proximo spawn
+            yield return new WaitForSeconds(3);
+
+        }
+        coroutineRunning = false;
+        Debug.Log("tenho caminho");
     }
 
     void Move()
     { 
-        FindPlayer();
-
         if(agent.hasPath) 
-        {
-            Vector2 direction = agent.destination - transform.position; // Direçao que o objeto tem que ir
-            Debug.Log("agente destination" + agent.destination);
-            Debug.Log("pos" + transform.position);
-            Debug.Log("direction" + direction);
+        {   
+            // Transformando em vector2
+            Vector2 agentDestination = new Vector2(agent.destination.x, agent.destination.y);
+            Vector2 pos = new Vector2(transform.position.x, transform.position.y);
+
+            Vector2 direction = agentDestination - pos; // Direçao que o objeto tem que ir
+
             direction = direction.normalized; // Normalizando essa direçao
             rb.velocity = direction * entityStats.moveSpeed * Time.fixedDeltaTime;
             return;
         }
+        Debug.Log("No path");
         rb.velocity = new Vector2(0,0);
+        //StartCoroutine(PatrolFunc());
+        
     }    
 }

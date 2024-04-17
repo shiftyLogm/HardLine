@@ -11,6 +11,7 @@ TagManager:
   - TabNG
   - ButtonMenu
   - Classes
+  - EnemySpawns
   layers:
   - Default
   - TransparentFX
