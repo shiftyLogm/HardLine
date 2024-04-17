@@ -17,13 +17,10 @@ public class NameSave : MonoBehaviour
         Placeholdertext = Placeholder.text;
     }
 
-    public void setFocusInputField() 
+    public void selectInputField()
     {
-        saveName.Select();
-        saveName.ActivateInputField();
-        Placeholder.text = ""; 
+        Placeholder.text = "";
     }
-
     public void deselectInputField()
     {
         if (Normaltext.text.Length <= 1) Placeholder.text = Placeholdertext;

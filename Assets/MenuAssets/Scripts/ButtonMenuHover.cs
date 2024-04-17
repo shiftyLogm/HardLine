@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class ButtonMenuHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public float transitionSpeed;
+    private float transitionSpeed;
     public TextMeshProUGUI textComponent;
 
     public GameObject buttonComponent;

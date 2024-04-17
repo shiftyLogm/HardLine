@@ -24,7 +24,6 @@ public class MoveNewGameTabs : MonoBehaviour
     public static bool _setMoveNG;
     public List<EventTrigger> eventsTrigger = new List<EventTrigger>();
     public List<TransformHover> eventsHover = new List<TransformHover>();
-    private NameSave objNameSave;
     private HoverTabsClassNG objClassNG;
 
     void Start()
@@ -41,7 +40,6 @@ public class MoveNewGameTabs : MonoBehaviour
         tabNG = GameObject.FindGameObjectsWithTag("TabNG");
         _initialScaleTab = tabNG[0].transform.localScale;
         _TargetScaleTab = tabNG[0].GetComponent<TransformHover>().targetScale;
-        objNameSave = FindObjectOfType<NameSave>();
         objClassNG = FindObjectOfType<HoverTabsClassNG>();
     }
     
@@ -67,7 +65,6 @@ public class MoveNewGameTabs : MonoBehaviour
         MenuClicks.SetMenuNemGame = false;
         setListEventTrigger(eventsTrigger, false);
         setListEventHover(eventsHover, _initialScaleTab);
-        objNameSave.setFocusInputField();
         objClassNG.classAnimation(-100, objClassNG.flexSpeedEnter);
     }
     public void turnTabs() 
