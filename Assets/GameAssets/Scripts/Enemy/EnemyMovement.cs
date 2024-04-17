@@ -42,6 +42,7 @@ public class EnemyMovement : MonoBehaviour
 
         // EnemySpawns
         enemySpawns = GameObject.FindGameObjectsWithTag("EnemySpawns");
+
     }
 
     // Update is called once per frame
@@ -53,8 +54,6 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         FindPlayer();  
-
-         // Setando o Z para 0
     }
 
     void OnDrawGizmos()
@@ -121,6 +120,7 @@ public class EnemyMovement : MonoBehaviour
     { 
         if(agent.hasPath) 
         {   
+
             // Transformando em vector2
             Vector2 agentDestination = new Vector2(agent.destination.x, agent.destination.y);
             Vector2 pos = new Vector2(transform.position.x, transform.position.y);
@@ -131,6 +131,7 @@ public class EnemyMovement : MonoBehaviour
             rb.velocity = direction * entityStats.moveSpeed * Time.fixedDeltaTime;
             return;
         }
+
         Debug.Log("No path");
         rb.velocity = new Vector2(0,0);
         //StartCoroutine(PatrolFunc());
