@@ -82,8 +82,8 @@ public class EnemyMovement : MonoBehaviour
                 if(hit.transform.CompareTag("Player")) 
                 {
                     target = collider.transform;
-                    agent.SetDestination(new Vector2(target.position.x, target.position.y + aumentoLinhaRay)); // Esse novo vector fara com que a linha do SetDestination va para o centro do target
-                    patrol = false; 
+                    agent.SetDestination(new Vector3(target.position.x, target.position.y + aumentoLinhaRay, 0)); // Esse novo vector fara com que a linha do SetDestination va para o centro do target
+                    patrol = false;
                     return;
                 }
             }
