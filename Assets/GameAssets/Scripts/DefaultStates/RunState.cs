@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class RunState : State
 {
     
@@ -11,7 +7,6 @@ public class RunState : State
         {
             string animationToPlay = directions[direction];
             animator.Play($"Walk{animationToPlay}");
-            
         }
     }
 

@@ -1,18 +1,14 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Xml;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using System.Linq;
-using System.Data;
+
 
 public class PlayerController : MonoBehaviour
 {
     // States
     public RunState runState;
     public IdleState idleState;
-    public PlayerAttackState attackState;
+    public AttackState attackState;
     public PlayerDashState dashState;
 
     State state;
@@ -32,11 +28,15 @@ public class PlayerController : MonoBehaviour
     Vector2 mov;
     Vector2 oldMov;
 
+    // PlayerAttack
+    PlayerAttack playerAttack;
+
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
         entityStats = GetComponent<EntityStats>();
+        playerAttack = GetComponent<PlayerAttack>();
 
         // States Setup
         idleState.Setup(animator, rb);
@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
     {
         if(state == dashState)
         {
-            dashState.mov = oldMov;
+            dashState.mov = oldMov; // Setando qual direçao devo ir ao dar dash
             return;
         }
 
@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour
             {"up", rb.velocity.y > 0},
             {"down", rb.velocity.y < 0},
             {"right", rb.velocity.x > 0},
-            {"left", rb.velocity.x < 0},
+            {"left", rb.velocity.x < 0}
         };
 
         var key = Helper.FindKey(dictActions, true);
@@ -115,7 +115,7 @@ public class PlayerController : MonoBehaviour
             state = Helper.FindKeyState(dict, true);
             if(state == null) state = oldState;
 
-            if(state == idleState) isTrueOrFalseAction = false; // Linha apenas necessaria por falta de pensar mais para criar outra logica
+            if(state == idleState) isTrueOrFalseAction = false;
         }
 
         // Movimento
@@ -174,6 +174,7 @@ public class PlayerController : MonoBehaviour
         {
             isTrueOrFalseAction = true;
             isAttacking = true;
+            playerAttack.Attack();
         }
     }
 

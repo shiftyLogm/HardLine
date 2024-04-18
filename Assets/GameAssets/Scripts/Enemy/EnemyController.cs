@@ -8,12 +8,15 @@ public class EnemyController : MonoBehaviour
     // States
     public IdleState idleState;
     public RunState runState;
+    public AttackState attackState;
 
     State state;
 
     // Variaveis
     private Animator animator;
-    private bool isTrueOrFalseAction = false;
+    public bool isTrueOrFalseAction = false;
+    public bool isAttacking = false;
+    private bool coroutineRunning = false;
 
     // EnemyMovement
     EnemyMovement enemyMovement;
@@ -32,6 +35,7 @@ public class EnemyController : MonoBehaviour
         // Setup dos States
         idleState.Setup(animator, enemyMovement.rb);
         runState.Setup(animator, enemyMovement.rb);
+        attackState.Setup(animator, enemyMovement.rb);
     }
 
     // Update is called once per frame
@@ -40,7 +44,22 @@ public class EnemyController : MonoBehaviour
         if(enemyMovement.rb.velocity != new Vector2(0,0)) DirectionFacing();
 
         SelectState();
-        state.Do();
+        // Se nao for o attackState, state ira rolar normal
+        if(state != attackState) 
+        {
+            // Parando a rotina caso ela esteja em execuçao
+            if(coroutineRunning)
+            {
+                coroutineRunning = false;
+                StopCoroutine(AttackDelayFunc());
+            }
+            state.Do();
+            return;
+        }
+        
+        // Se for o attackState, state tera um delay
+        coroutineRunning = true;
+        StartCoroutine(AttackDelayFunc());
     }
 
     #region DirectionFacing
@@ -49,24 +68,38 @@ public class EnemyController : MonoBehaviour
     {
         Dictionary<string, bool> dict = new()
         {
-            {"up", enemyMovement.rb.velocity.y > 0},
-            {"down", enemyMovement.rb.velocity.y < 0},
-            {"right", enemyMovement.rb.velocity.x > 0},
-            {"left", enemyMovement.rb.velocity.y < 0}
+            {"up", enemyMovement.rb.velocity.y > 0 && !(enemyMovement.rb.velocity.x > enemyMovement.rb.velocity.y)},
+            {"down", enemyMovement.rb.velocity.y < 0 && !(enemyMovement.rb.velocity.x < enemyMovement.rb.velocity.y)},
+            {"right", enemyMovement.rb.velocity.x > 0 && !(enemyMovement.rb.velocity.y > enemyMovement.rb.velocity.x)},
+            {"left", enemyMovement.rb.velocity.x < 0 && !(enemyMovement.rb.velocity.y < enemyMovement.rb.velocity.x)}
         };
 
         var key = Helper.FindKey(dict, true);
         state.direction = key;
         idleState.direction = state.direction;
+        attackState.direction = state.direction;
     }
 
     #endregion
-
 
     #region States
     private void SelectState()
     {
         State oldState = state;
+
+        Dictionary<State, bool> dict = new()
+        {
+            {attackState, isAttacking && (state == idleState || state == runState)}
+        };
+
+        // isTrueOrFalseActions
+        if(isTrueOrFalseAction)
+        {
+            state = Helper.FindKeyState(dict, true);
+            if(state == null) state = oldState;
+
+            if(state == idleState) isTrueOrFalseAction = false;
+        }
 
         // Movimento
         if(!isTrueOrFalseAction)
@@ -87,6 +120,19 @@ public class EnemyController : MonoBehaviour
             state.Initialize();
             state.Enter();
         }
+        if(state.isComplete)
+        {
+            isAttacking = false;
+            isTrueOrFalseAction = false;
+        }
+    }
+
+    IEnumerator AttackDelayFunc()
+    {
+        if(coroutineRunning) yield break; // Ira parar caso ja haja uma rotina dessa em execuçao
+
+        yield return new WaitForSeconds(2);
+        state.Do();    
     }
 
     #endregion

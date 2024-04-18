@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
@@ -45,7 +42,7 @@ public class PlayerAttack : MonoBehaviour
     // Funçao apenas para desenha a hitbox
     void OnDrawGizmosSelected()
     {
-        if(attackPoints[attackPoint] == null)
+        if(attackPoints[attackPoint] == null || attackPoint > attackPoints.Length)
         {
             return;
         }

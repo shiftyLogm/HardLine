@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAttackState : State
+public class AttackState : State
 {
     public override void Enter()
     {
