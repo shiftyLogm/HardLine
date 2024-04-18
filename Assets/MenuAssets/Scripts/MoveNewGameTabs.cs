@@ -3,6 +3,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using System;
 using System.IO;
+using Unity.VisualScripting.Antlr3.Runtime;
+using TMPro;
+using UnityEngine.UI;
 
 public class MoveNewGameTabs : MonoBehaviour
 {
@@ -22,7 +25,7 @@ public class MoveNewGameTabs : MonoBehaviour
     public List<TransformHover> eventsHover = new List<TransformHover>();
     private HoverTabsClassNG objClassNG;
     public static bool clearText;
-    private GameObject[] classChangeobj;
+    public GameObject[] classChangeobj;
     void Start()
     {
         _tabPosition = GetComponent<RectTransform>();
@@ -38,7 +41,6 @@ public class MoveNewGameTabs : MonoBehaviour
         _initialScaleTab = tabNG[0].transform.localScale;
         _TargetScaleTab = tabNG[0].GetComponent<TransformHover>().targetScale;
         objClassNG = FindObjectOfType<HoverTabsClassNG>();
-        classChangeobj = GameObject.FindGameObjectsWithTag("Classes");
     }
     
     private void setListEventTrigger(List<EventTrigger> events, bool value)
@@ -68,6 +70,7 @@ public class MoveNewGameTabs : MonoBehaviour
     }
     public void turnTabs() 
     {
+        foreach (var materialtab in classChangeobj) materialtab.GetComponent<Image>().material = null;
         LeanTween.move(_tabPosition, _initialPosition, _speedExit).setEase(LeanTweenType.easeInOutCubic);
         LeanTween.move(NameSaveInput, _initialNewSaveInputPos, .5f).setEase(LeanTweenType.easeInOutCubic);
         _setMoveNG = false;
@@ -83,6 +86,7 @@ public class MoveNewGameTabs : MonoBehaviour
             try { obj.GetComponent<HoverTabsClassNG>().OnPointerClick(true); }
             catch (NullReferenceException) {};
         }   
+
     }
     void Update()
     {
