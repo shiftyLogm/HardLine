@@ -29,7 +29,7 @@ public abstract class State : MonoBehaviour
     public virtual void FixedDo() { }
     public virtual void Exit() { }
 
-    public void Setup(Animator _animator, Rigidbody2D _rb, [Optional]EntityStats _entityStats) 
+    public void Setup([Optional]Animator _animator, [Optional]Rigidbody2D _rb, [Optional]EntityStats _entityStats)
     {
         animator = _animator;
         rb = _rb;

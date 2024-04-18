@@ -10,12 +10,12 @@ public class EntityStats : MonoBehaviour
     public float attackRange;
     public float attackDamage;
     public float dashForce;
-    
+
 
     // Start is called before the first frame update
     void Start()
     {
-        hp = maxHp;   
+  
     }
 
     // Update is called once per frame
@@ -37,5 +37,10 @@ public class EntityStats : MonoBehaviour
     void Death()
     {
         Destroy(this.gameObject);
+    }
+
+    public void SetHp()
+    {
+        hp = maxHp;
     }
 }

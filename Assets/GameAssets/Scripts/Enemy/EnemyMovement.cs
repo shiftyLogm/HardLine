@@ -7,6 +7,9 @@ public class EnemyMovement : MonoBehaviour
     private EntityStats entityStats;
     public Rigidbody2D rb;
 
+    // EnemyController
+    EnemyController enemyController;
+
     // Campo de visao variaveis
     public float raioVisao;
     public LayerMask layerMask;
@@ -32,6 +35,7 @@ public class EnemyMovement : MonoBehaviour
         entityStats = GetComponent<EntityStats>();
         rb = GetComponent<Rigidbody2D>();
         agent = GetComponent<NavMeshAgent>();
+        enemyController = GetComponent<EnemyController>();
 
         agent.updateRotation = false;
         agent.updateUpAxis = false;
@@ -54,7 +58,6 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         FindPlayer();  
-        // Debug.Log(agent.remainingDistance);
     }
 
     void OnDrawGizmos()
@@ -63,7 +66,7 @@ public class EnemyMovement : MonoBehaviour
         //if(player != null) Gizmos.DrawRay(transform.position, new Vector2(player.transform.position.x, player.transform.position.y + aumentoLinhaRay) - new Vector2(transform.position.x, transform.position.y));
     }
 
-    async void FindPlayer()
+    void FindPlayer()
     {
         Collider2D collider = Physics2D.OverlapCircle(transform.position, raioVisao, layerMask);
 
@@ -82,48 +85,44 @@ public class EnemyMovement : MonoBehaviour
                     target = collider.transform;
                     agent.SetDestination(new Vector3(target.position.x, target.position.y + aumentoLinhaRay, 0)); // Esse novo vector fara com que a linha do SetDestination va para o centro do target
                     patrol = false;
+                    StopCoroutine(PatrolFunc());
+                    coroutineRunning = false;
                     return;
                 }
             }
         }
-        
-        if (agent.remainingDistance < 0.1f) transform.position = agent.destination;
-
         target = null; 
     }
 
     IEnumerator PatrolFunc()
     {
-        if(coroutineRunning) yield break;
+        if(coroutineRunning) yield break; // Se ja tiver uma rotina dessa ativa, ele nao inicia outra
+        
         coroutineRunning = true;
-        patrol = true;
-
-        Debug.Log("Dentro da rotina");
         while(patrol)
         {
-            
-            Debug.Log("indo ate spawn");
-            agent.SetDestination(new Vector2(enemySpawns[indexEnemySpawns].transform.position.x, enemySpawns[indexEnemySpawns].transform.position.y));
+            // Dando um tempo ate ele ir para o proximo spawn
+            yield return new WaitForSeconds(3);
+
+            agent.SetDestination(new Vector3(enemySpawns[indexEnemySpawns].transform.position.x, enemySpawns[indexEnemySpawns].transform.position.y, 0f));
+
             
             // Rotina ira parar ate que ele chegue ao spawn
-            yield return new WaitUntil(() => new Vector2(transform.position.x, transform.position.y) == new Vector2(enemySpawns[indexEnemySpawns].transform.position.x, enemySpawns[indexEnemySpawns].transform.position.y));
+            yield return new WaitUntil(() => new Vector3(transform.position.x, transform.position.y, 0f) == new Vector3(enemySpawns[indexEnemySpawns].transform.position.x, enemySpawns[indexEnemySpawns].transform.position.y, 0f));
             
             // Aumentando index do spawn
             indexEnemySpawns++;
             if(indexEnemySpawns >= enemySpawns.Length) indexEnemySpawns = 0;
-            
-            // Dando um tempo ate ele ir para o proximo spawn
-            yield return new WaitForSeconds(3);
 
         }
         coroutineRunning = false;
-        Debug.Log("tenho caminho");
     }
 
     void Move()
     { 
         if(agent.hasPath) 
         {   
+            if (agent.remainingDistance <= 0.1f) transform.position = agent.destination;
 
             // Transformando em vector2
             Vector2 agentDestination = new Vector2(agent.destination.x, agent.destination.y);
@@ -132,13 +131,27 @@ public class EnemyMovement : MonoBehaviour
             Vector2 direction = agentDestination - pos; // Direçao que o objeto tem que ir
 
             direction = direction.normalized; // Normalizando essa direçao
+            
+            // Se ele estiver perto do inimigo, ele ira atacar
+            if(target)
+            {
+                if(agent.remainingDistance <= 0.9f)
+                {
+                    enemyController.isAttacking = true;
+                    enemyController.isTrueOrFalseAction = true;
+                    return;
+                }
+            }
+
             rb.velocity = direction * entityStats.moveSpeed * Time.fixedDeltaTime;
             return;
         }
 
         Debug.Log("No path");
         rb.velocity = new Vector2(0,0);
-        //StartCoroutine(PatrolFunc());
+        patrol = true;
+        StartCoroutine(PatrolFunc());
         
     }    
+
 }
