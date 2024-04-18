@@ -1,12 +1,8 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using System;
-using TMPro;
-using UnityEditor;
-using UnityEngine.UIElements;
-using UnityEditor.Rendering;
+using System.IO;
 
 public class MoveNewGameTabs : MonoBehaviour
 {
@@ -25,7 +21,8 @@ public class MoveNewGameTabs : MonoBehaviour
     public List<EventTrigger> eventsTrigger = new List<EventTrigger>();
     public List<TransformHover> eventsHover = new List<TransformHover>();
     private HoverTabsClassNG objClassNG;
-
+    public static bool clearText;
+    private GameObject[] classChangeobj;
     void Start()
     {
         _tabPosition = GetComponent<RectTransform>();
@@ -41,6 +38,7 @@ public class MoveNewGameTabs : MonoBehaviour
         _initialScaleTab = tabNG[0].transform.localScale;
         _TargetScaleTab = tabNG[0].GetComponent<TransformHover>().targetScale;
         objClassNG = FindObjectOfType<HoverTabsClassNG>();
+        classChangeobj = GameObject.FindGameObjectsWithTag("Classes");
     }
     
     private void setListEventTrigger(List<EventTrigger> events, bool value)
@@ -66,6 +64,7 @@ public class MoveNewGameTabs : MonoBehaviour
         setListEventTrigger(eventsTrigger, false);
         setListEventHover(eventsHover, _initialScaleTab);
         objClassNG.classAnimation(-100, objClassNG.flexSpeedEnter);
+        clearText = false;
     }
     public void turnTabs() 
     {
@@ -76,7 +75,15 @@ public class MoveNewGameTabs : MonoBehaviour
         setListEventTrigger(eventsTrigger, true);
         foreach(var Tab in tabNG) Tab.GetComponent<TransformHover>().targetScale = _TargetScaleTab;
         objClassNG.classAnimation(620, objClassNG.flexSpeedExit);
-    }   
+        objClassNG.StartGameBTN.SetActive(false);
+        objClassNG.changeClassBTN.SetActive(false);
+        clearText = true;
+        foreach (var obj in classChangeobj)
+        {
+            try { obj.GetComponent<HoverTabsClassNG>().OnPointerClick(true); }
+            catch (NullReferenceException) {};
+        }   
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) 

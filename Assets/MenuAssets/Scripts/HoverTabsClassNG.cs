@@ -32,6 +32,12 @@ public class HoverTabsClassNG : MonoBehaviour
     private GameObject NameClassObj;
     private GameObject StatusClassObj;
     public GameObject changeClassBTN;
+    public GameObject StartGameBTN;
+    private NameSave inputField;
+    public static string ClassNewGameData;
+    private MenuClicks objMenuClicks;
+    public Material[] glowEffectTab;
+    public Color emissionColor;
     void Start()
     {
         initialColor = new Color(166f/ 255, 166f/ 255, 166f/ 255, 1);
@@ -43,22 +49,31 @@ public class HoverTabsClassNG : MonoBehaviour
         targetScale = new Vector3(1.1f, 1.1f, 1.1f);
         initialArmourColor = new Color(20f / 225f, 20f / 225f, 20f / 225f, 1);
         writeEffect = FindObjectOfType<WriteStatusEffect>();
-        Classes = GameObject.FindGameObjectsWithTag("Classes");
         changeClassBTN.SetActive(false);
+        inputField = FindObjectOfType<NameSave>();
+        objMenuClicks = FindObjectOfType<MenuClicks>();
+        tabClass.GetComponent<Image>().material = null;
     }
     public void OnPointerEnter()
     {
+        Find();
         colorHover = targetColor;
         scaleHover = targetScale;
+        writeEffect.nameText = NameClassObj.GetComponent<TextMeshProUGUI>();
+        writeEffect.statusText = StatusClassObj.GetComponent<TextMeshProUGUI>();
+        StartCoroutine(writeEffect.DisplayLine(NameClass, StatusClass));
+        ClassNewGameData = NameClassObj.name;
+        objMenuClicks.globalVolume.enabled = true;
+    }
+
+    private void Find()
+    {
         idxStringValue = tabClass.name;
         idxInt = Array.IndexOf(ClassesString, idxStringValue);
         armourImage = tabClass.transform.Find($"ClassArmour{idxInt + 1}");
         armourImage.GetComponent<Image>().color = targetColor;
         NameClassObj = GameObject.Find($"NameClass{idxInt + 1}");
         StatusClassObj = GameObject.Find($"StatusClass{idxInt + 1}");
-        writeEffect.nameText = NameClassObj.GetComponent<TextMeshProUGUI>();
-        writeEffect.statusText = StatusClassObj.GetComponent<TextMeshProUGUI>();
-        StartCoroutine(writeEffect.DisplayLine(NameClass, StatusClass));
     }
 
     public void OnPointerExit()
@@ -69,13 +84,25 @@ public class HoverTabsClassNG : MonoBehaviour
         StopAllCoroutines();
         NameClassObj.GetComponent<TextMeshProUGUI>().text = "";
         StatusClassObj.GetComponent<TextMeshProUGUI>().text = "";
+        objMenuClicks.globalVolume.enabled = false;
+        foreach (var materialtab in Classes) materialtab.GetComponent<Image>().material = null;
     }
 
     public void OnPointerClick(bool value)
     {
         foreach(var classObj in Classes) classObj.GetComponent<EventTrigger>().enabled = value;
+        tabClass.GetComponent<Image>().material = glowEffectTab[idxInt];
+        LeanTween.value(0, 1.5f, .5f).setOnUpdate((float value) => glowEffectTab[idxInt].SetColor("_Color", emissionColor * value));
         changeClassBTN.SetActive(!value);
-        try { if (value) OnPointerExit(); }
+        try 
+        {
+            if (value) 
+            {
+                OnPointerExit(); 
+                changeClassBTN.GetComponent<TransformHover>().transform.localScale = new Vector3(1f, 1f, 1f);
+                changeClassBTN.GetComponent<TransformHover>().scaleHover = new Vector3(1f, 1f, 1f);
+            }
+        }
         catch (NullReferenceException) {} 
     }
     public void classAnimation(int rectvalueY, float[] arrayspeed)
@@ -91,5 +118,6 @@ public class HoverTabsClassNG : MonoBehaviour
     {
         tabClass.GetComponent<Image>().color = Color.Lerp(tabClass.GetComponent<Image>().color, colorHover, _transitionSpeedColor);
         tabClass.transform.localScale = Vector3.Lerp(tabClass.transform.localScale, scaleHover, _transitionSpeedScale);
+        StartGameBTN.SetActive(changeClassBTN.activeSelf && inputField.Normaltext.text.Length > 1 ? true : false);
     }
 }

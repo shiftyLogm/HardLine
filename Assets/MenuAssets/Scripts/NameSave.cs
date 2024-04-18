@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class NameSave : MonoBehaviour
@@ -17,12 +18,14 @@ public class NameSave : MonoBehaviour
         Placeholdertext = Placeholder.text;
     }
 
-    public void selectInputField()
-    {
-        Placeholder.text = "";
-    }
+    public void selectInputField() => Placeholder.text = "";
     public void deselectInputField()
     {
         if (Normaltext.text.Length <= 1) Placeholder.text = Placeholdertext;
+    }
+
+    void Update()
+    {
+        if (MoveNewGameTabs.clearText) Normaltext.text = "";
     }
 }

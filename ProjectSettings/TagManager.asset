@@ -12,6 +12,7 @@ TagManager:
   - ButtonMenu
   - Classes
   - EnemySpawns
+  - ChangeClass
   layers:
   - Default
   - TransparentFX
