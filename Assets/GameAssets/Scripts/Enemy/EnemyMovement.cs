@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using System.Data;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -14,7 +16,7 @@ public class EnemyMovement : MonoBehaviour
     public float raioVisao;
     public LayerMask layerMask;
 
-    Transform target;
+    GameObject target;
     Transform player;
 
     NavMeshAgent agent;
@@ -27,6 +29,9 @@ public class EnemyMovement : MonoBehaviour
     private int indexEnemySpawns = 0;
     private bool patrol = true;
     private bool coroutineRunning = false;
+
+    // Variaveis
+    private bool hasPath = false;
     
 
     // Start is called before the first frame update
@@ -57,7 +62,11 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        FindPlayer();  
+        FindPlayer();
+
+
+        Debug.Log("x" + rb.velocity.x);
+        Debug.Log("y" + rb.velocity.y);
     }
 
     void OnDrawGizmos()
@@ -80,10 +89,10 @@ public class EnemyMovement : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(pos, direction); // Criando uma linha da posiçao do objeto ate a direçao criada e guardando tudo que essa linha colide em uma variavel
             if(hit.transform != null) 
             {    
-                if(hit.transform.CompareTag("Player")) 
+                if(hit.transform.tag == "Player") 
                 {
-                    target = collider.transform;
-                    agent.SetDestination(new Vector3(target.position.x, target.position.y + aumentoLinhaRay, 0)); // Esse novo vector fara com que a linha do SetDestination va para o centro do target
+                    target = collider.gameObject;
+                    SetTarget(target);
                     patrol = false;
                     StopCoroutine(PatrolFunc());
                     coroutineRunning = false;
@@ -96,20 +105,18 @@ public class EnemyMovement : MonoBehaviour
 
     IEnumerator PatrolFunc()
     {
-        if(coroutineRunning) yield break; // Se ja tiver uma rotina dessa ativa, ele nao inicia outra
-        
         coroutineRunning = true;
         while(patrol)
         {
             // Dando um tempo ate ele ir para o proximo spawn
             yield return new WaitForSeconds(3);
+            target = enemySpawns[indexEnemySpawns];
+            SetTarget(target);
 
-            agent.SetDestination(new Vector3(enemySpawns[indexEnemySpawns].transform.position.x, enemySpawns[indexEnemySpawns].transform.position.y, 0f));
-
-            
             // Rotina ira parar ate que ele chegue ao spawn
-            yield return new WaitUntil(() => new Vector3(transform.position.x, transform.position.y, 0f) == new Vector3(enemySpawns[indexEnemySpawns].transform.position.x, enemySpawns[indexEnemySpawns].transform.position.y, 0f));
-            
+            yield return new WaitUntil(() => !hasPath);
+        
+
             // Aumentando index do spawn
             indexEnemySpawns++;
             if(indexEnemySpawns >= enemySpawns.Length) indexEnemySpawns = 0;
@@ -120,27 +127,32 @@ public class EnemyMovement : MonoBehaviour
 
     void Move()
     { 
-        if(agent.hasPath) 
+        if(hasPath) 
         {   
-            if (agent.remainingDistance <= 0.1f) transform.position = agent.destination;
-
             // Transformando em vector2
             Vector2 agentDestination = new Vector2(agent.destination.x, agent.destination.y);
             Vector2 pos = new Vector2(transform.position.x, transform.position.y);
 
             Vector2 direction = agentDestination - pos; // Direçao que o objeto tem que ir
 
+            float remainingDistance = Mathf.Ceil((direction.x - direction.y) * 100) / 100; // Distancia que falta para ir
+            if(Mathf.Abs(remainingDistance) <= 0.02f) 
+            {
+                hasPath = false;
+                return;
+            }
+
             direction = direction.normalized; // Normalizando essa direçao
             
             // Se ele estiver perto do inimigo, ele ira atacar
             if(target)
             {
-                if(agent.remainingDistance <= 0.9f)
-                {
-                    enemyController.isAttacking = true;
-                    enemyController.isTrueOrFalseAction = true;
-                    return;
-                }
+                // if(agent.remainingDistance <= 0.9f)
+                // {
+                //     enemyController.isAttacking = true;
+                //     enemyController.isTrueOrFalseAction = true;
+                //     return;
+                // }
             }
 
             rb.velocity = direction * entityStats.moveSpeed * Time.fixedDeltaTime;
@@ -150,8 +162,13 @@ public class EnemyMovement : MonoBehaviour
         Debug.Log("No path");
         rb.velocity = new Vector2(0,0);
         patrol = true;
-        StartCoroutine(PatrolFunc());
+        if(!coroutineRunning) StartCoroutine(PatrolFunc());
         
     }    
 
+    private void SetTarget(GameObject target)
+    {
+        agent.SetDestination(new Vector3(target.transform.position.x, target.transform.position.y, 0)); // Esse novo vector fara com que a linha do SetDestination va para o centro do target
+        hasPath = true;
+    }
 }

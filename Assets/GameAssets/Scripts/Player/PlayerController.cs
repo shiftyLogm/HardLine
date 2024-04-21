@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour
 
         // State inicial
         state = idleState;
+        state.direction = "right";
         attackState.direction = "right";
 
         // Referenciando o script PlayerControls a variavel criada

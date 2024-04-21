@@ -31,6 +31,7 @@ public class EnemyController : MonoBehaviour
         
         // State inicial
         state = idleState;
+        state.direction = "right";
 
         // Setup dos States
         idleState.Setup(animator, enemyMovement.rb);
@@ -41,6 +42,8 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(state);
+
         if(enemyMovement.rb.velocity != new Vector2(0,0)) DirectionFacing();
 
         SelectState();
@@ -58,7 +61,7 @@ public class EnemyController : MonoBehaviour
         }
         
         // Se for o attackState, state tera um delay
-        coroutineRunning = true;
+        
         StartCoroutine(AttackDelayFunc());
     }
 
@@ -68,10 +71,10 @@ public class EnemyController : MonoBehaviour
     {
         Dictionary<string, bool> dict = new()
         {
-            {"up", enemyMovement.rb.velocity.y > 0 && !(enemyMovement.rb.velocity.x > enemyMovement.rb.velocity.y)},
-            {"down", enemyMovement.rb.velocity.y < 0 && !(enemyMovement.rb.velocity.x < enemyMovement.rb.velocity.y)},
-            {"right", enemyMovement.rb.velocity.x > 0 && !(enemyMovement.rb.velocity.y > enemyMovement.rb.velocity.x)},
-            {"left", enemyMovement.rb.velocity.x < 0 && !(enemyMovement.rb.velocity.y < enemyMovement.rb.velocity.x)}
+            {"up", enemyMovement.rb.velocity.y > 0 && (enemyMovement.rb.velocity.x < enemyMovement.rb.velocity.y)},
+            {"down", enemyMovement.rb.velocity.y < 0 && (enemyMovement.rb.velocity.x > enemyMovement.rb.velocity.y)},
+            {"right", enemyMovement.rb.velocity.x > 0 && (enemyMovement.rb.velocity.y < enemyMovement.rb.velocity.x)},
+            {"left", enemyMovement.rb.velocity.x < 0 && (enemyMovement.rb.velocity.y > enemyMovement.rb.velocity.x)}
         };
 
         var key = Helper.FindKey(dict, true);
@@ -129,10 +132,14 @@ public class EnemyController : MonoBehaviour
 
     IEnumerator AttackDelayFunc()
     {
-        if(coroutineRunning) yield break; // Ira parar caso ja haja uma rotina dessa em execuçao
+        if(coroutineRunning) yield break;
+        coroutineRunning = true;
 
-        yield return new WaitForSeconds(2);
-        state.Do();    
+        while(state == attackState)
+        {
+            yield return new WaitForSeconds(1);
+            state.Do(); 
+        }   
     }
 
     #endregion
