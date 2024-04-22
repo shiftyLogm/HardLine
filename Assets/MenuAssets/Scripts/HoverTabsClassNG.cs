@@ -52,7 +52,6 @@ public class HoverTabsClassNG : MonoBehaviour
         changeClassBTN.SetActive(false);
         inputField = FindObjectOfType<NameSave>();
         objMenuClicks = FindObjectOfType<MenuClicks>();
-        tabClass.GetComponent<Image>().material = null;
     }
     public void OnPointerEnter()
     {
@@ -85,15 +84,21 @@ public class HoverTabsClassNG : MonoBehaviour
         NameClassObj.GetComponent<TextMeshProUGUI>().text = "";
         StatusClassObj.GetComponent<TextMeshProUGUI>().text = "";
         objMenuClicks.globalVolume.enabled = false;
-        foreach (var materialtab in Classes) materialtab.GetComponent<Image>().material = null;
+        tabClass.GetComponent<Image>().material = null;
     }
 
     public void OnPointerClick(bool value)
     {
-        foreach(var classObj in Classes) classObj.GetComponent<EventTrigger>().enabled = value;
+        foreach(var classObj in Classes)
+        {
+            classObj.GetComponent<EventTrigger>().enabled = value;
+            classObj.GetComponent<Image>().material = null;
+        }
+
         tabClass.GetComponent<Image>().material = glowEffectTab[idxInt];
         LeanTween.value(0, 1.5f, .5f).setOnUpdate((float value) => glowEffectTab[idxInt].SetColor("_Color", emissionColor * value));
         changeClassBTN.SetActive(!value);
+
         try 
         {
             if (value) 
@@ -103,7 +108,17 @@ public class HoverTabsClassNG : MonoBehaviour
                 changeClassBTN.GetComponent<TransformHover>().scaleHover = new Vector3(1f, 1f, 1f);
             }
         }
+
         catch (NullReferenceException) {} 
+    }
+
+    public void turnTabsNormal(bool value)
+    {
+        foreach (var idx in Classes) 
+        {
+            idx.GetComponent<HoverTabsClassNG>().enabled = value;
+            idx.GetComponent<EventTrigger>().enabled = value;
+        }
     }
     public void classAnimation(int rectvalueY, float[] arrayspeed)
     {

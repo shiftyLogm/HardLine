@@ -67,10 +67,11 @@ public class MoveNewGameTabs : MonoBehaviour
         setListEventHover(eventsHover, _initialScaleTab);
         objClassNG.classAnimation(-100, objClassNG.flexSpeedEnter);
         clearText = false;
+        objClassNG.turnTabsNormal(true);
     }
     public void turnTabs() 
     {
-        foreach (var materialtab in classChangeobj) materialtab.GetComponent<Image>().material = null;
+        objClassNG.turnTabsNormal(false);
         LeanTween.move(_tabPosition, _initialPosition, _speedExit).setEase(LeanTweenType.easeInOutCubic);
         LeanTween.move(NameSaveInput, _initialNewSaveInputPos, .5f).setEase(LeanTweenType.easeInOutCubic);
         _setMoveNG = false;
@@ -81,12 +82,6 @@ public class MoveNewGameTabs : MonoBehaviour
         objClassNG.StartGameBTN.SetActive(false);
         objClassNG.changeClassBTN.SetActive(false);
         clearText = true;
-        foreach (var obj in classChangeobj)
-        {
-            try { obj.GetComponent<HoverTabsClassNG>().OnPointerClick(true); }
-            catch (NullReferenceException) {};
-        }   
-
     }
     void Update()
     {
