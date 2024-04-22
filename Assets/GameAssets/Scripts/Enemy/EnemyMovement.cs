@@ -53,7 +53,6 @@ public class EnemyMovement : MonoBehaviour
 
         // EnemySpawns
         enemySpawns = GameObject.FindGameObjectsWithTag("EnemySpawns");
-
     }
 
     // Update is called once per frame
@@ -148,7 +147,7 @@ public class EnemyMovement : MonoBehaviour
 
         Debug.Log("No path");
         rb.velocity = new Vector2(0,0);
-        patrol = target != null && target.gameObject.tag != "Player";
+        patrol = !hasPath;
         if(!coroutineRunning) StartCoroutine(PatrolFunc());
         
     }    
