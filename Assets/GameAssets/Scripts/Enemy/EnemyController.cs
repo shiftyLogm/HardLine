@@ -68,7 +68,6 @@ public class EnemyController : MonoBehaviour
         }
         
         // Se for o attackState, state tera um delay
-        
         StartCoroutine(AttackDelayFunc());
     }
 
@@ -124,13 +123,13 @@ public class EnemyController : MonoBehaviour
         }
 
         // Caso o oldState seja diferente state atual troca de estado
-        if(state != oldState)
+        if(state != oldState || state.isComplete)
         {
             oldState.Exit();
             state.Initialize();
             state.Enter();
         }
-        if(state.isComplete)
+        if(state.isComplete && !enemyMovement.insideCollider)
         {
             isAttacking = false;
             isTrueOrFalseAction = false;

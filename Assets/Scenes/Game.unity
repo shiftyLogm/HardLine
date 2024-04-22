@@ -619,7 +619,7 @@ GameObject:
   m_Component:
   - component: {fileID: 437160692}
   - component: {fileID: 437160693}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: RbMaxRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -883,7 +883,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 692270808}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Classes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -983,7 +983,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 826709090}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: AttackTypes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1115,7 +1115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 915624762}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: UpAttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1146,7 +1146,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1100168641}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: RightAttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1225,7 +1225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1152577126}
   - component: {fileID: 1152577127}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: MageClass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1344,7 +1344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1305799837}
   - component: {fileID: 1305799838}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: MeleeAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1389,7 +1389,7 @@ MonoBehaviour:
   attackPoint: 0
   targetLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
   _attackRange: 0.33
 --- !u!1 &1429122551
 GameObject:
@@ -1400,7 +1400,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1429122552}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: DownAttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1614,7 +1614,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1577101369}
   - component: {fileID: 1577101368}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: WarriorClass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1840,7 +1840,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1634890001}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: AttackPoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2015,6 +2015,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   aumentoLinhaRay: 0.23
+  insideCollider: 0
 --- !u!114 &1646377136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2065,7 +2066,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1661881920}
   - component: {fileID: 1661881919}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: RangedClass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2622,7 +2623,7 @@ GameObject:
   - component: {fileID: 1960101577}
   - component: {fileID: 1960101578}
   - component: {fileID: 1960101579}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2873,7 +2874,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2056310729}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: LeftAttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

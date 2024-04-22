@@ -34,6 +34,7 @@ public class EnemyMovement : MonoBehaviour
     // Variaveis
     private bool hasPath = false;
     private bool closeEnough = false;
+    public bool insideCollider = false;
     
 
     // Start is called before the first frame update
@@ -166,6 +167,7 @@ public class EnemyMovement : MonoBehaviour
         {
             if(collider.gameObject.tag == "Player")
             {
+                insideCollider = true;
                 closeEnough = true;
                 enemyController.isAttacking = true;
                 enemyController.isTrueOrFalseAction = true;
@@ -180,6 +182,7 @@ public class EnemyMovement : MonoBehaviour
         {
             if(collider.gameObject.tag == "Player")
             {
+                insideCollider = false;
                 closeEnough = false;
             }
         }

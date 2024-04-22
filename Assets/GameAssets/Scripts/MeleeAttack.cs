@@ -11,6 +11,9 @@ public class MeleeAttack : AttackState
         // Dando dano em cada objeto que foi pego
         foreach(Collider2D target in hitTargets)
         {
+            
+            if(target.GetComponent<EntityStats>() == null) Debug.Log("sem entityStats do target");
+
             target.GetComponent<EntityStats>().TakeDamage(entityStats.attackDamage);
         }
     }
