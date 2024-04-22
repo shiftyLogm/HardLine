@@ -145,8 +145,9 @@ public class EnemyController : MonoBehaviour
         while(state == attackState)
         {
             yield return new WaitForSeconds(1);
-            state.Do(); 
+            
             SelectAttackTypeAndAttack();
+            state.Do(); 
         }   
     }
 
