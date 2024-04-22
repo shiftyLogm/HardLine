@@ -11,10 +11,10 @@ public abstract class State : MonoBehaviour
     
     protected Dictionary<string, string> directions = new Dictionary<string, string>
     {
-        {"up", "Up"},
-        {"down", "Down"},
-        {"left", "Left"},
-        {"right", "Right"}
+        {"up", "UP"},
+        {"down", "DOWN"},
+        {"left", "LEFT"},
+        {"right", "RIGHT"}
     };
 
     // Blackboard variables
@@ -23,8 +23,10 @@ public abstract class State : MonoBehaviour
     protected EntityStats entityStats;
     public Vector2 mov;
     public string direction;
+    public string attackType;
+    
 
-    public virtual void Enter() { }
+    public virtual void Enter() {}
     public virtual void Do() { }
     public virtual void FixedDo() { }
     public virtual void Exit() { }

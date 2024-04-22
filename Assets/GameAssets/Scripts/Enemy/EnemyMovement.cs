@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Data;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -32,6 +33,7 @@ public class EnemyMovement : MonoBehaviour
 
     // Variaveis
     private bool hasPath = false;
+    private bool closeEnough = false;
     
 
     // Start is called before the first frame update
@@ -63,10 +65,6 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         FindPlayer();
-
-
-        Debug.Log("x" + rb.velocity.x);
-        Debug.Log("y" + rb.velocity.y);
     }
 
     void OnDrawGizmos()
@@ -127,7 +125,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Move()
     { 
-        if(hasPath) 
+        if(hasPath && !closeEnough) 
         {   
             // Transformando em vector2
             Vector2 agentDestination = new Vector2(agent.destination.x, agent.destination.y);
@@ -143,32 +141,48 @@ public class EnemyMovement : MonoBehaviour
             }
 
             direction = direction.normalized; // Normalizando essa direçao
-            
-            // Se ele estiver perto do inimigo, ele ira atacar
-            if(target)
-            {
-                // if(agent.remainingDistance <= 0.9f)
-                // {
-                //     enemyController.isAttacking = true;
-                //     enemyController.isTrueOrFalseAction = true;
-                //     return;
-                // }
-            }
 
-            rb.velocity = direction * entityStats.moveSpeed * Time.fixedDeltaTime;
+            if(!enemyController.isTrueOrFalseAction) rb.velocity = direction * entityStats.moveSpeed * Time.fixedDeltaTime;
             return;
         }
 
         Debug.Log("No path");
         rb.velocity = new Vector2(0,0);
-        patrol = true;
+        patrol = target != null && target.gameObject.tag != "Player";
         if(!coroutineRunning) StartCoroutine(PatrolFunc());
         
     }    
 
     private void SetTarget(GameObject target)
     {
-        agent.SetDestination(new Vector3(target.transform.position.x, target.transform.position.y, 0)); // Esse novo vector fara com que a linha do SetDestination va para o centro do target
+        agent.SetDestination(new Vector3(target.transform.position.x, target.transform.position.y + aumentoLinhaRay, 0)); // Esse novo vector fara com que a linha do SetDestination va para o centro do target
         hasPath = true;
+    }
+
+
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        Debug.Log(collider.gameObject.tag);
+        if(target != null && target.tag == "Player")
+        {
+            if(collider.gameObject.tag == "Player")
+            {
+                closeEnough = true;
+                enemyController.isAttacking = true;
+                enemyController.isTrueOrFalseAction = true;
+                rb.velocity = new Vector2(0,0);
+            }
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collider)
+    {
+        if(target != null && target.tag == "Player")
+        {
+            if(collider.gameObject.tag == "Player")
+            {
+                closeEnough = false;
+            }
+        }
     }
 }

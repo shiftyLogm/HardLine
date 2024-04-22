@@ -6,14 +6,14 @@ public class PlayerDashState : State
 {
     public override void Enter()
     {
-        animator.Play("DashRight");
+        animator.Play("DASHRIGHT");
     }
 
     public override void Do()
     {
-        animator.Play("DashRight");
+        animator.Play("DASHRIGHT");
         Dash();
-        if(animator.GetCurrentAnimatorStateInfo(0).IsName("DashRight") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1) isComplete = true;
+        if(animator.GetCurrentAnimatorStateInfo(0).IsName("DASHRIGHT") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1) isComplete = true;
     }
 
     public override void Exit()

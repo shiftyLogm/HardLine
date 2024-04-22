@@ -15,7 +15,7 @@ public class EntityStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-  
+        SetHp();
     }
 
     // Update is called once per frame

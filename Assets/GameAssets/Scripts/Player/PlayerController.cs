@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
 
     State state;
 
+    // Attack Types
+    public MeleeAttack meleeAttack;
 
     // Variaveis
     private Animator animator;
@@ -23,26 +25,28 @@ public class PlayerController : MonoBehaviour
     private bool isDashing = false;
     private bool isTrueOrFalseAction = false;
     private bool canChangeDirection;
+    PlayerClassesController playerClassesController;
+    
 
     // Criando uma variavel para saber a direçao para onde o jogador quer ir
     Vector2 mov;
     Vector2 oldMov;
-
-    // PlayerAttack
-    PlayerAttack playerAttack;
 
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
         entityStats = GetComponent<EntityStats>();
-        playerAttack = GetComponent<PlayerAttack>();
+        playerClassesController = GetComponent<PlayerClassesController>();
 
         // States Setup
         idleState.Setup(animator, rb);
         runState.Setup(animator, rb);
-        attackState.Setup(animator, rb);
+        attackState.Setup(animator, rb, entityStats);
         dashState.Setup(animator, rb, entityStats);
+
+        // Attack Types Setup
+        meleeAttack.Setup(animator, rb, entityStats);
 
         // State inicial
         state = idleState;
@@ -175,7 +179,7 @@ public class PlayerController : MonoBehaviour
         {
             isTrueOrFalseAction = true;
             isAttacking = true;
-            playerAttack.Attack();
+            SelectAttackTypeAndAttack();
         }
     }
 
@@ -190,4 +194,19 @@ public class PlayerController : MonoBehaviour
 
     #endregion;
 
+    #region Attack Types
+    
+    private void SelectAttackTypeAndAttack()
+    {
+        Dictionary<string, AttackState> attackTypeDict = new()
+        {
+            {"Warrior", meleeAttack}
+        };
+
+        attackTypeDict[playerClassesController.idxClass].attackPoint = attackState.SelectAttackPoint();
+        attackTypeDict[playerClassesController.idxClass].Attack();
+
+    }
+
+    #endregion
 }

@@ -11,8 +11,10 @@ public class WarriorClass : State
 
         entityStats.moveSpeed = 300;
         entityStats.attackRange = 0.35f;
-        entityStats.attackDamage = 5;
+        entityStats.attackDamage = 3;
         entityStats.dashForce = 10;
+
+        attackType = "meleeAttack";
     }
 
     public override void Do()

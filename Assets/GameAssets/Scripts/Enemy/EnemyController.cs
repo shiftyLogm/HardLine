@@ -12,6 +12,9 @@ public class EnemyController : MonoBehaviour
 
     State state;
 
+    // Attack Types
+    public MeleeAttack meleeAttack;
+
     // Variaveis
     private Animator animator;
     public bool isTrueOrFalseAction = false;
@@ -21,13 +24,16 @@ public class EnemyController : MonoBehaviour
     // EnemyMovement
     EnemyMovement enemyMovement;
 
+    // EntityStats
+    EntityStats entityStats;
+
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
-
         enemyMovement = gameObject.GetComponent<EnemyMovement>();
+        entityStats = GetComponent<EntityStats>();
         
         // State inicial
         state = idleState;
@@ -36,7 +42,8 @@ public class EnemyController : MonoBehaviour
         // Setup dos States
         idleState.Setup(animator, enemyMovement.rb);
         runState.Setup(animator, enemyMovement.rb);
-        attackState.Setup(animator, enemyMovement.rb);
+        attackState.Setup(animator, enemyMovement.rb, entityStats);
+        meleeAttack.Setup(animator, enemyMovement.rb, entityStats);
     }
 
     // Update is called once per frame
@@ -71,12 +78,12 @@ public class EnemyController : MonoBehaviour
     {
         Dictionary<string, bool> dict = new()
         {
+            {"right", enemyMovement.rb.velocity.x > 0 && (Mathf.Abs(enemyMovement.rb.velocity.y) < enemyMovement.rb.velocity.x)},
+            {"left", enemyMovement.rb.velocity.x < 0 && (Mathf.Abs(enemyMovement.rb.velocity.y) < Mathf.Abs(enemyMovement.rb.velocity.x))},
             {"up", enemyMovement.rb.velocity.y > 0 && (enemyMovement.rb.velocity.x < enemyMovement.rb.velocity.y)},
-            {"down", enemyMovement.rb.velocity.y < 0 && (enemyMovement.rb.velocity.x > enemyMovement.rb.velocity.y)},
-            {"right", enemyMovement.rb.velocity.x > 0 && (enemyMovement.rb.velocity.y < enemyMovement.rb.velocity.x)},
-            {"left", enemyMovement.rb.velocity.x < 0 && (enemyMovement.rb.velocity.y > enemyMovement.rb.velocity.x)}
+            {"down", enemyMovement.rb.velocity.y < 0 && (enemyMovement.rb.velocity.x < Mathf.Abs(enemyMovement.rb.velocity.y))}
         };
-
+ 
         var key = Helper.FindKey(dict, true);
         state.direction = key;
         idleState.direction = state.direction;
@@ -139,7 +146,18 @@ public class EnemyController : MonoBehaviour
         {
             yield return new WaitForSeconds(1);
             state.Do(); 
+            SelectAttackTypeAndAttack();
         }   
+    }
+
+    #endregion
+
+    #region Attack Types
+
+    private void SelectAttackTypeAndAttack()
+    {
+        meleeAttack.attackPoint = attackState.SelectAttackPoint();
+        meleeAttack.Attack();
     }
 
     #endregion
