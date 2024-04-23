@@ -38,6 +38,7 @@ public class EnemyController : MonoBehaviour
         // State inicial
         state = idleState;
         state.direction = "right";
+        attackState.direction = "right";
 
         // Setup dos States
         idleState.Setup(animator, enemyMovement.rb);
@@ -49,8 +50,6 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(state);
-
         if(enemyMovement.rb.velocity != new Vector2(0,0)) DirectionFacing();
 
         SelectState();
@@ -147,7 +146,8 @@ public class EnemyController : MonoBehaviour
             
             SelectAttackTypeAndAttack();
             state.Do(); 
-        }   
+        } 
+        coroutineRunning = false;
     }
 
     #endregion

@@ -145,8 +145,7 @@ public class EnemyMovement : MonoBehaviour
             if(!enemyController.isTrueOrFalseAction) rb.velocity = direction * entityStats.moveSpeed * Time.fixedDeltaTime;
             return;
         }
-
-        Debug.Log("No path");
+        
         rb.velocity = new Vector2(0,0);
         patrol = !hasPath;
         if(!coroutineRunning) StartCoroutine(PatrolFunc());
@@ -162,7 +161,6 @@ public class EnemyMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        Debug.Log(collider.gameObject.tag);
         if(target != null && target.tag == "Player")
         {
             if(collider.gameObject.tag == "Player")
@@ -178,6 +176,7 @@ public class EnemyMovement : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collider)
     {
+        Debug.Log("saiu do range");
         if(target != null && target.tag == "Player")
         {
             if(collider.gameObject.tag == "Player")

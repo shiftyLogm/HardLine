@@ -34,6 +34,7 @@ public class AttackState : State
         string animationToPlay = directions[direction];
         animator.Play($"ATTACK{animationToPlay}");
         if(animator.GetCurrentAnimatorStateInfo(0).IsName($"ATTACK{animationToPlay}") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1) isComplete = true;
+        Debug.Log(isComplete);
     }
 
     public override void Exit()
