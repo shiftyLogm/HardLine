@@ -23,23 +23,22 @@ public class AttackState : State
 
         rb.velocity = new Vector2(0,0);
 
-        string animationToPlay = directions[direction];
+        
+        animationToPlay = directions[direction];
         animator.Play($"ATTACK{animationToPlay}");
     }
 
     public override void Do()
     {
         rb.velocity = new Vector2(0,0);
-
-        string animationToPlay = directions[direction];
+        animationToPlay = directions[direction];
         animator.Play($"ATTACK{animationToPlay}");
         if(animator.GetCurrentAnimatorStateInfo(0).IsName($"ATTACK{animationToPlay}") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1) isComplete = true;
-        Debug.Log(isComplete);
     }
 
     public override void Exit()
     {
-
+        
     }
 
 

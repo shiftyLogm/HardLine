@@ -21,6 +21,7 @@ public abstract class State : MonoBehaviour
     protected Animator animator;
     protected Rigidbody2D rb;
     protected EntityStats entityStats;
+    protected string animationToPlay;
     public Vector2 mov;
     public string direction;
     public string attackType;

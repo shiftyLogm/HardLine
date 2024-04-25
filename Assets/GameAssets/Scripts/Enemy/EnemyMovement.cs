@@ -167,16 +167,12 @@ public class EnemyMovement : MonoBehaviour
             {
                 insideCollider = true;
                 closeEnough = true;
-                enemyController.isAttacking = true;
-                enemyController.isTrueOrFalseAction = true;
-                rb.velocity = new Vector2(0,0);
             }
         }
     }
 
     void OnTriggerExit2D(Collider2D collider)
     {
-        Debug.Log("saiu do range");
         if(target != null && target.tag == "Player")
         {
             if(collider.gameObject.tag == "Player")

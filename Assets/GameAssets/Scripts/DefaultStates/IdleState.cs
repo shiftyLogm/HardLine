@@ -5,7 +5,7 @@ public class IdleState : State
     {
         if(direction != "")
         {
-            string animationToPlay = directions[direction];
+            animationToPlay = directions[direction];
             animator.Play($"IDLE{animationToPlay}");
         }
     }
@@ -14,7 +14,7 @@ public class IdleState : State
     {
         if(direction != "")
         {
-            string animationToPlay = directions[direction];
+            animationToPlay = directions[direction];
             animator.Play($"IDLE{animationToPlay}");
         }
   

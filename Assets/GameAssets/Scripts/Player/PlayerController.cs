@@ -129,12 +129,11 @@ public class PlayerController : MonoBehaviour
             if (rb.velocity.x == 0 && rb.velocity.y == 0)
             {
                 state = idleState;
-                return;
             }
 
-            state = runState;
+            else state = runState;
         }
-
+        
         // Caso o oldState seja diferente state atual troca de estado
         if (state != oldState)
         {

@@ -54,11 +54,13 @@ public class EnemyController : MonoBehaviour
 
         SelectState();
         // Se nao for o attackState, state ira rolar normal
-        if(state != attackState) 
+        if(!isAttacking) 
         {
+            Debug.Log("state != attackState");
             // Parando a rotina caso ela esteja em execuçao
             if(coroutineRunning)
             {
+                Debug.Log("if(coroutineRunning)");
                 coroutineRunning = false;
                 StopCoroutine(AttackDelayFunc());
             }
@@ -66,8 +68,7 @@ public class EnemyController : MonoBehaviour
             return;
         }
         
-        // Se for o attackState, state tera um delay
-        StartCoroutine(AttackDelayFunc());
+        
     }
 
     #region DirectionFacing
@@ -115,21 +116,46 @@ public class EnemyController : MonoBehaviour
             if(enemyMovement.rb.velocity.x == 0 && enemyMovement.rb.velocity.y == 0)
             {
                 state = idleState;
-                return;
             }
 
-            state = runState;
+            else state = runState;
         }
 
+        
+
         // Caso o oldState seja diferente state atual troca de estado
-        if(state != oldState || state.isComplete)
+        if(state != oldState)
         {
+            Debug.Log("state != oldState");
             oldState.Exit();
             state.Initialize();
             state.Enter();
+            return;
         }
-        if(state.isComplete && !enemyMovement.insideCollider)
+
+        Debug.Log($"{state} : {state.isComplete}");
+        if(enemyMovement.insideCollider && state.isComplete)
         {
+            Debug.Log("IF QUE COLOCA OS DOIS PARA FALSE");
+            isAttacking = false;
+            isTrueOrFalseAction = false;
+            return;
+        }
+
+        if(enemyMovement.insideCollider)
+        {
+            // Se for o attackState, state tera um delay
+            StartCoroutine(AttackDelayFunc());
+            state.Do();
+            Debug.Log("IF QUE COLOCA OS DOIS PARA TRUE");
+            isAttacking = true;
+            isTrueOrFalseAction = true;
+            return;
+        }
+
+        if(state.isComplete)
+        {
+            Debug.Log("STATE.ISCOMPLETE");
             isAttacking = false;
             isTrueOrFalseAction = false;
         }
@@ -142,10 +168,8 @@ public class EnemyController : MonoBehaviour
 
         while(state == attackState)
         {
-            yield return new WaitForSeconds(1);
-            
             SelectAttackTypeAndAttack();
-            state.Do(); 
+            yield return new WaitForSeconds(5);
         } 
         coroutineRunning = false;
     }

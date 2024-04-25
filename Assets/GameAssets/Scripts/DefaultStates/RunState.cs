@@ -5,7 +5,7 @@ public class RunState : State
     {
         if(direction != "")
         {
-            string animationToPlay = directions[direction];
+            animationToPlay = directions[direction];
             animator.Play($"WALK{animationToPlay}");
         }
     }
@@ -14,7 +14,7 @@ public class RunState : State
     {
         if(direction != "")
         {
-            string animationToPlay = directions[direction];
+            animationToPlay = directions[direction];
             animator.Play($"WALK{animationToPlay}");
         }
         
