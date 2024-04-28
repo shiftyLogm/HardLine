@@ -1,5 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class EntityStats : MonoBehaviour
@@ -22,12 +25,13 @@ public class EntityStats : MonoBehaviour
     void Update()
     {
         BlinkDamage();
+
     }
 
     public void TakeDamage(float _damage)
     {
         hp -= _damage;
-        
+
         // Mudar cor ao tomar dano
         GetComponentInChildren<SpriteRenderer>().color = (this.tag == "Player") ? Color.red : Color.magenta;
 
@@ -50,8 +54,10 @@ public class EntityStats : MonoBehaviour
     private void BlinkDamage()
     {
         if(GetComponentInChildren<SpriteRenderer>().color == Color.white && this.tag == "Player") return;
-        if(GetComponentInChildren<SpriteRenderer>().color == Color.white && this.tag == "Enemy") return;
+        if(GetComponentInChildren<SpriteRenderer>().color == Color.red && this.tag == "Enemy") return;
 
         GetComponentInChildren<SpriteRenderer>().color = Color.Lerp(GetComponentInChildren<SpriteRenderer>().color, (this.tag == "Player") ? Color.white : Color.red, 5 * Time.deltaTime);
     }
+
+
 }

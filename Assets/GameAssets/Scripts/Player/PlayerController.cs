@@ -174,7 +174,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnAttack(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && isAttacking == false)
         {
             isTrueOrFalseAction = true;
             isAttacking = true;
