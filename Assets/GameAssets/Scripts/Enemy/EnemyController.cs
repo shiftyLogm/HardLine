@@ -53,22 +53,7 @@ public class EnemyController : MonoBehaviour
         if(enemyMovement.rb.velocity != new Vector2(0,0)) DirectionFacing();
 
         SelectState();
-        // Se nao for o attackState, state ira rolar normal
-        if(!isAttacking) 
-        {
-            Debug.Log("state != attackState");
-            // Parando a rotina caso ela esteja em execuçao
-            if(coroutineRunning)
-            {
-                Debug.Log("if(coroutineRunning)");
-                coroutineRunning = false;
-                StopCoroutine(AttackDelayFunc());
-            }
-            state.Do();
-            return;
-        }
-        
-        
+        state.Do();
     }
 
     #region DirectionFacing
@@ -105,9 +90,9 @@ public class EnemyController : MonoBehaviour
         if(isTrueOrFalseAction)
         {
             state = Helper.FindKeyState(dict, true);
-            if(state == null) state = oldState;
-
+            
             if(state == idleState) isTrueOrFalseAction = false;
+            if(state == null) state = oldState;
         }
 
         // Movimento
@@ -126,36 +111,31 @@ public class EnemyController : MonoBehaviour
         // Caso o oldState seja diferente state atual troca de estado
         if(state != oldState)
         {
-            Debug.Log("state != oldState");
             oldState.Exit();
             state.Initialize();
             state.Enter();
             return;
         }
 
-        Debug.Log($"{state} : {state.isComplete}");
+        // Se o player estiver dentro do range de ataque, e o state estiver completo, ele ira para animaçao de idle antes de atacar novamente
         if(enemyMovement.insideCollider && state.isComplete)
         {
-            Debug.Log("IF QUE COLOCA OS DOIS PARA FALSE");
-            isAttacking = false;
+            state = idleState;
             isTrueOrFalseAction = false;
             return;
         }
 
-        if(enemyMovement.insideCollider)
+        // Esse IF so vai iniciar a rotina, se for a primeira vez que o player entrou no range do inimigo (se o player sair, isso reseta)
+        if(enemyMovement.insideCollider && !coroutineRunning)
         {
-            // Se for o attackState, state tera um delay
-            StartCoroutine(AttackDelayFunc());
-            state.Do();
-            Debug.Log("IF QUE COLOCA OS DOIS PARA TRUE");
             isAttacking = true;
             isTrueOrFalseAction = true;
+            StartCoroutine(AttackDelayFunc());
             return;
         }
 
         if(state.isComplete)
         {
-            Debug.Log("STATE.ISCOMPLETE");
             isAttacking = false;
             isTrueOrFalseAction = false;
         }
@@ -163,13 +143,16 @@ public class EnemyController : MonoBehaviour
 
     IEnumerator AttackDelayFunc()
     {
-        if(coroutineRunning) yield break;
         coroutineRunning = true;
+        isAttacking = true;
 
         while(state == attackState)
         {
             SelectAttackTypeAndAttack();
-            yield return new WaitForSeconds(5);
+            isAttacking = false;
+
+            yield return new WaitForSeconds(2);
+            StartCoroutine(AttackDelayFunc());
         } 
         coroutineRunning = false;
     }

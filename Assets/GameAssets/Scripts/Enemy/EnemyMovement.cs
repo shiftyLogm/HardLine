@@ -125,6 +125,8 @@ public class EnemyMovement : MonoBehaviour
 
     void Move()
     { 
+        Debug.Log("hasPath" + hasPath);
+        Debug.Log("closeEnough" + closeEnough);
         if(hasPath && !closeEnough) 
         {   
             // Transformando em vector2

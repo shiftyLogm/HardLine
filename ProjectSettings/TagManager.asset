@@ -13,6 +13,7 @@ TagManager:
   - Classes
   - EnemySpawns
   - ChangeClass
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -44,9 +44,10 @@ public class AttackState : State
 
     void OnDrawGizmosSelected()
     {
-        if(attackPoints == null) return;
+        if(attackPoints == null) Debug.Log("sem attack points");
+        
 
-        if(attackPoints[attackPoint] == null || attackPoint > attackPoints.Length)
+        if(attackPoints[attackPoint] == null || attackPoint >= attackPoints.Length)
         {
             return;
         }
