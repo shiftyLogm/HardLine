@@ -8,7 +8,7 @@ using UnityEngine;
 public class EntityStats : MonoBehaviour
 {
     public int maxHp;
-    float hp;
+    public float hp;
     public float moveSpeed;
     public float attackRange;
     public float attackDamage;
@@ -31,6 +31,8 @@ public class EntityStats : MonoBehaviour
     public void TakeDamage(float _damage)
     {
         hp -= _damage;
+
+        HUD.Instance.ShowDamageOnScreen(_damage, this.gameObject.transform.position);
 
         // Mudar cor ao tomar dano
         GetComponentInChildren<SpriteRenderer>().color = (this.tag == "Player") ? Color.red : Color.magenta;
