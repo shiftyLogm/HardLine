@@ -99,6 +99,7 @@ namespace NavMeshPlus.Components
             get { return s_NavMeshSurfaces; }
         }
 
+
         void OnEnable()
         {
             Register(this);

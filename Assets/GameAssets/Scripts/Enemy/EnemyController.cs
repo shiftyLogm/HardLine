@@ -54,6 +54,8 @@ public class EnemyController : MonoBehaviour
 
         SelectState();
         state.Do();
+
+        transform.rotation = Quaternion.Euler(Vector3.zero);
     }
 
     #region DirectionFacing

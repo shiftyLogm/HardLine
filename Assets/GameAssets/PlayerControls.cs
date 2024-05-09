@@ -53,6 +53,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Interaction"",
+                    ""type"": ""Button"",
+                    ""id"": ""19c239df-85a0-429b-ac70-0a58c4773b42"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -132,6 +141,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bf798ba8-7fbe-4e4c-b1fc-67daafe40eb3"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""PC"",
+                    ""action"": ""Interaction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -171,6 +191,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_BasicControls_Move = m_BasicControls.FindAction("Move", throwIfNotFound: true);
         m_BasicControls_Attack = m_BasicControls.FindAction("Attack", throwIfNotFound: true);
         m_BasicControls_Dash = m_BasicControls.FindAction("Dash", throwIfNotFound: true);
+        m_BasicControls_Interaction = m_BasicControls.FindAction("Interaction", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -235,6 +256,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_BasicControls_Move;
     private readonly InputAction m_BasicControls_Attack;
     private readonly InputAction m_BasicControls_Dash;
+    private readonly InputAction m_BasicControls_Interaction;
     public struct BasicControlsActions
     {
         private @PlayerControls m_Wrapper;
@@ -242,6 +264,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_BasicControls_Move;
         public InputAction @Attack => m_Wrapper.m_BasicControls_Attack;
         public InputAction @Dash => m_Wrapper.m_BasicControls_Dash;
+        public InputAction @Interaction => m_Wrapper.m_BasicControls_Interaction;
         public InputActionMap Get() { return m_Wrapper.m_BasicControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -260,6 +283,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Dash.started += instance.OnDash;
             @Dash.performed += instance.OnDash;
             @Dash.canceled += instance.OnDash;
+            @Interaction.started += instance.OnInteraction;
+            @Interaction.performed += instance.OnInteraction;
+            @Interaction.canceled += instance.OnInteraction;
         }
 
         private void UnregisterCallbacks(IBasicControlsActions instance)
@@ -273,6 +299,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Dash.started -= instance.OnDash;
             @Dash.performed -= instance.OnDash;
             @Dash.canceled -= instance.OnDash;
+            @Interaction.started -= instance.OnInteraction;
+            @Interaction.performed -= instance.OnInteraction;
+            @Interaction.canceled -= instance.OnInteraction;
         }
 
         public void RemoveCallbacks(IBasicControlsActions instance)
@@ -313,5 +342,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
+        void OnInteraction(InputAction.CallbackContext context);
     }
 }

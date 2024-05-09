@@ -314,7 +314,7 @@ GameObject:
   - component: {fileID: 8535976162093649524}
   m_Layer: 10
   m_Name: EnemyDefault
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -414,7 +414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017915ab3c759f5409c3b8785cdf89b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 500
+  maxHp: 30
   hp: 0
   moveSpeed: 100
   attackRange: 0.35
@@ -432,7 +432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c60454cae2e7a243af58e0b05dfd9c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
+  rb: {fileID: 7207979733228987043}
   raioVisao: 6.93
   layerMask:
     serializedVersion: 2
@@ -452,7 +452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 7207979733228987043}
-  force: 0.2
+  force: 0.05
   delay: 0.15
   OnBegin:
     m_PersistentCalls:
@@ -607,7 +607,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 10
   m_Sprite: {fileID: 1422800935, guid: cf301add1a9dc564ebfb524fd0108628, type: 3}
   m_Color: {r: 0.9056604, g: 0.26059094, b: 0.26059094, a: 1}
   m_FlipX: 0

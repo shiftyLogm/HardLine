@@ -26,6 +26,9 @@ public class PlayerController : MonoBehaviour
     private bool isTrueOrFalseAction = false;
     private bool canChangeDirection;
     PlayerClassesController playerClassesController;
+
+    // Fogueira
+    public Fogueira fogueira;
     
 
     // Criando uma variavel para saber a direçao para onde o jogador quer ir
@@ -54,7 +57,7 @@ public class PlayerController : MonoBehaviour
         attackState.direction = "right";
 
         // Referenciando o script PlayerControls a variavel criada
-        playerControls = new PlayerControls();
+        playerControls = new PlayerControls();   
     }
 
     void FixedUpdate()
@@ -188,6 +191,18 @@ public class PlayerController : MonoBehaviour
         {
             isTrueOrFalseAction = true;
             isDashing = true;
+        }
+    }
+
+    public void OnInteraction(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+        {
+            if(fogueira.canUseFireplace) 
+            {
+                fogueira.Spawn();
+                fogueira.RestoreHP();
+            }
         }
     }
 
