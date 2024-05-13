@@ -58,7 +58,8 @@ public class Fogueira : MonoBehaviour
 
         float dist = Vector2.Distance(myDist, playerDist);
         
-        if(dist <= 0.615f) canUseFireplace = true;
+        canUseFireplace = dist <= 0.615f;
+        HUD.Instance.distFogPlayer = canUseFireplace;
     }
 
 }

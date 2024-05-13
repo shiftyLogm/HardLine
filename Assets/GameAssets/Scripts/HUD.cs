@@ -15,6 +15,10 @@ public class HUD : MonoBehaviour
 
     public Slider hpBar;
 
+    // Fogueira interaction
+    public GameObject interaction;
+    public bool distFogPlayer;
+
 
     void Awake()
     {
@@ -53,6 +57,12 @@ public class HUD : MonoBehaviour
     {
         hpBar.maxValue = playerStats.maxHp;
         hpBar.value = playerStats.hp;
+    }
+
+    // Mostrar Interaction
+    void ShowInteraction()
+    {
+        
     }
     
 }
