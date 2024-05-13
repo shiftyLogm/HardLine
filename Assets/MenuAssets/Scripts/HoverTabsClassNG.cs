@@ -1,9 +1,7 @@
 using System;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class HoverTabsClassNG : MonoBehaviour
@@ -79,13 +77,13 @@ public class HoverTabsClassNG : MonoBehaviour
         StopAllCoroutines();
         NameClassObj.GetComponent<TextMeshProUGUI>().text = "";
         StatusClassObj.GetComponent<TextMeshProUGUI>().text = "";
-        tabClass.GetComponent<Image>().material = null;
     }
 
     public void OnPointerClick(bool value)
     {
         foreach(var classObj in Classes) classObj.GetComponent<EventTrigger>().enabled = value;
         changeClassBTN.SetActive(!value);
+        MoveNewGameTabs._setMoveNG = value;
 
         try 
         {
@@ -98,6 +96,7 @@ public class HoverTabsClassNG : MonoBehaviour
         }
 
         catch (NullReferenceException) {} 
+        
     }
 
     public void turnTabsNormal(bool value)
@@ -125,7 +124,6 @@ public class HoverTabsClassNG : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape)) 
         {   
-            MoveNewGameTabs._setMoveNG = false;
             OnPointerClick(true);
         }
     }

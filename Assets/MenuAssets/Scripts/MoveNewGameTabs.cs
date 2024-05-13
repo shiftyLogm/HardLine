@@ -6,6 +6,7 @@ using System.IO;
 using Unity.VisualScripting.Antlr3.Runtime;
 using TMPro;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class MoveNewGameTabs : MonoBehaviour
 {
@@ -65,8 +66,8 @@ public class MoveNewGameTabs : MonoBehaviour
         MenuClicks.SetMenuNemGame = false;
         setListEventTrigger(eventsTrigger, false);
         setListEventHover(eventsHover, _initialScaleTab);
-        objClassNG.classAnimation(-100, objClassNG.flexSpeedEnter);
         clearText = false;
+        objClassNG.classAnimation(-100, objClassNG.flexSpeedEnter);
         objClassNG.turnTabsNormal(true);
     }
     public void turnTabs() 
