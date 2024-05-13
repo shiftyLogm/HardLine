@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.UI;
 
 public class NameSave : MonoBehaviour
 {
@@ -26,6 +22,6 @@ public class NameSave : MonoBehaviour
 
     void Update()
     {
-        if (MoveNewGameTabs.clearText) Normaltext.text = "";
+        if (MoveNewGameTabs.clearText) Normaltext.SetText("");
     }
 }

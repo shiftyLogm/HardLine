@@ -5339,10 +5339,6 @@ MonoBehaviour:
     BlaBla: 31'
   changeClassBTN: {fileID: 685186865}
   StartGameBTN: {fileID: 1438409098}
-  glowEffectTab:
-  - {fileID: 2100000, guid: 272f0b6224e9170409841f44036b2a33, type: 2}
-  - {fileID: 2100000, guid: 5a4a38a220d1e7540a3a50a1ab0df1cf, type: 2}
-  - {fileID: 2100000, guid: d37a3574701f62846bdcf6868554462d, type: 2}
   emissionColor: {r: 0, g: 0.7490196, b: 0, a: 1}
 --- !u!114 &1032129652
 MonoBehaviour:
@@ -7155,10 +7151,6 @@ MonoBehaviour:
     BlaBla: 31'
   changeClassBTN: {fileID: 685186865}
   StartGameBTN: {fileID: 1438409098}
-  glowEffectTab:
-  - {fileID: 2100000, guid: 272f0b6224e9170409841f44036b2a33, type: 2}
-  - {fileID: 2100000, guid: 5a4a38a220d1e7540a3a50a1ab0df1cf, type: 2}
-  - {fileID: 2100000, guid: d37a3574701f62846bdcf6868554462d, type: 2}
   emissionColor: {r: 0, g: 0, b: 0.7490196, a: 1}
 --- !u!114 &1523364288
 MonoBehaviour:
@@ -8875,6 +8867,7 @@ GameObject:
   - component: {fileID: 1916340504}
   - component: {fileID: 1916340505}
   - component: {fileID: 1916340506}
+  - component: {fileID: 1916340507}
   m_Layer: 8
   m_Name: PageArea
   m_TagString: Untagged
@@ -8955,6 +8948,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
+--- !u!114 &1916340507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916340502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &1944111623
 GameObject:
   m_ObjectHideFlags: 0
@@ -9365,10 +9375,6 @@ MonoBehaviour:
     BlaBla: 31'
   changeClassBTN: {fileID: 685186865}
   StartGameBTN: {fileID: 1438409098}
-  glowEffectTab:
-  - {fileID: 2100000, guid: 272f0b6224e9170409841f44036b2a33, type: 2}
-  - {fileID: 2100000, guid: 5a4a38a220d1e7540a3a50a1ab0df1cf, type: 2}
-  - {fileID: 2100000, guid: d37a3574701f62846bdcf6868554462d, type: 2}
   emissionColor: {r: 0.7490196, g: 0, b: 0, a: 1}
 --- !u!114 &2023935086
 MonoBehaviour:

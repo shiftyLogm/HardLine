@@ -88,7 +88,6 @@ public class MoveNewGameTabs : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape)) 
         {
             if (_setMoveNG) turnTabs();
-            else MenuClicks.SetMenuNemGame = true;
         }
     }
 }

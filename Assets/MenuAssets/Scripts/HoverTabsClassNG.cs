@@ -35,8 +35,6 @@ public class HoverTabsClassNG : MonoBehaviour
     public GameObject StartGameBTN;
     private NameSave inputField;
     public static string ClassNewGameData;
-    private MenuClicks objMenuClicks;
-    public Material[] glowEffectTab;
     public Color emissionColor;
     void Start()
     {
@@ -51,7 +49,6 @@ public class HoverTabsClassNG : MonoBehaviour
         writeEffect = FindObjectOfType<WriteStatusEffect>();
         changeClassBTN.SetActive(false);
         inputField = FindObjectOfType<NameSave>();
-        objMenuClicks = FindObjectOfType<MenuClicks>();
     }
     public void OnPointerEnter()
     {
@@ -62,7 +59,6 @@ public class HoverTabsClassNG : MonoBehaviour
         writeEffect.statusText = StatusClassObj.GetComponent<TextMeshProUGUI>();
         StartCoroutine(writeEffect.DisplayLine(NameClass, StatusClass));
         ClassNewGameData = NameClassObj.name;
-        objMenuClicks.globalVolume.enabled = true;
     }
 
     private void Find()
@@ -83,20 +79,12 @@ public class HoverTabsClassNG : MonoBehaviour
         StopAllCoroutines();
         NameClassObj.GetComponent<TextMeshProUGUI>().text = "";
         StatusClassObj.GetComponent<TextMeshProUGUI>().text = "";
-        objMenuClicks.globalVolume.enabled = false;
         tabClass.GetComponent<Image>().material = null;
     }
 
     public void OnPointerClick(bool value)
     {
-        foreach(var classObj in Classes)
-        {
-            classObj.GetComponent<EventTrigger>().enabled = value;
-            classObj.GetComponent<Image>().material = null;
-        }
-
-        tabClass.GetComponent<Image>().material = glowEffectTab[idxInt];
-        LeanTween.value(0, 1.5f, .5f).setOnUpdate((float value) => glowEffectTab[idxInt].SetColor("_Color", emissionColor * value));
+        foreach(var classObj in Classes) classObj.GetComponent<EventTrigger>().enabled = value;
         changeClassBTN.SetActive(!value);
 
         try 
@@ -134,5 +122,11 @@ public class HoverTabsClassNG : MonoBehaviour
         tabClass.GetComponent<Image>().color = Color.Lerp(tabClass.GetComponent<Image>().color, colorHover, _transitionSpeedColor);
         tabClass.transform.localScale = Vector3.Lerp(tabClass.transform.localScale, scaleHover, _transitionSpeedScale);
         StartGameBTN.SetActive(changeClassBTN.activeSelf && inputField.Normaltext.text.Length > 1 ? true : false);
+
+        if (Input.GetKeyDown(KeyCode.Escape)) 
+        {   
+            MoveNewGameTabs._setMoveNG = false;
+            OnPointerClick(true);
+        }
     }
 }
