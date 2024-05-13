@@ -418,7 +418,7 @@ MonoBehaviour:
   hp: 0
   moveSpeed: 100
   attackRange: 0.35
-  attackDamage: 2
+  attackDamage: 0
   dashForce: 0
 --- !u!114 &1826794357106430210
 MonoBehaviour:
