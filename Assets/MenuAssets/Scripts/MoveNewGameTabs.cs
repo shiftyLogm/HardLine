@@ -23,7 +23,7 @@ public class MoveNewGameTabs : MonoBehaviour
     public static bool _setMoveNG;
     public List<EventTrigger> eventsTrigger = new List<EventTrigger>();
     public List<TransformHover> eventsHover = new List<TransformHover>();
-    private HoverTabsClassNG[] objClassNG;
+    private HoverTabsClassNG objClassNG;
     public static bool clearText;
     public GameObject[] classChangeobj;
     void Start()
@@ -40,7 +40,7 @@ public class MoveNewGameTabs : MonoBehaviour
         tabNG = GameObject.FindGameObjectsWithTag("TabNG");
         _initialScaleTab = tabNG[0].transform.localScale;
         _TargetScaleTab = tabNG[0].GetComponent<TransformHover>().targetScale;
-        objClassNG = FindObjectsOfType<HoverTabsClassNG>();
+        objClassNG = FindObjectOfType<HoverTabsClassNG>();
     }
     
     private void setListEventTrigger(List<EventTrigger> events, bool value)
@@ -65,25 +65,22 @@ public class MoveNewGameTabs : MonoBehaviour
         MenuClicks.SetMenuNemGame = false;
         setListEventTrigger(eventsTrigger, false);
         setListEventHover(eventsHover, _initialScaleTab);
-        objClassNG[0].classAnimation(-100, objClassNG[0].flexSpeedEnter);
+        objClassNG.classAnimation(-100, objClassNG.flexSpeedEnter);
         clearText = false;
         objClassNG.turnTabsNormal(true);
     }
     public void turnTabs() 
     {
-<<<<<<< Updated upstream
         objClassNG.turnTabsNormal(false);
-=======
->>>>>>> Stashed changes
         LeanTween.move(_tabPosition, _initialPosition, _speedExit).setEase(LeanTweenType.easeInOutCubic);
         LeanTween.move(NameSaveInput, _initialNewSaveInputPos, .5f).setEase(LeanTweenType.easeInOutCubic);
         _setMoveNG = false;
         MenuClicks.SetMenuNemGame = true;
         setListEventTrigger(eventsTrigger, true);
         foreach(var Tab in tabNG) Tab.GetComponent<TransformHover>().targetScale = _TargetScaleTab;
-        objClassNG[0].classAnimation(620, objClassNG[0].flexSpeedExit);
-        objClassNG[0].StartGameBTN.SetActive(false);
-        objClassNG[0].changeClassBTN.SetActive(false);
+        objClassNG.classAnimation(620, objClassNG.flexSpeedExit);
+        objClassNG.StartGameBTN.SetActive(false);
+        objClassNG.changeClassBTN.SetActive(false);
         clearText = true;
     }
     void Update()
@@ -91,6 +88,7 @@ public class MoveNewGameTabs : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape)) 
         {
             if (_setMoveNG) turnTabs();
+            else MenuClicks.SetMenuNemGame = true;
         }
     }
 }

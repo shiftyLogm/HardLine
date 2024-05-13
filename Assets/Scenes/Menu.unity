@@ -2034,7 +2034,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.5
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2616,7 +2616,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.5
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4159,7 +4159,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -4388,7 +4388,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.5
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5339,6 +5339,10 @@ MonoBehaviour:
     BlaBla: 31'
   changeClassBTN: {fileID: 685186865}
   StartGameBTN: {fileID: 1438409098}
+  glowEffectTab:
+  - {fileID: 2100000, guid: 272f0b6224e9170409841f44036b2a33, type: 2}
+  - {fileID: 2100000, guid: 5a4a38a220d1e7540a3a50a1ab0df1cf, type: 2}
+  - {fileID: 2100000, guid: d37a3574701f62846bdcf6868554462d, type: 2}
   emissionColor: {r: 0, g: 0.7490196, b: 0, a: 1}
 --- !u!114 &1032129652
 MonoBehaviour:
@@ -5461,14 +5465,10 @@ MonoBehaviour:
   - {fileID: 905623899}
   - {fileID: 86936134}
   - {fileID: 302930781}
-<<<<<<< Updated upstream
   classChangeobj:
   - {fileID: 2023935081}
   - {fileID: 1523364283}
   - {fileID: 1032129647}
-=======
-  classChangeobj: []
->>>>>>> Stashed changes
 --- !u!1 &1085129691
 GameObject:
   m_ObjectHideFlags: 0
@@ -7155,6 +7155,10 @@ MonoBehaviour:
     BlaBla: 31'
   changeClassBTN: {fileID: 685186865}
   StartGameBTN: {fileID: 1438409098}
+  glowEffectTab:
+  - {fileID: 2100000, guid: 272f0b6224e9170409841f44036b2a33, type: 2}
+  - {fileID: 2100000, guid: 5a4a38a220d1e7540a3a50a1ab0df1cf, type: 2}
+  - {fileID: 2100000, guid: d37a3574701f62846bdcf6868554462d, type: 2}
   emissionColor: {r: 0, g: 0, b: 0.7490196, a: 1}
 --- !u!114 &1523364288
 MonoBehaviour:
@@ -8947,14 +8951,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1916340502}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
+  m_Delegates: []
 --- !u!1 &1944111623
 GameObject:
   m_ObjectHideFlags: 0
@@ -9365,6 +9365,10 @@ MonoBehaviour:
     BlaBla: 31'
   changeClassBTN: {fileID: 685186865}
   StartGameBTN: {fileID: 1438409098}
+  glowEffectTab:
+  - {fileID: 2100000, guid: 272f0b6224e9170409841f44036b2a33, type: 2}
+  - {fileID: 2100000, guid: 5a4a38a220d1e7540a3a50a1ab0df1cf, type: 2}
+  - {fileID: 2100000, guid: d37a3574701f62846bdcf6868554462d, type: 2}
   emissionColor: {r: 0.7490196, g: 0, b: 0, a: 1}
 --- !u!114 &2023935086
 MonoBehaviour:
