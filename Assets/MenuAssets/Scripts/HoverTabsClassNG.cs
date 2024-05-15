@@ -34,6 +34,7 @@ public class HoverTabsClassNG : MonoBehaviour
     private NameSave inputField;
     public static string ClassNewGameData;
     public Color emissionColor;
+    private MoveNewGameTabs objNewGameTabs;
     void Start()
     {
         initialColor = new Color(166f/ 255, 166f/ 255, 166f/ 255, 1);
@@ -47,6 +48,7 @@ public class HoverTabsClassNG : MonoBehaviour
         writeEffect = FindObjectOfType<WriteStatusEffect>();
         changeClassBTN.SetActive(false);
         inputField = FindObjectOfType<NameSave>();
+        objNewGameTabs = FindObjectOfType<MoveNewGameTabs>();
     }
     public void OnPointerEnter()
     {
@@ -81,6 +83,7 @@ public class HoverTabsClassNG : MonoBehaviour
 
     public void OnPointerClick(bool value)
     {
+        if (!value) objNewGameTabs.DisableUpdate();
         foreach(var classObj in Classes) classObj.GetComponent<EventTrigger>().enabled = value;
         changeClassBTN.SetActive(!value);
         MoveNewGameTabs._setMoveNG = value;
@@ -92,6 +95,7 @@ public class HoverTabsClassNG : MonoBehaviour
                 OnPointerExit(); 
                 changeClassBTN.GetComponent<TransformHover>().transform.localScale = new Vector3(1f, 1f, 1f);
                 changeClassBTN.GetComponent<TransformHover>().scaleHover = new Vector3(1f, 1f, 1f);
+                objNewGameTabs.EnableUpdate();
             }
         }
 
@@ -122,9 +126,6 @@ public class HoverTabsClassNG : MonoBehaviour
         tabClass.transform.localScale = Vector3.Lerp(tabClass.transform.localScale, scaleHover, _transitionSpeedScale);
         StartGameBTN.SetActive(changeClassBTN.activeSelf && inputField.Normaltext.text.Length > 1 ? true : false);
 
-        if (Input.GetKeyDown(KeyCode.Escape)) 
-        {   
-            OnPointerClick(true);
-        }
+        if (Input.GetKeyDown(KeyCode.Escape)) OnPointerClick(true);
     }
 }

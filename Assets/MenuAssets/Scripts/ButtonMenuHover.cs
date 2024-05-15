@@ -31,11 +31,13 @@ public class ButtonMenuHover : MonoBehaviour, IPointerEnterHandler, IPointerExit
         textComponent.color = Color.Lerp(textComponent.color, TargetColor, transitionSpeed);
         buttonComponent.transform.localScale = Vector3.Lerp(buttonComponent.transform.localScale, TargetVector, transitionSpeed);
     }
+
     public void OnPointerEnter(PointerEventData eventData) 
     {
         TargetColor = hoverColor;
         TargetVector = hoverVector;
     }
+    
     public void OnPointerExit(PointerEventData eventData) 
     {
         TargetColor = normalColor;

@@ -19,9 +19,9 @@ public class NameSave : MonoBehaviour
     {
         if (Normaltext.text.Length <= 1) Placeholder.text = Placeholdertext;
     }
-
+    
     void Update()
     {
-        if (MoveNewGameTabs.clearText) Normaltext.SetText("");
+        if (MoveNewGameTabs.clearText) saveName.text = "";
     }
 }

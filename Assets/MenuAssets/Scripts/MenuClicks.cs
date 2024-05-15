@@ -21,6 +21,8 @@ public class MenuClicks : MonoBehaviour
     private GameObject[] buttonsMenu;
     public List<Button> buttonComponents = new List<Button>();
     public List<ButtonMenuHover> eventsHover = new List<ButtonMenuHover>();
+    private bool waitForNewGameScreen = false;
+    private bool waitForOptionsScreen = false;
 
     void Start()
     {
@@ -61,6 +63,7 @@ public class MenuClicks : MonoBehaviour
         }
     }
 
+    void EnableWaitForNewGameScreen() => waitForNewGameScreen = true;
     public void NewGameButtonClick()
     {
         LeanTween.move(PanelNewGame, new Vector2(-4, -.46f), 1f).setEase(LeanTweenType.easeInOutCubic);
@@ -68,10 +71,10 @@ public class MenuClicks : MonoBehaviour
         SetMenuNemGame = true;
         DisableAndEnableOnClick(buttonComponents, false);
         DisableHoverButton(eventsHover, Color.white, InitialVectorButtonMenu);
-        Invoke("disableVolume", 1f);
+        Invoke("EnableWaitForNewGameScreen", 1f);
     }
 
-    void disableVolume() => globalVolume.enabled = false;
+    void EnableWaitForOptionsScreen() => waitForOptionsScreen = true;
     public void OptionsButtonClick()
     {
         LeanTween.move(GameLogo, new Vector2(0, -700), .5f).setEase(LeanTweenType.easeInOutQuad);
@@ -80,7 +83,7 @@ public class MenuClicks : MonoBehaviour
         SetMenuOptions = true;
         DisableAndEnableOnClick(buttonComponents, false);
         DisableHoverButton(eventsHover, Color.white, InitialVectorButtonMenu);
-        Invoke("disableVolume", .5f);
+        Invoke("EnableWaitForOptionsScreen", .5f);
     }
 
     public void ExitButtonClick() 
@@ -95,9 +98,9 @@ public class MenuClicks : MonoBehaviour
         LeanTween.move(MainMenuRect, new (0, -330.6f), .5f).setEase(LeanTweenType.easeInOutQuad);
         LeanTween.move(OptionsMenu, new(0, 1054), .5f).setEase(LeanTweenType.easeInOutQuad);
         SetMenuOptions = false;
+        waitForOptionsScreen = false;
         DisableAndEnableOnClick(buttonComponents, true);
         turnButtonsNormal();
-        globalVolume.enabled = true;
     }
 
     public void ArrowButtonClickNewGame()
@@ -105,9 +108,9 @@ public class MenuClicks : MonoBehaviour
         LeanTween.move(PanelMainMenu, new Vector2(0, 0), 1f).setEase(LeanTweenType.easeInOutCubic);
         LeanTween.move(PanelNewGame, new Vector2(-1920, -.46f), 1f).setEase(LeanTweenType.easeInOutCubic);
         SetMenuNemGame = false;
+        waitForNewGameScreen = false;
         DisableAndEnableOnClick(buttonComponents, true);
         turnButtonsNormal();
-        globalVolume.enabled = true;
     }
 
     void Update()
@@ -116,8 +119,8 @@ public class MenuClicks : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (SetMenuOptions) ArrowButtonClick();
-            if (SetMenuNemGame) ArrowButtonClickNewGame();
+            if (SetMenuOptions && waitForOptionsScreen) ArrowButtonClick();
+            if (SetMenuNemGame && waitForNewGameScreen) ArrowButtonClickNewGame();
         }
     }
 };

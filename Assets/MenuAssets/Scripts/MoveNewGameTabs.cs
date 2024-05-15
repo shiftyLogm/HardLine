@@ -7,6 +7,7 @@ using Unity.VisualScripting.Antlr3.Runtime;
 using TMPro;
 using UnityEngine.UI;
 using Unity.VisualScripting;
+using System.Threading;
 
 public class MoveNewGameTabs : MonoBehaviour
 {
@@ -25,8 +26,9 @@ public class MoveNewGameTabs : MonoBehaviour
     public List<EventTrigger> eventsTrigger = new List<EventTrigger>();
     public List<TransformHover> eventsHover = new List<TransformHover>();
     private HoverTabsClassNG objClassNG;
-    public static bool clearText;
     public GameObject[] classChangeobj;
+    public static bool clearText = false;
+    public bool waitForTurnTabs = false;
     void Start()
     {
         _tabPosition = GetComponent<RectTransform>();
@@ -58,6 +60,8 @@ public class MoveNewGameTabs : MonoBehaviour
             Scales.targetScale = scale;
         }
     }
+
+    void enablewaitForTurnTabs() => waitForTurnTabs = true;
     public void moveTabs()
     {
         LeanTween.move(_tabPosition, _finalPosition, _speedEnter).setEase(LeanTweenType.easeInOutCubic);
@@ -66,9 +70,10 @@ public class MoveNewGameTabs : MonoBehaviour
         MenuClicks.SetMenuNemGame = false;
         setListEventTrigger(eventsTrigger, false);
         setListEventHover(eventsHover, _initialScaleTab);
-        clearText = false;
         objClassNG.classAnimation(-100, objClassNG.flexSpeedEnter);
         objClassNG.turnTabsNormal(true);
+        clearText = false;
+        Invoke("enablewaitForTurnTabs", 1);
     }
     public void turnTabs() 
     {
@@ -83,12 +88,13 @@ public class MoveNewGameTabs : MonoBehaviour
         objClassNG.StartGameBTN.SetActive(false);
         objClassNG.changeClassBTN.SetActive(false);
         clearText = true;
+        waitForTurnTabs = false;
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) 
-        {
-            if (_setMoveNG) turnTabs();
-        }
+        if (Input.GetKeyDown(KeyCode.Escape) && waitForTurnTabs) if (_setMoveNG) turnTabs();
     }
+
+    public void DisableUpdate() => this.enabled = false;
+    public void EnableUpdate() => this.enabled = true;
 }

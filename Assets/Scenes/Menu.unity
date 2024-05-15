@@ -2703,13 +2703,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 1199057296}
   m_HandleRect: {fileID: 187387277}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: -1
   m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 836693749}
+        m_TargetAssemblyTypeName: SetPostProcessingValues, Assembly-CSharp
+        m_MethodName: ChangeBrightness
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &491838735
 GameObject:
   m_ObjectHideFlags: 0
@@ -3972,6 +3984,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 836693746}
+  - component: {fileID: 836693749}
   - component: {fileID: 836693748}
   - component: {fileID: 836693747}
   m_Layer: 8
@@ -4100,6 +4113,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836693745}
   m_CullTransparentMesh: 1
+--- !u!114 &836693749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836693745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a23fcebe4f324df44b58312e30621e2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sliderBrightness: {fileID: 467630748}
+  volumePostProcessing: {fileID: 1893458561}
 --- !u!1 &843291118
 GameObject:
   m_ObjectHideFlags: 0
@@ -5465,6 +5492,7 @@ MonoBehaviour:
   - {fileID: 2023935081}
   - {fileID: 1523364283}
   - {fileID: 1032129647}
+  waitForTurnTabs: 0
 --- !u!1 &1085129691
 GameObject:
   m_ObjectHideFlags: 0
