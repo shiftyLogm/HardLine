@@ -35,6 +35,7 @@ public class HoverTabsClassNG : MonoBehaviour
     public static string ClassNewGameData;
     public Color emissionColor;
     private MoveNewGameTabs objNewGameTabs;
+
     void Start()
     {
         initialColor = new Color(166f/ 255, 166f/ 255, 166f/ 255, 1);
@@ -50,6 +51,7 @@ public class HoverTabsClassNG : MonoBehaviour
         inputField = FindObjectOfType<NameSave>();
         objNewGameTabs = FindObjectOfType<MoveNewGameTabs>();
     }
+
     public void OnPointerEnter()
     {
         Find();
@@ -99,18 +101,14 @@ public class HoverTabsClassNG : MonoBehaviour
             }
         }
 
-        catch (NullReferenceException) {} 
-        
+        catch (NullReferenceException) {}
     }
 
     public void turnTabsNormal(bool value)
     {
-        foreach (var idx in Classes) 
-        {
-            idx.GetComponent<HoverTabsClassNG>().enabled = value;
-            idx.GetComponent<EventTrigger>().enabled = value;
-        }
+        foreach (var idx in Classes) idx.GetComponent<EventTrigger>().enabled = value;
     }
+
     public void classAnimation(int rectvalueY, float[] arrayspeed)
     {
         for (int i = 0; i < Classes.Length; i++)
@@ -120,12 +118,21 @@ public class HoverTabsClassNG : MonoBehaviour
             LeanTween.move(Classes[i].GetComponent<RectTransform>(), new(rectvalueX, rectvalueY), arrayspeed[i]).setEase(LeanTweenType.easeInOutCubic);
         }
     }
+    void desactiveEventTrigger() 
+    {
+        if (MoveNewGameTabs.desactiveEventTrigger) turnTabsNormal(false);
+    }
+
     void Update() 
     {
         tabClass.GetComponent<Image>().color = Color.Lerp(tabClass.GetComponent<Image>().color, colorHover, _transitionSpeedColor);
         tabClass.transform.localScale = Vector3.Lerp(tabClass.transform.localScale, scaleHover, _transitionSpeedScale);
         StartGameBTN.SetActive(changeClassBTN.activeSelf && inputField.Normaltext.text.Length > 1 ? true : false);
 
-        if (Input.GetKeyDown(KeyCode.Escape)) OnPointerClick(true);
+        if (Input.GetKeyDown(KeyCode.Escape)) 
+        {
+            OnPointerClick(true);
+            Invoke("desactiveEventTrigger", 0.01f);
+        }
     }
 }

@@ -29,6 +29,7 @@ public class MoveNewGameTabs : MonoBehaviour
     public GameObject[] classChangeobj;
     public static bool clearText = false;
     public bool waitForTurnTabs = false;
+    public static bool desactiveEventTrigger = false;
     void Start()
     {
         _tabPosition = GetComponent<RectTransform>();
@@ -74,10 +75,11 @@ public class MoveNewGameTabs : MonoBehaviour
         objClassNG.turnTabsNormal(true);
         clearText = false;
         Invoke("enablewaitForTurnTabs", 1);
+        desactiveEventTrigger = false;
     }
+
     public void turnTabs() 
     {
-        objClassNG.turnTabsNormal(false);
         LeanTween.move(_tabPosition, _initialPosition, _speedExit).setEase(LeanTweenType.easeInOutCubic);
         LeanTween.move(NameSaveInput, _initialNewSaveInputPos, .5f).setEase(LeanTweenType.easeInOutCubic);
         _setMoveNG = false;
@@ -90,9 +92,14 @@ public class MoveNewGameTabs : MonoBehaviour
         clearText = true;
         waitForTurnTabs = false;
     }
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && waitForTurnTabs) if (_setMoveNG) turnTabs();
+        if (Input.GetKeyDown(KeyCode.Escape) && waitForTurnTabs && _setMoveNG)
+        {   
+            desactiveEventTrigger = true;
+            turnTabs();
+        }
     }
 
     public void DisableUpdate() => this.enabled = false;
