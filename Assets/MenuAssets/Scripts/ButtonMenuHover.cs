@@ -16,7 +16,8 @@ public class ButtonMenuHover : MonoBehaviour, IPointerEnterHandler, IPointerExit
     public Color TargetColor;
 
     private Color normalColor = Color.white;
-    public Color hoverColor = Color.yellow;
+    public Color hoverColor;
+    
     void Start()
     {
         transitionSpeed = 5f * Time.deltaTime;
@@ -25,7 +26,6 @@ public class ButtonMenuHover : MonoBehaviour, IPointerEnterHandler, IPointerExit
         TargetVector = normalVector;
         hoverVector = new Vector3(2.35f, 2.35f, 1.175f);
     }
-
     void Update()
     {
         textComponent.color = Color.Lerp(textComponent.color, TargetColor, transitionSpeed);

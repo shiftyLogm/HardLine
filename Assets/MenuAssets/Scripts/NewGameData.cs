@@ -13,9 +13,9 @@ public class NewGameData : MonoBehaviour
         objNameSave = FindObjectOfType<NameSave>();
         classNames = new()
         {
-            {"NameClass1", "C1"},
-            {"NameClass2", "C2"},
-            {"NameClass3", "C3"}
+            {"NameClass1", "Warrior"},
+            {"NameClass2", "Archer"},
+            {"NameClass3", "Mage"}
         };
     }
     public void GetDataNewGame()

@@ -1,10 +1,13 @@
-using NovaSamples.Effects;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine.Rendering;
+using TMPro;
+using Unity.Mathematics;
+using System.Collections;
 public class MenuClicks : MonoBehaviour
 {
+    private GameObject menuObj;
     public Volume globalVolume;
     public static bool SetMenuNemGame;
     public static bool SetMenuOptions;
@@ -17,13 +20,19 @@ public class MenuClicks : MonoBehaviour
     public RectTransform PanelMainMenu;
     public RectTransform GameLogo;
     private Vector3 InitialVectorButtonMenu;
+    private Vector3 InitialVectorButtonExitGame;
     private Vector3 TargetVectorButtonMenu;
     private GameObject[] buttonsMenu;
     public List<Button> buttonComponents = new List<Button>();
     public List<ButtonMenuHover> eventsHover = new List<ButtonMenuHover>();
     private bool waitForNewGameScreen = false;
     private bool waitForOptionsScreen = false;
-
+    private bool ExitGameEsc;
+    public GameObject ExitGameScreen;
+    public TextMeshProUGUI YesText;
+    public TextMeshProUGUI NoText;
+    public TextMeshProUGUI TextExitGame;
+    public Color fadeOutColor = new Color(255, 255, 255, 0);
     void Start()
     {
         MainMenuRect = GetComponent<RectTransform>();
@@ -36,6 +45,8 @@ public class MenuClicks : MonoBehaviour
         InitialVectorButtonMenu = buttonsMenu[0].transform.localScale;
         TargetVectorButtonMenu = new Vector3(2.35f, 2.35f, 1.175f);
         GameLogo.anchoredPosition = new Vector2(0, 211);
+        ExitGameScreen.SetActive(false);
+        ExitGameEsc = true;
     }
 
     private void DisableAndEnableOnClick(List<Button> list, bool value)
@@ -72,6 +83,7 @@ public class MenuClicks : MonoBehaviour
         DisableAndEnableOnClick(buttonComponents, false);
         DisableHoverButton(eventsHover, Color.white, InitialVectorButtonMenu);
         Invoke("EnableWaitForNewGameScreen", 1f);
+        ExitGameEsc = false;
     }
 
     void EnableWaitForOptionsScreen() => waitForOptionsScreen = true;
@@ -84,14 +96,55 @@ public class MenuClicks : MonoBehaviour
         DisableAndEnableOnClick(buttonComponents, false);
         DisableHoverButton(eventsHover, Color.white, InitialVectorButtonMenu);
         Invoke("EnableWaitForOptionsScreen", .5f);
+        ExitGameEsc = false;
     }
 
     public void ExitButtonClick() 
     {
-        Application.Quit();
+        ExitGameScreen.SetActive(true);
         Debug.Log("Exit");
+        ExitGameScreen.GetComponent<Image>().color = Color.white;
+        YesText.color = Color.white;
+        NoText.color = Color.white;
+        TextExitGame.color = Color.white;
+        ExitGameScreen.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
     }
-      
+
+    public void YesOption() => Application.Quit();
+    
+    private IEnumerator fadeOutExitGame()
+    {
+        float elapsedTime = 0.0f;
+        float _speed = 0.3f;
+
+        while (elapsedTime < _speed)
+        {
+            elapsedTime += Time.deltaTime;
+            float alpha = Mathf.Lerp(1, 0, elapsedTime / _speed);
+            ExitGameScreen.GetComponent<Image>().color = new Color(255, 255, 255, alpha);
+            YesText.color = new Color(255, 255, 255, alpha);
+            NoText.color = new Color(255, 255, 255, alpha);
+            TextExitGame.color = new Color(255, 255, 255, alpha);
+            yield return null;
+        }
+
+        setValuesExit(true);
+        ExitGameScreen.SetActive(false);
+    }
+
+    private void setValuesExit(bool value)
+    {
+        YesText.GetComponentInParent<ButtonMenuHover>().enabled = value;
+        YesText.GetComponentInParent<Button>().enabled = value;
+        NoText.GetComponentInParent<ButtonMenuHover>().enabled = value;
+        NoText.GetComponentInParent<Button>().enabled = value;
+    }    
+    public void NoOption()
+    {
+        setValuesExit(false);
+        StartCoroutine(fadeOutExitGame());
+    }
+
     public void ArrowButtonClick() 
     {
         LeanTween.move(GameLogo, new Vector2(0, 211), .5f).setEase(LeanTweenType.easeInOutCubic);
@@ -101,6 +154,7 @@ public class MenuClicks : MonoBehaviour
         waitForOptionsScreen = false;
         DisableAndEnableOnClick(buttonComponents, true);
         turnButtonsNormal();
+        ExitGameEsc = true;
     }
 
     public void ArrowButtonClickNewGame()
@@ -111,12 +165,13 @@ public class MenuClicks : MonoBehaviour
         waitForNewGameScreen = false;
         DisableAndEnableOnClick(buttonComponents, true);
         turnButtonsNormal();
+        ExitGameEsc = true;
     }
 
     void Update()
     {  
         resetOptions = OptionsMenu.anchoredPosition.y > 1000 ? true : false;
-        
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (SetMenuOptions && waitForOptionsScreen) ArrowButtonClick();
