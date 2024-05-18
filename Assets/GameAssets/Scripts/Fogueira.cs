@@ -27,6 +27,8 @@ public class Fogueira : MonoBehaviour
     void Update()
     {
         if(player != null) GetDistance();
+
+        ShowInteraction();
     }
 
 
@@ -71,8 +73,11 @@ public class Fogueira : MonoBehaviour
     {
         if(canUseFireplace)
         {
-            GameObject textInteractionInstance = Instantiate(textInteraction, transform.position, Quaternion.identity);
+            textInteraction.SetActive(true);
+            return;
         }
+
+        textInteraction.SetActive(false);    
     }
 
 }

@@ -17,14 +17,13 @@ public class PlayerController : MonoBehaviour
     public MeleeAttack meleeAttack;
 
     // Variaveis
-    private Animator animator;
-    private PlayerControls playerControls;
-    private Rigidbody2D rb;
-    private EntityStats entityStats;
-    private bool isAttacking = false;
-    private bool isDashing = false;
-    private bool isTrueOrFalseAction = false;
-    private bool canChangeDirection;
+    private Animator _animator;
+    private Rigidbody2D _rb;
+    private EntityStats _entityStats;
+    private bool _isAttacking = false;
+    private bool _isDashing = false;
+    private bool _isTrueOrFalseAction = false;
+    private bool _canChangeDirection;
     PlayerClassesController playerClassesController;
 
     // Fogueira
@@ -37,27 +36,24 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        animator = GetComponentInChildren<Animator>();
-        rb = GetComponent<Rigidbody2D>();
-        entityStats = GetComponent<EntityStats>();
+        _animator = GetComponentInChildren<Animator>();
+        _rb = GetComponent<Rigidbody2D>();
+        _entityStats = GetComponent<EntityStats>();
         playerClassesController = GetComponent<PlayerClassesController>();
 
         // States Setup
-        idleState.Setup(animator, rb);
-        runState.Setup(animator, rb);
-        attackState.Setup(animator, rb, entityStats);
-        dashState.Setup(animator, rb, entityStats);
+        idleState.Setup(_animator, _rb);
+        runState.Setup(_animator, _rb);
+        attackState.Setup(_animator, _rb, _entityStats);
+        dashState.Setup(_animator, _rb, _entityStats);
 
         // Attack Types Setup
-        meleeAttack.Setup(animator, rb, entityStats);
+        meleeAttack.Setup(_animator, _rb, _entityStats);
 
         // State inicial
         state = idleState;
         state.direction = "right";
         attackState.direction = "right";
-
-        // Referenciando o script PlayerControls a variavel criada
-        playerControls = new PlayerControls();   
 
         // Fogueira
         fogueiras = GameObject.FindGameObjectsWithTag("Fogueira");
@@ -65,6 +61,13 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        // Input Actions
+
+        mov = UserInput.Instance.MoveInput;
+
+        // -=-=-=-=-=-=-=
+
+
         if(state == dashState)
         {
             dashState.mov = oldMov; // Setando qual direçao devo ir ao dar dash
@@ -72,19 +75,48 @@ public class PlayerController : MonoBehaviour
         }
 
         // Fazendo o jogador andar
-        if(!isTrueOrFalseAction) rb.velocity = mov * entityStats.moveSpeed * Time.fixedDeltaTime;
+        if(!_isTrueOrFalseAction) _rb.velocity = mov * _entityStats.moveSpeed * Time.fixedDeltaTime;
     }
 
     void Update()
     {
-        // Seleciona a animaçao da direçao correspondente com a velocidade
-        if (rb.velocity != new Vector2(0, 0) && canChangeDirection) DirectionFacing();
+        #region Input Actions
 
+        // Input Actions
+        if(UserInput.Instance.AttackInput)
+        {
+            _isTrueOrFalseAction = true;
+            _isAttacking = true;
+            SelectAttackTypeAndAttack();
+        }
+
+        if(UserInput.Instance.DashInput)
+        {
+            _isTrueOrFalseAction = true;
+            _isDashing = true;
+        }
+
+        if(UserInput.Instance.InteractionInput)
+        {
+            foreach(GameObject fogueira in fogueiras)
+            {
+                if(fogueira.GetComponent<Fogueira>().canUseFireplace) 
+                {
+                    fogueira.GetComponent<Fogueira>().Spawn();
+                    fogueira.GetComponent<Fogueira>().RestoreHP();
+                }
+            }
+        }
+
+        #endregion
+
+        // Seleciona a animaçao da direçao correspondente com a velocidade
+        if (_rb.velocity != new Vector2(0, 0)) DirectionFacing();
 
         SelectState();
         state.Do();
 
-        if(!isTrueOrFalseAction) oldMov = mov;
+        if(!_isTrueOrFalseAction) oldMov = mov;
     }
 
     #region Direction
@@ -93,10 +125,10 @@ public class PlayerController : MonoBehaviour
     {
         Dictionary<string, bool> dictActions = new()
         {
-            {"up", rb.velocity.y > 0},
-            {"down", rb.velocity.y < 0},
-            {"right", rb.velocity.x > 0},
-            {"left", rb.velocity.x < 0}
+            {"up", _rb.velocity.y > 0},
+            {"down", _rb.velocity.y < 0},
+            {"right", _rb.velocity.x > 0},
+            {"left", _rb.velocity.x < 0}
         };
 
         var key = Helper.FindKey(dictActions, true);
@@ -115,24 +147,24 @@ public class PlayerController : MonoBehaviour
         
         Dictionary<State, bool> dict = new()
         {
-            {attackState, isAttacking && (state == idleState || state == runState)},
-            {dashState, isDashing && (state == runState)}
+            {attackState, _isAttacking && (state == idleState || state == runState)},
+            {dashState, _isDashing && (state == runState)}
         };
 
 
-        // isTrueOrFalseActions
-        if(isTrueOrFalseAction)
+        // _isTrueOrFalseActions
+        if(_isTrueOrFalseAction)
         {
             state = Helper.FindKeyState(dict, true);
             if(state == null) state = oldState;
 
-            if(state == idleState) isTrueOrFalseAction = false;
+            if(state == idleState) _isTrueOrFalseAction = false;
         }
 
         // Movimento
-        if(!isTrueOrFalseAction)
+        if(!_isTrueOrFalseAction)
         {
-            if (rb.velocity.x == 0 && rb.velocity.y == 0)
+            if (_rb.velocity.x == 0 && _rb.velocity.y == 0)
             {
                 state = idleState;
             }
@@ -149,65 +181,13 @@ public class PlayerController : MonoBehaviour
         }
         if(state.isComplete)
         {
-            isAttacking = false;
-            isDashing = false;
-            isTrueOrFalseAction = false;
+            _isAttacking = false;
+            _isDashing = false;
+            _isTrueOrFalseAction = false;
         }
-
-
     }
 
     #endregion
-
-    #region Input System
-
-    public void OnMove(InputAction.CallbackContext context)
-    {
-        // Colocando o valor Vector2 a variavel de direçao criada
-        if(context.performed || context.started) 
-        {
-            mov = context.ReadValue<Vector2>();
-            canChangeDirection = true;
-        }
-        else if (context.canceled)
-        {
-            mov = new Vector2(0,0);
-            canChangeDirection = false;  
-        } 
-    }
-
-    public void OnAttack(InputAction.CallbackContext context)
-    {
-        if (context.performed && isAttacking == false)
-        {
-            isTrueOrFalseAction = true;
-            isAttacking = true;
-            SelectAttackTypeAndAttack();
-        }
-    }
-
-    public void OnDash(InputAction.CallbackContext context)
-    {
-        if(context.performed)
-        {
-            isTrueOrFalseAction = true;
-            isDashing = true;
-        }
-    }
-
-    public void OnInteraction(InputAction.CallbackContext context)
-    {
-        if(context.performed)
-        {
-            // if(fogueira.canUseFireplace) 
-            // {
-            //     fogueira.Spawn();
-            //     fogueira.RestoreHP();
-            // }
-        }
-    }
-
-    #endregion;
 
     #region Attack Types
     
