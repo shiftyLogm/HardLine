@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -8,9 +9,13 @@ public class Fogueira : MonoBehaviour
     public GameObject[] enemyPreFabList;
     public GameObject[] enemySpawns;
     List<GameObject> enemyInstanceList = new List<GameObject>();
+
     Transform player;
     public bool canUseFireplace;
     EntityStats playerStats;
+
+    // Text Interaction
+    public GameObject textInteraction;
 
     void Start()
     {
@@ -60,6 +65,14 @@ public class Fogueira : MonoBehaviour
         
         canUseFireplace = dist <= 0.615f;
         HUD.Instance.distFogPlayer = canUseFireplace;
+    }
+
+    void ShowInteraction()
+    {
+        if(canUseFireplace)
+        {
+            GameObject textInteractionInstance = Instantiate(textInteraction, transform.position, Quaternion.identity);
+        }
     }
 
 }

@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
     PlayerClassesController playerClassesController;
 
     // Fogueira
-    public Fogueira fogueira;
+    public GameObject[] fogueiras;
     
 
     // Criando uma variavel para saber a direçao para onde o jogador quer ir
@@ -58,6 +58,9 @@ public class PlayerController : MonoBehaviour
 
         // Referenciando o script PlayerControls a variavel criada
         playerControls = new PlayerControls();   
+
+        // Fogueira
+        fogueiras = GameObject.FindGameObjectsWithTag("Fogueira");
     }
 
     void FixedUpdate()
@@ -196,11 +199,11 @@ public class PlayerController : MonoBehaviour
     {
         if(context.performed)
         {
-            if(fogueira.canUseFireplace) 
-            {
-                fogueira.Spawn();
-                fogueira.RestoreHP();
-            }
+            // if(fogueira.canUseFireplace) 
+            // {
+            //     fogueira.Spawn();
+            //     fogueira.RestoreHP();
+            // }
         }
     }
 
