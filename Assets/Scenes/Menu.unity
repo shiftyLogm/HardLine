@@ -2169,7 +2169,7 @@ GameObject:
   - component: {fileID: 290315101}
   - component: {fileID: 290315103}
   - component: {fileID: 290315102}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: TextExitGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2661,14 +2661,17 @@ MonoBehaviour:
   buttonComponents:
   - {fileID: 2007236582}
   - {fileID: 905914080}
+  - {fileID: 1874093599}
   eventsHover:
   - {fileID: 2007236585}
   - {fileID: 905914083}
+  - {fileID: 1874093602}
   ExitGameScreen: {fileID: 862350969}
   YesText: {fileID: 1314946981}
   NoText: {fileID: 1721543900}
   TextExitGame: {fileID: 290315102}
   fadeOutColor: {r: 1, g: 1, b: 1, a: 1}
+  BlackScreen: {fileID: 906313181}
 --- !u!1 &383046026
 GameObject:
   m_ObjectHideFlags: 0
@@ -3165,9 +3168,9 @@ GameObject:
   - component: {fileID: 573787624}
   - component: {fileID: 573787623}
   - component: {fileID: 573787622}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: NoButton
-  m_TagString: ButtonMenu
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3390,7 +3393,7 @@ GameObject:
   - component: {fileID: 607013059}
   - component: {fileID: 607013061}
   - component: {fileID: 607013060}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4518,7 +4521,7 @@ GameObject:
   - component: {fileID: 862350970}
   - component: {fileID: 862350972}
   - component: {fileID: 862350971}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: ExitGameScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5270,6 +5273,81 @@ MonoBehaviour:
   TargetVector: {x: 0, y: 0, z: 0}
   TargetColor: {r: 0, g: 0, b: 0, a: 0}
   hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+--- !u!1 &906313179
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 906313180}
+  - component: {fileID: 906313182}
+  - component: {fileID: 906313181}
+  m_Layer: 12
+  m_Name: BlackScreen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &906313180
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906313179}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 914672393}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0.000015258789}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &906313181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906313179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.98039216}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &906313182
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906313179}
+  m_CullTransparentMesh: 1
 --- !u!1 &914672392
 GameObject:
   m_ObjectHideFlags: 0
@@ -5303,6 +5381,7 @@ RectTransform:
   m_Children:
   - {fileID: 598214937}
   - {fileID: 361355862}
+  - {fileID: 906313180}
   - {fileID: 862350970}
   m_Father: {fileID: 921288216}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6501,7 +6580,7 @@ GameObject:
   - component: {fileID: 1314946980}
   - component: {fileID: 1314946982}
   - component: {fileID: 1314946981}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: YesText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8799,7 +8878,7 @@ GameObject:
   - component: {fileID: 1721543899}
   - component: {fileID: 1721543901}
   - component: {fileID: 1721543900}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: NoText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9185,7 +9264,7 @@ GameObject:
   - component: {fileID: 1874093601}
   - component: {fileID: 1874093600}
   - component: {fileID: 1874093599}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: ExitGameButton
   m_TagString: ButtonMenu
   m_Icon: {fileID: 0}
@@ -10458,9 +10537,9 @@ GameObject:
   - component: {fileID: 2135224776}
   - component: {fileID: 2135224775}
   - component: {fileID: 2135224774}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: YesButton
-  m_TagString: ButtonMenu
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -1,11 +1,10 @@
-using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class ButtonMenuHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    private float transitionSpeed;
+    public static float transitionSpeed;
     public TextMeshProUGUI textComponent;
 
     public GameObject buttonComponent;

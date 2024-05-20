@@ -5,9 +5,11 @@ using UnityEngine.Rendering;
 using TMPro;
 using Unity.Mathematics;
 using System.Collections;
+using UnityEngine.EventSystems;
+using System.Reflection;
+using Unity.VisualScripting;
 public class MenuClicks : MonoBehaviour
 {
-    private GameObject menuObj;
     public Volume globalVolume;
     public static bool SetMenuNemGame;
     public static bool SetMenuOptions;
@@ -20,7 +22,6 @@ public class MenuClicks : MonoBehaviour
     public RectTransform PanelMainMenu;
     public RectTransform GameLogo;
     private Vector3 InitialVectorButtonMenu;
-    private Vector3 InitialVectorButtonExitGame;
     private Vector3 TargetVectorButtonMenu;
     private GameObject[] buttonsMenu;
     public List<Button> buttonComponents = new List<Button>();
@@ -33,6 +34,7 @@ public class MenuClicks : MonoBehaviour
     public TextMeshProUGUI NoText;
     public TextMeshProUGUI TextExitGame;
     public Color fadeOutColor = new Color(255, 255, 255, 0);
+    public Image BlackScreen;
     void Start()
     {
         MainMenuRect = GetComponent<RectTransform>();
@@ -47,6 +49,7 @@ public class MenuClicks : MonoBehaviour
         GameLogo.anchoredPosition = new Vector2(0, 211);
         ExitGameScreen.SetActive(false);
         ExitGameEsc = true;
+        BlackScreen.enabled = false;
     }
 
     private void DisableAndEnableOnClick(List<Button> list, bool value)
@@ -99,15 +102,21 @@ public class MenuClicks : MonoBehaviour
         ExitGameEsc = false;
     }
 
+    void EnableWaitForExitScreen() => ExitGameEsc = true;
     public void ExitButtonClick() 
     {
+        ExitGameEsc = false;
         ExitGameScreen.SetActive(true);
-        Debug.Log("Exit");
+        setValuesExit(true);
+        NoText.GetComponentInParent<ButtonMenuHover>().TargetColor = Color.white;
         ExitGameScreen.GetComponent<Image>().color = Color.white;
         YesText.color = Color.white;
         NoText.color = Color.white;
         TextExitGame.color = Color.white;
         ExitGameScreen.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
+        DisableAndEnableOnClick(buttonComponents, false);
+        DisableHoverButton(eventsHover, Color.white, InitialVectorButtonMenu);
+        BlackScreen.enabled = true;
     }
 
     public void YesOption() => Application.Quit();
@@ -127,9 +136,14 @@ public class MenuClicks : MonoBehaviour
             TextExitGame.color = new Color(255, 255, 255, alpha);
             yield return null;
         }
+    }
 
-        setValuesExit(true);
-        ExitGameScreen.SetActive(false);
+    private IEnumerator TurnHoverNoOption()
+    { 
+        var NoTextHover = NoText.GetComponentInParent<ButtonMenuHover>();
+        NoTextHover.TargetColor = new Color(84, 185, 0);
+        NoTextHover.TargetVector = new Vector2(2, 2);
+        yield return null;
     }
 
     private void setValuesExit(bool value)
@@ -138,11 +152,22 @@ public class MenuClicks : MonoBehaviour
         YesText.GetComponentInParent<Button>().enabled = value;
         NoText.GetComponentInParent<ButtonMenuHover>().enabled = value;
         NoText.GetComponentInParent<Button>().enabled = value;
-    }    
-    public void NoOption()
+    }  
+
+    private IEnumerator NoOptionCoroutine()
     {
+        yield return StartCoroutine(TurnHoverNoOption());
+        yield return StartCoroutine(fadeOutExitGame());
         setValuesExit(false);
-        StartCoroutine(fadeOutExitGame());
+        ExitGameScreen.SetActive(false);
+        ExitGameEsc = true;
+        BlackScreen.enabled = false;
+    }
+    public void NoOption()
+    {          
+        DisableAndEnableOnClick(buttonComponents, true);
+        turnButtonsNormal();
+        StartCoroutine(NoOptionCoroutine());     
     }
 
     public void ArrowButtonClick() 
@@ -154,7 +179,7 @@ public class MenuClicks : MonoBehaviour
         waitForOptionsScreen = false;
         DisableAndEnableOnClick(buttonComponents, true);
         turnButtonsNormal();
-        ExitGameEsc = true;
+        Invoke("EnableWaitForExitScreen", .5f);
     }
 
     public void ArrowButtonClickNewGame()
@@ -165,7 +190,7 @@ public class MenuClicks : MonoBehaviour
         waitForNewGameScreen = false;
         DisableAndEnableOnClick(buttonComponents, true);
         turnButtonsNormal();
-        ExitGameEsc = true;
+        Invoke("EnableWaitForExitScreen", 1);
     }
 
     void Update()
@@ -176,6 +201,7 @@ public class MenuClicks : MonoBehaviour
         {
             if (SetMenuOptions && waitForOptionsScreen) ArrowButtonClick();
             if (SetMenuNemGame && waitForNewGameScreen) ArrowButtonClickNewGame();
+            if (ExitGameEsc) ExitButtonClick();
         }
     }
 };
