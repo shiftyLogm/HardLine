@@ -13,8 +13,12 @@ public class PlayerController : MonoBehaviour
 
     State state;
 
+
     // Attack Types
     public MeleeAttack meleeAttack;
+    public RangeAttack rangeAttack;
+    public ArcherAttack archerAttack;
+    public MageAttack mageAttack;
 
     // Variaveis
     private Animator _animator;
@@ -24,7 +28,6 @@ public class PlayerController : MonoBehaviour
     private bool _isDashing = false;
     private bool _isTrueOrFalseAction = false;
     private bool _canChangeDirection;
-    PlayerClassesController playerClassesController;
 
     // Fogueira
     public GameObject[] fogueiras;
@@ -39,7 +42,6 @@ public class PlayerController : MonoBehaviour
         _animator = GetComponentInChildren<Animator>();
         _rb = GetComponent<Rigidbody2D>();
         _entityStats = GetComponent<EntityStats>();
-        playerClassesController = GetComponent<PlayerClassesController>();
 
         // States Setup
         idleState.Setup(_animator, _rb);
@@ -49,6 +51,7 @@ public class PlayerController : MonoBehaviour
 
         // Attack Types Setup
         meleeAttack.Setup(_animator, _rb, _entityStats);
+        rangeAttack.Setup(_animator, _rb, _entityStats);
 
         // State inicial
         state = idleState;
@@ -195,11 +198,16 @@ public class PlayerController : MonoBehaviour
     {
         Dictionary<string, AttackState> attackTypeDict = new()
         {
-            {"Warrior", meleeAttack}
+            {"Warrior", meleeAttack},
+            {"Archer", archerAttack},
+            {"Mage", mageAttack}
         };
 
-        attackTypeDict[playerClassesController.idxClass].attackPoint = attackState.SelectAttackPoint();
-        attackTypeDict[playerClassesController.idxClass].Attack();
+        
+        Debug.Log($"classe {attackTypeDict[PlayerClassesController.Instance.idxClass]}");
+        
+        attackTypeDict[PlayerClassesController.Instance.idxClass].attackPoint = attackState.SelectAttackPoint();
+        attackTypeDict[PlayerClassesController.Instance.idxClass].Attack();
 
     }
 

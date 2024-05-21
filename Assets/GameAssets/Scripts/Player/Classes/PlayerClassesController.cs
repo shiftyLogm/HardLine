@@ -4,30 +4,46 @@ using UnityEngine;
 
 public class PlayerClassesController : MonoBehaviour
 {
+    public static PlayerClassesController Instance { get; set; }
+
     // Class states
-    State state;
-    public WarriorClass warriorClass;
-    public MageClass mageClass;
-    public RangedClass rangedClass;
+    // State state;
+    // public WarriorClass warriorClass;
+    // public MageClass mageClass;
+    // public RangedClass rangedClass;
 
     // EntityStats
-    EntityStats entityStats;
+    // EntityStats entityStats;
 
     // Index de classes
     public string idxClass = "";
 
-    // Start is called before the first frame update
-    void Start()
+    // Prefabs das classes
+
+    [SerializeField]
+    private GameObject _warriorClass;
+    
+    [SerializeField]
+    private GameObject _mageClass;
+    
+    [SerializeField]
+    private GameObject _archerClass;
+
+    public GameObject player;
+
+    void Awake()
     {
-        entityStats = GetComponent<EntityStats>();
+        if(Instance == null) Instance = this;
+
+        // entityStats = GetComponent<EntityStats>();
 
         SelectClass();
 
-        warriorClass.Setup(_entityStats: entityStats);
-        rangedClass.Setup(_entityStats: entityStats);
-        mageClass.Setup(_entityStats: entityStats);
+        // warriorClass.Setup(_entityStats: entityStats);
+        // rangedClass.Setup(_entityStats: entityStats);
+        // mageClass.Setup(_entityStats: entityStats);
 
-        state.Enter();
+        // state.Enter();
     }
 
     // Update is called once per frame
@@ -38,13 +54,14 @@ public class PlayerClassesController : MonoBehaviour
 
     void SelectClass()
     {
-        Dictionary<string, State> classes = new()
+        Dictionary<string, GameObject> classes = new()
         {
-            {"Warrior", warriorClass},
-            {"Ranged", rangedClass},
-            {"Mage", mageClass}
+            {"Warrior", _warriorClass},
+            {"Archer", _archerClass},
+            {"Mage", _mageClass}
         };
 
-        state = classes[idxClass];
+        // Instanciando o player com sua classe
+        player = Instantiate(classes[idxClass], new Vector3(-3.14f, 1.612f, 0), Quaternion.identity);
     }
 }

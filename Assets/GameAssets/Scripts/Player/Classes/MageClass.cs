@@ -9,10 +9,12 @@ public class MageClass : State
         entityStats.maxHp = 10;
         entityStats.SetHp();
 
-        entityStats.moveSpeed = 310;
+        entityStats.moveSpeed = 160;
         entityStats.attackRange = 3;
         entityStats.attackDamage = 7;
         entityStats.dashForce = 7;
+
+        attackType = "mageAttack";
     }
 
     public override void Do()
