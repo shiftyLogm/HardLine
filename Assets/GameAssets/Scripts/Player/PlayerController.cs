@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
         #region Input Actions
 
         // Input Actions
-        if(UserInput.Instance.AttackInput)
+        if(UserInput.Instance.AttackInput && !_isAttacking)
         {
             _isTrueOrFalseAction = true;
             _isAttacking = true;

@@ -7,6 +7,7 @@ public class RangeAttack : AttackState
     [SerializeField]
     protected GameObject projectile;
 
+
     // Start is called before the first frame update
     void Start()
     {

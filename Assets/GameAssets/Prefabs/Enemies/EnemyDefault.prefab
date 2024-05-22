@@ -211,7 +211,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.57
+  m_Radius: 1
 --- !u!1 &3998224024067656214
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,7 +290,7 @@ Transform:
   m_GameObject: {fileID: 4603992182314597170}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.33, y: 0, z: 0}
+  m_LocalPosition: {x: -0.602, y: -0.093, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -329,7 +329,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.018, y: 1.1219361, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1221482674252267649}
@@ -371,7 +371,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.029373765, y: -0.02962476}
+  m_Offset: {x: -0.0552817, y: -0.120327234}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -382,7 +382,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.530977, y: 0.6563529}
+  m_Size: {x: 1.3896278, y: 1.2126617}
   m_EdgeRadius: 0
 --- !u!114 &6380798097041269531
 MonoBehaviour:
@@ -414,12 +414,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017915ab3c759f5409c3b8785cdf89b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _level: 1
   maxHp: 30
   hp: 0
+  maxXp: 0
+  xp: 300
   moveSpeed: 100
-  attackRange: 0.35
+  attackRange: 0.3
   attackDamage: 0
   dashForce: 0
+  projectileForce: 0
+  attackCooldown: 0
 --- !u!114 &1826794357106430210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -804,11 +809,11 @@ MonoBehaviour:
   - {fileID: 4603992182314597170}
   - {fileID: 793575446233477648}
   - {fileID: 7045609218135609627}
-  attackPoint: 0
+  attackPoint: 1
   targetLayers:
     serializedVersion: 2
     m_Bits: 2048
-  _attackRange: 0.35
+  _attackRange: 0.3
 --- !u!1 &8923644803051518746
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,7 +839,7 @@ Transform:
   m_GameObject: {fileID: 8923644803051518746}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.33, y: 0, z: 0}
+  m_LocalPosition: {x: 0.626, y: -0.067, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

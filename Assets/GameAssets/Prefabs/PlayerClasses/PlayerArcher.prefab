@@ -696,12 +696,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017915ab3c759f5409c3b8785cdf89b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _level: 1
   maxHp: 15
   hp: 0
+  maxXp: 0
+  xp: 0
   moveSpeed: 180
   attackRange: 1
   attackDamage: 3.5
   dashForce: 12
+  projectileForce: 5
+  attackCooldown: 1
 --- !u!114 &2538329621796815791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -736,7 +741,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2203340508633087618}
-  force: 0.2
+  force: 0.05
   delay: 0.15
   OnBegin:
     m_PersistentCalls:
@@ -956,4 +961,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   _attackRange: 0
-  projectile: {fileID: 4322950957168782364, guid: bc4417544bd2b3040a2d1613438d3af1, type: 3}
+  projectile: {fileID: 4322950957168782364, guid: ade5892dbb6d2bf419e133a914bdb145, type: 3}
