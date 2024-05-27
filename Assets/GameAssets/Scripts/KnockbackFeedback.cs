@@ -17,6 +17,7 @@ public class KnockbackFeedback : MonoBehaviour
 
     public void PlayFeedback()
     {
+        sender.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         StopAllCoroutines();
         OnBegin?.Invoke();
         Vector2 direction = (transform.position - sender.transform.position).normalized;

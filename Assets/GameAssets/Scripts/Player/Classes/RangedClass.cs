@@ -9,10 +9,12 @@ public class RangedClass : State
         entityStats.maxHp = 15;
         entityStats.SetHp();
 
-        entityStats.moveSpeed = 330;
+        entityStats.moveSpeed = 180;
         entityStats.attackRange = 1;
         entityStats.attackDamage = 3.5f;
         entityStats.dashForce = 12;
+
+        attackType = "arrowAttack";
     }
 
     public override void Do()
