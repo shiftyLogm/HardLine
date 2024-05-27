@@ -1,4 +1,5 @@
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -16,7 +17,6 @@ public class ButtonMenuHover : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     private Color normalColor = Color.white;
     public Color hoverColor;
-    
     void Start()
     {
         transitionSpeed = 5f * Time.deltaTime;
@@ -35,9 +35,24 @@ public class ButtonMenuHover : MonoBehaviour, IPointerEnterHandler, IPointerExit
     {
         TargetColor = hoverColor;
         TargetVector = hoverVector;
+        EventSystem.current.SetSelectedGameObject(null);
+        MenuClicks.setNavigate = true;
+        ExitGameScreenNavigate.setNavigateExitScreen = true;
     }
     
     public void OnPointerExit(PointerEventData eventData) 
+    {
+        TargetColor = normalColor;
+        TargetVector = normalVector;
+    }
+
+    public void OnSelect()
+    {
+        TargetColor = hoverColor;
+        TargetVector = hoverVector;
+    }
+
+    public void OnDeselect()
     {
         TargetColor = normalColor;
         TargetVector = normalVector;

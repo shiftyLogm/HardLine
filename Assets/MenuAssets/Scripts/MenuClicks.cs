@@ -3,11 +3,11 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine.Rendering;
 using TMPro;
-using Unity.Mathematics;
 using System.Collections;
 using UnityEngine.EventSystems;
-using System.Reflection;
-using Unity.VisualScripting;
+using System;
+using System.Linq;
+
 public class MenuClicks : MonoBehaviour
 {
     public Volume globalVolume;
@@ -35,6 +35,10 @@ public class MenuClicks : MonoBehaviour
     public TextMeshProUGUI TextExitGame;
     public Color fadeOutColor = new Color(255, 255, 255, 0);
     public Image BlackScreen;
+    public GameObject newgameButton;
+    public static bool setNavigate = true;
+    private bool turnExitScreenWithEsc = false;
+    private Dictionary<Action, bool> dictEscOptions;
     void Start()
     {
         MainMenuRect = GetComponent<RectTransform>();
@@ -51,7 +55,7 @@ public class MenuClicks : MonoBehaviour
         ExitGameEsc = true;
         BlackScreen.enabled = false;
     }
-
+    
     private void DisableAndEnableOnClick(List<Button> list, bool value)
     {
         foreach(var button in list) button.interactable = value;
@@ -87,9 +91,11 @@ public class MenuClicks : MonoBehaviour
         DisableHoverButton(eventsHover, Color.white, InitialVectorButtonMenu);
         Invoke("EnableWaitForNewGameScreen", 1f);
         ExitGameEsc = false;
+        setNavigate = true;
     }
 
     void EnableWaitForOptionsScreen() => waitForOptionsScreen = true;
+
     public void OptionsButtonClick()
     {
         LeanTween.move(GameLogo, new Vector2(0, -700), .5f).setEase(LeanTweenType.easeInOutQuad);
@@ -100,15 +106,20 @@ public class MenuClicks : MonoBehaviour
         DisableHoverButton(eventsHover, Color.white, InitialVectorButtonMenu);
         Invoke("EnableWaitForOptionsScreen", .5f);
         ExitGameEsc = false;
+        setNavigate = true;
+        OptionsNavigate.setNavigateOptions = true;
     }
 
     void EnableWaitForExitScreen() => ExitGameEsc = true;
+    void EnableturnExitScreenWithEsc() => turnExitScreenWithEsc = true;
+
     public void ExitButtonClick() 
     {
         ExitGameEsc = false;
         ExitGameScreen.SetActive(true);
         setValuesExit(true);
         NoText.GetComponentInParent<ButtonMenuHover>().TargetColor = Color.white;
+        YesText.GetComponentInParent<ButtonMenuHover>().TargetColor = Color.white;
         ExitGameScreen.GetComponent<Image>().color = Color.white;
         YesText.color = Color.white;
         NoText.color = Color.white;
@@ -116,7 +127,11 @@ public class MenuClicks : MonoBehaviour
         ExitGameScreen.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
         DisableAndEnableOnClick(buttonComponents, false);
         DisableHoverButton(eventsHover, Color.white, InitialVectorButtonMenu);
+        BlackScreen.color = new Color(0, 0, 0, a: 0.98f);
         BlackScreen.enabled = true;
+        setNavigate = true;
+        Invoke("EnableturnExitScreenWithEsc", 0.2f);
+        ExitGameScreenNavigate.setNavigateExitScreen = true;
     }
 
     public void YesOption() => Application.Quit();
@@ -134,6 +149,7 @@ public class MenuClicks : MonoBehaviour
             YesText.color = new Color(255, 255, 255, alpha);
             NoText.color = new Color(255, 255, 255, alpha);
             TextExitGame.color = new Color(255, 255, 255, alpha);
+            BlackScreen.color = new Color(0, 0, 0, alpha - 0.02f);
             yield return null;
         }
     }
@@ -141,8 +157,11 @@ public class MenuClicks : MonoBehaviour
     private IEnumerator TurnHoverNoOption()
     { 
         var NoTextHover = NoText.GetComponentInParent<ButtonMenuHover>();
+        var YesTextHover = YesText.GetComponentInParent<ButtonMenuHover>();
         NoTextHover.TargetColor = new Color(84, 185, 0);
         NoTextHover.TargetVector = new Vector2(2, 2);
+        YesTextHover.TargetColor = new Color(195, 4, 0);
+        YesTextHover.TargetVector = new Vector2(2, 2);
         yield return null;
     }
 
@@ -167,7 +186,9 @@ public class MenuClicks : MonoBehaviour
     {          
         DisableAndEnableOnClick(buttonComponents, true);
         turnButtonsNormal();
-        StartCoroutine(NoOptionCoroutine());     
+        StartCoroutine(NoOptionCoroutine());
+        turnExitScreenWithEsc = false;     
+        ExitGameScreenNavigate.setNavigateExitScreen = false;
     }
 
     public void ArrowButtonClick() 
@@ -180,6 +201,9 @@ public class MenuClicks : MonoBehaviour
         DisableAndEnableOnClick(buttonComponents, true);
         turnButtonsNormal();
         Invoke("EnableWaitForExitScreen", .5f);
+        OptionsNavigate.setNavigateOptions = false;
+        EventSystem.current.SetSelectedGameObject(null);
+        setNavigate = true;
     }
 
     public void ArrowButtonClickNewGame()
@@ -193,15 +217,42 @@ public class MenuClicks : MonoBehaviour
         Invoke("EnableWaitForExitScreen", 1);
     }
 
+    private Action findKeyToEsc(Dictionary<Action, bool> dict, bool value)
+    {
+        var idx = dict.FirstOrDefault(x => x.Value == value);
+        return idx.Key;
+    }
+
+    private void EscValue()
+    {
+        try
+        {
+            dictEscOptions = new()
+            {
+                {() => ArrowButtonClick(), SetMenuOptions && waitForOptionsScreen},
+                {() => ArrowButtonClickNewGame(), SetMenuNemGame && waitForNewGameScreen},
+                {() => ExitButtonClick(), ExitGameEsc},
+                {() => NoOption(), turnExitScreenWithEsc}
+            };
+
+            findKeyToEsc(dictEscOptions, true).Invoke();
+        }
+
+        catch(NullReferenceException) {}
+
+    }
+
     void Update()
     {  
         resetOptions = OptionsMenu.anchoredPosition.y > 1000 ? true : false;
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (SetMenuOptions && waitForOptionsScreen) ArrowButtonClick();
-            if (SetMenuNemGame && waitForNewGameScreen) ArrowButtonClickNewGame();
-            if (ExitGameEsc) ExitButtonClick();
-        }
+        if (Input.GetKey(KeyCode.Escape)) EscValue();
+
+            if (Input.GetKeyDown(KeyCode.UpArrow) && setNavigate || Input.GetKeyDown(KeyCode.DownArrow) && setNavigate)
+            {
+                EventSystem.current.SetSelectedGameObject(newgameButton);
+                setNavigate = false;
+            }
+
     }
 };

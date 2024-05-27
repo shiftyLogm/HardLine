@@ -7,6 +7,7 @@ public class SetPostProcessingValues : MonoBehaviour
     public UnityEngine.UI.Slider sliderBrightness;
     public Volume volumePostProcessing;
     private ColorAdjustments brightness;
+    
     void Start()
     {
         volumePostProcessing.profile.TryGet<ColorAdjustments>(out brightness);
@@ -16,6 +17,4 @@ public class SetPostProcessingValues : MonoBehaviour
     }
 
     public void ChangeBrightness() => brightness.postExposure.value = sliderBrightness.value;
-
-
 }

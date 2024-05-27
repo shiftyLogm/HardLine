@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MenuMusic : MonoBehaviour
@@ -8,7 +6,7 @@ public class MenuMusic : MonoBehaviour
     void Start()
     { 
         musicMenu = GetComponent<AudioSource>();
-        musicMenu.volume = 1;
+        musicMenu.volume = 0;
         musicMenu.loop = true;
         musicMenu.playOnAwake = true;
         musicMenu.pitch = .85f;

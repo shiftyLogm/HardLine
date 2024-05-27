@@ -1,13 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using System;
-using System.IO;
-using Unity.VisualScripting.Antlr3.Runtime;
-using TMPro;
-using UnityEngine.UI;
-using Unity.VisualScripting;
-using System.Threading;
 
 public class MoveNewGameTabs : MonoBehaviour
 {
@@ -30,6 +23,7 @@ public class MoveNewGameTabs : MonoBehaviour
     public static bool clearText = false;
     public bool waitForTurnTabs = false;
     public static bool desactiveEventTrigger = false;
+    private GameObject _enterShortcut;
     void Start()
     {
         _tabPosition = GetComponent<RectTransform>();
@@ -45,6 +39,7 @@ public class MoveNewGameTabs : MonoBehaviour
         _initialScaleTab = tabNG[0].transform.localScale;
         _TargetScaleTab = tabNG[0].GetComponent<TransformHover>().targetScale;
         objClassNG = FindObjectOfType<HoverTabsClassNG>();
+        _enterShortcut = GameObject.FindWithTag("EnterShortcut");
     }
     
     private void setListEventTrigger(List<EventTrigger> events, bool value)
@@ -76,6 +71,7 @@ public class MoveNewGameTabs : MonoBehaviour
         clearText = false;
         Invoke("enablewaitForTurnTabs", 1);
         desactiveEventTrigger = false;
+        _enterShortcut.SetActive(false);
     }
 
     public void turnTabs() 
@@ -91,6 +87,7 @@ public class MoveNewGameTabs : MonoBehaviour
         objClassNG.changeClassBTN.SetActive(false);
         clearText = true;
         waitForTurnTabs = false;
+        _enterShortcut.SetActive(true);
     }
 
     void Update()
