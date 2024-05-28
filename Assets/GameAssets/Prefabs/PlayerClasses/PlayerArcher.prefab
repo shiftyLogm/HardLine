@@ -696,7 +696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017915ab3c759f5409c3b8785cdf89b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _level: 1
+  level: 1
   maxHp: 15
   hp: 0
   maxXp: 0
@@ -704,7 +704,13 @@ MonoBehaviour:
   moveSpeed: 180
   attackRange: 1
   attackDamage: 3.5
-  dashForce: 12
+  faith: 0
+  defense: 0
+  vitality: 0
+  dexterity: 0
+  inteligence: 0
+  luck: 0
+  dashForce: 6
   projectileForce: 5
   attackCooldown: 1
 --- !u!114 &2538329621796815791

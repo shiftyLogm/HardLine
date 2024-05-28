@@ -59,10 +59,5 @@ public class HUD : MonoBehaviour
         hpBar.value = playerStats.hp;
     }
 
-    // Mostrar Interaction
-    void ShowInteraction()
-    {
-        
-    }
     
 }

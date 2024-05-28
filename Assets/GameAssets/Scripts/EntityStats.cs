@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class EntityStats : MonoBehaviour
 {
-    [SerializeField]
-    private int _level = 1;
+    public int level = 1;
     public int maxHp;
     public float hp;
     public int maxXp;
@@ -11,6 +10,12 @@ public class EntityStats : MonoBehaviour
     public float moveSpeed;
     public float attackRange;
     public float attackDamage;
+    public float faith;
+    public float defense;
+    public float vitality;
+    public float dexterity;
+    public float inteligence;
+    public float luck;
     public float dashForce;
     public float projectileForce;
     public float attackCooldown;
@@ -20,6 +25,7 @@ public class EntityStats : MonoBehaviour
     void Start()
     {
         SetHp();
+        moveSpeed += dexterity/100;
     }
 
     // Update is called once per frame
@@ -36,7 +42,7 @@ public class EntityStats : MonoBehaviour
         HUD.Instance.ShowDamageOnScreen(_damage, this.gameObject.transform.position);
 
         // Mudar cor ao tomar dano
-        GetComponentInChildren<SpriteRenderer>().color = (this.tag == "Player") ? Color.red : Color.magenta;
+        GetComponentInChildren<SpriteRenderer>().color = Color.red;
 
         if(hp <= 0)
         {
@@ -60,10 +66,7 @@ public class EntityStats : MonoBehaviour
 
     private void BlinkDamage()
     {
-        if(GetComponentInChildren<SpriteRenderer>().color == Color.white && this.tag == "Player") return;
-        if(GetComponentInChildren<SpriteRenderer>().color == Color.red && this.tag == "Enemy") return;
-
-        GetComponentInChildren<SpriteRenderer>().color = Color.Lerp(GetComponentInChildren<SpriteRenderer>().color, (this.tag == "Player") ? Color.white : Color.red, 5 * Time.deltaTime);
+        GetComponentInChildren<SpriteRenderer>().color = Color.Lerp(GetComponentInChildren<SpriteRenderer>().color, Color.white, 5 * Time.deltaTime);
     }
 
     private void LevelUp(float xpToUp)
@@ -72,7 +75,7 @@ public class EntityStats : MonoBehaviour
 
         while(xp >= maxXp)
         {
-            _level += 1;
+            level += 1;
             xp -= maxXp;
             if(xp < 0) xp = 0;
             maxXp += 50;

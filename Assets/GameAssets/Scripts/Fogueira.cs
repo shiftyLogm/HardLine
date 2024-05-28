@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -11,6 +12,8 @@ public class Fogueira : MonoBehaviour
     List<GameObject> enemyInstanceList = new List<GameObject>();
 
     Transform player;
+    private int _level;
+    private int _oldLevel;
     public bool canUseFireplace;
     EntityStats playerStats;
 
@@ -20,6 +23,7 @@ public class Fogueira : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        _oldLevel = player.gameObject.GetComponent<EntityStats>().level;
         playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<EntityStats>();
         Spawn();
     }
@@ -32,7 +36,34 @@ public class Fogueira : MonoBehaviour
     }
 
 
-    public void Spawn()
+    public void Interact()
+    {
+        Spawn();
+        RestoreHP();
+        LevelUpScreen(); //Testar em casa
+    }
+
+    private void LevelUpScreen()
+    {
+        _level = player.gameObject.GetComponent<EntityStats>().level;
+        if(_level != _oldLevel)
+        {
+            _oldLevel = _level;
+
+            Dictionary<string, Action> levelUpDict = new()
+            {
+                {"str", () => playerStats.attackDamage += 2},
+                {"faith", () => playerStats.faith += 2},
+                {"int", () => playerStats.inteligence += 2}, 
+                {"def", () => playerStats.defense += 2},
+                {"dex", () => {playerStats.dexterity += 2; playerStats.moveSpeed += playerStats.dexterity/100;}},
+                {"luck", () => playerStats.luck += 2},
+                {"vit", () => playerStats.vitality += 2},
+            };
+        }
+    }
+
+    private void Spawn()
     {
         // Se ja existir inimigos spawnados, eles serao destruidos antes de spawnar novos
         if(enemyInstanceList != null) 
@@ -53,7 +84,7 @@ public class Fogueira : MonoBehaviour
         }
     }
 
-    public void RestoreHP()
+    private void RestoreHP()
     {
         playerStats.hp = playerStats.maxHp;
     }

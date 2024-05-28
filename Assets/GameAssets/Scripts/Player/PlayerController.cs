@@ -64,18 +64,13 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Input Actions
-
         mov = UserInput.Instance.MoveInput;
+        if(!_isTrueOrFalseAction) oldMov = mov;
 
         // -=-=-=-=-=-=-=
 
 
-        if(state == dashState)
-        {
-            dashState.mov = oldMov; // Setando qual direçao devo ir ao dar dash
-            return;
-        }
+        
 
         // Fazendo o jogador andar
         if(!_isTrueOrFalseAction) _rb.velocity = mov * _entityStats.moveSpeed * Time.fixedDeltaTime;
@@ -105,21 +100,23 @@ public class PlayerController : MonoBehaviour
             {
                 if(fogueira.GetComponent<Fogueira>().canUseFireplace) 
                 {
-                    fogueira.GetComponent<Fogueira>().Spawn();
-                    fogueira.GetComponent<Fogueira>().RestoreHP();
+                    fogueira.GetComponent<Fogueira>().Interact();
                 }
             }
         }
 
         #endregion
 
+        if(state == dashState)
+        {
+            dashState.mov = mov; // Setando qual direçao devo ir ao dar dash
+        }
+        
         // Seleciona a animaçao da direçao correspondente com a velocidade
         if (_rb.velocity != new Vector2(0, 0)) DirectionFacing();
 
         SelectState();
         state.Do();
-
-        if(!_isTrueOrFalseAction) oldMov = mov;
     }
 
     #region Direction
