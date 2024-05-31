@@ -64,23 +64,29 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        // Movimentaçao
         mov = UserInput.Instance.MoveInput;
-        if(!_isTrueOrFalseAction) oldMov = mov;
-
-        // -=-=-=-=-=-=-=
-
-
-        
-
-        // Fazendo o jogador andar
-        if(!_isTrueOrFalseAction) _rb.velocity = mov * _entityStats.moveSpeed * Time.fixedDeltaTime;
+        if(!_isTrueOrFalseAction)
+        {
+            _rb.velocity = mov * _entityStats.moveSpeed * Time.fixedDeltaTime;
+        }
     }
 
     void Update()
     {
-        #region Input Actions
+        GetDashMov();
 
-        // Input Actions
+        InputActions(); // Acoes que o jogador pode realizar
+
+        // Seleciona a animaçao da direçao correspondente com a velocidade
+        DirectionFacing();
+
+        SelectState();
+        state.Do();
+    }
+
+    void InputActions()
+    {
         if(UserInput.Instance.AttackInput && !_isAttacking)
         {
             _isTrueOrFalseAction = true;
@@ -104,19 +110,16 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+    }
 
-        #endregion
-
-        if(state == dashState)
+    void GetDashMov()
+    {
+        if(state != dashState)
         {
-            dashState.mov = mov; // Setando qual direçao devo ir ao dar dash
+            oldMov = mov;
         }
-        
-        // Seleciona a animaçao da direçao correspondente com a velocidade
-        if (_rb.velocity != new Vector2(0, 0)) DirectionFacing();
 
-        SelectState();
-        state.Do();
+        dashState.mov = oldMov; // Setando qual direçao devo ir ao dar dash
     }
 
     #region Direction
@@ -125,16 +128,19 @@ public class PlayerController : MonoBehaviour
     {
         Dictionary<string, bool> dictActions = new()
         {
-            {"up", _rb.velocity.y > 0},
-            {"down", _rb.velocity.y < 0},
-            {"right", _rb.velocity.x > 0},
-            {"left", _rb.velocity.x < 0}
+            {"up", UserInput.Instance.MoveInput.y > 0},
+            {"down", UserInput.Instance.MoveInput.y < 0},
+            {"right", UserInput.Instance.MoveInput.x > 0},
+            {"left", UserInput.Instance.MoveInput.x < 0}
         };
 
         var key = Helper.FindKey(dictActions, true);
-        state.direction = key;
-        idleState.direction = state.direction;
-        attackState.direction = state.direction;
+        if(key != null)
+        {
+            state.direction = key;
+            idleState.direction = state.direction;
+            attackState.direction = state.direction;
+        }
     }   
 
     #endregion

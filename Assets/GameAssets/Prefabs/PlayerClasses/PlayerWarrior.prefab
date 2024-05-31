@@ -636,9 +636,10 @@ MonoBehaviour:
   dexterity: 0
   inteligence: 0
   luck: 0
-  dashForce: 5
+  dashForce: 7
   projectileForce: 0
   attackCooldown: 0
+  invencible: 0
 --- !u!114 &2694758342022350938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -673,7 +674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4228116226195675097}
-  force: 0.005
+  force: 20
   delay: 0.15
   OnBegin:
     m_PersistentCalls:

@@ -19,6 +19,7 @@ public class EntityStats : MonoBehaviour
     public float dashForce;
     public float projectileForce;
     public float attackCooldown;
+    public bool invencible = false;
 
 
     // Start is called before the first frame update
@@ -32,25 +33,27 @@ public class EntityStats : MonoBehaviour
     void Update()
     {
         BlinkDamage();
-
     }
 
     public void TakeDamage(float _damage)
     {
-        hp -= _damage;
-
-        HUD.Instance.ShowDamageOnScreen(_damage, this.gameObject.transform.position);
-
-        // Mudar cor ao tomar dano
-        GetComponentInChildren<SpriteRenderer>().color = Color.red;
-
-        if(hp <= 0)
+        if(invencible == false)
         {
-            if(this.gameObject.tag == "Enemy")
+            hp -= _damage;
+
+            HUD.Instance.ShowDamageOnScreen(_damage, this.gameObject.transform.position);
+
+            // Mudar cor ao tomar dano
+            GetComponentInChildren<SpriteRenderer>().color = Color.red;
+
+            if(hp <= 0)
             {
-                GameObject.FindGameObjectWithTag("Player").GetComponent<EntityStats>().LevelUp(xp);
+                if(this.gameObject.tag == "Enemy")
+                {
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<EntityStats>().LevelUp(xp);
+                }
+                Death();
             }
-            Death();
         }
     }
 

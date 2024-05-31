@@ -313,7 +313,7 @@ GameObject:
   - component: {fileID: 7207979733228987043}
   - component: {fileID: 8535976162093649524}
   m_Layer: 10
-  m_Name: EnemyDefault
+  m_Name: Wolf
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

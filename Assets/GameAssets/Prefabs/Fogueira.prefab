@@ -98,12 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bade033aa380d541960e74c14cf1da5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPreFabList:
-  - {fileID: 4854479527839349835, guid: ef4a7137b802f8f4d97f704b4ab98ca7, type: 3}
-  - {fileID: 4854479527839349835, guid: ef4a7137b802f8f4d97f704b4ab98ca7, type: 3}
-  enemySpawns:
-  - {fileID: 0}
-  - {fileID: 0}
+  enemyPreFabList: []
+  enemySpawns: []
   canUseFireplace: 0
   textInteraction: {fileID: 8428332928004690172}
 --- !u!1001 &9064289513297550998

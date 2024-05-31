@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 1258099345781273775}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.422, z: 0}
+  m_LocalPosition: {x: 0, y: -0.275, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 6408692372491797949}
   - component: {fileID: 277668671023840127}
   m_Layer: 10
-  m_Name: Morcego
+  m_Name: Bat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,7 +153,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0552817, y: -0.120327234}
+  m_Offset: {x: -0.0035063028, y: 0.027938902}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -164,7 +164,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3896278, y: 1.2126617}
+  m_Size: {x: 1.1542847, y: 0.7466825}
   m_EdgeRadius: 0
 --- !u!114 &7093690739890643706
 MonoBehaviour:
@@ -352,7 +352,7 @@ Transform:
   m_GameObject: {fileID: 1968119852942802379}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.602, y: -0.093, z: 0}
+  m_LocalPosition: {x: -0.602, y: 0.018, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -383,7 +383,7 @@ Transform:
   m_GameObject: {fileID: 3991057400663774285}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.079, y: 0.366, z: 0}
+  m_LocalPosition: {x: -0.009, y: 0.477, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -416,7 +416,7 @@ Transform:
   m_GameObject: {fileID: 4392793208390922472}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.06, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -635,11 +635,11 @@ MonoBehaviour:
   - {fileID: 1968119852942802379}
   - {fileID: 3991057400663774285}
   - {fileID: 1258099345781273775}
-  attackPoint: 1
+  attackPoint: 0
   targetLayers:
     serializedVersion: 2
     m_Bits: 2048
-  _attackRange: 0.3
+  _attackRange: 0.23
 --- !u!1 &6540634064836866330
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,7 +766,7 @@ Transform:
   m_GameObject: {fileID: 7918627556718011728}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.626, y: -0.067, z: 0}
+  m_LocalPosition: {x: 0.626, y: 0.021, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
