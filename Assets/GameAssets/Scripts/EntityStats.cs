@@ -19,6 +19,11 @@ public class EntityStats : MonoBehaviour
     public float dashForce;
     public float projectileForce;
     public float attackCooldown;
+    public bool invencible = false;
+
+    //Particles
+    public GameObject bloodParticle;
+    public GameObject deathParticle;
 
 
     // Start is called before the first frame update
@@ -32,30 +37,44 @@ public class EntityStats : MonoBehaviour
     void Update()
     {
         BlinkDamage();
-
     }
 
     public void TakeDamage(float _damage)
     {
-        hp -= _damage;
-
-        HUD.Instance.ShowDamageOnScreen(_damage, this.gameObject.transform.position);
-
-        // Mudar cor ao tomar dano
-        GetComponentInChildren<SpriteRenderer>().color = Color.red;
-
-        if(hp <= 0)
+        if(invencible == false)
         {
-            if(this.gameObject.tag == "Enemy")
+            hp -= _damage;
+
+            HUD.Instance.ShowDamageOnScreen(_damage, this.gameObject.transform.position);
+
+            //Particle instance
+            if(bloodParticle)
             {
-                GameObject.FindGameObjectWithTag("Player").GetComponent<EntityStats>().LevelUp(xp);
+                Instantiate(bloodParticle, this.gameObject.transform.position, Quaternion.identity);
+            } 
+
+            // Mudar cor ao tomar dano
+            GetComponentInChildren<SpriteRenderer>().color = Color.red;
+
+            if(hp <= 0)
+            {
+                if(this.gameObject.tag == "Enemy")
+                {
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<EntityStats>().LevelUp(xp);
+                }
+                Death();
             }
-            Death();
         }
     }
 
     void Death()
     {
+        //Particle instance
+        if(deathParticle)
+        {
+            Instantiate(deathParticle, this.gameObject.transform.position, Quaternion.Euler(new Vector3(-90,0,0)));
+        }
+
         Destroy(this.gameObject);
     }
 

@@ -713,6 +713,9 @@ MonoBehaviour:
   dashForce: 6
   projectileForce: 5
   attackCooldown: 1
+  invencible: 0
+  bloodParticle: {fileID: 6823200998282874702, guid: 8f8fe12323625f5499b2853dd2ad3e58, type: 3}
+  deathParticle: {fileID: 0}
 --- !u!114 &2538329621796815791
 MonoBehaviour:
   m_ObjectHideFlags: 0

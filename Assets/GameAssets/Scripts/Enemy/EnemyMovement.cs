@@ -149,7 +149,7 @@ public class EnemyMovement : MonoBehaviour
         }
         
         rb.velocity = new Vector2(0,0);
-        patrol = !hasPath;
+        patrol = !hasPath && enemySpawns.Length > 1;
         if(!coroutineRunning) StartCoroutine(PatrolFunc());
         
     }    

@@ -15,13 +15,14 @@ public class PlayerDashState : State
     public override void Do()
     {
         animator.Play("DASHRIGHT");
+        entityStats.invencible = true;
         if(_canDash) Dash();
         if(animator.GetCurrentAnimatorStateInfo(0).IsName("DASHRIGHT") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1) isComplete = true;
     }
 
     public override void Exit()
     {
-
+        entityStats.invencible = false;
     }
 
     public void Dash()
@@ -29,6 +30,6 @@ public class PlayerDashState : State
         _canDash = false;
         mov.Normalize();
         Debug.Log(mov);
-        rb.AddForce(mov * (entityStats.dashForce/10000), ForceMode2D.Impulse);
+        rb.AddForce(mov * (entityStats.dashForce/100), ForceMode2D.Impulse);
     }
 }
