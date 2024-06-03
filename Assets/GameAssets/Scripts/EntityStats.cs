@@ -69,6 +69,12 @@ public class EntityStats : MonoBehaviour
 
     void Death()
     {
+        //Particle instance
+        if(deathParticle)
+        {
+            Instantiate(deathParticle, this.gameObject.transform.position, Quaternion.Euler(new Vector3(-90,0,0)));
+        }
+
         Destroy(this.gameObject);
     }
 
