@@ -414,7 +414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017915ab3c759f5409c3b8785cdf89b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _level: 1
+  level: 1
   maxHp: 30
   hp: 0
   maxXp: 0
@@ -422,9 +422,18 @@ MonoBehaviour:
   moveSpeed: 100
   attackRange: 0.3
   attackDamage: 0
+  faith: 0
+  defense: 0
+  vitality: 0
+  dexterity: 0
+  inteligence: 0
+  luck: 0
   dashForce: 0
   projectileForce: 0
   attackCooldown: 0
+  invencible: 0
+  bloodParticle: {fileID: 6823200998282874702, guid: 8f8fe12323625f5499b2853dd2ad3e58, type: 3}
+  deathParticle: {fileID: 0}
 --- !u!114 &1826794357106430210
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -21,6 +21,10 @@ public class EntityStats : MonoBehaviour
     public float attackCooldown;
     public bool invencible = false;
 
+    //Particles
+    public GameObject bloodParticle;
+    public GameObject deathParticle;
+
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +46,12 @@ public class EntityStats : MonoBehaviour
             hp -= _damage;
 
             HUD.Instance.ShowDamageOnScreen(_damage, this.gameObject.transform.position);
+
+            //Particle instance
+            if(bloodParticle)
+            {
+                Instantiate(bloodParticle, this.gameObject.transform.position, Quaternion.identity);
+            } 
 
             // Mudar cor ao tomar dano
             GetComponentInChildren<SpriteRenderer>().color = Color.red;
