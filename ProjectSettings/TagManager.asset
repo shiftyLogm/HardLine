@@ -15,6 +15,7 @@ TagManager:
   - ChangeClass
   - Enemy
   - EnterShortcut
+  - PageControlls
   layers:
   - Default
   - TransparentFX

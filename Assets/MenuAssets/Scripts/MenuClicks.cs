@@ -36,9 +36,11 @@ public class MenuClicks : MonoBehaviour
     public Color fadeOutColor = new Color(255, 255, 255, 0);
     public Image BlackScreen;
     public GameObject newgameButton;
+    public GameObject optiongameButton;
     public static bool setNavigate = true;
     private bool turnExitScreenWithEsc = false;
     private Dictionary<Action, bool> dictEscOptions;
+
     void Start()
     {
         MainMenuRect = GetComponent<RectTransform>();
@@ -92,6 +94,7 @@ public class MenuClicks : MonoBehaviour
         Invoke("EnableWaitForNewGameScreen", 1f);
         ExitGameEsc = false;
         setNavigate = true;
+        NewGameNavigation.navigateNewGame = true;
     }
 
     void EnableWaitForOptionsScreen() => waitForOptionsScreen = true;
@@ -212,9 +215,12 @@ public class MenuClicks : MonoBehaviour
         LeanTween.move(PanelNewGame, new Vector2(-1920, -.46f), 1f).setEase(LeanTweenType.easeInOutCubic);
         SetMenuNemGame = false;
         waitForNewGameScreen = false;
+        EventSystem.current.SetSelectedGameObject(null);
+        setNavigate = true;
         DisableAndEnableOnClick(buttonComponents, true);
         turnButtonsNormal();
         Invoke("EnableWaitForExitScreen", 1);
+        NewGameNavigation.navigateNewGame = false;
     }
 
     private Action findKeyToEsc(Dictionary<Action, bool> dict, bool value)
@@ -241,18 +247,19 @@ public class MenuClicks : MonoBehaviour
         catch(NullReferenceException) {}
 
     }
-
+ 
     void Update()
     {  
         resetOptions = OptionsMenu.anchoredPosition.y > 1000 ? true : false;
 
         if (Input.GetKey(KeyCode.Escape)) EscValue();
 
-            if (Input.GetKeyDown(KeyCode.UpArrow) && setNavigate || Input.GetKeyDown(KeyCode.DownArrow) && setNavigate)
-            {
-                EventSystem.current.SetSelectedGameObject(newgameButton);
-                setNavigate = false;
-            }
-
+        if (Input.GetKeyDown(KeyCode.UpArrow) && setNavigate || Input.GetKeyDown(KeyCode.DownArrow) && setNavigate)
+        {
+            EventSystem.current.SetSelectedGameObject(
+                Input.GetKeyDown(KeyCode.UpArrow) ? newgameButton :
+                Input.GetKeyDown(KeyCode.DownArrow) ? optiongameButton : null);
+            setNavigate = false;
+        }
     }
 };

@@ -72,14 +72,15 @@ public class MoveNewGameTabs : MonoBehaviour
         Invoke("enablewaitForTurnTabs", 1);
         desactiveEventTrigger = false;
         _enterShortcut.SetActive(false);
+        NewGameNavigation.navigateNewGame = true;
     }
 
+    void waitforTurnback() => MenuClicks.SetMenuNemGame = true;
     public void turnTabs() 
     {
         LeanTween.move(_tabPosition, _initialPosition, _speedExit).setEase(LeanTweenType.easeInOutCubic);
         LeanTween.move(NameSaveInput, _initialNewSaveInputPos, .5f).setEase(LeanTweenType.easeInOutCubic);
         _setMoveNG = false;
-        MenuClicks.SetMenuNemGame = true;
         setListEventTrigger(eventsTrigger, true);
         foreach(var Tab in tabNG) Tab.GetComponent<TransformHover>().targetScale = _TargetScaleTab;
         objClassNG.classAnimation(620, objClassNG.flexSpeedExit);
@@ -88,6 +89,7 @@ public class MoveNewGameTabs : MonoBehaviour
         clearText = true;
         waitForTurnTabs = false;
         _enterShortcut.SetActive(true);
+        Invoke("waitforTurnback", .7f);
     }
 
     void Update()

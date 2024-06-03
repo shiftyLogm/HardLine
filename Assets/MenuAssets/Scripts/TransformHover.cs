@@ -17,9 +17,20 @@ public class TransformHover : MonoBehaviour , IPointerEnterHandler , IPointerExi
         scaleHover = initialScale;
         _speed = 5f * Time.deltaTime;
     }
-    public void OnPointerEnter(PointerEventData eventData) => scaleHover = targetScale;
+    
+    public void OnPointerEnter(PointerEventData eventData) 
+    {
+        scaleHover = targetScale;
+        EventSystem.current.SetSelectedGameObject(null);
+        NewGameNavigation.navigateNewGame = true;
+    }
+    
 
     public void OnPointerExit(PointerEventData eventData) => scaleHover = initialScale;
+
+    public void OnSelect() => scaleHover = targetScale;
+
+    public void OnDeselect() => scaleHover = initialScale;
 
     void Update() => targetObject.transform.localScale = Vector3.Lerp(targetObject.transform.localScale, scaleHover, _speed);
 }
