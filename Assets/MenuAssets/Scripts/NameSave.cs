@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 
 public class NameSave : MonoBehaviour
@@ -22,6 +23,6 @@ public class NameSave : MonoBehaviour
     
     void Update()
     {
-        if (MoveNewGameTabs.clearText) saveName.text = "";
+        if (MoveNewGameTabs.clearText) saveName.text = "";;
     }
 }
