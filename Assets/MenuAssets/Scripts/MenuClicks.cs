@@ -40,6 +40,7 @@ public class MenuClicks : MonoBehaviour
     public static bool setNavigate = true;
     private bool turnExitScreenWithEsc = false;
     private Dictionary<Action, bool> dictEscOptions;
+    private HoverTabsClassNG hoverTabsObj;
 
     void Start()
     {
@@ -56,6 +57,8 @@ public class MenuClicks : MonoBehaviour
         ExitGameScreen.SetActive(false);
         ExitGameEsc = true;
         BlackScreen.enabled = false;
+        hoverTabsObj = FindObjectOfType<HoverTabsClassNG>();
+        hoverTabsObj.enabled = false;
     }
     
     private void DisableAndEnableOnClick(List<Button> list, bool value)
@@ -95,6 +98,7 @@ public class MenuClicks : MonoBehaviour
         ExitGameEsc = false;
         setNavigate = true;
         NewGameNavigation.navigateNewGame = true;
+        hoverTabsObj.enabled = true;
     }
 
     void EnableWaitForOptionsScreen() => waitForOptionsScreen = true;
@@ -111,6 +115,7 @@ public class MenuClicks : MonoBehaviour
         ExitGameEsc = false;
         setNavigate = true;
         OptionsNavigate.setNavigateOptions = true;
+        HoverTabsClassNG.navigateTabsNewGame = false;
     }
 
     void EnableWaitForExitScreen() => ExitGameEsc = true;
@@ -204,9 +209,10 @@ public class MenuClicks : MonoBehaviour
         DisableAndEnableOnClick(buttonComponents, true);
         turnButtonsNormal();
         Invoke("EnableWaitForExitScreen", .5f);
-        OptionsNavigate.setNavigateOptions = false;
         EventSystem.current.SetSelectedGameObject(null);
         setNavigate = true;
+        OptionsNavigate.setNavigateOptions = false;
+        hoverTabsObj.enabled = false;
     }
 
     public void ArrowButtonClickNewGame()

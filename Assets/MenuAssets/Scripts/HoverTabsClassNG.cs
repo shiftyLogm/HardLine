@@ -1,5 +1,6 @@
 using System;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -35,6 +36,9 @@ public class HoverTabsClassNG : MonoBehaviour
     public static string ClassNewGameData;
     public Color emissionColor;
     private MoveNewGameTabs objNewGameTabs;
+    public static bool navigateTabsNewGame;
+    private bool disableSelect;
+    public static bool escNewGame;
 
     void Start()
     {
@@ -53,14 +57,41 @@ public class HoverTabsClassNG : MonoBehaviour
     }
 
     public void OnPointerEnter()
-    {
+    {   
         Find();
         colorHover = targetColor;
         scaleHover = targetScale;
         writeEffect.nameText = NameClassObj.GetComponent<TextMeshProUGUI>();
         writeEffect.statusText = StatusClassObj.GetComponent<TextMeshProUGUI>();
         StartCoroutine(writeEffect.DisplayLine(NameClass, StatusClass));
+        EventSystem.current.SetSelectedGameObject(null);
         ClassNewGameData = NameClassObj.name;
+        navigateTabsNewGame = false;
+        disableSelect = true;
+    }
+
+    public void OnSelect()
+    {
+        if (!disableSelect)
+        {
+            Find();
+            colorHover = targetColor;
+            scaleHover = targetScale;
+            writeEffect.nameText = NameClassObj.GetComponent<TextMeshProUGUI>();
+            writeEffect.statusText = StatusClassObj.GetComponent<TextMeshProUGUI>();
+            StartCoroutine(writeEffect.DisplayLine(NameClass, StatusClass));
+            ClassNewGameData = NameClassObj.name;
+        }
+    }
+
+    public void OnDeselect()
+    {
+        colorHover = initialColor;
+        scaleHover = initialScale;
+        armourImage.GetComponent<Image>().color = initialArmourColor;
+        StopAllCoroutines();
+        NameClassObj.GetComponent<TextMeshProUGUI>().text = "";
+        StatusClassObj.GetComponent<TextMeshProUGUI>().text = "";
     }
 
     private void Find()
@@ -81,6 +112,8 @@ public class HoverTabsClassNG : MonoBehaviour
         StopAllCoroutines();
         NameClassObj.GetComponent<TextMeshProUGUI>().text = "";
         StatusClassObj.GetComponent<TextMeshProUGUI>().text = "";
+        navigateTabsNewGame = true;
+        disableSelect = false;
     }
 
     public void OnPointerClick(bool value)
@@ -89,6 +122,7 @@ public class HoverTabsClassNG : MonoBehaviour
         foreach(var classObj in Classes) classObj.GetComponent<EventTrigger>().enabled = value;
         changeClassBTN.SetActive(!value);
         MoveNewGameTabs._setMoveNG = value;
+        inputField.saveName.Select();
 
         try 
         {
@@ -129,10 +163,19 @@ public class HoverTabsClassNG : MonoBehaviour
         tabClass.transform.localScale = Vector3.Lerp(tabClass.transform.localScale, scaleHover, _transitionSpeedScale);
         StartGameBTN.SetActive(changeClassBTN.activeSelf && inputField.Normaltext.text.Length > 1 ? true : false);
 
-        if (Input.GetKeyDown(KeyCode.Escape)) 
+        if (Input.GetKeyDown(KeyCode.Escape) && escNewGame) 
         {
             OnPointerClick(true);
             Invoke("desactiveEventTrigger", 0.01f);
+            navigateTabsNewGame = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && navigateTabsNewGame || Input.GetKeyDown(KeyCode.RightArrow) && navigateTabsNewGame)
+        {
+            EventSystem.current.SetSelectedGameObject(
+                Input.GetKeyDown(KeyCode.LeftArrow) ? Classes[0] :
+                Input.GetKeyDown(KeyCode.RightArrow) ? Classes[1] : null);
+            navigateTabsNewGame = false;
         }
     }
 }

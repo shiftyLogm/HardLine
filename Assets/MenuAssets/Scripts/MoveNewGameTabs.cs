@@ -72,12 +72,16 @@ public class MoveNewGameTabs : MonoBehaviour
         Invoke("enablewaitForTurnTabs", 1);
         desactiveEventTrigger = false;
         _enterShortcut.SetActive(false);
-        NewGameNavigation.navigateNewGame = true;
+        EventSystem.current.SetSelectedGameObject(null);
+        NewGameNavigation.navigateNewGame = false;
+        HoverTabsClassNG.navigateTabsNewGame = true;
+        HoverTabsClassNG.escNewGame = true;
     }
 
     void waitforTurnback() => MenuClicks.SetMenuNemGame = true;
     public void turnTabs() 
     {
+        HoverTabsClassNG.navigateTabsNewGame = false;
         LeanTween.move(_tabPosition, _initialPosition, _speedExit).setEase(LeanTweenType.easeInOutCubic);
         LeanTween.move(NameSaveInput, _initialNewSaveInputPos, .5f).setEase(LeanTweenType.easeInOutCubic);
         _setMoveNG = false;
@@ -90,6 +94,9 @@ public class MoveNewGameTabs : MonoBehaviour
         waitForTurnTabs = false;
         _enterShortcut.SetActive(true);
         Invoke("waitforTurnback", .7f);
+        EventSystem.current.SetSelectedGameObject(null);
+        NewGameNavigation.navigateNewGame = true;
+        HoverTabsClassNG.escNewGame = false;
     }
 
     void Update()

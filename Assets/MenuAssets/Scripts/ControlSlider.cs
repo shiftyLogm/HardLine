@@ -13,6 +13,7 @@ public class ControlSlider : MonoBehaviour
     private Button button;
     private Navigation buttonSelect;
     public Selectable tabLogoSound;
+    public GameObject tabLogo;
     private bool turnMenu;
 
     public void OnClick()
@@ -51,11 +52,13 @@ public class ControlSlider : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape) && turnMenu)
         {
-            EventSystem.current.SetSelectedGameObject(null);
+            OnDeselect();
             Invoke("EnableBoolMenuClicks", 0.1f);
             OptionsNavigate.setNavigateOptions = true;
             turnMenu = false;
         }
+
+        Debug.Log(EventSystem.current.currentSelectedGameObject);
     }
 
 }

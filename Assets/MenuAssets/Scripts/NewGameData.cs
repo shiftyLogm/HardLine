@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class NewGameData : MonoBehaviour
 {
-    private Dictionary<string, string> classNames;
-    private string classIdx;
-    private string NameSaveGame;
-    private NameSave objNameSave;
+    public Dictionary<string, string> classNames;
+    public string classIdx;
+    public string NameSaveGame;
+    public NameSave objNameSave;
     void Start()
     {
         objNameSave = FindObjectOfType<NameSave>();
