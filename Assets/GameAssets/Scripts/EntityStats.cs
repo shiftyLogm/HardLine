@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EntityStats : MonoBehaviour
 {
+    [Header("Stats")]
     public int level = 1;
     public int maxHp;
     public float hp;

@@ -72,8 +72,8 @@ public class EnemyController : MonoBehaviour
  
         var key = Helper.FindKey(dict, true);
         state.direction = key;
-        idleState.direction = state.direction;
-        attackState.direction = state.direction;
+        idleState.direction = key;
+        attackState.direction = key;
     }
 
     #endregion

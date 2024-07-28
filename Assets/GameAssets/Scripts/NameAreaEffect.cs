@@ -24,7 +24,7 @@ public class NameAreaEffect : MonoBehaviour
             yield return new WaitForSeconds(typingSpeed);
         }
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         typingSpeed -= 0.04f;
 
         for (int i = areaName.text.Length - 1; i >= 0; i--)
