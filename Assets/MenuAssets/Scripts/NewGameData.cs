@@ -22,7 +22,5 @@ public class NewGameData : MonoBehaviour
     {
         NameSaveGame = objNameSave.Normaltext.text.ToUpper();
         classIdx = HoverTabsClassNG.ClassNewGameData;
-        Debug.Log(classNames[classIdx]);
-        Debug.Log(NameSaveGame);
     }
 }

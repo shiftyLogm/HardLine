@@ -23,6 +23,6 @@ public class NameSave : MonoBehaviour
     
     void Update()
     {
-        if (MoveNewGameTabs.clearText) saveName.text = "";;
+        if (MoveNewGameTabs.clearText) saveName.text = "";
     }
 }

@@ -39,7 +39,6 @@ public class HoverTabsClassNG : MonoBehaviour
     public static bool navigateTabsNewGame;
     private bool disableSelect;
     public static bool escNewGame;
-
     void Start()
     {
         initialColor = new Color(166f/ 255, 166f/ 255, 166f/ 255, 1);
