@@ -39,6 +39,7 @@ public class HoverTabsClassNG : MonoBehaviour
     public static bool navigateTabsNewGame;
     private bool disableSelect;
     public static bool escNewGame;
+    private NewGameConfirmTab newGameInfo;
     void Start()
     {
         initialColor = new Color(166f/ 255, 166f/ 255, 166f/ 255, 1);
@@ -53,6 +54,7 @@ public class HoverTabsClassNG : MonoBehaviour
         changeClassBTN.SetActive(false);
         inputField = FindObjectOfType<NameSave>();
         objNewGameTabs = FindObjectOfType<MoveNewGameTabs>();
+        newGameInfo = FindObjectOfType<NewGameConfirmTab>();
     }
 
     public void OnPointerEnter()
@@ -176,5 +178,8 @@ public class HoverTabsClassNG : MonoBehaviour
                 Input.GetKeyDown(KeyCode.RightArrow) ? Classes[1] : null);
             navigateTabsNewGame = false;
         }
+
+        if (StartGameBTN.activeSelf && Input.GetKeyDown(KeyCode.Return)) newGameInfo.ShowTab();
+        
     }
 }

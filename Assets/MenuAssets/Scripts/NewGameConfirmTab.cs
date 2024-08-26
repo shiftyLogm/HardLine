@@ -9,7 +9,6 @@ public class NewGameConfirmTab : MonoBehaviour
     public UnityEngine.UI.Image imageClass; 
     public UnityEngine.UI.Image blackScreen;
     private NewGameData newgameInfo;
-    public GameObject StartGameBTN;
     void Start()
     {
         newgameInfo = FindObjectOfType<NewGameData>();
@@ -31,5 +30,4 @@ public class NewGameConfirmTab : MonoBehaviour
         blackScreen.enabled = false;
         tabConfirm.SetActive(false);
     }
-
 }
