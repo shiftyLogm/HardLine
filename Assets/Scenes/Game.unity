@@ -286,63 +286,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 38120937}
   m_CullTransparentMesh: 1
---- !u!1001 &190667668
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2776997405336613025, guid: 774841b97a480d34daf68dd3e880d8dd, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.14
-      objectReference: {fileID: 0}
-    - target: {fileID: 2776997405336613025, guid: 774841b97a480d34daf68dd3e880d8dd, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.612
-      objectReference: {fileID: 0}
-    - target: {fileID: 2776997405336613025, guid: 774841b97a480d34daf68dd3e880d8dd, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2776997405336613025, guid: 774841b97a480d34daf68dd3e880d8dd, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2776997405336613025, guid: 774841b97a480d34daf68dd3e880d8dd, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2776997405336613025, guid: 774841b97a480d34daf68dd3e880d8dd, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2776997405336613025, guid: 774841b97a480d34daf68dd3e880d8dd, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2776997405336613025, guid: 774841b97a480d34daf68dd3e880d8dd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2776997405336613025, guid: 774841b97a480d34daf68dd3e880d8dd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2776997405336613025, guid: 774841b97a480d34daf68dd3e880d8dd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8108740344113740172, guid: 774841b97a480d34daf68dd3e880d8dd, type: 3}
-      propertyPath: m_Name
-      value: PlayerWarrior
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 774841b97a480d34daf68dd3e880d8dd, type: 3}
+--- !u!1 &208320350 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8470629284129184509, guid: 5b27570201de7e64bb0c9a37d7ca9a54, type: 3}
+  m_PrefabInstance: {fileID: 757969629}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &305651730
 GameObject:
   m_ObjectHideFlags: 0
@@ -9528,7 +9476,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6692965078429744682, guid: 7a82980a0a8d25d408383135851e1e7c, type: 3}
       propertyPath: enemySpawns.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6692965078429744682, guid: 7a82980a0a8d25d408383135851e1e7c, type: 3}
       propertyPath: enemySpawns.Array.data[0]
@@ -9537,15 +9485,19 @@ PrefabInstance:
     - target: {fileID: 6692965078429744682, guid: 7a82980a0a8d25d408383135851e1e7c, type: 3}
       propertyPath: enemySpawns.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 208320350}
     - target: {fileID: 6692965078429744682, guid: 7a82980a0a8d25d408383135851e1e7c, type: 3}
       propertyPath: enemyPreFabList.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6692965078429744682, guid: 7a82980a0a8d25d408383135851e1e7c, type: 3}
       propertyPath: enemyPreFabList.Array.data[0]
       value: 
       objectReference: {fileID: 4854479527839349835, guid: ef4a7137b802f8f4d97f704b4ab98ca7, type: 3}
+    - target: {fileID: 6692965078429744682, guid: 7a82980a0a8d25d408383135851e1e7c, type: 3}
+      propertyPath: enemyPreFabList.Array.data[1]
+      value: 
+      objectReference: {fileID: 1612906063358287699, guid: 113965a589774724a9c5a2c04929f00d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9933,4 +9885,3 @@ SceneRoots:
   - {fileID: 1939627081}
   - {fileID: 2033989173}
   - {fileID: 1039157761}
-  - {fileID: 190667668}

@@ -57,6 +57,7 @@ public class PlayerController : MonoBehaviour
         state = idleState;
         state.direction = "right";
         attackState.direction = "right";
+        dashState.direction = "right";
 
         // Fogueira
         fogueiras = GameObject.FindGameObjectsWithTag("Fogueira");
@@ -65,9 +66,10 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         // Movimentaçao
-        mov = UserInput.Instance.MoveInput;
+        
         if(!_isTrueOrFalseAction)
         {
+            mov = UserInput.Instance.MoveInput;
             _rb.velocity = mov * _entityStats.moveSpeed * Time.fixedDeltaTime;
         }
     }
@@ -140,6 +142,7 @@ public class PlayerController : MonoBehaviour
             state.direction = key;
             idleState.direction = state.direction;
             attackState.direction = state.direction;
+            dashState.direction = state.direction;
         }
     }   
 

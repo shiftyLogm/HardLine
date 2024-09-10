@@ -8,16 +8,21 @@ public class PlayerDashState : State
     private bool _canDash = false;
     public override void Enter()
     {
-        animator.Play("DASHRIGHT");
+
+        animationToPlay = directions[direction];
+        animator.Play($"DASH{animationToPlay}");
         _canDash = true;
+
     }
 
     public override void Do()
     {
-        animator.Play("DASHRIGHT");
+
+        animator.Play($"DASH{animationToPlay}");
         entityStats.invencible = true;
         if(_canDash) Dash();
-        if(animator.GetCurrentAnimatorStateInfo(0).IsName("DASHRIGHT") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1) isComplete = true;
+        if(animator.GetCurrentAnimatorStateInfo(0).IsName($"DASH{animationToPlay}") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1) isComplete = true;
+
     }
 
     public override void Exit()
