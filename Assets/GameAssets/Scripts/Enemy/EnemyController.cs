@@ -50,7 +50,7 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        DirectionFacing();
+        if(enemyMovement.rb.velocity != new Vector2(0,0)) DirectionFacing();
 
         SelectState();
         state.Do();
