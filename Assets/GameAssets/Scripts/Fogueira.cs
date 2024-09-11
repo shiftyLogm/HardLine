@@ -46,21 +46,8 @@ public class Fogueira : MonoBehaviour
     private void LevelUpScreen()
     {
         _level = player.gameObject.GetComponent<EntityStats>().level;
-        if(_level != _oldLevel)
-        {
-            _oldLevel = _level;
-
-            Dictionary<string, Action> levelUpDict = new()
-            {
-                {"str", () => playerStats.attackDamage += 2},
-                {"faith", () => playerStats.faith += 2},
-                {"int", () => playerStats.inteligence += 2}, 
-                {"def", () => playerStats.defense += 2},
-                {"dex", () => {playerStats.dexterity += 2; playerStats.moveSpeed += playerStats.dexterity/100;}},
-                {"luck", () => playerStats.luck += 2},
-                {"vit", () => playerStats.vitality += 2},
-            };
-        }
+        if(_level != _oldLevel) _oldLevel = _level;
+        
     }
 
     private void Spawn()
