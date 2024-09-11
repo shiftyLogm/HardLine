@@ -3,6 +3,8 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Rendering;
 using Unity.VisualScripting;
+using System.Collections.Generic;
+using System;
 
 public class HUD : MonoBehaviour
 {
@@ -47,7 +49,7 @@ public class HUD : MonoBehaviour
     public void ShowDamageOnScreen(float _damage, Vector2 fatherPos)
     {
         GameObject newPopUp = Instantiate(damagePopUp, fatherPos, Quaternion.identity);
-        newPopUp.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(0,2), 2), ForceMode2D.Impulse);
+        newPopUp.GetComponent<Rigidbody2D>().AddForce(new Vector2(UnityEngine.Random.Range(0,2), 2), ForceMode2D.Impulse);
         newPopUp.GetComponentInChildren<TextMeshProUGUI>().text = _damage.ToString();
         Destroy(newPopUp, 0.3f);
     }
@@ -59,5 +61,18 @@ public class HUD : MonoBehaviour
         hpBar.value = playerStats.hp;
     }
 
-    
+    public void LevelUp(string stat){
+        Dictionary<string, Action> levelUpDict = new()
+        {
+            {"str", () => playerStats.attackDamage += 2},
+            {"faith", () => playerStats.faith += 2},
+            {"int", () => playerStats.inteligence += 2}, 
+            {"def", () => playerStats.defense += 2},
+            {"dex", () => {playerStats.dexterity += 2; playerStats.moveSpeed += playerStats.dexterity/100;}},
+            {"luck", () => playerStats.luck += 2},
+            {"vit", () => playerStats.vitality += 2},
+        };
+
+        levelUpDict[stat]();
+    }
 }
