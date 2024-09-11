@@ -16,6 +16,8 @@ TagManager:
   - Enemy
   - EnterShortcut
   - PageControlls
+  - Fogueira
+  - RebindScreen
   layers:
   - Default
   - TransparentFX
