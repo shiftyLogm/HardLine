@@ -7,7 +7,6 @@ using System.Collections;
 using UnityEngine.EventSystems;
 using System;
 using System.Linq;
-
 public class MenuClicks : MonoBehaviour
 {
     public Volume globalVolume;
