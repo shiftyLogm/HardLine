@@ -7,6 +7,8 @@ using System.Collections;
 using UnityEngine.EventSystems;
 using System;
 using System.Linq;
+
+
 public class MenuClicks : MonoBehaviour
 {
     public Volume globalVolume;
@@ -240,7 +242,7 @@ public class MenuClicks : MonoBehaviour
         {
             dictEscOptions = new()
             {
-                {() => ArrowButtonClick(), SetMenuOptions && waitForOptionsScreen},
+                {() => ArrowButtonClick(), SetMenuOptions && waitForOptionsScreen && KeyRebindingWait.setRebindingKeys},
                 {() => ArrowButtonClickNewGame(), SetMenuNemGame && waitForNewGameScreen},
                 {() => ExitButtonClick(), ExitGameEsc},
                 {() => NoOption(), turnExitScreenWithEsc}
@@ -252,7 +254,7 @@ public class MenuClicks : MonoBehaviour
         catch(NullReferenceException) {}
 
     }
- 
+
     void Update()
     {  
         resetOptions = OptionsMenu.anchoredPosition.y > 1000 ? true : false;

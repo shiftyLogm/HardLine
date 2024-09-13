@@ -20,7 +20,7 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
         /// Reference to the action that is to be rebound.
         /// </summary>
         /// 
-        public static bool setOptionsRebiding;
+
         public InputActionReference actionReference
         {
             get => m_Action;
@@ -276,7 +276,7 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
                 PerformInteractiveRebind(action, bindingIndex);
             }
         }
-
+        
         private void PerformInteractiveRebind(InputAction action, int bindingIndex, bool allCompositeParts = false)
         {
             m_RebindOperation?.Cancel(); // Will null out m_RebindOperation.
@@ -298,6 +298,7 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
                         action.Enable();
                         m_RebindStopEvent?.Invoke(this, operation);
                         m_RebindOverlay?.SetActive(false);
+                        
 
                         if (CheckDuplicateRebindings(action, bindingIndex, allCompositeParts))
                         {
@@ -319,8 +320,6 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
                         UpdateBindingDisplay();
                         CleanUp();
 
-                        // If there's more composite parts we should bind, initiate a rebind
-                        // for the next part.
                         if (allCompositeParts)
                         {
                             var nextBindingIndex = bindingIndex + 1;
@@ -329,7 +328,6 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
                         }
                     });
 
-            // If it's a part binding, show the name of the part in the UI.
             var partName = default(string);
             if (action.bindings[bindingIndex].isPartOfComposite)
                 partName = $"Binding '{action.bindings[bindingIndex].name}'. ";
