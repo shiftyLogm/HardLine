@@ -21,6 +21,8 @@ public class HUD : MonoBehaviour
     public GameObject interaction;
     public bool distFogPlayer;
 
+    // 
+
 
     void Awake()
     {
@@ -65,12 +67,9 @@ public class HUD : MonoBehaviour
         Dictionary<string, Action> levelUpDict = new()
         {
             {"str", () => playerStats.attackDamage += 2},
-            {"faith", () => playerStats.faith += 2},
-            {"int", () => playerStats.inteligence += 2}, 
-            {"def", () => playerStats.defense += 2},
-            {"dex", () => {playerStats.dexterity += 2; playerStats.moveSpeed += playerStats.dexterity/100;}},
-            {"luck", () => playerStats.luck += 2},
-            {"vit", () => playerStats.vitality += 2},
+            {"faith", () => {playerStats.faith += 2; playerStats.intelligence += 2;}},
+            {"def", () => playerStats.SetDef()},
+            {"dex", () => playerStats.SetDex()},
         };
 
         levelUpDict[stat]();

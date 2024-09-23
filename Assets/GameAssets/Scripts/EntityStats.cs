@@ -12,11 +12,10 @@ public class EntityStats : MonoBehaviour
     public float attackRange;
     public float attackDamage;
     public float faith;
-    public float defense;
-    public float vitality;
+    public float defence;
+    public int vitality;
     public float dexterity;
-    public float inteligence;
-    public float luck;
+    public float intelligence;
     public float dashForce;
     public float projectileForce;
     public float attackCooldown;
@@ -30,7 +29,7 @@ public class EntityStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SetHp();
+        SetStatus();
         moveSpeed += dexterity/100;
     }
 
@@ -79,10 +78,31 @@ public class EntityStats : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    public void SetHp()
+    #region Seters Stats
+    public void SetStatus()
     {
+        SetDef();
         hp = maxHp;
+
+        SetDex();
     }
+
+    public void SetDex()
+    {
+        moveSpeed += dexterity/100;
+        if(level == 1) return;
+
+        dexterity += 2; 
+    }
+
+    public void SetDef()
+    {
+        maxHp += vitality;
+        if(level == 1) return;
+        defence += 2; 
+        vitality += 2;
+    }
+    #endregion
 
     private void BlinkDamage()
     {
