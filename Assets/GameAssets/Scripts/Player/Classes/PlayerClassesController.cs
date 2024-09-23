@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerClassesController : MonoBehaviour
@@ -17,7 +18,10 @@ public class PlayerClassesController : MonoBehaviour
 
     // Index de classes
     public string idxClass = "";
-
+    public void setIdxClass(string v)
+    {
+        this.idxClass = v;
+    }
     // Prefabs das classes
 
     [SerializeField]
