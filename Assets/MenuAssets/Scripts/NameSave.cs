@@ -16,6 +16,7 @@ public class NameSave : MonoBehaviour
     }
 
     public void selectInputField() => Placeholder.text = "";
+    
     public void deselectInputField()
     {
         if (Normaltext.text.Length <= 1) Placeholder.text = Placeholdertext;

@@ -22,5 +22,6 @@ public class NewGameData : MonoBehaviour
     {
         NameSaveGame = objNameSave.Normaltext.text.ToUpper();
         classIdx = HoverTabsClassNG.ClassNewGameData;
+        PlayerClassesController.Instance.idxClass = classIdx;
     }
 }
