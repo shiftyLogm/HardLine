@@ -35,19 +35,29 @@ public class Fogueira : MonoBehaviour
         ShowInteraction();
     }
 
-
-    public void Interact()
+    public IEnumerator Interact()
     {
+        LevelUpScreen();
+        yield return new WaitUntil(() => playerStats.levelsUped == 0); // Ira esperar ate que a tela de levelUp suma para fazer o resto da função da fogueira
+        HideLevelUpScreen();
         Spawn();
         RestoreHP();
-        LevelUpScreen(); //Testar em casa
     }
 
     private void LevelUpScreen()
     {
-        _level = player.gameObject.GetComponent<EntityStats>().level;
-        if(_level != _oldLevel) _oldLevel = _level;
-        
+        // Caso ainda tenha pontos de habilidade, a tela continuara ativa
+
+        if(playerStats.levelsUped == 0){
+            HideLevelUpScreen();
+            return;
+        } 
+        HUD.Instance.SetLevelUpScreenStats();
+        HUD.Instance.levelUpScreen.SetActive(true);
+    }
+    private void HideLevelUpScreen()
+    {
+        HUD.Instance.levelUpScreen.SetActive(false);
     }
 
     private void Spawn()

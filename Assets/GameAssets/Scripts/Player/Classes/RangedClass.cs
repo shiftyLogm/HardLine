@@ -11,6 +11,7 @@ public class RangedClass : State
         entityStats.attackRange = 1;
         entityStats.attackDamage = 3.5f;
         entityStats.dashForce = 12;
+        entityStats.vitality = 3;
         entityStats.SetStatus();
 
         

@@ -25,6 +25,8 @@ public class EntityStats : MonoBehaviour
     public GameObject bloodParticle;
     public GameObject deathParticle;
 
+    public int levelsUped;
+
 
     // Start is called before the first frame update
     void Start()
@@ -85,6 +87,9 @@ public class EntityStats : MonoBehaviour
         hp = maxHp;
 
         SetDex();
+
+        // Colocando na tela de level up os stats
+        HUD.Instance.SetLevelUpScreenStats();
     }
 
     public void SetDex()
@@ -97,7 +102,7 @@ public class EntityStats : MonoBehaviour
 
     public void SetDef()
     {
-        maxHp += vitality;
+        maxHp += vitality + 2;
         if(level == 1) return;
         defence += 2; 
         vitality += 2;
@@ -115,12 +120,14 @@ public class EntityStats : MonoBehaviour
 
         while(xp >= maxXp)
         {
+            levelsUped += 1;
             level += 1;
             xp -= maxXp;
             if(xp < 0) xp = 0;
             maxXp += 50;
         }
     }
+
 
 
 }

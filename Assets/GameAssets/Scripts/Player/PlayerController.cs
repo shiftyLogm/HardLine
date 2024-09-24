@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Nova;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -108,7 +109,7 @@ public class PlayerController : MonoBehaviour
             {
                 if(fogueira.GetComponent<Fogueira>().canUseFireplace) 
                 {
-                    fogueira.GetComponent<Fogueira>().Interact();
+                    StartCoroutine(fogueira.GetComponent<Fogueira>().Interact());
                 }
             }
         }

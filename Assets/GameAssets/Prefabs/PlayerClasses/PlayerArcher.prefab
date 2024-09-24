@@ -705,11 +705,10 @@ MonoBehaviour:
   attackRange: 1
   attackDamage: 3.5
   faith: 0
-  defense: 0
-  vitality: 0
+  defence: 0
+  vitality: 3
   dexterity: 0
-  inteligence: 0
-  luck: 0
+  intelligence: 0
   dashForce: 6
   projectileForce: 5
   attackCooldown: 1

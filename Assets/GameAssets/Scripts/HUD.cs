@@ -16,12 +16,24 @@ public class HUD : MonoBehaviour
     public GameObject damagePopUp; // Canvas do dano para mostrar na tela
 
     public Slider hpBar;
+    public Slider xpBar;
 
     // Fogueira interaction
     public GameObject interaction;
     public bool distFogPlayer;
 
-    // 
+    // LevelUp Screen
+    [Header("LevelUp Screen")]
+    [SerializeField] private TextMeshProUGUI level;
+    [SerializeField] private TextMeshProUGUI maxHp;
+    [SerializeField] private TextMeshProUGUI faith;
+    [SerializeField] private TextMeshProUGUI intelligence;
+    [SerializeField] private TextMeshProUGUI vit;
+    [SerializeField] private TextMeshProUGUI def;
+    [SerializeField] private TextMeshProUGUI dex;
+    [SerializeField] private TextMeshProUGUI movSpeed;
+    public GameObject levelUpScreen;
+
 
 
     void Awake()
@@ -39,12 +51,14 @@ public class HUD : MonoBehaviour
     void Start()
     {
         playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<EntityStats>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         ChangeHpBar();
+        ChangeXpBar();
     }
 
     // Funçao que mostra o dano na tela
@@ -57,10 +71,17 @@ public class HUD : MonoBehaviour
     }
 
     // Funçao para mudar o slider de hp quando tomar dano
-    void ChangeHpBar()
+    public void ChangeHpBar()
     {
         hpBar.maxValue = playerStats.maxHp;
         hpBar.value = playerStats.hp;
+    }
+    
+    // Função para mudar o slider de xp quando eliminar um enimigo
+    public void ChangeXpBar()
+    {
+        xpBar.maxValue = playerStats.maxXp;
+        xpBar.value = playerStats.xp;
     }
 
     public void LevelUp(string stat){
@@ -71,7 +92,25 @@ public class HUD : MonoBehaviour
             {"def", () => playerStats.SetDef()},
             {"dex", () => playerStats.SetDex()},
         };
-
+        playerStats.levelsUped -= 1;
         levelUpDict[stat]();
+        
     }
+
+    #region LevelUp Screen
+    
+    // Stats que aparecerao na tela de levelUP
+    public void SetLevelUpScreenStats()
+    {
+        level.text = $"Level: {playerStats.level}";
+        maxHp.text = $"Max Health: {playerStats.maxHp}";
+        faith.text = $"Faith: {playerStats.faith}";
+        intelligence.text = $"Intelligence: {playerStats.intelligence}";
+        vit.text = $"Viatlity: {playerStats.vitality}";
+        def.text = $"Defence: {playerStats.defence}";
+        dex.text = $"Dexterity: {playerStats.dexterity}";
+        movSpeed.text = $"Move Speed: {playerStats.moveSpeed}";
+    }
+
+    #endregion
 }

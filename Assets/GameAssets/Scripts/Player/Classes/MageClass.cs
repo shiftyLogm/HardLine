@@ -11,6 +11,7 @@ public class MageClass : State
         entityStats.attackRange = 3;
         entityStats.attackDamage = 7;
         entityStats.dashForce = 7;
+        entityStats.vitality = 2;
         entityStats.SetStatus();
 
         

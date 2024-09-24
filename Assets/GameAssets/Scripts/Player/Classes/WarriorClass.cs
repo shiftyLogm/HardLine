@@ -11,6 +11,7 @@ public class WarriorClass : State
         entityStats.attackRange = 0.35f;
         entityStats.attackDamage = 3;
         entityStats.dashForce = 10;
+        entityStats.vitality = 5;
         entityStats.SetStatus();
 
         
