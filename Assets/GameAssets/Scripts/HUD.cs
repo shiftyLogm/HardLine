@@ -5,6 +5,7 @@ using UnityEngine.Rendering;
 using Unity.VisualScripting;
 using System.Collections.Generic;
 using System;
+using System.Collections;
 
 public class HUD : MonoBehaviour
 {
@@ -12,8 +13,10 @@ public class HUD : MonoBehaviour
 
 
     EntityStats playerStats;
+    public bool isCoroutineRunning;
 
     public GameObject damagePopUp; // Canvas do dano para mostrar na tela
+    public TextMeshProUGUI levelUpPopUp; // Canvas do texto de level up
 
     public Slider hpBar;
     public Slider xpBar;
@@ -34,6 +37,9 @@ public class HUD : MonoBehaviour
     [SerializeField] private TextMeshProUGUI movSpeed;
     public GameObject levelUpScreen;
 
+    // Cor de levelUp
+    public Color32 levelUpColor;
+
 
 
     void Awake()
@@ -51,7 +57,12 @@ public class HUD : MonoBehaviour
     void Start()
     {
         playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<EntityStats>();
-        
+
+        // Cor de levelUp
+        levelUpColor = new Color32(253, 215, 92, 255);
+
+        levelUpPopUp = GameObject.FindGameObjectWithTag("LevelUpPopUp").GetComponent<TextMeshProUGUI>();
+        levelUpPopUp.color = new Color(0,0,0,0);
     }
 
     // Update is called once per frame
@@ -68,6 +79,19 @@ public class HUD : MonoBehaviour
         newPopUp.GetComponent<Rigidbody2D>().AddForce(new Vector2(UnityEngine.Random.Range(0,2), 2), ForceMode2D.Impulse);
         newPopUp.GetComponentInChildren<TextMeshProUGUI>().text = _damage.ToString();
         Destroy(newPopUp, 0.3f);
+    }
+
+    // Funçao que mostra o texto que o jogador upou de nivel
+    public IEnumerator ShowLevelUpTextScreen()
+    {
+        isCoroutineRunning = true;
+        if(levelUpPopUp.color != levelUpColor)
+        {
+            levelUpPopUp.color = Color.Lerp(levelUpPopUp.color, levelUpColor, 5 * Time.deltaTime);
+            StartCoroutine(ShowLevelUpTextScreen());
+            yield return new WaitForSeconds(0);
+        }
+        isCoroutineRunning = false;
     }
 
     // Funçao para mudar o slider de hp quando tomar dano

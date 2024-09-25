@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EntityStats : MonoBehaviour
@@ -27,18 +28,22 @@ public class EntityStats : MonoBehaviour
 
     public int levelsUped;
 
+    
+
 
     // Start is called before the first frame update
     void Start()
     {
         SetStatus();
         moveSpeed += dexterity/100;
+
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        BlinkDamage();
+        if(GetComponentInChildren<SpriteRenderer>().color != (levelsUped >= 1 ? HUD.Instance.levelUpColor : Color.white)) BlinkDamage();
     }
 
     public void TakeDamage(float _damage)
@@ -111,7 +116,7 @@ public class EntityStats : MonoBehaviour
 
     private void BlinkDamage()
     {
-        GetComponentInChildren<SpriteRenderer>().color = Color.Lerp(GetComponentInChildren<SpriteRenderer>().color, Color.white, 5 * Time.deltaTime);
+        GetComponentInChildren<SpriteRenderer>().color = Color.Lerp(GetComponentInChildren<SpriteRenderer>().color, levelsUped >= 1 ? HUD.Instance.levelUpColor : Color.white, 5 * Time.deltaTime); // Caso ele tenha pontos de habilidade, a cor padrao dele sera levelUpColor, por isso ela voltara para essa cor quando tomar dano
     }
 
     private void LevelUp(float xpToUp)
@@ -121,6 +126,10 @@ public class EntityStats : MonoBehaviour
         while(xp >= maxXp)
         {
             levelsUped += 1;
+
+            GetComponentInChildren<SpriteRenderer>().color = Color.Lerp(GetComponentInChildren<SpriteRenderer>().color, HUD.Instance.levelUpColor, 5 * Time.deltaTime);
+            if(!HUD.Instance.isCoroutineRunning) StartCoroutine(HUD.Instance.ShowLevelUpTextScreen());
+
             level += 1;
             xp -= maxXp;
             if(xp < 0) xp = 0;
