@@ -18,6 +18,7 @@ TagManager:
   - PageControlls
   - Fogueira
   - RebindScreen
+  - LevelUpPopUp
   layers:
   - Default
   - TransparentFX
