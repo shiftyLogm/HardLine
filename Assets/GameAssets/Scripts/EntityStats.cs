@@ -112,6 +112,7 @@ public class EntityStats : MonoBehaviour
         defence += 2; 
         vitality += 2;
     }
+
     #endregion
 
     private void BlinkDamage()
@@ -128,7 +129,7 @@ public class EntityStats : MonoBehaviour
             levelsUped += 1;
 
             GetComponentInChildren<SpriteRenderer>().color = Color.Lerp(GetComponentInChildren<SpriteRenderer>().color, HUD.Instance.levelUpColor, 5 * Time.deltaTime);
-            if(!HUD.Instance.isCoroutineRunning) StartCoroutine(HUD.Instance.ShowLevelUpTextScreen());
+            HUD.Instance.ShowLevelUpTextScreen();
 
             level += 1;
             xp -= maxXp;

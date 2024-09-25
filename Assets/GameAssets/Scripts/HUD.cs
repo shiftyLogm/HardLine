@@ -16,7 +16,7 @@ public class HUD : MonoBehaviour
     public bool isCoroutineRunning;
 
     public GameObject damagePopUp; // Canvas do dano para mostrar na tela
-    public TextMeshProUGUI levelUpPopUp; // Canvas do texto de level up
+    public GameObject levelUpPopUp; // Canvas do texto de level up
 
     public Slider hpBar;
     public Slider xpBar;
@@ -61,8 +61,6 @@ public class HUD : MonoBehaviour
         // Cor de levelUp
         levelUpColor = new Color32(253, 215, 92, 255);
 
-        levelUpPopUp = GameObject.FindGameObjectWithTag("LevelUpPopUp").GetComponent<TextMeshProUGUI>();
-        levelUpPopUp.color = new Color(0,0,0,0);
     }
 
     // Update is called once per frame
@@ -82,16 +80,9 @@ public class HUD : MonoBehaviour
     }
 
     // Funçao que mostra o texto que o jogador upou de nivel
-    public IEnumerator ShowLevelUpTextScreen()
+    public void ShowLevelUpTextScreen()
     {
-        isCoroutineRunning = true;
-        if(levelUpPopUp.color != levelUpColor)
-        {
-            levelUpPopUp.color = Color.Lerp(levelUpPopUp.color, levelUpColor, 5 * Time.deltaTime);
-            StartCoroutine(ShowLevelUpTextScreen());
-            yield return new WaitForSeconds(0);
-        }
-        isCoroutineRunning = false;
+        Instantiate(levelUpPopUp, new Vector3(-814, 334, 0), Quaternion.identity);   
     }
 
     // Funçao para mudar o slider de hp quando tomar dano

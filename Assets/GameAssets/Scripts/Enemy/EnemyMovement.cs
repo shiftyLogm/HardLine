@@ -27,9 +27,7 @@ public class EnemyMovement : MonoBehaviour
 
     // Lugar que o inimigo vai voltar quando nao encontrar player
     GameObject[] enemySpawns;
-    private int indexEnemySpawns = 0;
     private bool patrol = true;
-    private bool coroutineRunning = false;
 
     // Variaveis
     private bool hasPath = false;
@@ -92,35 +90,11 @@ public class EnemyMovement : MonoBehaviour
                     target = collider.gameObject;
                     SetTarget(target);
                     patrol = false;
-                    StopCoroutine(PatrolFunc());
-                    coroutineRunning = false;
                     return;
                 }
             }
         }
         target = null; 
-    }
-
-    IEnumerator PatrolFunc()
-    {
-        coroutineRunning = true;
-        while(patrol)
-        {
-            // Dando um tempo ate ele ir para o proximo spawn
-            yield return new WaitForSeconds(3);
-            target = enemySpawns[indexEnemySpawns];
-            SetTarget(target);
-
-            // Rotina ira parar ate que ele chegue ao spawn
-            yield return new WaitUntil(() => !hasPath);
-        
-
-            // Aumentando index do spawn
-            indexEnemySpawns++;
-            if(indexEnemySpawns >= enemySpawns.Length) indexEnemySpawns = 0;
-
-        }
-        coroutineRunning = false;
     }
 
     void Move()
@@ -150,7 +124,6 @@ public class EnemyMovement : MonoBehaviour
         
         rb.velocity = new Vector2(0,0);
         patrol = !hasPath && enemySpawns.Length > 1;
-        if(!coroutineRunning) StartCoroutine(PatrolFunc());
         
     }    
 
