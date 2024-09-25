@@ -14150,6 +14150,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1633829503}
+  - component: {fileID: 1633829504}
   - component: {fileID: 1633829502}
   - component: {fileID: 1633829501}
   - component: {fileID: 1633829499}
@@ -14206,9 +14207,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 361355863}
-        m_TargetAssemblyTypeName: MenuClicks, Assembly-CSharp
-        m_MethodName: YesOption
+      - m_Target: {fileID: 1633829504}
+        m_TargetAssemblyTypeName: StartNewGame, Assembly-CSharp
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14339,6 +14340,18 @@ RectTransform:
   m_AnchoredPosition: {x: 389, y: 35}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1633829504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633829497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5110447e57e58d444aeb83329e78b0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1665284850
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ public class NewGameConfirmTab : MonoBehaviour
     public TextMeshProUGUI nameSave;
     public UnityEngine.UI.Image imageClass; 
     public UnityEngine.UI.Image blackScreen;
-    private NewGameData newgameInfo;
+    public static NewGameData newgameInfo;
     void Start()
     {
         newgameInfo = FindObjectOfType<NewGameData>();
