@@ -76,8 +76,8 @@ public class PlayerController : MonoBehaviour
         if(!_isTrueOrFalseAction)
         {
             mov = UserInput.Instance.MoveInput;
-            //if(mov != new Vector2(0,0)) passos.volume = 1;
-            //else passos.volume = 0;
+            if(mov != new Vector2(0,0)) passos.volume = 1f;
+            else passos.volume = 0;
             _rb.velocity = mov * _entityStats.moveSpeed * Time.fixedDeltaTime;
         }
     }
