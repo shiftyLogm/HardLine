@@ -1,5 +1,8 @@
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
+using System.Collections;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 public class NewGameConfirmTab : MonoBehaviour
 {
@@ -7,13 +10,11 @@ public class NewGameConfirmTab : MonoBehaviour
     public TextMeshProUGUI className;
     public TextMeshProUGUI nameSave;
     public UnityEngine.UI.Image imageClass; 
-    public UnityEngine.UI.Image blackScreen;
+    public GameObject blackScreen;
     public static NewGameData newgameInfo;
     void Start()
     {
         newgameInfo = FindObjectOfType<NewGameData>();
-        tabConfirm.SetActive(false);
-        blackScreen.enabled = false;
     }
 
     public void ShowTab()
@@ -22,12 +23,20 @@ public class NewGameConfirmTab : MonoBehaviour
         newgameInfo.GetDataNewGame();
         className.text = "CLASS: " + newgameInfo.classNames[newgameInfo.classIdx].ToUpper();
         nameSave.text = "NAME: " + newgameInfo.NameSaveGame;
-        blackScreen.enabled = true;
+        blackScreen.SetActive(true);
     }
 
     public void NoOption() 
-    {   
-        blackScreen.enabled = false;
+    {
+        blackScreen.SetActive(false);
         tabConfirm.SetActive(false);
+    }
+
+    void Update()
+    {
+        if (this.isActiveAndEnabled && Input.GetKeyDown(KeyCode.Escape))
+        {
+            NoOption();
+        }
     }
 }

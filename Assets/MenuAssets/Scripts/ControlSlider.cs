@@ -54,8 +54,6 @@ public class ControlSlider : MonoBehaviour
             OptionsNavigate.setNavigateOptions = true;
             turnMenu = false;
         }
-
-        Debug.Log(EventSystem.current.currentSelectedGameObject);
     }
 
 }

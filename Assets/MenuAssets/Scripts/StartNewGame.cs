@@ -8,7 +8,7 @@ public class StartNewGame : MonoBehaviour
     {
         StartCoroutine(ChangeScene());
     }
-
+    
     private IEnumerator ChangeScene()
     {
         SceneManager.LoadScene("Game", LoadSceneMode.Additive);

@@ -19,7 +19,6 @@ TagManager:
   - Fogueira
   - RebindScreen
   - LevelUpPopUp
-  - Footsteps
   layers:
   - Default
   - TransparentFX
