@@ -19,6 +19,9 @@ TagManager:
   - Fogueira
   - RebindScreen
   - LevelUpPopUp
+  - MasterVolume
+  - BlackScreenConfirm
+  - Footsteps
   layers:
   - Default
   - TransparentFX

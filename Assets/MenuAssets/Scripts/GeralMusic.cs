@@ -19,7 +19,7 @@ public class GeralMusic : MonoBehaviour
                 audio.volume = 5f;
                 audio.loop = true;
                 audio.playOnAwake = true;
-                audio.pitch = .85f;
+                if (musicObject.name == "MenuMusic") audio.pitch = .80f;
             }
         }
 
