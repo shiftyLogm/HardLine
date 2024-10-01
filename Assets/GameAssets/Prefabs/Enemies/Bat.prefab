@@ -205,17 +205,17 @@ MonoBehaviour:
   attackRange: 0.3
   attackDamage: 0
   faith: 0
-  defense: 0
+  defence: 0
   vitality: 0
   dexterity: 0
-  inteligence: 0
-  luck: 0
+  intelligence: 0
   dashForce: 0
   projectileForce: 0
   attackCooldown: 0
   invencible: 0
   bloodParticle: {fileID: 6823200998282874702, guid: 8f8fe12323625f5499b2853dd2ad3e58, type: 3}
   deathParticle: {fileID: 0}
+  levelsUped: 0
 --- !u!114 &4680203796500117848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -586,6 +586,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   _attackRange: 0
+  weaponSFX: {fileID: 0}
 --- !u!1 &4899188520995808603
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,6 +644,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   _attackRange: 0.23
+  weaponSFX: {fileID: 8300000, guid: c8f15b93d4f56e048a1c129d8c9a3e31, type: 3}
 --- !u!1 &6540634064836866330
 GameObject:
   m_ObjectHideFlags: 0

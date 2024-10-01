@@ -16,7 +16,7 @@ public class ArcherAttack : RangeAttack
         if(_canAttack)
         {
             
-
+            HUD.Instance.weaponAttack.PlayOneShot(weaponSFX);
             GameObject projectileInstance = Instantiate(projectile, _player.transform.position, Quaternion.identity);
 
             Rigidbody2D projectileRb = projectileInstance.GetComponent<Rigidbody2D>();

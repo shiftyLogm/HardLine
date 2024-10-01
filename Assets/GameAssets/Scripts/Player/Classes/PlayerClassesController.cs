@@ -35,6 +35,9 @@ public class PlayerClassesController : MonoBehaviour
 
     public GameObject player;
 
+    // SFX
+    public AudioClip swordHitSound;
+
     void Awake()
     {
         if(Instance == null) Instance = this;
@@ -67,5 +70,17 @@ public class PlayerClassesController : MonoBehaviour
 
         // Instanciando o player com sua classe
         player = Instantiate(classes[idxClass], new Vector3(-3.14f, 1.612f, 0), Quaternion.identity);
+    }
+
+    public AudioClip SelectHitSound()
+    {
+        Dictionary<string, AudioClip> classes = new()
+        {
+            {"Warrior", swordHitSound},
+            {"Archer", swordHitSound},
+            {"Mage", swordHitSound}
+        };
+
+        return classes[idxClass];
     }
 }

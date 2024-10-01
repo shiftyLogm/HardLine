@@ -21,7 +21,9 @@ TagManager:
   - LevelUpPopUp
   - MasterVolume
   - BlackScreenConfirm
-  - Footsteps
+  - PlayerClassesManager
+  - Music
+  - SFX
   layers:
   - Default
   - TransparentFX

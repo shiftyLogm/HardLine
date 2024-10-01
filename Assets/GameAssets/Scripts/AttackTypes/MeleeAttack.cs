@@ -1,10 +1,11 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MeleeAttack : AttackState
 {
     public override void Attack()
     {
+        HUD.Instance.weaponAttack.volume = 0.3f;
+        HUD.Instance.weaponAttack.PlayOneShot(weaponSFX);
         // Pega o collider de todo objeto que estiver no enemyLayers
         Collider2D[] hitTargets = Physics2D.OverlapCircleAll(attackPoints[attackPoint].transform.position, entityStats.attackRange, targetLayers); // ponto inicial, raio e o layer
 
