@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: DefaultCompany
   productName: HardLine
-  defaultCursor: {fileID: 2800000, guid: a5d5dc56bedf1e848a4bbc727c15d727, type: 3}
+  defaultCursor: {fileID: 2800000, guid: b84cada7bd67105499596c9f4344e4ff, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
