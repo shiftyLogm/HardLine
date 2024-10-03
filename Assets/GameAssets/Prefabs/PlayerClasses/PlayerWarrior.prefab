@@ -646,7 +646,6 @@ MonoBehaviour:
   bloodParticle: {fileID: 6823200998282874702, guid: 8f8fe12323625f5499b2853dd2ad3e58, type: 3}
   deathParticle: {fileID: 0}
   levelsUped: 0
-  hitingAudio: {fileID: 8300000, guid: 864a505e4f1db2b448353adfee79833d, type: 3}
 --- !u!114 &2694758342022350938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -668,7 +667,8 @@ MonoBehaviour:
   archerAttack: {fileID: 8694805767165219911}
   mageAttack: {fileID: 66671024680333791}
   fogueiras: []
-  passos: {fileID: 6002748288477366116, guid: 949db3a50d5ea0548a1f630fee56ec3f, type: 3}
+  mov: {x: 0, y: 0}
+  oldMov: {x: 0, y: 0}
 --- !u!114 &5432570096216393121
 MonoBehaviour:
   m_ObjectHideFlags: 0

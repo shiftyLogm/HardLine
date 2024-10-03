@@ -57,6 +57,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   _attackRange: 0
+  weaponSFX: {fileID: 0}
   projectile: {fileID: 0}
 --- !u!1 &353025758862597857
 GameObject:
@@ -129,6 +130,7 @@ MonoBehaviour:
   invencible: 0
   bloodParticle: {fileID: 6823200998282874702, guid: 8f8fe12323625f5499b2853dd2ad3e58, type: 3}
   deathParticle: {fileID: 0}
+  levelsUped: 0
 --- !u!114 &3889903256347551215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,6 +152,8 @@ MonoBehaviour:
   archerAttack: {fileID: 6728634666220810035}
   mageAttack: {fileID: 5830219201776262585}
   fogueiras: []
+  mov: {x: 0, y: 0}
+  oldMov: {x: 0, y: 0}
 --- !u!114 &6477356705437345872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1096268423800218118}
-  force: 0.05
+  force: 20
   delay: 0.15
   OnBegin:
     m_PersistentCalls:
@@ -208,7 +212,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.0001
+  m_Mass: 0.05
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -356,6 +360,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   _attackRange: 0
+  weaponSFX: {fileID: 0}
 --- !u!1 &1352751122318155193
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,6 +418,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   _attackRange: 0.35
+  weaponSFX: {fileID: 0}
 --- !u!1 &1398819780785622703
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,6 +476,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   _attackRange: 0
+  weaponSFX: {fileID: 0}
   projectile: {fileID: 0}
 --- !u!1 &1614572617158797583
 GameObject:
@@ -938,6 +945,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   _attackRange: 0
+  weaponSFX: {fileID: 0}
   projectile: {fileID: 4322950957168782364, guid: bc4417544bd2b3040a2d1613438d3af1, type: 3}
 --- !u!1 &8732192257327672626
 GameObject:

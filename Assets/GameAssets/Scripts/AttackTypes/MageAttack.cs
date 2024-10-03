@@ -49,7 +49,5 @@ public class MageAttack : RangeAttack
             return;
         }
         _cooldown -= Time.deltaTime;
-
-        
     }
 }
