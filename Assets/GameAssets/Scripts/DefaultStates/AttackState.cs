@@ -16,6 +16,9 @@ public class AttackState : State
     // Variavel apenas para teste do tamanho da hitbox
     public float _attackRange;
 
+    // SFX
+    [SerializeField] protected AudioClip weaponSFX;
+
     #endregion
 
     public override void Enter()
@@ -56,7 +59,10 @@ public class AttackState : State
 
     #region Funçoes dos attack types
 
-    public virtual void Attack() { }
+    public virtual void Attack() 
+    {
+
+    }
 
     public int SelectAttackPoint()
     {

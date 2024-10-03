@@ -28,6 +28,7 @@ public class EntityStats : MonoBehaviour
 
     public int levelsUped;
 
+
     
 
 
@@ -54,6 +55,19 @@ public class EntityStats : MonoBehaviour
 
             HUD.Instance.ShowDamageOnScreen(_damage, this.gameObject.transform.position);
 
+            //
+            if(gameObject.tag == "Enemy")
+            {
+                HUD.Instance.hitSound.volume = 0.4f;
+                HUD.Instance.hitSound.PlayOneShot(GameObject.FindGameObjectWithTag("PlayerClassesManager").GetComponent<PlayerClassesController>().SelectHitSound());
+            }
+
+            if(gameObject.tag == "Player")
+            {
+                HUD.Instance.hitSound.volume = 0.4f;
+                HUD.Instance.hitSound.PlayOneShot(HUD.Instance.playerHits.RandomIndex());
+            }
+
             //Particle instance
             if(bloodParticle)
             {
@@ -62,14 +76,21 @@ public class EntityStats : MonoBehaviour
 
             // Mudar cor ao tomar dano
             GetComponentInChildren<SpriteRenderer>().color = Color.red;
-
+            
+            HUD.Instance.hitSound.volume = 0.1f;
             if(hp <= 0)
             {
                 if(this.gameObject.tag == "Enemy")
                 {
+                    HUD.Instance.hitSound.volume = 0.15f;
                     GameObject.FindGameObjectWithTag("Player").GetComponent<EntityStats>().LevelUp(xp);
                 }
                 Death();
+            }
+
+            if(gameObject.tag == "Enemy")
+            {
+                HUD.Instance.hitSound.PlayOneShot(GameObject.FindGameObjectWithTag("PlayerClassesManager").GetComponent<PlayerClassesController>().SelectHitSound());
             }
         }
     }

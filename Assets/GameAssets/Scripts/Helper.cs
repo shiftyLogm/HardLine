@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
+using UnityEngine;
 
 public static class Helper
 {
@@ -14,6 +16,11 @@ public static class Helper
     {
         var idx = dict.FirstOrDefault(x => x.Value == value);
         return idx.Key;
+    }
+
+    public static T RandomIndex<T>(this T[] array)
+    {
+        return array[UnityEngine.Random.Range(0, array.Length)];
     }
 
 }

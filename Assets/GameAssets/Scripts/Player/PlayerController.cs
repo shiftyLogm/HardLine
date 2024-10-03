@@ -34,11 +34,9 @@ public class PlayerController : MonoBehaviour
     public GameObject[] fogueiras;
     
     // Criando uma variavel para saber a direçao para onde o jogador quer ir
-    Vector2 mov;
-    Vector2 oldMov;
+    public Vector2 mov;
+    public Vector2 oldMov;
 
-    // SFX
-    public AudioSource passos;
 
     void Start()
     {
@@ -64,9 +62,6 @@ public class PlayerController : MonoBehaviour
 
         // Fogueira
         fogueiras = GameObject.FindGameObjectsWithTag("Fogueira");
-
-        // SFX
-        passos = GameObject.FindGameObjectWithTag("Footsteps").GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
@@ -76,8 +71,6 @@ public class PlayerController : MonoBehaviour
         if(!_isTrueOrFalseAction)
         {
             mov = UserInput.Instance.MoveInput;
-            if(mov != new Vector2(0,0)) passos.volume = 1f;
-            else passos.volume = 0;
             _rb.velocity = mov * _entityStats.moveSpeed * Time.fixedDeltaTime;
         }
     }

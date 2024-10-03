@@ -40,6 +40,13 @@ public class HUD : MonoBehaviour
     // Cor de levelUp
     public Color32 levelUpColor;
 
+    // SFX Managers
+    [Header("SFX")]
+    public AudioSource weaponAttack;
+    public AudioSource hitSound;
+
+    // Audios
+    public AudioClip[] playerHits;
 
 
     void Awake()
