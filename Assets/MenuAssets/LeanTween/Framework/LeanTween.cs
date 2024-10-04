@@ -2885,7 +2885,10 @@ public class LeanTween : MonoBehaviour {
         }
     }
 
-
+    internal static void value(Color color1, Color color2, float v)
+    {
+        throw new NotImplementedException();
+    }
 } // End LeanTween class
 
 public class LTUtility {
