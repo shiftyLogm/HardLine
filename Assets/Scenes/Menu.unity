@@ -15504,6 +15504,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5110447e57e58d444aeb83329e78b0ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _fullScreenObj: {fileID: 785697057}
+  _brightnessObj: {fileID: 1524079254}
 --- !u!1 &1665284850
 GameObject:
   m_ObjectHideFlags: 0
