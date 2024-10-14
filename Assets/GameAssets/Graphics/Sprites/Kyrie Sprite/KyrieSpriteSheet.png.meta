@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 028bd38c4176f3b49bb8d9882aa2fca3
+guid: e2b428972b18f9c4f8bd0ff89e5ae9fd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_0
+      name: KyrieSpriteSheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -105,20 +105,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65372b94e891817408cd706fe5c1a8d6
-      internalID: -1028180082
+      spriteID: 693ed3503e342664bb31508bef9e0e02
+      internalID: -2026978300
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_1
+      name: KyrieSpriteSheet_1
       rect:
         serializedVersion: 2
         x: 32
@@ -126,20 +126,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 535b000ab4bf26d40a745f2253c39cfd
-      internalID: 1090842719
+      spriteID: d7d038721d4e6fa48a8389d7bae82a51
+      internalID: -435137173
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_2
+      name: KyrieSpriteSheet_2
       rect:
         serializedVersion: 2
         x: 64
@@ -147,20 +147,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 503b7087020b134499f880afdbbd079c
-      internalID: -1767336103
+      spriteID: 4c4c0b6b576eb384daf17eb155805e30
+      internalID: -806855051
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_3
+      name: KyrieSpriteSheet_3
       rect:
         serializedVersion: 2
         x: 96
@@ -168,20 +168,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff77d2011875ab147b124888093a28aa
-      internalID: -526153015
+      spriteID: 46c2e835681c3e04380f96831cd6c168
+      internalID: -383847276
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_4
+      name: KyrieSpriteSheet_4
       rect:
         serializedVersion: 2
         x: 128
@@ -189,20 +189,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56527042182405e418135556b4e13cbe
-      internalID: 435821158
+      spriteID: db38c2b2b3076044ebe927d612d39a64
+      internalID: -1066634987
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_5
+      name: KyrieSpriteSheet_5
       rect:
         serializedVersion: 2
         x: 160
@@ -210,20 +210,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fb416adfe076bb4ba200510ca422a52
-      internalID: -1168629580
+      spriteID: fd03d2ba29dcac940bf38376917dbb75
+      internalID: 207383488
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_6
+      name: KyrieSpriteSheet_6
       rect:
         serializedVersion: 2
         x: 192
@@ -231,20 +231,41 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9033097b93cc784285140e6af6217df
-      internalID: 1525050895
+      spriteID: 35e6e1c267505ef4e90e4117072ad707
+      internalID: -157809849
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_7
+      name: KyrieSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 608
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d3f1f79b533d7b4aa2b2aa97462065b
+      internalID: -1827839085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_8
       rect:
         serializedVersion: 2
         x: 480
@@ -252,20 +273,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 068fc0130d3f4094abe992a3c2769f09
-      internalID: -1233975442
+      spriteID: 462b7a72317ce7448984f419ef116c8b
+      internalID: -1701948903
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_8
+      name: KyrieSpriteSheet_9
       rect:
         serializedVersion: 2
         x: 512
@@ -273,20 +294,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b00416cfdaa7317478f021bf0698fdc3
-      internalID: 1049005945
+      spriteID: 61d3e4ccae19931419cf0cae1e0795b0
+      internalID: 2021403408
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_9
+      name: KyrieSpriteSheet_10
       rect:
         serializedVersion: 2
         x: 544
@@ -294,20 +315,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 618aea3f363b42545b18633c1bd22b26
-      internalID: 1379446733
+      spriteID: 1ade8f6f744a8604baa3321ac016f929
+      internalID: -724301255
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_10
+      name: KyrieSpriteSheet_11
       rect:
         serializedVersion: 2
         x: 576
@@ -315,20 +336,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65b5a700f899a7742b62e417c98f025b
-      internalID: -864241921
+      spriteID: c0b6ae9cf886501418cd788319645771
+      internalID: -70150673
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_11
+      name: KyrieSpriteSheet_12
       rect:
         serializedVersion: 2
         x: 608
@@ -336,20 +357,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df341c68165d42c43a7cb2b92ce0c34d
-      internalID: -386330755
+      spriteID: 793d3ed253249f84384dbb9e5f4118dd
+      internalID: -594321356
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_12
+      name: KyrieSpriteSheet_13
       rect:
         serializedVersion: 2
         x: 0
@@ -357,20 +378,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a5e4926831cd8245afbc731a585cea8
-      internalID: 1098422121
+      spriteID: 359543d888c2c114aa8742b2ca9e491f
+      internalID: -1263717015
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_13
+      name: KyrieSpriteSheet_14
       rect:
         serializedVersion: 2
         x: 32
@@ -378,20 +399,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81f60f41c4f25fe4b9898d13979b06aa
-      internalID: -563610742
+      spriteID: d20b52569f2f8234bb0fbada7a9c8028
+      internalID: 2082603624
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_14
+      name: KyrieSpriteSheet_15
       rect:
         serializedVersion: 2
         x: 64
@@ -399,20 +420,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49caf5de10bc0054e9647a36fd086d44
-      internalID: 1455609612
+      spriteID: ff6af4d8a9749e54e8be7696f018e744
+      internalID: 1068983952
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_15
+      name: KyrieSpriteSheet_16
       rect:
         serializedVersion: 2
         x: 96
@@ -420,20 +441,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d0c4ad700b698e458f9c99db7659bb9
-      internalID: -699592122
+      spriteID: 1c57c8836f0cad249b64b5400eb830f5
+      internalID: 428896366
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_16
+      name: KyrieSpriteSheet_17
       rect:
         serializedVersion: 2
         x: 128
@@ -441,20 +462,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d84024dc95b90347992d0ed721dd012
-      internalID: -1583076608
+      spriteID: 358055e66fc70ce4591dfe3885632924
+      internalID: -372778208
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_17
+      name: KyrieSpriteSheet_18
       rect:
         serializedVersion: 2
         x: 160
@@ -462,20 +483,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: deeda07b2cb9290468975edb3672e2ce
-      internalID: 460712406
+      spriteID: 6d0e5f9874af389419db10fdc86cf7aa
+      internalID: -1019718328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_18
+      name: KyrieSpriteSheet_19
       rect:
         serializedVersion: 2
         x: 192
@@ -483,20 +504,41 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5befdd7aead7df499eb9e133d69e687
-      internalID: -1313355042
+      spriteID: 3de1def527ccb1e4a90307445666b1de
+      internalID: 664043066
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_19
+      name: KyrieSpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 544
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10c715e34d1b6894a925701d480f80f2
+      internalID: 1497160215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_21
       rect:
         serializedVersion: 2
         x: 480
@@ -504,20 +546,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6fc0a31a9a91254ba29569d30c58850
-      internalID: -1630502380
+      spriteID: 31ae2d09c533dc342826f5232183935c
+      internalID: -1263261221
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_20
+      name: KyrieSpriteSheet_22
       rect:
         serializedVersion: 2
         x: 512
@@ -525,20 +567,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9dc17f35b2a23540aa1b42ac10b8a46
-      internalID: 898046915
+      spriteID: 21d7606461f7b1d428d1ba95981cea3a
+      internalID: -274456193
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_21
+      name: KyrieSpriteSheet_23
       rect:
         serializedVersion: 2
         x: 544
@@ -546,20 +588,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86117fc2e431ee04d82b97c0b4031f8b
-      internalID: 1102904876
+      spriteID: 3a225f73d281be14a8b217bc49a9391d
+      internalID: -1584919844
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_22
+      name: KyrieSpriteSheet_24
       rect:
         serializedVersion: 2
         x: 576
@@ -567,20 +609,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72bfe2504523db043bf86fa515c6979d
-      internalID: -1070224831
+      spriteID: d5f3d79fcdc19844aa58f49f158fea47
+      internalID: -1966991650
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_23
+      name: KyrieSpriteSheet_25
       rect:
         serializedVersion: 2
         x: 608
@@ -588,20 +630,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 815669163540f3f479249c7bf1e913f4
-      internalID: 569101575
+      spriteID: 8b4216d22eee56c46955eab3eaa10013
+      internalID: -1007512262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_24
+      name: KyrieSpriteSheet_26
       rect:
         serializedVersion: 2
         x: 0
@@ -609,20 +651,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63829e0aa79c755459afef6c421f017b
-      internalID: -1254101943
+      spriteID: 6518849dd9998964993190542933167a
+      internalID: -518067084
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_25
+      name: KyrieSpriteSheet_27
       rect:
         serializedVersion: 2
         x: 32
@@ -630,20 +672,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae0c410c584729a4eb0dff3420ee8fda
-      internalID: -1700505917
+      spriteID: 95a8267dfd7212844a68ac433cec9f40
+      internalID: -707970051
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_26
+      name: KyrieSpriteSheet_28
       rect:
         serializedVersion: 2
         x: 64
@@ -651,20 +693,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5f1eaad21016d2428ed56e69264d722
-      internalID: -902144762
+      spriteID: 1aafe46e04271b84c8eb90ede4f51f59
+      internalID: -1879665009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_27
+      name: KyrieSpriteSheet_29
       rect:
         serializedVersion: 2
         x: 96
@@ -672,20 +714,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d9828c470c1b3840bfda48d1d69190c
-      internalID: -416970509
+      spriteID: 9370e2138b4ec3e4487c4920babf9fc6
+      internalID: 377050930
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_28
+      name: KyrieSpriteSheet_30
       rect:
         serializedVersion: 2
         x: 128
@@ -693,20 +735,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d47022c1b4d74a4db2474aeeb194193
-      internalID: 826541038
+      spriteID: 41e4b9ceacc25c94592c291cc068b461
+      internalID: 991168523
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_29
+      name: KyrieSpriteSheet_31
       rect:
         serializedVersion: 2
         x: 160
@@ -714,20 +756,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ad3f3e610a4ad94f999d00ec7d9e774
-      internalID: -1684805105
+      spriteID: 6e7cd23649623c143a704f61fbe63dbd
+      internalID: -325489630
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_30
+      name: KyrieSpriteSheet_32
       rect:
         serializedVersion: 2
         x: 192
@@ -735,20 +777,41 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9643098243538a54baaca24f1f5f5f0c
-      internalID: -1767644033
+      spriteID: bfa8049c524f12e4fb26af0794cf5736
+      internalID: 977638592
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_31
+      name: KyrieSpriteSheet_33
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17cc400607af334fb7f0567ad2bdd95
+      internalID: -967468410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_34
       rect:
         serializedVersion: 2
         x: 352
@@ -756,20 +819,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c52089962bc6624689e7f5299c1d3cc
-      internalID: -1066128564
+      spriteID: d6c5402bacf1211498f370f1a4a46caf
+      internalID: 732642908
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_32
+      name: KyrieSpriteSheet_35
       rect:
         serializedVersion: 2
         x: 384
@@ -777,20 +840,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40be20ddf5142d540b1656333e96b0c9
-      internalID: -1788480848
+      spriteID: bbbbc4bedc6e733468e399189c18920a
+      internalID: -1587596715
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_33
+      name: KyrieSpriteSheet_36
       rect:
         serializedVersion: 2
         x: 416
@@ -798,20 +861,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 794cf6da69eaec14b8b3bec66577f58f
-      internalID: -1936552132
+      spriteID: 3ce98faeecac40740a134478c9492131
+      internalID: 1617773869
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_34
+      name: KyrieSpriteSheet_37
       rect:
         serializedVersion: 2
         x: 448
@@ -819,20 +882,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f595aff2ebdfb4443a698e56fff43c50
-      internalID: -924958499
+      spriteID: 3e8b57622151d134aa511e423d267071
+      internalID: -873675348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_35
+      name: KyrieSpriteSheet_38
       rect:
         serializedVersion: 2
         x: 480
@@ -840,20 +903,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9740dfea790975c42a46f708e948ea98
-      internalID: -2083744106
+      spriteID: 9d7a2aa9fb4d58c49a2823121b793860
+      internalID: -1463438162
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_36
+      name: KyrieSpriteSheet_39
       rect:
         serializedVersion: 2
         x: 512
@@ -861,20 +924,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d165a6459834dfd41b39e130ccf17c48
-      internalID: 1597940033
+      spriteID: 6058bc506dd941647ab106fd790196b0
+      internalID: -1101559420
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_37
+      name: KyrieSpriteSheet_40
       rect:
         serializedVersion: 2
         x: 544
@@ -882,20 +945,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e08f880374745a47913413901a6ea8f
-      internalID: 1960461219
+      spriteID: ed89d15e1a9eb7148b405beefb004239
+      internalID: 1681362584
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_38
+      name: KyrieSpriteSheet_41
       rect:
         serializedVersion: 2
         x: 576
@@ -903,20 +966,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4a08fc9f59b3944b8a263a34b8daddb
-      internalID: 1962978814
+      spriteID: 688230d56d0111a49a245345a2fc6ecc
+      internalID: -67783177
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_39
+      name: KyrieSpriteSheet_42
       rect:
         serializedVersion: 2
         x: 608
@@ -924,20 +987,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a7074284d9569944a320eaa3f8a68d2
-      internalID: 1513884973
+      spriteID: 85a4bb35a408090449f2206c2082673e
+      internalID: -301767036
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_40
+      name: KyrieSpriteSheet_43
       rect:
         serializedVersion: 2
         x: 0
@@ -945,20 +1008,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acbaf7cce584b2944a7bb40d5077faf5
-      internalID: -2120551123
+      spriteID: c89e8851fae836c44b994ca156b25116
+      internalID: -327034590
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_41
+      name: KyrieSpriteSheet_44
       rect:
         serializedVersion: 2
         x: 32
@@ -966,20 +1029,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6163654cb2bdaa54096d368434a79e62
-      internalID: -688279826
+      spriteID: 1a08992ac1a2d9641892fd2aabbececb
+      internalID: -1501229706
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_42
+      name: KyrieSpriteSheet_45
       rect:
         serializedVersion: 2
         x: 64
@@ -987,20 +1050,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0caa5f7f813c2cb44a579be552fe9fab
-      internalID: 312875657
+      spriteID: a303c42d80b9ae74699932b32963e3f7
+      internalID: -1728189114
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_43
+      name: KyrieSpriteSheet_46
       rect:
         serializedVersion: 2
         x: 96
@@ -1008,20 +1071,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32e5f289a0189b743ab2a7c328cf2790
-      internalID: 2108556480
+      spriteID: 30718d8546a0ff44ca6e27ae10b95edb
+      internalID: 1396708558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_44
+      name: KyrieSpriteSheet_47
       rect:
         serializedVersion: 2
         x: 128
@@ -1029,20 +1092,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c49c3023823ea1c46968437d8a4934c7
-      internalID: -1350690590
+      spriteID: a8d7948b64755bf499d5c3e0859381c9
+      internalID: 2043880145
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_45
+      name: KyrieSpriteSheet_48
       rect:
         serializedVersion: 2
         x: 160
@@ -1050,20 +1113,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08dff43b7b0d00c4b9d54ef75ea26992
-      internalID: 888678773
+      spriteID: 2f37171406b397a4bae376690b96b45e
+      internalID: 1291459013
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_46
+      name: KyrieSpriteSheet_49
       rect:
         serializedVersion: 2
         x: 192
@@ -1071,20 +1134,41 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e37b5b2cc8c1fbf4ea984e73ab12a552
-      internalID: -1776447450
+      spriteID: 092cb1d8b8d1eb44080301d0e8c9789d
+      internalID: -1238841443
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_47
+      name: KyrieSpriteSheet_50
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f9c29c8134b26448fa71c78a623dca
+      internalID: -1898660309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_51
       rect:
         serializedVersion: 2
         x: 352
@@ -1092,20 +1176,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 363f79b9e795ebb4a9a239193602b528
-      internalID: 1443160400
+      spriteID: 4a5d9555078f86e4594a8739cc5984f8
+      internalID: 190138113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_48
+      name: KyrieSpriteSheet_52
       rect:
         serializedVersion: 2
         x: 384
@@ -1113,20 +1197,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 953aeb42da4f89f45b6454ab285fe1d2
-      internalID: 1643237403
+      spriteID: 059b3b06e0586524ba88e0ca427adfa1
+      internalID: 1737203949
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_49
+      name: KyrieSpriteSheet_53
       rect:
         serializedVersion: 2
         x: 416
@@ -1134,20 +1218,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d57d3d4c4f364834ea7d92adf6980e9c
-      internalID: 257335668
+      spriteID: b394e1672dd6d254b8aba2e8d1c82dcf
+      internalID: 2097509319
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_50
+      name: KyrieSpriteSheet_54
       rect:
         serializedVersion: 2
         x: 448
@@ -1155,20 +1239,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9c682a1a84f63342870633ff5e3b78a
-      internalID: -1849479794
+      spriteID: dfe37ab976aa74944b333bc16b4fcf10
+      internalID: 2073897436
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_51
+      name: KyrieSpriteSheet_55
       rect:
         serializedVersion: 2
         x: 480
@@ -1176,20 +1260,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 426c73661b7204b419813e87a7fe804f
-      internalID: -2078445814
+      spriteID: 8065001902d4a1248b744fe5890003f9
+      internalID: 1488675144
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_52
+      name: KyrieSpriteSheet_56
       rect:
         serializedVersion: 2
         x: 512
@@ -1197,20 +1281,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b1e32f809387c945b73e90eb9365562
-      internalID: -1215616755
+      spriteID: f9c4612d2635f1b41b7dbc5195215853
+      internalID: -402656827
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_53
+      name: KyrieSpriteSheet_57
       rect:
         serializedVersion: 2
         x: 544
@@ -1218,20 +1302,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffeea191315c505469aa1307ec037a63
-      internalID: 1143988272
+      spriteID: 75d1eafecd17a1a40adec64bf506af59
+      internalID: -1345619408
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_54
+      name: KyrieSpriteSheet_58
       rect:
         serializedVersion: 2
         x: 576
@@ -1239,20 +1323,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 828b358d601c85a41b16e39f3521ec31
-      internalID: -87988856
+      spriteID: e4888e82ed151304082924e7179038df
+      internalID: -46010727
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_55
+      name: KyrieSpriteSheet_59
       rect:
         serializedVersion: 2
         x: 608
@@ -1260,20 +1344,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e8fded033f379e4b837937a85fcb697
-      internalID: 2144357727
+      spriteID: 659bee2c6b405b544942d90efcc547ba
+      internalID: 1828409187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_56
+      name: KyrieSpriteSheet_60
       rect:
         serializedVersion: 2
         x: 0
@@ -1281,20 +1365,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82b640f5d3e86ee4ca0d5292947583f2
-      internalID: -900923600
+      spriteID: 17071299873a7d14fbd995ac3f710830
+      internalID: 1455087445
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_57
+      name: KyrieSpriteSheet_61
       rect:
         serializedVersion: 2
         x: 32
@@ -1302,20 +1386,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e649f77a2f3f1d45846b41c51adfcee
-      internalID: -700921842
+      spriteID: d689cc0cdc037e044b77f96b823ce4c4
+      internalID: -2033802904
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_58
+      name: KyrieSpriteSheet_62
       rect:
         serializedVersion: 2
         x: 64
@@ -1323,20 +1407,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bba47c626f0197845a5086257fe6256e
-      internalID: 1968103
+      spriteID: f4d955645babf9b4a954e5e5737a7d2d
+      internalID: 1315145699
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_59
+      name: KyrieSpriteSheet_63
       rect:
         serializedVersion: 2
         x: 96
@@ -1344,20 +1428,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1785f95614ee2d4eb36130cc0688007
-      internalID: -21966258
+      spriteID: 71ff37e24d463ab45a221ef30f228173
+      internalID: 1182852014
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_60
+      name: KyrieSpriteSheet_64
       rect:
         serializedVersion: 2
         x: 128
@@ -1365,20 +1449,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4285ba2e2b9fb4b40ac573aab08efeb4
-      internalID: 734598205
+      spriteID: e3b5d327e82b829418c83b506282203c
+      internalID: -2035068205
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_61
+      name: KyrieSpriteSheet_65
       rect:
         serializedVersion: 2
         x: 160
@@ -1386,20 +1470,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 431e4c949eb841341a95dc91ce1d7b91
-      internalID: 150660036
+      spriteID: 5b767beb83ddccb41bec35e2da84f9ef
+      internalID: 979102553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_62
+      name: KyrieSpriteSheet_66
       rect:
         serializedVersion: 2
         x: 192
@@ -1407,20 +1491,146 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0369b09d8a50c0c41afaa37be2592b58
-      internalID: 1333344043
+      spriteID: 8a1d07a4c2b49a34eaf6f2e98353a6bd
+      internalID: 1075114890
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_63
+      name: KyrieSpriteSheet_67
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bf4493b586bb4f4f9768b582adfe903
+      internalID: 1173568733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_68
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb190efae1e1bc743a046ebb0b34d466
+      internalID: -1210811387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_69
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e06bfd7e3fd8d647bed6063296cf813
+      internalID: -592896314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_70
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dfdd8b5945ccbc4c947118973d81201
+      internalID: 191712207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_71
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4d22fc94f31bc84c8de41a6e113c228
+      internalID: -1177527611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_72
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8820453d28135344aa6d184350c59ccd
+      internalID: 1999739181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_73
       rect:
         serializedVersion: 2
         x: 544
@@ -1428,20 +1638,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a4bf53a9feff4b43bc5ab03a6d3955c
-      internalID: -49389906
+      spriteID: 88d368d2775937f4c93305bd74332bfa
+      internalID: 213944580
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_64
+      name: KyrieSpriteSheet_74
       rect:
         serializedVersion: 2
         x: 576
@@ -1449,20 +1659,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f399d7c54480394f90009e923e62e77
-      internalID: 136123422
+      spriteID: 08993a56f7210c441af43a63de058410
+      internalID: 376113223
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_65
+      name: KyrieSpriteSheet_75
       rect:
         serializedVersion: 2
         x: 608
@@ -1470,20 +1680,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0c7e68018bdb6c4c98f675df2551438
-      internalID: 1426454670
+      spriteID: 0f4ed1069d6282b498c93a36c972c64d
+      internalID: 1872149424
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_66
+      name: KyrieSpriteSheet_76
       rect:
         serializedVersion: 2
         x: 0
@@ -1491,20 +1701,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b53bde47f189e24a9bb539f570d5af0
-      internalID: -907185736
+      spriteID: c6e920766a465ec4790c0ca55867a946
+      internalID: 2102271940
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_67
+      name: KyrieSpriteSheet_77
       rect:
         serializedVersion: 2
         x: 32
@@ -1512,20 +1722,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0e1b05205a1aaf49a18d8ab6cbb51e7
-      internalID: 1544323357
+      spriteID: 624f2a53b4ebaee41b10da9dc398229e
+      internalID: 954469164
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_68
+      name: KyrieSpriteSheet_78
       rect:
         serializedVersion: 2
         x: 64
@@ -1533,20 +1743,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 962b4ba4bd3f26744a3fb6738dbedaa1
-      internalID: 424382770
+      spriteID: 1415851084933a646bfd1a8d4193c98e
+      internalID: 883825951
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_69
+      name: KyrieSpriteSheet_79
       rect:
         serializedVersion: 2
         x: 96
@@ -1554,20 +1764,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e687344ac9bfb3e4381dee5a7c8959b0
-      internalID: 392591946
+      spriteID: ad3bb8999ac90c348b48eafd93fe1870
+      internalID: 163996450
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_70
+      name: KyrieSpriteSheet_80
       rect:
         serializedVersion: 2
         x: 128
@@ -1575,20 +1785,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9e9f1b2c6e164146bf8d3b97425ff35
-      internalID: 1323402745
+      spriteID: 04e4919a2db251f46b5de88674e3be3f
+      internalID: 1211745387
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_71
+      name: KyrieSpriteSheet_81
       rect:
         serializedVersion: 2
         x: 160
@@ -1596,20 +1806,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b131300481544cd42afb10bc41410046
-      internalID: 1393307249
+      spriteID: 7e00364e21121894dbab2527867267bc
+      internalID: -1775322784
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_72
+      name: KyrieSpriteSheet_82
       rect:
         serializedVersion: 2
         x: 192
@@ -1617,1232 +1827,1379 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e281e07029e01fa46a15480ed79d372f
-      internalID: -825310889
+      spriteID: c9cecd5198b93664fa913850594ec0ca
+      internalID: 437442595
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_73
+      name: KyrieSpriteSheet_83
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca04a6b9023cdff41b780ff03c9d8397
+      internalID: 864658682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_84
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c03553849db6fb4458937955c43cd7c5
+      internalID: -862094344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_85
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ecc454fef285c74fa42a97d447aa0cd
+      internalID: -1737945445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_86
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae88fd973f00c940b57d4af0b2e0733
+      internalID: -752143286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_87
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7343f2c74f9dc9544bf0b849f3af8670
+      internalID: 970167908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_88
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2982b02fadd36124a900d4a074837a24
+      internalID: 1979210533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_89
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 243355401fbd57840a0efb1c5951b58d
+      internalID: -1053024938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3cafd1cdc642434db828b83deb1f86a
+      internalID: 1243052838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_91
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bf76787188e6c446ba7624b89eda046
+      internalID: -124144734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_92
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b9cae71aace6224b920b6c4632468e9
+      internalID: -1378281466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_93
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 496149f5c042ce847a380e6c368a186e
+      internalID: -1002809120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_94
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba75b5dbd35dd904da25e88cbf96412e
+      internalID: 1210100192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_95
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fce772c8bb0c48478f224ef35e3aa68
+      internalID: -1290148171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_96
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 787590bd1ac9ae94c863263e587628fa
+      internalID: 120952483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_97
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62f7a644d93270d4285a17bbe36bce03
+      internalID: -1690925713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_98
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f26412eb21b0577479084e51d0475f78
+      internalID: 1980457775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_99
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 629ca5003584fc64c87590b3e8941f25
+      internalID: 1244216223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_100
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78abce1c3e830c345ba5fc4807665343
+      internalID: 648633337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_101
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d25f847c120cb3647b5626d86c0790c0
+      internalID: -745065419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_102
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce246841d889d3347ba45d7b8cabe05d
+      internalID: 353092810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_103
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 879395cfd099c1f4a93740f2d3fbc1d8
+      internalID: 1621112114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_104
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f45f6ebc25743c47a115d100261dc44
+      internalID: -2104929780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_105
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a2929b3a6d55244595b925443e79c67
+      internalID: 1807942936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_106
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9576f6d880019ee4f9612ca81f03f0af
+      internalID: -1187266097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_107
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e8e4bb58d8a8fc40bc5da46fee15016
+      internalID: -1320027356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_108
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eca6c129234ef614e8bfeca4cb41a826
+      internalID: 645886990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_109
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68f71a10bd84d1449963758366e4a75c
+      internalID: 2039438862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_110
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c05b056e6f48f0b43b6256d6d8a5e90a
+      internalID: -1214983280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_111
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ccf495e766da3045a44414848a95dab
+      internalID: 1533091906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_112
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a4880f0659d8984cab482486a7e21e4
+      internalID: -1170270056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_113
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b8f91ed7072d6f4283d192ac98a8569
+      internalID: 638216154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_114
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13241998353ac0940849d00650d4bc33
+      internalID: 1661650267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_115
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 297d61d638818294babc39df9075c106
+      internalID: -792391185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_116
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af325ecdb9fd97042ab47d0981a1ec56
+      internalID: 940355155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_117
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23738260cdb06ba48838abbe3306cd20
+      internalID: -1203904787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_118
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a46d81004052e6548912642e2ec530c5
+      internalID: 1964406140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_119
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46edd270009b724478f4171d2c44583c
+      internalID: 1909426149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_120
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dc09a1c6fdb8064e895454fa3ff79af
+      internalID: 213957402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_121
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8743c8a227768c46b11d3333163b9cf
+      internalID: -658895242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_122
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91be3ee42cac86143be78f120440b3a5
+      internalID: -251401208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_123
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6b1eefde3718dd409230aba8a479b5f
+      internalID: -290716950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_124
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79507e8688ed7f2478be002815e6ab0a
+      internalID: -1890033903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_125
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8683552809a8bc42bc1d00ea4626c65
+      internalID: -880809612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_126
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b47e149b0a06f134897175b78d7c19a6
+      internalID: 1958515367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_127
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9ab0f3e93186904499466d28aa0bf20
+      internalID: -1101205994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_128
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af0a67648a8ac9343a17b07d45c4386f
+      internalID: -1359065111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_129
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da29ebe28d7fc7e45887a6868f06ad7c
+      internalID: 1086650752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_130
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f463c2f8394e934198115903e4b4a45
+      internalID: 1274280902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_131
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d46488c3ef035044b5b3020cd3b47ad
+      internalID: 1194947854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_132
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b6184ec6d21239449260ad64ec97745
+      internalID: -1595475261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_133
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06a89272ec107fa418f6b241b75892c4
+      internalID: -877739248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_134
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f46484f2e4029fa448619a90a2e19089
+      internalID: 1289911843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_135
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3bbee98a7c2fa749bc67a14d816b9ff
+      internalID: -279346645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_136
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415ce3f8107738d4ebd51c6305dfb30d
+      internalID: 132274851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_137
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 093b475e4d749344db471968b0e3aa69
+      internalID: 1215633662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_138
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a6f2702404f1d244aea9c8bacd9ab48
+      internalID: 131743098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_139
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fd45de4933b70a4db95a3aa78b69825
+      internalID: 1928437146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KyrieSpriteSheet_140
       rect:
         serializedVersion: 2
         x: 352
-        y: 288
+        y: 32
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a505041b01ac7954587c36a2bea97b43
-      internalID: 458770424
+      spriteID: e4393a7317de2d145a6b533d3805a86c
+      internalID: 1080037989
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_74
+      name: KyrieSpriteSheet_141
       rect:
         serializedVersion: 2
         x: 384
-        y: 288
+        y: 32
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd202037d3ac65e41b464302cb101fcd
-      internalID: -199360192
+      spriteID: aa218aa369ea5f042891e7255c05c194
+      internalID: -653591509
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_75
+      name: KyrieSpriteSheet_142
       rect:
         serializedVersion: 2
         x: 416
-        y: 288
+        y: 32
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e906cf92a6d5e5248ad6dc3c2540ede2
-      internalID: -898578794
+      spriteID: fc47ec030e205904e9d1edaa5cb939d1
+      internalID: 912220288
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_76
+      name: KyrieSpriteSheet_143
       rect:
         serializedVersion: 2
         x: 448
-        y: 288
+        y: 32
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0e2d03dc34c61e4dbc5b61c1b75ded1
-      internalID: 746823298
+      spriteID: 5cab53e1604b5cd4a8a665e4de6afddb
+      internalID: 2067252464
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_77
+      name: KyrieSpriteSheet_144
       rect:
         serializedVersion: 2
         x: 480
-        y: 288
+        y: 32
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30ffb8d5065d620438d8b079ac347f6b
-      internalID: -1343197198
+      spriteID: 9c3874877756d0647b4d674db77bc1ef
+      internalID: 493955954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_78
+      name: KyrieSpriteSheet_145
       rect:
         serializedVersion: 2
         x: 512
-        y: 288
+        y: 32
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d645bb80987c514182421c8a20cb300
-      internalID: 761283499
+      spriteID: 91fc960f14ba063469d7304b7d5480e1
+      internalID: -2031004051
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_79
-      rect:
-        serializedVersion: 2
-        x: 544
-        y: 288
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 81a685a3b3cba4a4d90656ad850f7096
-      internalID: -1484025686
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_80
+      name: KyrieSpriteSheet_146
       rect:
         serializedVersion: 2
         x: 576
-        y: 288
+        y: 32
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f43c35ae3316c14e8fadb0dc5543fd8
-      internalID: -392933584
+      spriteID: c5d26b8a539166849b20b21197824770
+      internalID: -366847051
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyrieSpriteSheet3_81
+      name: KyrieSpriteSheet_147
       rect:
         serializedVersion: 2
         x: 608
-        y: 288
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2fdd0fc9c4c0eeb4891d2e9193ffd132
-      internalID: 169591015
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_82
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 224
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9e6248e8de8196f4c93a1bbcd4ed9682
-      internalID: 2820281
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_83
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 224
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 553a0e751ebab9d45a70c644b5c360bd
-      internalID: -1910471158
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_84
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 224
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9202dcf043b6afb4ea956156352ed8fb
-      internalID: 1450351348
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_85
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 224
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3aba1ab778e51c8499626e3c049f5c25
-      internalID: 42755013
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_86
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 224
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 563a229973908464f83000a9827f24b8
-      internalID: -1259620235
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_87
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 224
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 67756eb29d5cc7b4a989221975083d67
-      internalID: 1062339770
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_88
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 224
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8412487ae899b6444b9b22e610e14126
-      internalID: -169346157
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_89
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 224
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7af4de3af1ff22d4a85e419cfe2f18d6
-      internalID: 529456745
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_90
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 224
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dc1d1ab3ae91b0843b64e525f4d940bb
-      internalID: -1263340213
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_91
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 224
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 53fa4a83b0610604aa0bdd8ded5723c4
-      internalID: -927552090
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_92
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 224
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 26ce88dcc57f94347b40eaf893fc6972
-      internalID: 1631478460
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_93
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 224
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a5fc4ded097d32e4492e04f871bb2d7b
-      internalID: -1181678303
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_94
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 224
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b53728fa203a2b44f8b29f7ec530e9b6
-      internalID: 258945442
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_95
-      rect:
-        serializedVersion: 2
-        x: 544
-        y: 224
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c08dff99bdbd7c84aa1ab8760c014352
-      internalID: 1414276285
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_96
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 224
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 81052713e9ec2854aaec46c5c4459202
-      internalID: -615894600
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_97
-      rect:
-        serializedVersion: 2
-        x: 608
-        y: 224
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 732bbd90747da644284651d7fb9c1dde
-      internalID: -1348534983
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_98
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a60dd62497f9114087f0ccbeceb94eb
-      internalID: -1135428749
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_99
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9aabea4c60912c449ad4d68965fa3e01
-      internalID: 808737808
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_100
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bdfb565c387d3794c992a8b24eee2f82
-      internalID: -1093365804
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_101
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 83d2ef2fc76afbf44a8ac1cf291c7d22
-      internalID: 1159725730
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_102
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dc4f658794fa5fa45b31f6ba10d233bc
-      internalID: -309580528
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_103
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 86550689188b9594692a643537ed26ad
-      internalID: 1912998708
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_104
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 70636c879be74c549a1cf36ca81a5446
-      internalID: -2074729155
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_105
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cb69c4a8953946d4f8143f71872d306e
-      internalID: -2103813314
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_106
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 04f2cb16bb743264f980766b2273c203
-      internalID: -570721022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_107
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3b5faf42646ebde4ba762762a6e01f9d
-      internalID: -859271340
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_108
-      rect:
-        serializedVersion: 2
-        x: 544
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 18a45404b54200c43a8017739c7b2717
-      internalID: -1294235504
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_109
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ecbb0f9af5c6a745bdf024656f1ec1c
-      internalID: -391154472
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_110
-      rect:
-        serializedVersion: 2
-        x: 608
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6c569f70d3b196a4aa981c1d5c5467cd
-      internalID: -72908324
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_111
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3310a9f2874a5f14db053b092dcfad9d
-      internalID: -803240492
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_112
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5fd8ef0fcc10938429854eca76841816
-      internalID: 466814056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_113
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4385803ab14117241a17e4114c299f3b
-      internalID: -1560620626
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_114
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 05762c5f7e9a4e843ade2c524be812fe
-      internalID: -1310080452
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_115
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f872f217b10d3cf468589c3e9d1786c5
-      internalID: -949474369
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_116
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 41a664b78fc7cf2419f788d54928bad8
-      internalID: -987221331
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_117
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 16417aa9519f44548a98628ab3b1151d
-      internalID: -23845941
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_118
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f45666dd03bdeb14db7c1c560720ef6d
-      internalID: -565171886
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_119
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e333ba1cad6d18845b1bdb414c2adb8f
-      internalID: 1857877857
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_120
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c493b27488ee2df4599ffddf0150bb13
-      internalID: 1687097869
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_121
-      rect:
-        serializedVersion: 2
-        x: 544
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 723c527245674bf4e92107d2d42be903
-      internalID: 1445192340
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_122
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e0da5064504c7454d9f8064fef0c1fe2
-      internalID: 680499068
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_123
-      rect:
-        serializedVersion: 2
-        x: 608
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c1966a77fe12f7d42bd28254a42b011d
-      internalID: -1876391333
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_124
-      rect:
-        serializedVersion: 2
-        x: 0
         y: 32
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebda422a175eebf43b4ab0c3851c46ce
-      internalID: 2113830048
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_125
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ee40f03d52530c4dbd559bdb5b3bd76
-      internalID: -1976859079
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_126
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c5a47830519e855469b895840dce06ef
-      internalID: 1466857095
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_127
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bc36900301618f542ae8cf72e3edfd3f
-      internalID: -1089753341
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_128
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 137364d90afd65e48aa4173327b01400
-      internalID: 1087678639
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_129
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6c62c93fec4554943a39964921f4a19d
-      internalID: -1107902059
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: KyrieSpriteSheet3_130
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bb1690f4001a6f442954b9c9b696f903
-      internalID: -522165626
+      spriteID: 7fb5eafa975eb944cac95926fc550007
+      internalID: -1485561631
       vertices: []
       indices: 
       edges: []
@@ -2858,137 +3215,154 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      KyrieSpriteSheet3_0: -1028180082
-      KyrieSpriteSheet3_1: 1090842719
-      KyrieSpriteSheet3_10: -864241921
-      KyrieSpriteSheet3_100: -1093365804
-      KyrieSpriteSheet3_101: 1159725730
-      KyrieSpriteSheet3_102: -309580528
-      KyrieSpriteSheet3_103: 1912998708
-      KyrieSpriteSheet3_104: -2074729155
-      KyrieSpriteSheet3_105: -2103813314
-      KyrieSpriteSheet3_106: -570721022
-      KyrieSpriteSheet3_107: -859271340
-      KyrieSpriteSheet3_108: -1294235504
-      KyrieSpriteSheet3_109: -391154472
-      KyrieSpriteSheet3_11: -386330755
-      KyrieSpriteSheet3_110: -72908324
-      KyrieSpriteSheet3_111: -803240492
-      KyrieSpriteSheet3_112: 466814056
-      KyrieSpriteSheet3_113: -1560620626
-      KyrieSpriteSheet3_114: -1310080452
-      KyrieSpriteSheet3_115: -949474369
-      KyrieSpriteSheet3_116: -987221331
-      KyrieSpriteSheet3_117: -23845941
-      KyrieSpriteSheet3_118: -565171886
-      KyrieSpriteSheet3_119: 1857877857
-      KyrieSpriteSheet3_12: 1098422121
-      KyrieSpriteSheet3_120: 1687097869
-      KyrieSpriteSheet3_121: 1445192340
-      KyrieSpriteSheet3_122: 680499068
-      KyrieSpriteSheet3_123: -1876391333
-      KyrieSpriteSheet3_124: 2113830048
-      KyrieSpriteSheet3_125: -1976859079
-      KyrieSpriteSheet3_126: 1466857095
-      KyrieSpriteSheet3_127: -1089753341
-      KyrieSpriteSheet3_128: 1087678639
-      KyrieSpriteSheet3_129: -1107902059
-      KyrieSpriteSheet3_13: -563610742
-      KyrieSpriteSheet3_130: -522165626
-      KyrieSpriteSheet3_14: 1455609612
-      KyrieSpriteSheet3_15: -699592122
-      KyrieSpriteSheet3_16: -1583076608
-      KyrieSpriteSheet3_17: 460712406
-      KyrieSpriteSheet3_18: -1313355042
-      KyrieSpriteSheet3_19: -1630502380
-      KyrieSpriteSheet3_2: -1767336103
-      KyrieSpriteSheet3_20: 898046915
-      KyrieSpriteSheet3_21: 1102904876
-      KyrieSpriteSheet3_22: -1070224831
-      KyrieSpriteSheet3_23: 569101575
-      KyrieSpriteSheet3_24: -1254101943
-      KyrieSpriteSheet3_25: -1700505917
-      KyrieSpriteSheet3_26: -902144762
-      KyrieSpriteSheet3_27: -416970509
-      KyrieSpriteSheet3_28: 826541038
-      KyrieSpriteSheet3_29: -1684805105
-      KyrieSpriteSheet3_3: -526153015
-      KyrieSpriteSheet3_30: -1767644033
-      KyrieSpriteSheet3_31: -1066128564
-      KyrieSpriteSheet3_32: -1788480848
-      KyrieSpriteSheet3_33: -1936552132
-      KyrieSpriteSheet3_34: -924958499
-      KyrieSpriteSheet3_35: -2083744106
-      KyrieSpriteSheet3_36: 1597940033
-      KyrieSpriteSheet3_37: 1960461219
-      KyrieSpriteSheet3_38: 1962978814
-      KyrieSpriteSheet3_39: 1513884973
-      KyrieSpriteSheet3_4: 435821158
-      KyrieSpriteSheet3_40: -2120551123
-      KyrieSpriteSheet3_41: -688279826
-      KyrieSpriteSheet3_42: 312875657
-      KyrieSpriteSheet3_43: 2108556480
-      KyrieSpriteSheet3_44: -1350690590
-      KyrieSpriteSheet3_45: 888678773
-      KyrieSpriteSheet3_46: -1776447450
-      KyrieSpriteSheet3_47: 1443160400
-      KyrieSpriteSheet3_48: 1643237403
-      KyrieSpriteSheet3_49: 257335668
-      KyrieSpriteSheet3_5: -1168629580
-      KyrieSpriteSheet3_50: -1849479794
-      KyrieSpriteSheet3_51: -2078445814
-      KyrieSpriteSheet3_52: -1215616755
-      KyrieSpriteSheet3_53: 1143988272
-      KyrieSpriteSheet3_54: -87988856
-      KyrieSpriteSheet3_55: 2144357727
-      KyrieSpriteSheet3_56: -900923600
-      KyrieSpriteSheet3_57: -700921842
-      KyrieSpriteSheet3_58: 1968103
-      KyrieSpriteSheet3_59: -21966258
-      KyrieSpriteSheet3_6: 1525050895
-      KyrieSpriteSheet3_60: 734598205
-      KyrieSpriteSheet3_61: 150660036
-      KyrieSpriteSheet3_62: 1333344043
-      KyrieSpriteSheet3_63: -49389906
-      KyrieSpriteSheet3_64: 136123422
-      KyrieSpriteSheet3_65: 1426454670
-      KyrieSpriteSheet3_66: -907185736
-      KyrieSpriteSheet3_67: 1544323357
-      KyrieSpriteSheet3_68: 424382770
-      KyrieSpriteSheet3_69: 392591946
-      KyrieSpriteSheet3_7: -1233975442
-      KyrieSpriteSheet3_70: 1323402745
-      KyrieSpriteSheet3_71: 1393307249
-      KyrieSpriteSheet3_72: -825310889
-      KyrieSpriteSheet3_73: 458770424
-      KyrieSpriteSheet3_74: -199360192
-      KyrieSpriteSheet3_75: -898578794
-      KyrieSpriteSheet3_76: 746823298
-      KyrieSpriteSheet3_77: -1343197198
-      KyrieSpriteSheet3_78: 761283499
-      KyrieSpriteSheet3_79: -1484025686
-      KyrieSpriteSheet3_8: 1049005945
-      KyrieSpriteSheet3_80: -392933584
-      KyrieSpriteSheet3_81: 169591015
-      KyrieSpriteSheet3_82: 2820281
-      KyrieSpriteSheet3_83: -1910471158
-      KyrieSpriteSheet3_84: 1450351348
-      KyrieSpriteSheet3_85: 42755013
-      KyrieSpriteSheet3_86: -1259620235
-      KyrieSpriteSheet3_87: 1062339770
-      KyrieSpriteSheet3_88: -169346157
-      KyrieSpriteSheet3_89: 529456745
-      KyrieSpriteSheet3_9: 1379446733
-      KyrieSpriteSheet3_90: -1263340213
-      KyrieSpriteSheet3_91: -927552090
-      KyrieSpriteSheet3_92: 1631478460
-      KyrieSpriteSheet3_93: -1181678303
-      KyrieSpriteSheet3_94: 258945442
-      KyrieSpriteSheet3_95: 1414276285
-      KyrieSpriteSheet3_96: -615894600
-      KyrieSpriteSheet3_97: -1348534983
-      KyrieSpriteSheet3_98: -1135428749
-      KyrieSpriteSheet3_99: 808737808
+      KyrieSpriteSheet_0: -2026978300
+      KyrieSpriteSheet_1: -435137173
+      KyrieSpriteSheet_10: -724301255
+      KyrieSpriteSheet_100: 648633337
+      KyrieSpriteSheet_101: -745065419
+      KyrieSpriteSheet_102: 353092810
+      KyrieSpriteSheet_103: 1621112114
+      KyrieSpriteSheet_104: -2104929780
+      KyrieSpriteSheet_105: 1807942936
+      KyrieSpriteSheet_106: -1187266097
+      KyrieSpriteSheet_107: -1320027356
+      KyrieSpriteSheet_108: 645886990
+      KyrieSpriteSheet_109: 2039438862
+      KyrieSpriteSheet_11: -70150673
+      KyrieSpriteSheet_110: -1214983280
+      KyrieSpriteSheet_111: 1533091906
+      KyrieSpriteSheet_112: -1170270056
+      KyrieSpriteSheet_113: 638216154
+      KyrieSpriteSheet_114: 1661650267
+      KyrieSpriteSheet_115: -792391185
+      KyrieSpriteSheet_116: 940355155
+      KyrieSpriteSheet_117: -1203904787
+      KyrieSpriteSheet_118: 1964406140
+      KyrieSpriteSheet_119: 1909426149
+      KyrieSpriteSheet_12: -594321356
+      KyrieSpriteSheet_120: 213957402
+      KyrieSpriteSheet_121: -658895242
+      KyrieSpriteSheet_122: -251401208
+      KyrieSpriteSheet_123: -290716950
+      KyrieSpriteSheet_124: -1890033903
+      KyrieSpriteSheet_125: -880809612
+      KyrieSpriteSheet_126: 1958515367
+      KyrieSpriteSheet_127: -1101205994
+      KyrieSpriteSheet_128: -1359065111
+      KyrieSpriteSheet_129: 1086650752
+      KyrieSpriteSheet_13: -1263717015
+      KyrieSpriteSheet_130: 1274280902
+      KyrieSpriteSheet_131: 1194947854
+      KyrieSpriteSheet_132: -1595475261
+      KyrieSpriteSheet_133: -877739248
+      KyrieSpriteSheet_134: 1289911843
+      KyrieSpriteSheet_135: -279346645
+      KyrieSpriteSheet_136: 132274851
+      KyrieSpriteSheet_137: 1215633662
+      KyrieSpriteSheet_138: 131743098
+      KyrieSpriteSheet_139: 1928437146
+      KyrieSpriteSheet_14: 2082603624
+      KyrieSpriteSheet_140: 1080037989
+      KyrieSpriteSheet_141: -653591509
+      KyrieSpriteSheet_142: 912220288
+      KyrieSpriteSheet_143: 2067252464
+      KyrieSpriteSheet_144: 493955954
+      KyrieSpriteSheet_145: -2031004051
+      KyrieSpriteSheet_146: -366847051
+      KyrieSpriteSheet_147: -1485561631
+      KyrieSpriteSheet_15: 1068983952
+      KyrieSpriteSheet_16: 428896366
+      KyrieSpriteSheet_17: -372778208
+      KyrieSpriteSheet_18: -1019718328
+      KyrieSpriteSheet_19: 664043066
+      KyrieSpriteSheet_2: -806855051
+      KyrieSpriteSheet_20: 1497160215
+      KyrieSpriteSheet_21: -1263261221
+      KyrieSpriteSheet_22: -274456193
+      KyrieSpriteSheet_23: -1584919844
+      KyrieSpriteSheet_24: -1966991650
+      KyrieSpriteSheet_25: -1007512262
+      KyrieSpriteSheet_26: -518067084
+      KyrieSpriteSheet_27: -707970051
+      KyrieSpriteSheet_28: -1879665009
+      KyrieSpriteSheet_29: 377050930
+      KyrieSpriteSheet_3: -383847276
+      KyrieSpriteSheet_30: 991168523
+      KyrieSpriteSheet_31: -325489630
+      KyrieSpriteSheet_32: 977638592
+      KyrieSpriteSheet_33: -967468410
+      KyrieSpriteSheet_34: 732642908
+      KyrieSpriteSheet_35: -1587596715
+      KyrieSpriteSheet_36: 1617773869
+      KyrieSpriteSheet_37: -873675348
+      KyrieSpriteSheet_38: -1463438162
+      KyrieSpriteSheet_39: -1101559420
+      KyrieSpriteSheet_4: -1066634987
+      KyrieSpriteSheet_40: 1681362584
+      KyrieSpriteSheet_41: -67783177
+      KyrieSpriteSheet_42: -301767036
+      KyrieSpriteSheet_43: -327034590
+      KyrieSpriteSheet_44: -1501229706
+      KyrieSpriteSheet_45: -1728189114
+      KyrieSpriteSheet_46: 1396708558
+      KyrieSpriteSheet_47: 2043880145
+      KyrieSpriteSheet_48: 1291459013
+      KyrieSpriteSheet_49: -1238841443
+      KyrieSpriteSheet_5: 207383488
+      KyrieSpriteSheet_50: -1898660309
+      KyrieSpriteSheet_51: 190138113
+      KyrieSpriteSheet_52: 1737203949
+      KyrieSpriteSheet_53: 2097509319
+      KyrieSpriteSheet_54: 2073897436
+      KyrieSpriteSheet_55: 1488675144
+      KyrieSpriteSheet_56: -402656827
+      KyrieSpriteSheet_57: -1345619408
+      KyrieSpriteSheet_58: -46010727
+      KyrieSpriteSheet_59: 1828409187
+      KyrieSpriteSheet_6: -157809849
+      KyrieSpriteSheet_60: 1455087445
+      KyrieSpriteSheet_61: -2033802904
+      KyrieSpriteSheet_62: 1315145699
+      KyrieSpriteSheet_63: 1182852014
+      KyrieSpriteSheet_64: -2035068205
+      KyrieSpriteSheet_65: 979102553
+      KyrieSpriteSheet_66: 1075114890
+      KyrieSpriteSheet_67: 1173568733
+      KyrieSpriteSheet_68: -1210811387
+      KyrieSpriteSheet_69: -592896314
+      KyrieSpriteSheet_7: -1827839085
+      KyrieSpriteSheet_70: 191712207
+      KyrieSpriteSheet_71: -1177527611
+      KyrieSpriteSheet_72: 1999739181
+      KyrieSpriteSheet_73: 213944580
+      KyrieSpriteSheet_74: 376113223
+      KyrieSpriteSheet_75: 1872149424
+      KyrieSpriteSheet_76: 2102271940
+      KyrieSpriteSheet_77: 954469164
+      KyrieSpriteSheet_78: 883825951
+      KyrieSpriteSheet_79: 163996450
+      KyrieSpriteSheet_8: -1701948903
+      KyrieSpriteSheet_80: 1211745387
+      KyrieSpriteSheet_81: -1775322784
+      KyrieSpriteSheet_82: 437442595
+      KyrieSpriteSheet_83: 864658682
+      KyrieSpriteSheet_84: -862094344
+      KyrieSpriteSheet_85: -1737945445
+      KyrieSpriteSheet_86: -752143286
+      KyrieSpriteSheet_87: 970167908
+      KyrieSpriteSheet_88: 1979210533
+      KyrieSpriteSheet_89: -1053024938
+      KyrieSpriteSheet_9: 2021403408
+      KyrieSpriteSheet_90: 1243052838
+      KyrieSpriteSheet_91: -124144734
+      KyrieSpriteSheet_92: -1378281466
+      KyrieSpriteSheet_93: -1002809120
+      KyrieSpriteSheet_94: 1210100192
+      KyrieSpriteSheet_95: -1290148171
+      KyrieSpriteSheet_96: 120952483
+      KyrieSpriteSheet_97: -1690925713
+      KyrieSpriteSheet_98: 1980457775
+      KyrieSpriteSheet_99: 1244216223
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

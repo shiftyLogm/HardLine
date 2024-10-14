@@ -6374,7 +6374,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -9
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -23467,11 +23467,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5323717520259374213, guid: 7a82980a0a8d25d408383135851e1e7c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.82
+      value: -8.96
       objectReference: {fileID: 0}
     - target: {fileID: 5323717520259374213, guid: 7a82980a0a8d25d408383135851e1e7c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.51
+      value: 5.36
       objectReference: {fileID: 0}
     - target: {fileID: 5323717520259374213, guid: 7a82980a0a8d25d408383135851e1e7c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23506,10 +23506,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6692965078429744682, guid: 7a82980a0a8d25d408383135851e1e7c, type: 3}
-      propertyPath: enemySpawns.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6692965078429744682, guid: 7a82980a0a8d25d408383135851e1e7c, type: 3}
       propertyPath: enemySpawns.Array.data[0]
       value: 
       objectReference: {fileID: 579448188}
@@ -23525,30 +23521,17 @@ PrefabInstance:
       propertyPath: enemySpawns.Array.data[3]
       value: 
       objectReference: {fileID: 1572496569}
-    - target: {fileID: 6692965078429744682, guid: 7a82980a0a8d25d408383135851e1e7c, type: 3}
-      propertyPath: enemyPreFabList.Array.size
-      value: 4
+    - target: {fileID: 8173727014199325001, guid: 7a82980a0a8d25d408383135851e1e7c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 79.7
       objectReference: {fileID: 0}
-    - target: {fileID: 6692965078429744682, guid: 7a82980a0a8d25d408383135851e1e7c, type: 3}
-      propertyPath: enemyPreFabList.Array.data[0]
-      value: 
-      objectReference: {fileID: 4854479527839349835, guid: ef4a7137b802f8f4d97f704b4ab98ca7, type: 3}
-    - target: {fileID: 6692965078429744682, guid: 7a82980a0a8d25d408383135851e1e7c, type: 3}
-      propertyPath: enemyPreFabList.Array.data[1]
-      value: 
-      objectReference: {fileID: 1612906063358287699, guid: 113965a589774724a9c5a2c04929f00d, type: 3}
-    - target: {fileID: 6692965078429744682, guid: 7a82980a0a8d25d408383135851e1e7c, type: 3}
-      propertyPath: enemyPreFabList.Array.data[2]
-      value: 
-      objectReference: {fileID: 4854479527839349835, guid: ef4a7137b802f8f4d97f704b4ab98ca7, type: 3}
-    - target: {fileID: 6692965078429744682, guid: 7a82980a0a8d25d408383135851e1e7c, type: 3}
-      propertyPath: enemyPreFabList.Array.data[3]
-      value: 
-      objectReference: {fileID: 1612906063358287699, guid: 113965a589774724a9c5a2c04929f00d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2183301076767753242, guid: 7a82980a0a8d25d408383135851e1e7c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2120900284}
   m_SourcePrefab: {fileID: 100100000, guid: 7a82980a0a8d25d408383135851e1e7c, type: 3}
 --- !u!1 &1848785040
 GameObject:
@@ -26275,6 +26258,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2110904499}
   m_CullTransparentMesh: 1
+--- !u!1 &2120900279 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2183301076767753242, guid: 7a82980a0a8d25d408383135851e1e7c, type: 3}
+  m_PrefabInstance: {fileID: 1831952437}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &2120900284
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120900279}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.043239355, y: 0.033301115}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 2.8}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.9545723, y: 1.1904001}
+  m_EdgeRadius: 0
 --- !u!1 &2127355005
 GameObject:
   m_ObjectHideFlags: 0
