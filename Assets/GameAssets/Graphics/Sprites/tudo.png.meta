@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86e4afaee144d4245bdbb9c8b2434caa
-      internalID: 1323093316
+      spriteID: 66cbe0a5d09e9eb46b79732654009d1e
+      internalID: 260088
       vertices: []
       indices: 
       edges: []
@@ -132,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 494594b53a12b6d4ea6ed22f3f5bcd69
-      internalID: 1646334370
+      spriteID: 7ff766614a6c315489964e7548bf7352
+      internalID: -1636832069
       vertices: []
       indices: 
       edges: []
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff9b4e51483823b458e64805c4b3f08c
-      internalID: 700223354
+      spriteID: 875b44368fb480f4c89a912508a9dddc
+      internalID: 1597967740
       vertices: []
       indices: 
       edges: []
@@ -163,7 +163,7 @@ TextureImporter:
       name: tudo_3
       rect:
         serializedVersion: 2
-        x: 128
+        x: 96
         y: 608
         width: 32
         height: 32
@@ -174,8 +174,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aece29c7b1beaee439cbed28d0efddd5
-      internalID: 829012787
+      spriteID: 4b661c46f86d20d47893ce2d3699bd7f
+      internalID: -1897926421
       vertices: []
       indices: 
       edges: []
@@ -195,8 +195,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a014be27c8edc2e4581a779e2d34e844
-      internalID: -2132293947
+      spriteID: 34ad3e3686e869948b141468d1764ded
+      internalID: -625363806
       vertices: []
       indices: 
       edges: []
@@ -216,8 +216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1928e8a8670e0f44194d6fc1dc08397f
-      internalID: 1727981931
+      spriteID: f19ae66ffa743664ca8743a685b084d8
+      internalID: -786810376
       vertices: []
       indices: 
       edges: []
@@ -237,14 +237,224 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aac456f3c6a4bae41b869450c53b402d
-      internalID: 1735717831
+      spriteID: 6c6df732df6eceb488fc9f3996e1124d
+      internalID: -220827334
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
       name: tudo_7
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 608
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eb1e24c13a7def4d905eb498bc803c5
+      internalID: -26390331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_8
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 608
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94b05e8b8499a3e4bb80994b0c334a8e
+      internalID: -1084293574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_9
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 608
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0665edf8c6cb2f84caf446f76536a403
+      internalID: -512494682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_10
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 608
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dcb19565ae0805479dca52bfb454fff
+      internalID: 133572596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 608
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 797944ec127a381498785be199447582
+      internalID: 1571902358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_12
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 608
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a80a58637313974bb7a87edd5626724
+      internalID: -1054045077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_13
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 608
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f73b00f942d7b194eae0ffb49fc9459d
+      internalID: 1685192312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_14
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 608
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8169c1b758b3ba2409b5cb19a95ad8f6
+      internalID: -1904203793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_15
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 608
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ec97c637b8f974691e8b0106c08722
+      internalID: 541181531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_16
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 608
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e8bb5df645f03c42ae917045b27af94
+      internalID: -1570500202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_17
       rect:
         serializedVersion: 2
         x: 0
@@ -258,14 +468,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ae04259e92f77d4fa840eee3a96a4da
-      internalID: 66198275
+      spriteID: 40ba290d44f605742925ba7743f956de
+      internalID: -291200370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tudo_8
+      name: tudo_18
       rect:
         serializedVersion: 2
         x: 32
@@ -279,14 +489,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a77a529a1870ab4aa6ad08f94eb6ec2
-      internalID: -43842984
+      spriteID: 634b477c153cd7b4f9ad00507dbdc064
+      internalID: -1272388901
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tudo_9
+      name: tudo_19
       rect:
         serializedVersion: 2
         x: 64
@@ -300,14 +510,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e4758759b339694f9131d381dede2f5
-      internalID: 1707328846
+      spriteID: e28d2e9cc2c24cb41b926bde33fb4c6b
+      internalID: -1053918444
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tudo_10
+      name: tudo_20
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 576
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e15ea824af86f37448e33d41d460011e
+      internalID: 1164243301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_21
       rect:
         serializedVersion: 2
         x: 128
@@ -321,14 +552,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3054c5d1039375b46bc6694580cb019b
-      internalID: -1360103055
+      spriteID: 8db4e0f13722a70408e9ec1f8c607b17
+      internalID: 922393995
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tudo_11
+      name: tudo_22
       rect:
         serializedVersion: 2
         x: 160
@@ -342,14 +573,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72b0b901d18ddd744853022d15e08ddc
-      internalID: 1257908723
+      spriteID: a1ed1fc6e08eb564ba76491d1f1ab48a
+      internalID: 382609450
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tudo_12
+      name: tudo_23
       rect:
         serializedVersion: 2
         x: 192
@@ -363,14 +594,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 666183f834c4afc46a30917f1c67502d
-      internalID: -648456286
+      spriteID: 1a290db682fd24a40ab1d011c61d3d5f
+      internalID: -579733375
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tudo_13
+      name: tudo_24
       rect:
         serializedVersion: 2
         x: 224
@@ -384,218 +615,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10d7592537ddfcf40a8514c190d91a79
-      internalID: -1687100025
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tudo_15
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 544
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 66c841f8f66a2b34bb5670f697fa3446
-      internalID: 1410189447
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tudo_16
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 544
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5e05f99a6a7c7934b80078821fa04212
-      internalID: 2001353057
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tudo_17
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 544
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 66c16703f8c1d1b4a8af8b53ebaa74c8
-      internalID: 1829400517
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tudo_18
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 544
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8fab9a25df489284f9a994884f726021
-      internalID: 371279826
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tudo_19
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 512
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1441c3b34ae05d243bcbcae48a552302
-      internalID: -1534963834
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tudo_20
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 512
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e137e043dd80b3e438a97329ab7dda14
-      internalID: -901678506
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tudo_21
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 512
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 77f59dc22320f6148a5dc3c4703cd904
-      internalID: -525515154
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tudo_22
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 512
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f605712547b85ff42beabd15bd34512b
-      internalID: -309575970
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tudo_23
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 480
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b8ca41fa0918eda4ba5d9b6e7f6128d1
-      internalID: -952093009
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tudo_24
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 480
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 253fac2655a2d2747bc1a099d00ea37e
-      internalID: -270604935
+      spriteID: d090a827d4c07ef469b0b9d0e648822f
+      internalID: 1145516276
       vertices: []
       indices: 
       edges: []
@@ -604,6 +625,783 @@ TextureImporter:
       name: tudo_25
       rect:
         serializedVersion: 2
+        x: 256
+        y: 576
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53cc8af1ac0e1e845838958db7db5592
+      internalID: -2125593335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_26
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 576
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51f2c47f8e48cdf4aa6cf74adedb8d25
+      internalID: -755885394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_27
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 576
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46a7732407515d5418ac53abe560bd99
+      internalID: -1342641585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_28
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 576
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0ff386e0e079d440a51a701aba488a1
+      internalID: -761277439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_29
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 576
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9a4aaaa3e91c2b46b452946f6bfd56f
+      internalID: -903093472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_30
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 576
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfa6d91c340253a4dade1dac39955cce
+      internalID: -495572219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_31
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 576
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d3d4f9d32502564b87465c06b778243
+      internalID: 1400888443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_32
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 576
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6adad4c4bf34074cbf6cbb5ee3855ab
+      internalID: 1062304020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_33
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 576
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa461d42ce22bc1459cbe121c3cb781b
+      internalID: 2407099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_34
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 576
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1956aa5d1879e2f43ba98347a621f4ad
+      internalID: -1876820871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_35
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 576
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f042dfadc69aa9d4d8fb60bbaee0dee5
+      internalID: -525423236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 544
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07a9ba14ee5e74144b9e17667a291795
+      internalID: -1671028627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_37
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 544
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36dd5d7a1a026784e914197ea359dcfa
+      internalID: 1549024138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_38
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 544
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbc4289c5b4dd2c4988212ba0128f858
+      internalID: 1261228780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_39
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 544
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb44059f957838d488ef8edd0d6da59c
+      internalID: 74195838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_40
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 544
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 240ab7411a943174494b42a2c41ea198
+      internalID: -797772701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_41
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 544
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b957721b96ab07468826bea1548c772
+      internalID: -805869873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_42
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 544
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d9fd9219bc0cc48851603cf17dfd6c
+      internalID: 1132254216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_43
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 544
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f03a3dd604cab340a839a496bb23783
+      internalID: -1797866779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_44
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 544
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51420878b13471645b167d952827f5f9
+      internalID: 1774627145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_45
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 544
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4b00ddcc00d68a4f80716eecc2341b3
+      internalID: 1020267753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_46
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 544
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0d879e2dff2026489adb7b691b4a0d2
+      internalID: -446784075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_47
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 544
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 191e7b9145cd9d34e9767f41cf9e0622
+      internalID: 621355923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_48
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 544
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b57d4e60f02373440a24d597706a4548
+      internalID: 515064759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f002317c5ab859f4395310b5cfee9c86
+      internalID: 1864413541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_50
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 512
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0623b8f716296641a138595583567d7
+      internalID: -1033547239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_51
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 512
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38c08045a367ebc468f5174479df487f
+      internalID: 111828836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_52
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 512
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90cf83acf91dcae42b90f9bde5eee4c3
+      internalID: -1434456626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_53
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fdc50a65bb9c4148a29f87e939b3879
+      internalID: 752498260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_54
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 512
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e47651d1f7a6a4d846a121f809c098
+      internalID: 184254735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_55
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 512
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8a25741b51083043a95dc66274fd267
+      internalID: 1229859367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_56
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 512
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cfabca7340408e488e01e1bedb106f2
+      internalID: -497457051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_57
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 512
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 854d9df5e42bdd54aba6216c63f4869b
+      internalID: -425725438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_58
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 512
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69fabef3531d6c5459e0bed5e6cbe021
+      internalID: -906965732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_59
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d6dd524f50b22d4bb18f940c4444ab6
+      internalID: -1136456306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18d30dcb983b37640a4a2ade38bd5870
+      internalID: -1726999929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_61
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a305c060ea6f2f040a4b520bf3dd9900
+      internalID: -1893007709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_62
+      rect:
+        serializedVersion: 2
         x: 64
         y: 480
         width: 32
@@ -615,14 +1413,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65dbcf5c61ffe9e40bc101c3e91850aa
-      internalID: -12884826
+      spriteID: adeea4e357f19ef4995148597ebe4d1b
+      internalID: -1492448163
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tudo_26
+      name: tudo_63
       rect:
         serializedVersion: 2
         x: 96
@@ -636,14 +1434,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbcc1a0a2beb5b147b0f2c2fbb1ad8da
-      internalID: 1552988262
+      spriteID: 0b71be272e5e2654eb8259b9e312a21d
+      internalID: 1677530746
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tudo_27
+      name: tudo_64
       rect:
         serializedVersion: 2
         x: 128
@@ -657,14 +1455,56 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecc93e4aad7a11849b9424819797f986
-      internalID: 1445221304
+      spriteID: 99261098dacc47647b47426cae9e4cfd
+      internalID: 1641895705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tudo_28
+      name: tudo_65
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d43d339a4bfddd469e99de567339681
+      internalID: 1384020911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_66
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4674689cac494c14b95bcc0f859a59a7
+      internalID: -1031014175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_67
       rect:
         serializedVersion: 2
         x: 0
@@ -678,14 +1518,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fc1b4a20cfc5a540a049d7de6eadcfa
-      internalID: -1483036329
+      spriteID: f55fe4d67e891c9429d4291f5a8b9990
+      internalID: -448517989
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tudo_29
+      name: tudo_68
       rect:
         serializedVersion: 2
         x: 32
@@ -699,14 +1539,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 857ac3de604ed65409df9522f6ae3f12
-      internalID: 2126532113
+      spriteID: 2402ba0c2dfe5f34a9181b5a2b5d6b23
+      internalID: -807154824
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tudo_30
+      name: tudo_69
       rect:
         serializedVersion: 2
         x: 64
@@ -720,14 +1560,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87372bddd49dbd64a8137626317bbf0c
-      internalID: 560850956
+      spriteID: c25b496e9efcfe743ac048e0dc08d925
+      internalID: -577476729
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tudo_31
+      name: tudo_70
       rect:
         serializedVersion: 2
         x: 96
@@ -741,17 +1581,38 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4360d694823ad6f418ea6b172fa758ae
-      internalID: 1936680331
+      spriteID: bdea52e0c6bb8b247995e97df9f626ad
+      internalID: 1548815839
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tudo_32
+      name: tudo_71
       rect:
         serializedVersion: 2
-        x: 128
+        x: 130
+        y: 448
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 317abb2f367de75428d35ac05565231d
+      internalID: 1846195355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_72
+      rect:
+        serializedVersion: 2
+        x: 320
         y: 448
         width: 32
         height: 32
@@ -762,8 +1623,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b88eb4292bbcbe41a0d642d93336404
-      internalID: 1013203437
+      spriteID: dd6da6ead95353b4baaaf95bf9e242f2
+      internalID: -895257492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_73
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50ff0158e80059848b654d24b0451d16
+      internalID: 963533172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_74
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d1aeacbddc51654b977480ab11a04b8
+      internalID: -1618226182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tudo_75
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 150cc18aead574b42b46addae0cd9218
+      internalID: 1922339567
       vertices: []
       indices: 
       edges: []
@@ -779,39 +1703,82 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tudo_0: 1323093316
-      tudo_1: 1646334370
-      tudo_10: -1360103055
-      tudo_11: 1257908723
-      tudo_12: -648456286
-      tudo_13: -1687100025
-      tudo_14: 1040510109
-      tudo_15: 1410189447
-      tudo_16: 2001353057
-      tudo_17: 1829400517
-      tudo_18: 371279826
-      tudo_19: -1534963834
-      tudo_2: 700223354
-      tudo_20: -901678506
-      tudo_21: -525515154
-      tudo_22: -309575970
-      tudo_23: -952093009
-      tudo_24: -270604935
-      tudo_25: -12884826
-      tudo_26: 1552988262
-      tudo_27: 1445221304
-      tudo_28: -1483036329
-      tudo_29: 2126532113
-      tudo_3: 829012787
-      tudo_30: 560850956
-      tudo_31: 1936680331
-      tudo_32: 1013203437
-      tudo_4: -2132293947
-      tudo_5: 1727981931
-      tudo_6: 1735717831
-      tudo_7: 66198275
-      tudo_8: -43842984
-      tudo_9: 1707328846
+      tudo_0: 260088
+      tudo_1: -1636832069
+      tudo_10: 133572596
+      tudo_11: 1571902358
+      tudo_12: -1054045077
+      tudo_13: 1685192312
+      tudo_14: -1904203793
+      tudo_15: 541181531
+      tudo_16: -1570500202
+      tudo_17: -291200370
+      tudo_18: -1272388901
+      tudo_19: -1053918444
+      tudo_2: 1597967740
+      tudo_20: 1164243301
+      tudo_21: 922393995
+      tudo_22: 382609450
+      tudo_23: -579733375
+      tudo_24: 1145516276
+      tudo_25: -2125593335
+      tudo_26: -755885394
+      tudo_27: -1342641585
+      tudo_28: -761277439
+      tudo_29: -903093472
+      tudo_3: -1897926421
+      tudo_30: -495572219
+      tudo_31: 1400888443
+      tudo_32: 1062304020
+      tudo_33: 2407099
+      tudo_34: -1876820871
+      tudo_35: -525423236
+      tudo_36: -1671028627
+      tudo_37: 1549024138
+      tudo_38: 1261228780
+      tudo_39: 74195838
+      tudo_4: -625363806
+      tudo_40: -797772701
+      tudo_41: -805869873
+      tudo_42: 1132254216
+      tudo_43: -1797866779
+      tudo_44: 1774627145
+      tudo_45: 1020267753
+      tudo_46: -446784075
+      tudo_47: 621355923
+      tudo_48: 515064759
+      tudo_49: 1864413541
+      tudo_5: -786810376
+      tudo_50: -1033547239
+      tudo_51: 111828836
+      tudo_52: -1434456626
+      tudo_53: 752498260
+      tudo_54: 184254735
+      tudo_55: 1229859367
+      tudo_56: -497457051
+      tudo_57: -425725438
+      tudo_58: -906965732
+      tudo_59: -1136456306
+      tudo_6: -220827334
+      tudo_60: -1726999929
+      tudo_61: -1893007709
+      tudo_62: -1492448163
+      tudo_63: 1677530746
+      tudo_64: 1641895705
+      tudo_65: 1384020911
+      tudo_66: -1031014175
+      tudo_67: -448517989
+      tudo_68: -807154824
+      tudo_69: -577476729
+      tudo_7: -26390331
+      tudo_70: 1548815839
+      tudo_71: 1846195355
+      tudo_72: -895257492
+      tudo_73: 963533172
+      tudo_74: -1618226182
+      tudo_75: 1922339567
+      tudo_8: -1084293574
+      tudo_9: -512494682
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

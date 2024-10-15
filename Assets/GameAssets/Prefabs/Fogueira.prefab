@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2595367515255230735}
   - component: {fileID: 6692965078429744682}
   - component: {fileID: 7922649131647955472}
+  - component: {fileID: 3186895835743691416}
   m_Layer: 0
   m_Name: Fogueira
   m_TagString: Fogueira
@@ -132,6 +133,51 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!61 &3186895835743691416
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2183301076767753242}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.043239355, y: 0.033301115}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 2.8}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.9545723, y: 1.1904001}
+  m_EdgeRadius: 0
 --- !u!1001 &9064289513297550998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -147,6 +193,10 @@ PrefabInstance:
     - target: {fileID: 665872407236742762, guid: 354239f12fdea3f4ba37eb858b967dbe, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 910916935380332511, guid: 354239f12fdea3f4ba37eb858b967dbe, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 79.7
       objectReference: {fileID: 0}
     - target: {fileID: 1141074052739058462, guid: 354239f12fdea3f4ba37eb858b967dbe, type: 3}
       propertyPath: m_Pivot.x
