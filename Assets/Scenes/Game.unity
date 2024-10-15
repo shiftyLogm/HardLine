@@ -5087,7 +5087,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1858706504}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuOptions, Assembly-CSharp
           m_MethodName: PageSoundsClick
           m_Mode: 1
@@ -5213,8 +5213,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1858706504}
-        m_TargetAssemblyTypeName: MenuOptions, Assembly-CSharp
+      - m_Target: {fileID: 1858706508}
+        m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
         m_MethodName: PageSoundsClick
         m_Mode: 1
         m_Arguments:
@@ -5275,10 +5275,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97bc2ebab6563400c95b036136d26ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Inverse: 0
-  m_MaskInteraction: 85
-  m_UseStencil: 1
-  m_RaycastFilter: 0
 --- !u!114 &467210693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5461,10 +5457,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97bc2ebab6563400c95b036136d26ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Inverse: 0
-  m_MaskInteraction: 85
-  m_UseStencil: 1
-  m_RaycastFilter: 0
 --- !u!114 &501499798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18437,7 +18429,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1075149607}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1858706508}
+        m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
+        m_MethodName: PageControlsClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &1242917569
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18490,7 +18494,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1858706504}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuOptions, Assembly-CSharp
           m_MethodName: PageControlsClick
           m_Mode: 1
@@ -19229,10 +19233,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97bc2ebab6563400c95b036136d26ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Inverse: 0
-  m_MaskInteraction: 85
-  m_UseStencil: 1
-  m_RaycastFilter: 0
 --- !u!114 &1326426059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21653,10 +21653,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97bc2ebab6563400c95b036136d26ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Inverse: 0
-  m_MaskInteraction: 85
-  m_UseStencil: 1
-  m_RaycastFilter: 0
 --- !u!114 &1563735390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23049,8 +23045,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1411645938}
   m_HandleRect: {fileID: 1411645937}
   m_Direction: 2
-  m_Value: -0.00000022472446
-  m_Size: 0.6946943
+  m_Value: 0
+  m_Size: 0.6946942
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -23762,8 +23758,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1858706503}
+  - component: {fileID: 1858706508}
   - component: {fileID: 1858706507}
-  - component: {fileID: 1858706504}
   - component: {fileID: 1858706506}
   - component: {fileID: 1858706505}
   m_Layer: 8
@@ -23795,21 +23791,6 @@ RectTransform:
   m_AnchoredPosition: {x: 115.47206, y: 0}
   m_SizeDelta: {x: 568.3123, y: 341.2521}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1858706504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1858706502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6b23fe8957e032479c6de1722fb8a8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PageGeneral: {fileID: 1252501352}
-  PageSounds: {fileID: 1609026452}
-  PageControls: {fileID: 297848918}
 --- !u!114 &1858706505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23863,6 +23844,21 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1858706508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858706502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee598b2fb00d68549a07f17a61996c94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PageGeneral: {fileID: 1252501352}
+  PageSounds: {fileID: 1609026452}
+  PageControls: {fileID: 297848918}
 --- !u!1 &1862922431
 GameObject:
   m_ObjectHideFlags: 0
@@ -24183,10 +24179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97bc2ebab6563400c95b036136d26ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Inverse: 0
-  m_MaskInteraction: 85
-  m_UseStencil: 1
-  m_RaycastFilter: 0
 --- !u!114 &1904566700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24334,10 +24326,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97bc2ebab6563400c95b036136d26ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Inverse: 0
-  m_MaskInteraction: 85
-  m_UseStencil: 1
-  m_RaycastFilter: 0
 --- !u!114 &1913996629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26602,7 +26590,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1858706504}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: MenuOptions, Assembly-CSharp
           m_MethodName: PageGeneralClick
           m_Mode: 1
@@ -26658,8 +26646,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1858706504}
-        m_TargetAssemblyTypeName: MenuOptions, Assembly-CSharp
+      - m_Target: {fileID: 1858706508}
+        m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
         m_MethodName: PageGeneralClick
         m_Mode: 1
         m_Arguments:
