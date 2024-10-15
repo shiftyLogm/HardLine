@@ -633,7 +633,7 @@ MonoBehaviour:
   xp: 0
   moveSpeed: 150
   attackRange: 0.35
-  attackDamage: 30
+  attackDamage: 20
   faith: 0
   defence: 0
   vitality: 5
@@ -869,7 +869,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &2030656181731103722

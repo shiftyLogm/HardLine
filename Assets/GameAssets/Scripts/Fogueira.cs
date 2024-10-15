@@ -60,7 +60,7 @@ public class Fogueira : MonoBehaviour
         HUD.Instance.levelUpScreen.SetActive(false);
     }
 
-    private void Spawn()
+    public void Spawn()
     {
         // Se ja existir inimigos spawnados, eles serao destruidos antes de spawnar novos
         if(enemyInstanceList != null) 

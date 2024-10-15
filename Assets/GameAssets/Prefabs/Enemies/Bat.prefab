@@ -197,13 +197,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 1
-  maxHp: 30
+  maxHp: 23
   hp: 0
   maxXp: 0
   xp: 300
   moveSpeed: 100
   attackRange: 0.3
-  attackDamage: 0
+  attackDamage: 5
   faith: 0
   defence: 0
   vitality: 0
@@ -745,7 +745,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 0.5
 --- !u!1 &7918627556718011728
 GameObject:
   m_ObjectHideFlags: 0

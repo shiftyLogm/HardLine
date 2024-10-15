@@ -422,7 +422,7 @@ MonoBehaviour:
   xp: 300
   moveSpeed: 100
   attackRange: 0.3
-  attackDamage: 0
+  attackDamage: 7
   faith: 0
   defence: 0
   vitality: 0

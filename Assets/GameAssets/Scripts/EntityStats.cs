@@ -1,4 +1,5 @@
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class EntityStats : MonoBehaviour
@@ -101,6 +102,14 @@ public class EntityStats : MonoBehaviour
         if(deathParticle)
         {
             Instantiate(deathParticle, this.gameObject.transform.position, Quaternion.Euler(new Vector3(-90,0,0)));
+        }
+
+        if(this.gameObject.tag == "Player")
+        {
+            this.gameObject.transform.position = new Vector2(GameObject.FindGameObjectWithTag("Fogueira").transform.position.x + 2, GameObject.FindGameObjectWithTag("Fogueira").transform.position.y );
+            hp = maxHp;
+            GameObject.FindGameObjectWithTag("Fogueira").GetComponent<Fogueira>().Spawn();
+            return;
         }
 
         Destroy(this.gameObject);
