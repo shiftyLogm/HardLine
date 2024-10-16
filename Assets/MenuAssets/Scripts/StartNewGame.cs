@@ -8,6 +8,9 @@ public class StartNewGame : MonoBehaviour
     [SerializeField] private Toggle _fullScreenObj;
     [SerializeField] private Slider _brightnessObj;
     [SerializeField] private GameObject _blackScreenTransition;
+    [SerializeField] private Slider _volumeMaster;
+    [SerializeField] private Slider _volumeMusic;
+    [SerializeField] private Slider _volumeEffect;
     public void OnClick()
     {
         StartCoroutine(ChangeScene());
@@ -50,6 +53,9 @@ public class StartNewGame : MonoBehaviour
     {
         Infos.brightnessValue = _brightnessObj.value;
         Infos.fullScreenValue = _fullScreenObj.isOn;
+        Infos.master = _volumeMaster.value;
+        Infos.music = _volumeMusic.value;
+        Infos.effect = _volumeEffect.value;
     }
 
 }

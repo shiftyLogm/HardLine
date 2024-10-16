@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Rendering.Universal.Internal;
 
 public class PauseMenu : MonoBehaviour
@@ -22,6 +23,7 @@ public class PauseMenu : MonoBehaviour
     public void moveMenu(int pos)
     {
         if (!_coroutineIsRunning) StartCoroutine(timeToOpenOrClose(pos));
+        EventSystem.current.SetSelectedGameObject(null);
     }
 
     private IEnumerator timeToOpenOrClose(int pos)

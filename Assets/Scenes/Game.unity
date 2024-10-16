@@ -2199,7 +2199,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 41
+  m_fontSize: 44.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5275,10 +5275,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97bc2ebab6563400c95b036136d26ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Inverse: 0
-  m_MaskInteraction: 85
-  m_UseStencil: 1
-  m_RaycastFilter: 0
 --- !u!114 &467210693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5385,6 +5381,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 497818334}
+  - component: {fileID: 497818335}
   m_Layer: 0
   m_Name: Sound_Manager
   m_TagString: Untagged
@@ -5411,6 +5408,31 @@ Transform:
   - {fileID: 2059101353}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &497818335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497818333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35b68f07759bb4f46814625b54b287e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 1355624936201180798}
+  - {fileID: 1997535874}
+  - {fileID: 267811854}
+  - {fileID: 2059101354}
+  mainMusic: {fileID: 2059101354}
+  effects:
+  - {fileID: 1355624936201180798}
+  - {fileID: 1997535874}
+  - {fileID: 267811854}
+  sliderGeneral: {fileID: 901636290}
+  sliderMusic: {fileID: 1362203346}
+  sliderEffects: {fileID: 1050793322}
 --- !u!1 &501499795
 GameObject:
   m_ObjectHideFlags: 0
@@ -5461,10 +5483,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97bc2ebab6563400c95b036136d26ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Inverse: 0
-  m_MaskInteraction: 85
-  m_UseStencil: 1
-  m_RaycastFilter: 0
 --- !u!114 &501499798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5946,6 +5964,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fullScreenObj: {fileID: 411838884}
   _brightnessObj: {fileID: 645814508}
+  masterSlide: {fileID: 901636290}
+  musicSlide: {fileID: 1362203346}
+  effectSlide: {fileID: 1050793322}
 --- !u!1 &611903317
 GameObject:
   m_ObjectHideFlags: 0
@@ -9444,9 +9465,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434988710}
-        m_TargetAssemblyTypeName: GeralMusic, Assembly-CSharp
-        m_MethodName: setCurrentVolume
+      - m_Target: {fileID: 497818335}
+        m_TargetAssemblyTypeName: SoundSlide, Assembly-CSharp
+        m_MethodName: setVolumeGeneral
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10122,7 +10143,19 @@ MonoBehaviour:
   m_Value: 0.7
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 497818335}
+        m_TargetAssemblyTypeName: SoundSlide, Assembly-CSharp
+        m_MethodName: setVolumeEffects
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1060721251
 GameObject:
   m_ObjectHideFlags: 0
@@ -19241,10 +19274,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97bc2ebab6563400c95b036136d26ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Inverse: 0
-  m_MaskInteraction: 85
-  m_UseStencil: 1
-  m_RaycastFilter: 0
 --- !u!114 &1326426059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19983,7 +20012,19 @@ MonoBehaviour:
   m_Value: 0.7
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 497818335}
+        m_TargetAssemblyTypeName: SoundSlide, Assembly-CSharp
+        m_MethodName: setVolumeMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1364502556
 GameObject:
   m_ObjectHideFlags: 0
@@ -21665,10 +21706,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97bc2ebab6563400c95b036136d26ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Inverse: 0
-  m_MaskInteraction: 85
-  m_UseStencil: 1
-  m_RaycastFilter: 0
 --- !u!114 &1563735390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23056,8 +23093,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1411645938}
   m_HandleRect: {fileID: 1411645937}
   m_Direction: 2
-  m_Value: -0.00000022472446
-  m_Size: 0.6946943
+  m_Value: 0
+  m_Size: 0.6946942
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -23720,8 +23757,8 @@ RectTransform:
   m_GameObject: {fileID: 1854761199}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1.3883083}
-  m_LocalScale: {x: -1.832, y: -1.9362601, z: -1.6922711}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: -2.01, y: -2.1243901, z: -1.8566948}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 251058032}
   m_Father: {fileID: 1988431428}
@@ -24142,10 +24179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97bc2ebab6563400c95b036136d26ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Inverse: 0
-  m_MaskInteraction: 85
-  m_UseStencil: 1
-  m_RaycastFilter: 0
 --- !u!114 &1904566700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24293,10 +24326,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97bc2ebab6563400c95b036136d26ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Inverse: 0
-  m_MaskInteraction: 85
-  m_UseStencil: 1
-  m_RaycastFilter: 0
 --- !u!114 &1913996629
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -3788,10 +3788,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97bc2ebab6563400c95b036136d26ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Inverse: 0
-  m_MaskInteraction: 85
-  m_UseStencil: 1
-  m_RaycastFilter: 0
 --- !u!1 &316348505
 GameObject:
   m_ObjectHideFlags: 0
@@ -3939,10 +3935,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97bc2ebab6563400c95b036136d26ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Inverse: 0
-  m_MaskInteraction: 85
-  m_UseStencil: 1
-  m_RaycastFilter: 0
 --- !u!1 &361355861
 GameObject:
   m_ObjectHideFlags: 0
@@ -4281,7 +4273,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 41
+  m_fontSize: 44.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -9668,10 +9660,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97bc2ebab6563400c95b036136d26ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Inverse: 0
-  m_MaskInteraction: 85
-  m_UseStencil: 1
-  m_RaycastFilter: 0
 --- !u!1 &975742195
 GameObject:
   m_ObjectHideFlags: 0
@@ -9722,10 +9710,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97bc2ebab6563400c95b036136d26ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Inverse: 0
-  m_MaskInteraction: 85
-  m_UseStencil: 1
-  m_RaycastFilter: 0
 --- !u!114 &975742198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13127,10 +13111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97bc2ebab6563400c95b036136d26ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Inverse: 0
-  m_MaskInteraction: 85
-  m_UseStencil: 1
-  m_RaycastFilter: 0
 --- !u!1 &1419474988
 GameObject:
   m_ObjectHideFlags: 0
@@ -15508,6 +15488,9 @@ MonoBehaviour:
   _fullScreenObj: {fileID: 785697057}
   _brightnessObj: {fileID: 1524079254}
   _blackScreenTransition: {fileID: 2118461905}
+  _volumeMaster: {fileID: 883809977}
+  _volumeMusic: {fileID: 206293330}
+  _volumeEffect: {fileID: 383046028}
 --- !u!1 &1665284850
 GameObject:
   m_ObjectHideFlags: 0
@@ -16761,10 +16744,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97bc2ebab6563400c95b036136d26ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Inverse: 0
-  m_MaskInteraction: 85
-  m_UseStencil: 1
-  m_RaycastFilter: 0
 --- !u!1 &1766334899
 GameObject:
   m_ObjectHideFlags: 0
@@ -18115,8 +18094,8 @@ RectTransform:
   m_GameObject: {fileID: 1925022707}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1.3883083}
-  m_LocalScale: {x: -1.832, y: -1.9362601, z: -1.6922711}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: -2.07, y: -2.1878047, z: -1.9121184}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 390328269}
   m_Father: {fileID: 1432094480}
