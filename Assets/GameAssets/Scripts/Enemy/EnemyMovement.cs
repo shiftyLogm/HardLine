@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Data;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 

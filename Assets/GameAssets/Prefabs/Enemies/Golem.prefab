@@ -824,7 +824,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   _attackRange: 0.3
-  weaponSFX: {fileID: 8300000, guid: e0ebcccb6996829439bd0398499c92e0, type: 3}
+  weaponSFX: {fileID: 8300000, guid: b13d641deed9d18478d0b7abffb36e8d, type: 3}
 --- !u!1 &8923644803051518746
 GameObject:
   m_ObjectHideFlags: 0
