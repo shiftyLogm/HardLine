@@ -32,6 +32,7 @@ public class StartNewGame : MonoBehaviour
         PlayerClassesController.Instance.idxClass = NewGameConfirmTab.newgameInfo.classNames[NewGameConfirmTab.newgameInfo.classIdx];
         
         yield return null;
+
         SceneManager.UnloadSceneAsync("Menu");
     }
 

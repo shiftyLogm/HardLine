@@ -103,7 +103,7 @@ public class HoverTabsClassNG : MonoBehaviour
         idxStringValue = tabClass.name;
         idxInt = Array.IndexOf(ClassesString, idxStringValue);
         armourImage = tabClass.transform.Find($"ClassArmour{idxInt + 1}");
-        armourImage.GetComponent<Image>().color = targetColor;
+        armourImage.GetComponent<Image>().color = Color.white;
         NameClassObj = GameObject.Find($"NameClass{idxInt + 1}");
         StatusClassObj = GameObject.Find($"StatusClass{idxInt + 1}");
     }

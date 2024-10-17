@@ -7120,14 +7120,14 @@ RectTransform:
   m_GameObject: {fileID: 808989406}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.16, y: 2.16, z: 2.16}
+  m_LocalScale: {x: 1.66, y: 1.66, z: 1.66}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 678841211}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -348, y: -26}
+  m_AnchoredPosition: {x: -382.2, y: 38.9}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &808989408
@@ -7150,7 +7150,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 992977845, guid: cf301add1a9dc564ebfb524fd0108628, type: 3}
+  m_Sprite: {fileID: -2026978300, guid: e2b428972b18f9c4f8bd0ff89e5ae9fd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9841,7 +9841,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 113}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &976233031
@@ -9864,7 +9864,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1422800935, guid: cf301add1a9dc564ebfb524fd0108628, type: 3}
+  m_Sprite: {fileID: 21300000, guid: afd47936000e852478cbb9567c4933c0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10382,19 +10382,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1032129649}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1032129651}
-        m_TargetAssemblyTypeName: HoverTabsClassNG, Assembly-CSharp
-        m_MethodName: OnPointerClick
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1040096210
 GameObject:
   m_ObjectHideFlags: 0
@@ -11114,7 +11102,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 113}
+  m_AnchoredPosition: {x: 0, y: 193}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1135546199
@@ -11137,7 +11125,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1422800935, guid: cf301add1a9dc564ebfb524fd0108628, type: 3}
+  m_Sprite: {fileID: -2026978300, guid: e2b428972b18f9c4f8bd0ff89e5ae9fd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11189,7 +11177,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3, y: 113}
+  m_AnchoredPosition: {x: 3, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1141734502
@@ -11212,7 +11200,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1422800935, guid: cf301add1a9dc564ebfb524fd0108628, type: 3}
+  m_Sprite: {fileID: 21300000, guid: afd47936000e852478cbb9567c4933c0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11323,7 +11311,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1169396291
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14343,19 +14331,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1523364285}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1523364287}
-        m_TargetAssemblyTypeName: HoverTabsClassNG, Assembly-CSharp
-        m_MethodName: OnPointerClick
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1524079252
 GameObject:
   m_ObjectHideFlags: 0
@@ -15509,7 +15485,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1665284851
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15854,7 +15830,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1675306848
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17776,7 +17752,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1893455265
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18817,13 +18793,13 @@ MonoBehaviour:
   - Class2
   - Class3
   NameClass: Warrior
-  StatusClass: 'Attack: 10
+  StatusClass: 'Attack: 3
 
-    Defense: 10
+    HP: 20
 
-    Magic: 30
+    Vitality: 5
 
-    BlaBla: 31'
+    Move Speed: 150'
   changeClassBTN: {fileID: 685186865}
   StartGameBTN: {fileID: 1438409098}
   emissionColor: {r: 0.7490196, g: 0, b: 0, a: 1}

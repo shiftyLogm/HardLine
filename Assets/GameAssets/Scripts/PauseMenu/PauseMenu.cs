@@ -49,7 +49,7 @@ public class PauseMenu : MonoBehaviour
 
         else if (Input.GetKeyDown(KeyCode.Escape))
         {
-            moveMenu(1000);
+            moveMenu(1045);
         }
     }
 }
