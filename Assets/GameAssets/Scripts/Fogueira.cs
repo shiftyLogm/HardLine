@@ -25,7 +25,7 @@ public class Fogueira : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         _oldLevel = player.gameObject.GetComponent<EntityStats>().level;
         playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<EntityStats>();
-        Spawn();
+        StartCoroutine(Spawning());
     }
 
     void Update()
@@ -33,6 +33,13 @@ public class Fogueira : MonoBehaviour
         if(player != null) GetDistance();
 
         ShowInteraction();
+    }
+
+    public IEnumerator Spawning()
+    {
+        yield return new WaitForSeconds(1.5f);
+        Spawn();
+        StopCoroutine(Spawning());
     }
 
     public IEnumerator Interact()

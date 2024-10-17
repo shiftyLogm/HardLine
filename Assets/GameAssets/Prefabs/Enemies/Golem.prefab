@@ -416,7 +416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 1
-  maxHp: 100
+  maxHp: 400
   hp: 0
   maxXp: 0
   xp: 300
