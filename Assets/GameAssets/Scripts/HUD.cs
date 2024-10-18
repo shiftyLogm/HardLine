@@ -35,6 +35,7 @@ public class HUD : MonoBehaviour
     [SerializeField] private TextMeshProUGUI def;
     [SerializeField] private TextMeshProUGUI dex;
     [SerializeField] private TextMeshProUGUI movSpeed;
+    [SerializeField] private TextMeshProUGUI str; 
     public GameObject levelUpScreen;
 
     // Cor de levelUp
@@ -132,6 +133,7 @@ public class HUD : MonoBehaviour
         def.text = $"Defence: {playerStats.defence}";
         dex.text = $"Dexterity: {playerStats.dexterity}";
         movSpeed.text = $"Move Speed: {playerStats.moveSpeed}";
+        str.text = $"Strength: {playerStats.attackDamage}";
     }
 
     #endregion
